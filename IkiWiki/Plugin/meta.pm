@@ -288,12 +288,13 @@ sub pagetemplate (@) {
 		$template->param(title_overridden => 1);
 	}
 
-	foreach my $field (qw{author authorurl permalink}) {
-		$template->param($field => $pagestate{$page}{meta}{$field})
+	foreach my $field (qw{authorurl permalink}) {
+		$template->param($field => HTML::Entities::encode_entities($pagestate{$page}{meta}{$field}))
 			if exists $pagestate{$page}{meta}{$field} && $template->query(name => $field);
 	}
 
-	foreach my $field (qw{description}) {
+	foreach my $field (qw{description author}) {
+		eval q{use HTML::Entities};
 		$template->param($field => HTML::Entities::encode_numeric($pagestate{$page}{meta}{$field}))
 			if exists $pagestate{$page}{meta}{$field} && $template->query(name => $field);
 	}
