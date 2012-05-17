@@ -1,4 +1,0 @@
-ikiwiki 3.20100815.9 released with [[!toggle text="these changes"]]
-[[!toggleable text="""
-   * meta: Security fix; add missing sanitization of author and authorurl.
-     CVE-2012-0220 Thanks, Raúl Benencia"""]]
