@@ -44,6 +44,9 @@ ikiwiki (3.20120629.2+deb7u2) UNRELEASED; urgency=medium
     adjusted for compatibility with the older pkg-perl-autopkgtest in jessie
     - d/control: add enough build-dependencies to run all tests, except for
       non-git VCSs
+  * Split CFLAGS into words when building wrapper, fixing build-time test
+    failure. Closes: #682237 (patch from Joey Hess, backported from
+    3.20120630)
 
  -- Simon McVittie <smcv@debian.org>  Wed, 11 Jan 2017 15:22:38 +0000
 
