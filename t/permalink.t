@@ -17,6 +17,7 @@ else {
 		--templatedir=templates);
 }
 
+ok(! system("rm -rf t/tmp"));
 ok(! system("mkdir t/tmp"));
 ok(! system(@command, qw(--plugin inline --url=http://example.com
 		--cgiurl=http://example.com/ikiwiki.cgi --rss --atom
