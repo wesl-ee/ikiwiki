@@ -8,6 +8,7 @@ ikiwiki (3.20141016.1) UNRELEASED; urgency=medium
 
   [ Amitai Schlair ]
   * blogspam: use the 2.0 JSON API (the 1.0 XML-RPC API has been EOL'd).
+    Closes: #774441
 
  -- Joey Hess <joeyh@debian.org>  Mon, 20 Oct 2014 12:04:49 -0400
 
