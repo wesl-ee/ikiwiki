@@ -4,7 +4,8 @@ ikiwiki (3.20141016.1) unstable; urgency=medium
 
   [ Joey Hess ]
   * Add missing build-depends on libcgi-formbuilder-perl, needed for
-    t/relativity.t
+    t/relativity.t if libipc-run-perl is also installed
+    (buildds are unaffected by this)
   * Set Debian package maintainer to Simon McVittie as I'm retiring from
     Debian.
 
@@ -15,6 +16,7 @@ ikiwiki (3.20141016.1) unstable; urgency=medium
   [ Simon McVittie ]
   * Work around imagemagick Debian bug #771047 by using a non-blank SVG
     for the regression test, to avoid FTBFS in current unstable
+    if inkscape is installed (buildds are unaffected by this)
 
  -- Simon McVittie <smcv@debian.org>  Wed, 07 Jan 2015 11:08:35 +0000
 
