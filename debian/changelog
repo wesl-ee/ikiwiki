@@ -1,4 +1,7 @@
-ikiwiki (3.20120629.1) UNRELEASED; urgency=medium
+ikiwiki (3.20120629.1) wheezy; urgency=medium
+
+  Backport blogspam plugin from experimental, because the version in
+  wheezy is no longer unusable:
 
   [ Joey Hess ]
   * Set Debian package maintainer to Simon McVittie as I'm retiring from
@@ -8,7 +11,7 @@ ikiwiki (3.20120629.1) UNRELEASED; urgency=medium
   * blogspam: use the 2.0 JSON API (the 1.0 XML-RPC API has been EOL'd).
     Closes: #774441
 
- -- Joey Hess <joeyh@debian.org>  Mon, 20 Oct 2014 12:04:49 -0400
+ -- Simon McVittie <smcv@debian.org>  Wed, 14 Jan 2015 22:10:48 +0000
 
 ikiwiki (3.20120629) unstable; urgency=low
 
