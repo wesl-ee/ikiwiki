@@ -1,3 +1,10 @@
+ikiwiki (3.20141016.2) UNRELEASED; urgency=high
+
+  [ Joey Hess ]
+  * Fix XSS in openid selector. Thanks, Raghav Bisht.
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 29 Mar 2015 22:28:15 +0100
+
 ikiwiki (3.20120629.1) wheezy; urgency=medium
 
   Backport blogspam plugin from experimental, because the version in
