@@ -1,7 +1,7 @@
-ikiwiki (3.20141016.2) UNRELEASED; urgency=high
+ikiwiki (3.20141016.2) unstable; urgency=high
 
   [ Joey Hess ]
-  * Fix XSS in openid selector. Thanks, Raghav Bisht.
+  * Fix XSS in openid selector. Thanks, Raghav Bisht. (Closes: #781483)
 
  -- Simon McVittie <smcv@debian.org>  Sun, 29 Mar 2015 22:28:15 +0100
 
