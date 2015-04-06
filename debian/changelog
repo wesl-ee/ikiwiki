@@ -1,9 +1,10 @@
-ikiwiki (3.20141016.2) UNRELEASED; urgency=high
+ikiwiki (3.20120629.2) wheezy; urgency=medium
 
   [ Joey Hess ]
-  * Fix XSS in openid selector. Thanks, Raghav Bisht.
+  * Fix XSS in openid selector. Thanks, Raghav Bisht. (Closes: #781483;
+    CVE-2015-2793)
 
- -- Simon McVittie <smcv@debian.org>  Sun, 29 Mar 2015 22:28:15 +0100
+ -- Simon McVittie <smcv@debian.org>  Mon, 06 Apr 2015 20:34:51 +0100
 
 ikiwiki (3.20120629.1) wheezy; urgency=medium
 
