@@ -65,6 +65,7 @@ $maybe_svg_img
 $maybe_pdf_img
 EOF
 );
+ok(utime(333333333, 333333333, "t/tmp/in/imgconversions.mdwn"));
 
 ok(! system("make -s ikiwiki.out"));
 
