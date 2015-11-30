@@ -34,6 +34,22 @@ else {
 
 push @command, qw(--set usedirs=0 --plugin img t/tmp/in t/tmp/out --verbose);
 
+my $installed = $ENV{INSTALLED_TESTS};
+
+my @command;
+if ($installed) {
+	@command = qw(ikiwiki);
+}
+else {
+	ok(! system("make -s ikiwiki.out"));
+	@command = qw(perl -I. ./ikiwiki.out
+		--underlaydir=underlays/basewiki
+		--set underlaydirbase=underlays
+		--templatedir=templates);
+}
+
+push @command, qw(--set usedirs=0 --plugin img t/tmp/in t/tmp/out --verbose);
+
 my $magick = new Image::Magick;
 
 $magick->Read("t/img/twopages.pdf");
