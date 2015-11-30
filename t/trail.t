@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 use warnings;
 use strict;
-use Test::More 'no_plan';
+use Test::More;
 use IkiWiki;
 
 sub check_trail {
@@ -26,6 +26,24 @@ my $blob;
 
 ok(! system("rm -rf t/tmp"));
 ok(! system("mkdir t/tmp"));
+
+my $installed = $ENV{INSTALLED_TESTS};
+
+my @command;
+if ($installed) {
+	@command = qw(ikiwiki);
+}
+else {
+	ok(! system("make -s ikiwiki.out"));
+	@command = qw(perl -I. ./ikiwiki.out
+		--underlaydir=underlays/basewiki
+		--set underlaydirbase=underlays
+		--templatedir=templates);
+}
+
+push @command, qw(--set usedirs=0 --plugin trail --plugin inline
+	--url=http://example.com --cgiurl=http://example.com/ikiwiki.cgi
+	--rss --atom t/tmp/in t/tmp/out --verbose);
 
 # Write files with a date in the past, so that when we refresh,
 # the update is detected.
@@ -117,13 +135,8 @@ write_old_file("wind_in_the_willows.mdwn", <<EOF
 EOF
 );
 
-ok(! system("make -s ikiwiki.out"));
-
-my $command = "perl -I. ./ikiwiki.out -set usedirs=0 -plugin trail -plugin inline -url=http://example.com -cgiurl=http://example.com/ikiwiki.cgi -rss -atom -underlaydir=underlays/basewiki -set underlaydirbase=underlays -templatedir=templates t/tmp/in t/tmp/out -verbose";
-
-ok(! system($command));
-
-ok(! system("$command -refresh"));
+ok(! system(@command));
+ok(! system(@command, "--refresh"));
 
 $blob = readfile("t/tmp/out/meme.html");
 ok($blob =~ /<a href="(\.\/)?badger.html">badger<\/a>/m);
@@ -192,7 +205,7 @@ writefile("sorting.mdwn", "t/tmp/in",
 	readfile("t/tmp/in/sorting.mdwn") .
 	'[[!trailoptions sort="title" reverse="yes"]]'); 
 
-ok(! system("$command -refresh"));
+ok(! system(@command, "--refresh"));
 
 check_trail("add/a.html", "n=add/b p=");
 check_trail("add/b.html", "n=add/c p=add/a");
@@ -219,3 +232,5 @@ check_trail("sorting/ancient.html", "n=sorting/z/a p=sorting/a/b");
 check_trail("sorting/z/a.html", "n= p=sorting/ancient");
 
 ok(! system("rm -rf t/tmp"));
+
+done_testing();

@@ -4,6 +4,8 @@ use strict;
 use Test::More; my $total_tests = 42;
 use IkiWiki;
 
+my $installed = $ENV{INSTALLED_TESTS};
+
 my $default_test_methods = '^test_*';
 my @required_programs = qw(
 	cvs
