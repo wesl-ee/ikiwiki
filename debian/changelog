@@ -1,3 +1,9 @@
+ikiwiki (3.20150614~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports, no source changes (Closes: #807452)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 18 Jan 2016 07:03:11 +0000
+
 ikiwiki (3.20150614) unstable; urgency=medium
 
   * inline: change default sort order from age to "age title" for
