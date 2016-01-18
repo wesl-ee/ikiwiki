@@ -21,6 +21,9 @@ BEGIN { use_ok("Image::Magick"); }
 my $magick = new Image::Magick;
 my $SVGS_WORK = defined $magick->QueryFormat("svg");
 
+$magick->Read("t/img/twopages.pdf");
+my $PDFS_WORK = defined $magick->Get("width");
+
 ok(! system("rm -rf t/tmp; mkdir -p t/tmp/in"));
 
 ok(! system("cp t/img/redsquare.png t/tmp/in/redsquare.png"));
@@ -43,6 +46,14 @@ if ($SVGS_WORK) {
 	$maybe_svg_img = "[[!img bluesquare.svg size=10x]]";
 }
 
+my $maybe_pdf_img = "";
+if ($PDFS_WORK) {
+	$maybe_pdf_img = <<EOF;
+[[!img twopages.pdf size=12x]]
+[[!img twopages.pdf size=16x pagenumber=1]]
+EOF
+}
+
 writefile("imgconversions.mdwn", "t/tmp/in", <<EOF
 [[!img redsquare.png]]
 [[!img redsquare.png size=10x]]
@@ -51,8 +62,7 @@ writefile("imgconversions.mdwn", "t/tmp/in", <<EOF
 [[!img a:b:c.png size=x4]]
 [[!img a:b:c:d:e:f:g:h:i:j.png size=x6]]
 $maybe_svg_img
-[[!img twopages.pdf size=12x]]
-[[!img twopages.pdf size=16x pagenumber=1]]
+$maybe_pdf_img
 EOF
 );
 
@@ -79,13 +89,20 @@ is(size("$outpath/10x-redsquare.png"), "10x10");
 ok(! -e "$outpath/30x-redsquare.png");
 ok($outhtml =~ /width="30" height="30".*expecting 30x30/);
 
-if ($SVGS_WORK) {
+SKIP: {
+	skip "SVG support not installed (try libmagickcore-extra)", 1
+		unless $SVGS_WORK;
 	# if this fails, you need libmagickcore-6.q16-2-extra installed
-	is(size("$outpath/10x-emptysquare.png"), "10x10");
+	is(size("$outpath/10x-bluesquare.png"), "10x10");
 }
 
-is(size("$outpath/12x-twopages.png"), "12x12");
-is(size("$outpath/16x-p1-twopages.png"), "16x2");
+SKIP: {
+	skip "PDF support not installed (try ghostscript)", 2
+		unless $PDFS_WORK;
+	is(size("$outpath/12x-twopages.png"), "12x12");
+	is(size("$outpath/16x-p1-twopages.png"), "16x2");
+}
+
 ok($outhtml =~ /width="8" height="8".*expecting 8x8/);
 is(size("$outpath/x8-hello:world.png"), "8x8");
 is(size("$outpath/x4-a:b:c.png"), "4x4");
