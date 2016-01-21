@@ -1,3 +1,9 @@
+ikiwiki (3.20160121~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports.
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 21 Jan 2016 10:18:07 +0000
+
 ikiwiki (3.20160121) unstable; urgency=medium
 
   [ Amitai Schlair ]
