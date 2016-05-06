@@ -1,5 +1,10 @@
-[[!template  id=test45 text="""Here is the text to insert into my note."""]]
-dddddddddddd
+Nope my friend.
+
+<<<<<<< HEAD
+[[test link]]
+=======
+[[Test link]]
+>>>>>>> 59f04c5ad3daf0c01e81d28ec1106e23567a1100
 
 [[!meta date="Thu Jun 16 22:04:33 2005" updated="Thu Dec 22 01:23:20 2011"]]
 
@@ -7,6 +12,8 @@ This is the [[SandBox]], a page anyone can edit to try out ikiwiki
 (version [[!version  ]]).
 vvvv
 CamelCase ?
+
+[[!tag sandbox]]
 
 What about [[this page]], nono better [[that page]]?
 
@@ -21,6 +28,54 @@ Hello!
 ~~~
 pre formated text?
 ~~~
+
+```
+testing markdown
+```
+
+# one
+
+- foo
+
+## two
+
+- bar
+
+### trois
+
+- blah
+    - more blah
+
+#### quatre
+
+## bir
+- bir
+
+## iki
+- iki
+
+* yildiz
+** cyildiz
+
+- tire
+  - ctire
+
+* *i dene*
+* **b dene**
+
+
+1. number
+2. list
+    a. ick
+    b. bar
+
+| table | here |
+|----|.----.|
+| test adfasdfasdfa | 2 |
+| subtest | adfad|
+
+ok no formating.
+
 
 > This is a blockquote.
 >

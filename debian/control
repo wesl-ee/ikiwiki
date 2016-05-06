@@ -17,7 +17,7 @@ Build-Depends-Indep:
  libhtml-scrubber-perl,
  libhtml-template-perl,
  libimage-magick-perl | perlmagick,
- libmagickcore-6.q16-2-extra | libmagickcore-extra,
+ libmagickcore-extra,
  libnet-openid-consumer-perl,
  librpc-xml-perl,
  libtext-markdown-discount-perl,
@@ -33,8 +33,9 @@ Maintainer: Simon McVittie <smcv@debian.org>
 Uploaders:
  Josh Triplett <josh@freedesktop.org>,
 Standards-Version: 3.9.6
-Homepage: http://ikiwiki.info/
+Homepage: https://ikiwiki.info/
 Vcs-Git: git://git.ikiwiki.info/
+Vcs-Browser: http://source.ikiwiki.branchable.com/?p=source.git;a=summary
 Testsuite: autopkgtest-pkg-perl
 
 Package: ikiwiki
