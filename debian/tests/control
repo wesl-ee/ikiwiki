@@ -1,0 +1,12 @@
+Test-Command: env INSTALLED_TESTS=1 /usr/share/pkg-perl-autopkgtest/runner build-deps
+Depends: @, @builddeps@, pkg-perl-autopkgtest
+
+Test-Command: env INSTALLED_TESTS=1 /usr/share/pkg-perl-autopkgtest/runner runtime-deps
+Depends: @, pkg-perl-autopkgtest
+
+Test-Command: env INSTALLED_TESTS=1 /usr/share/pkg-perl-autopkgtest/runner runtime-deps-and-recommends
+Depends: @, pkg-perl-autopkgtest
+Restrictions: needs-recommends
+
+Test-Command: env INSTALLED_TESTS=1 /usr/share/pkg-perl-autopkgtest/runner heavy-deps
+Depends: @, pkg-perl-autopkgtest, pkg-perl-autopkgtest-heavy
