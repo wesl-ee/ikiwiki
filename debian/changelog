@@ -1,4 +1,4 @@
-ikiwiki (3.20141016.3) UNRELEASED; urgency=medium
+ikiwiki (3.20141016.3) jessie-security; urgency=high
 
   [ Simon McVittie ]
   * img: stop ImageMagick trying to be clever if filenames contain a colon,
@@ -22,7 +22,7 @@ ikiwiki (3.20141016.3) UNRELEASED; urgency=medium
     them through and so specifying both a width and height can change
     the SVG's aspect ratio.
 
- -- Simon McVittie <smcv@debian.org>  Thu, 05 May 2016 23:33:26 +0100
+ -- Simon McVittie <smcv@debian.org>  Fri, 06 May 2016 07:55:49 +0100
 
 ikiwiki (3.20141016.2) unstable; urgency=high
 

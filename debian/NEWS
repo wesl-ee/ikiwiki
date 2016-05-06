@@ -1,4 +1,4 @@
-ikiwiki (3.20141016.3) UNRELEASED; urgency=medium
+ikiwiki (3.20141016.3) jessie-security; urgency=high
 
   To mitigate CVE-2016-3714 and similar ImageMagick security vulnerabilities,
   the [[!img]] directive is now restricted to these common web formats by
