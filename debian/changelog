@@ -1,4 +1,4 @@
-ikiwiki (3.20120629.3) UNRELEASED; urgency=medium
+ikiwiki (3.20120629.2+deb7u1) wheezy-security; urgency=medium
 
   * HTML-escape error messages, in one case avoiding potential cross-site
     scripting (CVE-2016-4561, OVE-20160505-0012)
@@ -29,7 +29,7 @@ ikiwiki (3.20120629.3) UNRELEASED; urgency=medium
     (chrysn, joeyh, schmonz, smcv)
   * debian/tests: add metadata to run the img test as an autopkgtest
 
- -- Simon McVittie <smcv@debian.org>  Sun, 08 May 2016 15:33:51 +0100
+ -- Simon McVittie <smcv@debian.org>  Sun, 08 May 2016 16:30:55 +0100
 
 ikiwiki (3.20120629.2) wheezy; urgency=medium
 
