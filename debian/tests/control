@@ -1,0 +1,5 @@
+Tests: img-low-fat
+Depends: @, perlmagick
+
+Tests: img-full-fat
+Depends: @, ghostscript, libmagickcore-extra, perlmagick
