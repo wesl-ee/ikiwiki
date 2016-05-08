@@ -25,6 +25,8 @@ ikiwiki (3.20120629.3) UNRELEASED; urgency=medium
     - Use data: URLs to embed images in page previews (chrysn)
     - Raise an error if the image's size cannot be determined (chrysn)
     - Handle filenames containing a colon correctly (smcv)
+  * Add t/img.t regression test also taken from version 3.20160506
+    (chrysn, joeyh, schmonz, smcv)
 
  -- Simon McVittie <smcv@debian.org>  Sun, 08 May 2016 15:33:51 +0100
 
