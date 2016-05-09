@@ -2,14 +2,15 @@ ikiwiki (3.20120629.2+deb7u1) wheezy-security; urgency=medium
 
   * HTML-escape error messages, in one case avoiding potential cross-site
     scripting (CVE-2016-4561, OVE-20160505-0012)
-  * Update img plugin to version 3.20160506 to mitigate ImageMagick
+  * Update img plugin to version 3.20160509 to mitigate ImageMagick
     vulnerabilities, including remote code execution (CVE-2016-3714):
     - Never convert SVG images to PNG; simply pass them through to the
       browser. This prevents exploitation of any ImageMagick SVG coder
       vulnerabilities. (joeyh)
     - Do not resize image formats other than JPEG, PNG, GIF unless
       specifically configured to do so. This prevents exploitation
-      of any vulnerabilities in less common coders, such as MVG. (smcv)
+      of any vulnerabilities in less common coders, such as MVG.
+      (schmonz, smcv)
     - Do not resize JPEG, PNG, GIF, PDF images if their extensions do
       not match their "magic numbers", because wiki admins might try to
       restrict attachments by extension, but ImageMagick can base its
@@ -29,7 +30,7 @@ ikiwiki (3.20120629.2+deb7u1) wheezy-security; urgency=medium
     (chrysn, joeyh, schmonz, smcv)
   * debian/tests: add metadata to run the img test as an autopkgtest
 
- -- Simon McVittie <smcv@debian.org>  Sun, 08 May 2016 16:30:55 +0100
+ -- Simon McVittie <smcv@debian.org>  Mon, 09 May 2016 22:38:35 +0100
 
 ikiwiki (3.20120629.2) wheezy; urgency=medium
 

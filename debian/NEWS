@@ -18,7 +18,7 @@ ikiwiki (3.20120629.2+deb7u1) wheezy-security; urgency=medium
   can be removed with the new img_allowed_formats setup option.
   See <https://ikiwiki.info/ikiwiki/directive/img/> for more details.
 
- -- Simon McVittie <smcv@debian.org>  Sun, 08 May 2016 16:30:55 +0100
+ -- Simon McVittie <smcv@debian.org>  Mon, 09 May 2016 22:38:35 +0100
 
 ikiwiki (3.20110122) unstable; urgency=low
 
