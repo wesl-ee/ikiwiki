@@ -1,3 +1,15 @@
+ikiwiki (3.20141016.4) UNRELEASED; urgency=medium
+
+  [ Amitai Schlair ]
+  * img: ignore the case of the extension when detecting image format,
+    fixing the regression that *.JPG etc. would not be displayed
+    since 3.20141016.3
+
+  [ Simon McVittie ]
+  * Add CVE-2016-4561 reference to 3.20141016.3 changelog
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 09 May 2016 22:35:16 +0100
+
 ikiwiki (3.20141016.3) jessie-security; urgency=high
 
   [ Simon McVittie ]
