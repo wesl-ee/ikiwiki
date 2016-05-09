@@ -4,7 +4,7 @@ ikiwiki (3.20141016.3) jessie-security; urgency=high
   * img: stop ImageMagick trying to be clever if filenames contain a colon,
     avoiding mis-processing
   * HTML-escape error messages, in one case avoiding potential cross-site
-    scripting (OVE-20160505-0012)
+    scripting (CVE-2016-4561, OVE-20160505-0012)
   * Mitigate ImageMagick vulnerabilities such as CVE-2016-3714:
     - img: force common Web formats to be interpreted according to extension,
       so that "allowed_attachments: '*.jpg'" does what one might expect
