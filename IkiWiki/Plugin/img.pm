@@ -39,7 +39,7 @@ sub allowed {
 	$allowed = ['jpeg', 'png', 'gif', 'svg'] unless defined $allowed && @$allowed;
 
 	foreach my $a (@$allowed) {
-		return 1 if $a eq $format || $a eq 'everything';
+		return 1 if lc($a) eq $format || lc($a) eq 'everything';
 	}
 
 	return 0;
@@ -89,7 +89,7 @@ sub preprocess (@) {
 	my $extension;
 	my $format;
 
-	if ($base =~ m/\.([a-z0-9]+)$/) {
+	if ($base =~ m/\.([a-z0-9]+)$/is) {
 		$extension = $1;
 	}
 	else {
