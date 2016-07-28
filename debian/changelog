@@ -1,3 +1,12 @@
+ikiwiki (3.20160728~bpo8+1) jessie-backports; urgency=medium
+
+  * Rebuild for jessie-backports
+    - debian/tests/control: set INSTALLED_TESTS=1 here,
+      pkg-perl-autopkgtest in jessie didn't support
+      debian/tests/pkg-perl/smoke-env
+
+ -- Simon McVittie <smcv@debian.org>  Thu, 28 Jul 2016 10:48:11 +0100
+
 ikiwiki (3.20160728) unstable; urgency=medium
 
   * Explicitly remove current working directory from Perl's library
