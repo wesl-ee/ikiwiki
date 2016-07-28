@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-09 21:58+0100\n"
+"POT-Creation-Date: 2016-07-28 10:33+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,7 +137,7 @@ msgstr ""
 msgid "deleting bucket.."
 msgstr ""
 
-#: ../IkiWiki/Plugin/amazon_s3.pm:38 ../ikiwiki.in:225
+#: ../IkiWiki/Plugin/amazon_s3.pm:38 ../ikiwiki.in:226
 msgid "done"
 msgstr ""
 
@@ -1197,7 +1197,7 @@ msgstr ""
 
 #: ../IkiWiki/Render.pm:353 ../IkiWiki/Render.pm:402
 #, perl-format
-msgid "%s has multiple possible source pages"
+msgid "%s has multiple possible source files; one will be chosen at random"
 msgstr ""
 
 #: ../IkiWiki/Render.pm:439
@@ -1292,43 +1292,43 @@ msgstr ""
 msgid "wrapper filename not specified"
 msgstr ""
 
-#: ../IkiWiki/Wrapper.pm:122
+#: ../IkiWiki/Wrapper.pm:120
 msgid "Please wait"
 msgstr ""
 
 #. translators: The parameter is a C filename.
-#: ../IkiWiki/Wrapper.pm:288
+#: ../IkiWiki/Wrapper.pm:301
 #, perl-format
 msgid "failed to compile %s"
 msgstr ""
 
 #. translators: The parameter is a filename.
-#: ../IkiWiki/Wrapper.pm:308
+#: ../IkiWiki/Wrapper.pm:321
 #, perl-format
 msgid "successfully generated %s"
 msgstr ""
 
-#: ../ikiwiki.in:10
+#: ../ikiwiki.in:11
 msgid "usage: ikiwiki [options] source dest"
 msgstr ""
 
-#: ../ikiwiki.in:11
+#: ../ikiwiki.in:12
 msgid "       ikiwiki --setup my.setup [options]"
 msgstr ""
 
-#: ../ikiwiki.in:102
+#: ../ikiwiki.in:103
 msgid "usage: --set var=value"
 msgstr ""
 
-#: ../ikiwiki.in:109
+#: ../ikiwiki.in:110
 msgid "usage: --set-yaml var=value"
 msgstr ""
 
-#: ../ikiwiki.in:214
+#: ../ikiwiki.in:215
 msgid "rebuilding wiki.."
 msgstr ""
 
-#: ../ikiwiki.in:217
+#: ../ikiwiki.in:218
 msgid "refreshing wiki.."
 msgstr ""
 
