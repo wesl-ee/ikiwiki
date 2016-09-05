@@ -1,11 +1,23 @@
-ikiwiki (3.20160728~bpo8+1) jessie-backports; urgency=medium
+ikiwiki (3.20160905~bpo8+1) jessie-backports; urgency=medium
 
   * Rebuild for jessie-backports
     - debian/tests/control: set INSTALLED_TESTS=1 here,
       pkg-perl-autopkgtest in jessie didn't support
       debian/tests/pkg-perl/smoke-env
 
- -- Simon McVittie <smcv@debian.org>  Thu, 28 Jul 2016 10:48:11 +0100
+ -- Simon McVittie <smcv@debian.org>  Mon, 05 Sep 2016 21:49:22 +0100
+
+ikiwiki (3.20160905) unstable; urgency=medium
+
+  [ Joey Hess ]
+  * Fix installation when prefix includes a string metacharacter.
+    Thanks, Sam Hathaway.
+
+  [ Simon McVittie ]
+  * Use git log --no-renames to generate recentchanges, fixing the git
+    test-case with git 2.9 (Closes: #835612)
+
+ -- Simon McVittie <smcv@debian.org>  Mon, 05 Sep 2016 21:26:19 +0100
 
 ikiwiki (3.20160728) unstable; urgency=medium
 
