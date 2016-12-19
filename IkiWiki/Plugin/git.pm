@@ -944,7 +944,9 @@ sub rcs_revert ($) {
 	my $rev = shift;
 	my ($sha1) = $rev =~ /^($sha1_pattern)$/; # untaint
 
-	if (run_or_non('git', 'revert', '--no-commit', $sha1)) {
+	if (run_or_non('git', 'revert', '--strategy=recursive',
+			'--strategy-option=no-renames',
+			'--no-commit', $sha1)) {
 		return undef;
 	}
 	else {
