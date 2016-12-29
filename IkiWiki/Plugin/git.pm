@@ -5,6 +5,7 @@ use warnings;
 use strict;
 use IkiWiki;
 use Encode;
+use File::Path qw{remove_tree};
 use URI::Escape q{uri_escape_utf8};
 use open qw{:utf8 :std};
 
@@ -153,23 +154,57 @@ sub genwrapper {
 	}
 }
 
-my $git_dir=undef;
-my $prefix=undef;
+my @git_dir_stack;
+my $prefix;
 
 sub in_git_dir ($$) {
-	$git_dir=shift;
+	unshift @git_dir_stack, shift;
 	my @ret=shift->();
-	$git_dir=undef;
+	shift @git_dir_stack;
 	$prefix=undef;
 	return @ret;
 }
 
-sub safe_git (&@) {
+# Loosely based on git-new-workdir from git contrib.
+sub create_temp_working_dir ($$) {
+	my $rootdir = shift;
+	my $branch = shift;
+	my $working = "$rootdir/.git/ikiwiki-temp-working";
+	remove_tree($working);
+
+	foreach my $dir ("", ".git") {
+		if (!mkdir("$working/$dir")) {
+			error("Unable to create $working/$dir: $!");
+		}
+	}
+
+	# Hooks are deliberately not included: we will commit to the temporary
+	# branch that is used in the temporary working tree, and we don't want
+	# to run the post-commit hook there.
+	#
+	# logs/refs is not included because we don't use the reflog.
+	# remotes, rr-cache, svn are similarly excluded.
+	foreach my $link ("config", "refs", "objects", "info", "packed-refs") {
+		if (!symlink("../../$link", "$working/.git/$link")) {
+			error("Unable to create symlink $working/.git/$link: $!");
+		}
+	}
+
+	open (my $out, '>', "$working/.git/HEAD") or
+		error("failed to write $working.git/HEAD: $!");
+	print $out "ref: refs/heads/$branch\n" or
+		error("failed to write $working.git/HEAD: $!");
+	close $out or
+		error("failed to write $working.git/HEAD: $!");
+	return $working;
+}
+
+sub safe_git {
 	# Start a child process safely without resorting to /bin/sh.
 	# Returns command output (in list content) or success state
 	# (in scalar context), or runs the specified data handler.
 
-	my ($error_handler, $data_handler, @cmdline) = @_;
+	my %params = @_;
 
 	my $pid = open my $OUT, "-|";
 
@@ -178,15 +213,20 @@ sub safe_git (&@) {
 	if (!$pid) {
 		# In child.
 		# Git commands want to be in wc.
-		if (! defined $git_dir) {
+		if (! @git_dir_stack) {
 			chdir $config{srcdir}
 			    or error("cannot chdir to $config{srcdir}: $!");
 		}
 		else {
-			chdir $git_dir
-			    or error("cannot chdir to $git_dir: $!");
+			chdir $git_dir_stack[0]
+			    or error("cannot chdir to $git_dir_stack[0]: $!");
 		}
-		exec @cmdline or error("Cannot exec '@cmdline': $!");
+
+		if ($params{stdout}) {
+			open(STDOUT, '>&', $params{stdout}) or error("Cannot reopen stdout: $!");
+		}
+
+		exec @{$params{cmdline}} or error("Cannot exec '@{$params{cmdline}}': $!");
 	}
 	# In parent.
 
@@ -201,24 +241,24 @@ sub safe_git (&@) {
 
 		chomp;
 
-		if (! defined $data_handler) {
+		if (! defined $params{data_handler}) {
 			push @lines, $_;
 		}
 		else {
-			last unless $data_handler->($_);
+			last unless $params{data_handler}->($_);
 		}
 	}
 
 	close $OUT;
 
-	$error_handler->("'@cmdline' failed: $!") if $? && $error_handler;
+	$params{error_handler}->("'@{$params{cmdline}}' failed: $!") if $? && $params{error_handler};
 
 	return wantarray ? @lines : ($? == 0);
 }
 # Convenient wrappers.
-sub run_or_die ($@) { safe_git(\&error, undef, @_) }
-sub run_or_cry ($@) { safe_git(sub { warn @_ }, undef, @_) }
-sub run_or_non ($@) { safe_git(undef, undef, @_) }
+sub run_or_die ($@) { safe_git(error_handler => \&error, cmdline => \@_) }
+sub run_or_cry ($@) { safe_git(error_handler => sub { warn @_ }, cmdline => \@_) }
+sub run_or_non ($@) { safe_git(cmdline => \@_) }
 
 sub ensure_committer {
 	if (! length $ENV{GIT_AUTHOR_NAME} || ! length $ENV{GIT_COMMITTER_NAME}) {
@@ -425,6 +465,16 @@ sub parse_diff_tree ($) {
 	}
 	shift @{ $dt_ref } if $dt_ref->[0] =~ /^$/;
 
+	$ci{details} = [parse_changed_files($dt_ref)];
+
+	return \%ci;
+}
+
+sub parse_changed_files {
+	my $dt_ref = shift;
+
+	my @files;
+
 	# Modified files.
 	while (my $line = shift @{ $dt_ref }) {
 		if ($line =~ m{^
@@ -442,7 +492,7 @@ sub parse_diff_tree ($) {
 			my $status = shift(@tmp);
 
 			if (length $file) {
-				push @{ $ci{'details'} }, {
+				push @files, {
 					'file'      => decode_git_file($file),
 					'sha1_from' => $sha1_from[0],
 					'sha1_to'   => $sha1_to,
@@ -456,7 +506,7 @@ sub parse_diff_tree ($) {
 		last;
 	}
 
-	return \%ci;
+	return @files;
 }
 
 sub git_commit_info ($;$) {
@@ -567,7 +617,10 @@ sub rcs_commit (@) {
 	# Check to see if the page has been changed by someone else since
 	# rcs_prepedit was called.
 	my $cur    = git_sha1_file($params{file});
-	my ($prev) = $params{token} =~ /^($sha1_pattern)$/; # untaint
+	my $prev;
+	if (defined $params{token}) {
+		($prev) = $params{token} =~ /^($sha1_pattern)$/; # untaint
+	}
 
 	if (defined $cur && defined $prev && $cur ne $prev) {
 		my $conflict = merge_past($prev, $params{file}, $dummy_commit_msg);
@@ -597,17 +650,23 @@ sub rcs_commit_helper (@) {
 		elsif (defined $params{session}->remote_addr()) {
 			$u=$params{session}->remote_addr();
 		}
-		if (defined $u) {
+		if (length $u) {
 			$u=encode_utf8(IkiWiki::cloak($u));
 			$ENV{GIT_AUTHOR_NAME}=$u;
+		}
+		else {
+			$u = 'anonymous';
 		}
 		if (defined $params{session}->param("nickname")) {
 			$u=encode_utf8($params{session}->param("nickname"));
 			$u=~s/\s+/_/g;
 			$u=~s/[^-_0-9[:alnum:]]+//g;
 		}
-		if (defined $u) {
+		if (length $u) {
 			$ENV{GIT_AUTHOR_EMAIL}="$u\@web";
+		}
+		else {
+			$ENV{GIT_AUTHOR_EMAIL}='anonymous@web';
 		}
 	}
 
@@ -770,7 +829,11 @@ sub rcs_diff ($;$) {
 			if (@lines || $line=~/^diff --git/);
 		return 1;
 	};
-	safe_git(undef, $addlines, "git", "show", $sha1);
+	safe_git(
+		error_handler => undef,
+		data_handler => $addlines,
+		cmdline => ["git", "show", $sha1],
+	);
 	if (wantarray) {
 		return @lines;
 	}
@@ -900,11 +963,11 @@ sub git_parse_changes {
 				die $@ if $@;
 				my $fh;
 				($fh, $path)=File::Temp::tempfile(undef, UNLINK => 1);
-				my $cmd = "cd $git_dir && ".
-				          "git show $detail->{sha1_to} > '$path'";
-				if (system($cmd) != 0) {
-					error("failed writing temp file '$path'.");
-				}
+				safe_git(
+					error_handler => sub { error("failed writing temp file '$path': ".shift."."); },
+					stdout => $fh,
+					cmdline => ['git', 'show', $detail->{sha1_to}],
+				);
 			}
 
 			push @rets, {
@@ -946,10 +1009,14 @@ sub rcs_preprevert ($) {
 	my $rev=shift;
 	my ($sha1) = $rev =~ /^($sha1_pattern)$/; # untaint
 
+	my @undo;      # undo stack for cleanup in case of an error
+
+	ensure_committer();
+
 	# Examine changes from root of git repo, not from any subdir,
 	# in order to see all changes.
 	my ($subdir, $rootdir) = git_find_root();
-	in_git_dir($rootdir, sub {
+	return in_git_dir($rootdir, sub {
 		my @commits=git_commit_info($sha1, 1);
 	
 		if (! @commits) {
@@ -962,7 +1029,66 @@ sub rcs_preprevert ($) {
 			error gettext("you are not allowed to revert a merge");
 		}
 
+		# Due to the presence of rename-detection, we cannot actually
+		# see what will happen in a revert without trying it.
+		# But we can guess, which is enough to rule out most changes
+		# that we won't allow reverting.
 		git_parse_changes(1, @commits);
+
+		my $failure;
+		my @ret;
+		eval {
+			IkiWiki::disable_commit_hook();
+			push @undo, sub {
+				IkiWiki::enable_commit_hook();
+			};
+			my $branch = "ikiwiki_revert_${sha1}"; # supposed to be unique
+
+			push @undo, sub {
+				run_or_cry('git', 'branch', '-D', $branch) if $failure;
+			};
+			if (run_or_non('git', 'rev-parse', '--quiet', '--verify', $branch)) {
+				run_or_non('git', 'branch', '-D', $branch);
+			}
+			run_or_die('git', 'branch', $branch, $config{gitmaster_branch});
+
+			my $working = create_temp_working_dir($rootdir, $branch);
+
+			push @undo, sub {
+				remove_tree($working);
+			};
+
+			in_git_dir($working, sub {
+				run_or_die('git', 'checkout', '--quiet', '--force', $branch);
+				run_or_die('git', 'revert', '--no-commit', $sha1);
+				run_or_die('git', 'commit', '-m', "revert $sha1", '-a');
+			});
+
+			my @raw_lines;
+			@raw_lines = run_or_die('git', 'diff', '--pretty=raw',
+				'--raw', '--abbrev=40', '--always', '--no-renames',
+				"..${branch}");
+
+			my $ci = {
+				details => [parse_changed_files(\@raw_lines)],
+			};
+
+			@ret = git_parse_changes(0, $ci);
+		};
+		$failure = $@;
+
+		# Process undo stack (in reverse order).  By policy cleanup
+		# actions should normally print a warning on failure.
+		while (my $handle = pop @undo) {
+			$handle->();
+		}
+
+		if ($failure) {
+			my $message = sprintf(gettext("Failed to revert commit %s"), $sha1);
+			error("$message\n$failure\n");
+		}
+
+		return @ret;
 	});
 }
 
@@ -973,11 +1099,11 @@ sub rcs_revert ($) {
 
 	ensure_committer();
 
-	if (run_or_non('git', 'revert', '--no-commit', $sha1)) {
+	if (run_or_non('git', 'merge', '--ff-only', "ikiwiki_revert_$sha1")) {
 		return undef;
 	}
 	else {
-		run_or_die('git', 'reset', '--hard');
+		run_or_non('git', 'branch', '-D', "ikiwiki_revert_$sha1");
 		return sprintf(gettext("Failed to revert commit %s"), $sha1);
 	}
 }
