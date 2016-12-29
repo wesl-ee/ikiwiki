@@ -1038,10 +1038,6 @@ sub rcs_preprevert ($) {
 		my $failure;
 		my @ret;
 		eval {
-			IkiWiki::disable_commit_hook();
-			push @undo, sub {
-				IkiWiki::enable_commit_hook();
-			};
 			my $branch = "ikiwiki_revert_${sha1}"; # supposed to be unique
 
 			push @undo, sub {
@@ -1099,7 +1095,7 @@ sub rcs_revert ($) {
 
 	ensure_committer();
 
-	if (run_or_non('git', 'merge', '--ff-only', "ikiwiki_revert_$sha1")) {
+	if (run_or_non('git', 'cherry-pick', '--no-commit', "ikiwiki_revert_$sha1")) {
 		return undef;
 	}
 	else {
