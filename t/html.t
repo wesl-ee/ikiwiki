@@ -6,6 +6,8 @@ use Test::More;
 my @pages;
 
 BEGIN {
+	plan(skip_all => 'running installed') if $ENV{INSTALLED_TESTS};
+
 	@pages=qw(index features news plugins/map security);
 	if (system("command -v validate >/dev/null") != 0) {
 		plan skip_all => "html validator not present";
