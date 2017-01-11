@@ -1,3 +1,52 @@
+ikiwiki (3.20120629.2+deb7u2) UNRELEASED; urgency=medium
+
+  * Security: force CGI::FormBuilder->field to scalar context where
+    necessary, avoiding unintended function argument injection
+    analogous to CVE-2014-1572.
+    - passwordauth: prevent authentication bypass via multiple name
+      parameters (CVE-2017-0356, OVE-20170111-0001)
+    - passwordauth: prevent userinfo forgery via repeated email
+      parameter (also CVE-2017-0356)
+    - comments, editpage: prevent commit metadata forgery
+      (CVE-2016-9646, OVE-20161226-0001)
+    - CGI, attachment, comments, editpage, notifyemail, passwordauth,
+      po, rename: harden against similar issues that are not believed
+      to be exploitable
+  * t/passwordauth.t: new automated test for CVE-2017-0356
+  * Backport IkiWiki::Plugin::git from 3.20170110 to fix the following
+    bugs, including one minor security vulnerability:
+    - Security: try revert operations before approving them. Previously,
+      automatic rename detection could result in a revert writing outside
+      the wiki srcdir or altering a file that the reverting user should not
+      be able to alter, an authorization bypass.
+      (CVE-2016-10026 represents the original vulnerability.)
+      The incomplete fix released in 3.20161219 was not effective for git
+      versions prior to 2.8.0rc0.
+      (CVE-2016-9645 represents that incomplete solution. Debian stable
+      was never vulnerable to this one.)
+    - Fix the warnings "cannot chdir to .../ikiwiki-temp-working: No such
+      file or directory" seen in the initial fixes for those security issues
+    - If no committer identity is known, set it to
+      "IkiWiki <ikiwiki.info>" in .git/config. This resolves commit errors
+      in versions of git that require a non-trivial committer identity.
+    - Use git log --no-renames to generate recentchanges, fixing the git
+      test-case with git 2.9 (Closes: #835612)
+    - Don't issue a warning if the rcsinfo CGI parameter is undefined
+    - Do not fail to commit changes with a recent git version
+      and an anonymous committer
+    - Do not fail on filenames starting with a dash
+      (patch from Florian Wagner)
+    - Don't add a redundant "--" and run "git rev-list ... -- -- ..."
+  * Backport t/git-cgi.t from 3.20170110 to have automated test coverage
+    for using the CGI with git, including tests for CVE-2016-10026
+     - Build-depend on libipc-run-perl for better build-time test coverage
+  * Backport tests' installed-test (autopkgtest) support from 3.20160121,
+    adjusted for compatibility with the older pkg-perl-autopkgtest in jessie
+    - d/control: add enough build-dependencies to run all tests, except for
+      non-git VCSs
+
+ -- Simon McVittie <smcv@debian.org>  Wed, 11 Jan 2017 15:22:38 +0000
+
 ikiwiki (3.20120629.2+deb7u1) wheezy-security; urgency=medium
 
   * HTML-escape error messages, in one case avoiding potential cross-site
