@@ -142,7 +142,12 @@ sub run_git {
 	my ($in, $out);
 	ok(run(['git', @$args], \$in, \$out, init => sub {
 		chdir 't/tmp/in' or die $!;
-		$ENV{EMAIL} = 'nobody@ikiwiki-tests.invalid';
+		my $name = 'The IkiWiki Tests';
+		my $email = 'nobody@ikiwiki-tests.invalid';
+		if ($args->[0] eq 'commit') {
+			$ENV{GIT_AUTHOR_NAME} = $ENV{GIT_COMMITTER_NAME} = $name;
+			$ENV{GIT_AUTHOR_EMAIL} = $ENV{GIT_COMMITTER_EMAIL} = $email;
+		}
 	}), "$desc at $filename:$line");
 	return $out;
 }
@@ -177,6 +182,10 @@ sub test {
 	$content = readfile('t/tmp/out/writable/one/index.html');
 	like($content, qr{This is the first test page});
 	my $orig_sha1 = run_git(['rev-list', '--max-count=1', 'HEAD']);
+
+	# We have to wait 1 second here so that new writes are guaranteed
+	# to have a strictly larger mtime.
+	sleep 1;
 
 	# Test the git hook, which accepts git commits
 	writefile('doc/writable/one.mdwn', 't/tmp/in',

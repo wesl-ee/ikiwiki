@@ -305,7 +305,7 @@ sub formbuilder_setup (@) {
 						noimageinline => 1));
 			}
 			else {
-				$form->text("<a href=\"".
+				$form->text("<a rel=\"nofollow\" href=\"".
 					IkiWiki::cgiurl(do => "edit", page => $userpage).
 					"\">".gettext("Create your user page")."</a>");
 			}
@@ -325,16 +325,20 @@ sub formbuilder (@) {
 
 	if ($form->title eq "signin" || $form->title eq "register") {
 		if (($form->submitted && $form->validate) || $do_register) {
+			my $user_name = $form->field('name');
+
 			if ($form->submitted eq 'Login') {
-				$session->param("name", $form->field("name"));
+				$session->param("name", $user_name);
 				IkiWiki::cgi_postsignin($cgi, $session);
 			}
 			elsif ($form->submitted eq 'Create Account') {
-				my $user_name=$form->field('name');
+				my $email = $form->field('email');
+				my $password = $form->field('password');
+
 				if (IkiWiki::userinfo_setall($user_name, {
-				    	'email' => $form->field('email'),
+					'email' => $email,
 					'regdate' => time})) {
-					setpassword($user_name, $form->field('password'));
+					setpassword($user_name, $password);
 					$form->field(name => "confirm_password", type => "hidden");
 					$form->field(name => "email", type => "hidden");
 					$form->text(gettext("Account creation successful. Now you can Login."));
@@ -344,7 +348,6 @@ sub formbuilder (@) {
 				}
 			}
 			elsif ($form->submitted eq 'Reset Password') {
-				my $user_name=$form->field("name");
 				my $email=IkiWiki::userinfo_get($user_name, "email");
 				if (! length $email) {
 					error(gettext("No email address, so cannot email password reset instructions."));
@@ -394,8 +397,9 @@ sub formbuilder (@) {
 	elsif ($form->title eq "preferences") {
 		if ($form->submitted eq "Save Preferences" && $form->validate) {
 			my $user_name=$form->field('name');
-			if (defined $form->field("password") && length $form->field("password")) {
-				setpassword($user_name, scalar $form->field('password'));
+			my $password=$form->field('password');
+			if (defined $password && length $password) {
+				setpassword($user_name, $password);
 			}
 		}
 	}
