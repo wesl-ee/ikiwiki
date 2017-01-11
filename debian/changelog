@@ -5,15 +5,15 @@ ikiwiki (3.20141016.4) UNRELEASED; urgency=high
     necessary, avoiding unintended function argument injection
     analogous to CVE-2014-1572.
     - passwordauth: prevent authentication bypass via multiple name
-      parameters (OVE-20170111-0001)
+      parameters (CVE-2017-0356, OVE-20170111-0001)
     - passwordauth: prevent userinfo forgery via repeated email
-      parameter (OVE-20170111-0001)
+      parameter (also CVE-2017-0356)
     - comments, editpage: prevent commit metadata forgery
       (CVE-2016-9646, OVE-20161226-0001)
     - CGI, attachment, comments, editpage, notifyemail, passwordauth,
       po, rename: harden against similar issues that are not believed
       to be exploitable
-  * t/passwordauth.t: new automated test for OVE-20170111-0001
+  * t/passwordauth.t: new automated test for CVE-2017-0356
   * Backport IkiWiki::Plugin::git from 3.20170110 to fix the following
     bugs, including one minor security vulnerability:
     - Security: try revert operations before approving them. Previously,
