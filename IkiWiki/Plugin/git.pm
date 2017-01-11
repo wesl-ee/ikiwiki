@@ -29,6 +29,8 @@ sub import {
 	hook(type => "rcs", id => "rcs_receive", call => \&rcs_receive);
 	hook(type => "rcs", id => "rcs_preprevert", call => \&rcs_preprevert);
 	hook(type => "rcs", id => "rcs_revert", call => \&rcs_revert);
+	hook(type => "rcs", id => "rcs_find_changes", call => \&rcs_find_changes);
+	hook(type => "rcs", id => "rcs_get_current_rev", call => \&rcs_get_current_rev);
 }
 
 sub checkconfig () {
@@ -341,8 +343,8 @@ sub parse_diff_tree ($) {
 	my $dt_ref = shift;
 
 	# End of stream?
-	return if !defined @{ $dt_ref } ||
-		  !defined @{ $dt_ref }[0] || !length @{ $dt_ref }[0];
+	return if ! @{ $dt_ref } ||
+		  !defined $dt_ref->[0] || !length $dt_ref->[0];
 
 	my %ci;
 	# Header line.
@@ -462,17 +464,63 @@ sub git_commit_info ($;$) {
 	return wantarray ? @ci : $ci[0];
 }
 
-sub git_sha1 (;$) {
-	# Return head sha1sum (of given file).
-	my $file = shift || q{--};
+sub rcs_find_changes ($) {
+	my $oldrev=shift;
 
+	# Note that git log will sometimes show files being added that
+	# don't exist. Particularly, git merge -s ours can result in a
+	# merge commit where some files were not really added.
+	# This is why the code below verifies that the files really
+	# exist.
+	my @raw_lines = run_or_die('git', 'log',
+		'--pretty=raw', '--raw', '--abbrev=40', '--always', '-c',
+		'--no-renames', , '--reverse',
+		'-r', "$oldrev..HEAD", '--', '.');
+
+	# Due to --reverse, we see changes in chronological order.
+	my %changed;
+	my %deleted;
+	my $nullsha = 0 x 40;
+	my $newrev=$oldrev;
+	while (my $ci = parse_diff_tree(\@raw_lines)) {
+		$newrev=$ci->{sha1};
+		foreach my $i (@{$ci->{details}}) {
+			my $file=$i->{file};
+			if ($i->{sha1_to} eq $nullsha) {
+				if (! -e "$config{srcdir}/$file") {
+					delete $changed{$file};
+					$deleted{$file}=1;
+				}
+			}
+			else {
+				if (-e "$config{srcdir}/$file") {
+					delete $deleted{$file};
+					$changed{$file}=1;
+				}
+			}
+		}
+	}
+
+	return (\%changed, \%deleted, $newrev);
+}
+
+sub git_sha1_file ($) {
+	my $file=shift;
+	git_sha1("--", $file);
+}
+
+sub git_sha1 (@) {
 	# Ignore error since a non-existing file might be given.
 	my ($sha1) = run_or_non('git', 'rev-list', '--max-count=1', 'HEAD',
-		'--', $file);
+		'--', @_);
 	if (defined $sha1) {
 		($sha1) = $sha1 =~ m/($sha1_pattern)/; # sha1 is untainted now
 	}
 	return defined $sha1 ? $sha1 : '';
+}
+
+sub rcs_get_current_rev () {
+	git_sha1();
 }
 
 sub rcs_update () {
@@ -488,7 +536,7 @@ sub rcs_prepedit ($) {
 	# This will be later used in rcs_commit if a merge is required.
 	my ($file) = @_;
 
-	return git_sha1($file);
+	return git_sha1_file($file);
 }
 
 sub rcs_commit (@) {
@@ -499,7 +547,7 @@ sub rcs_commit (@) {
 
 	# Check to see if the page has been changed by someone else since
 	# rcs_prepedit was called.
-	my $cur    = git_sha1($params{file});
+	my $cur    = git_sha1_file($params{file});
 	my ($prev) = $params{token} =~ /^($sha1_pattern)$/; # untaint
 
 	if (defined $cur && defined $prev && $cur ne $prev) {
@@ -550,7 +598,13 @@ sub rcs_commit_helper (@) {
 		# Force git to allow empty commit messages.
 		# (If this version of git supports it.)
 		my ($version)=`git --version` =~ /git version (.*)/;
-		if ($version ge "1.5.4") {
+		if ($version ge "1.7.8") {
+			push @opts, "--allow-empty-message", "--no-edit";
+		}
+		if ($version ge "1.7.2") {
+			push @opts, "--allow-empty-message";
+		}
+		elsif ($version ge "1.5.4") {
 			push @opts, '--cleanup=verbatim';
 		}
 		else {
@@ -564,7 +618,7 @@ sub rcs_commit_helper (@) {
 	# So we should ignore its exit status (hence run_or_non).
 	if (run_or_non('git', 'commit', '-m', $params{message}, '-q', @opts)) {
 		if (length $config{gitorigin_branch}) {
-			run_or_cry('git', 'push', $config{gitorigin_branch});
+			run_or_cry('git', 'push', $config{gitorigin_branch}, $config{gitmaster_branch});
 		}
 	}
 	
@@ -615,7 +669,9 @@ sub rcs_recentchanges ($) {
 		my @pages;
 		foreach my $detail (@{ $ci->{'details'} }) {
 			my $file = $detail->{'file'};
-			my $efile = uri_escape_utf8($file);
+			my $efile = join('/',
+				map { uri_escape_utf8($_) } split('/', $file)
+			);
 
 			my $diffurl = defined $config{'diffurl'} ? $config{'diffurl'} : "";
 			$diffurl =~ s/\[\[file\]\]/$efile/go;
