@@ -46,6 +46,10 @@ ikiwiki (3.20141016.4) UNRELEASED; urgency=high
     - img: ignore the case of the extension when detecting image format,
       fixing the regression that *.JPG etc. would not be displayed
       (patch from Amitai Schleier)
+  * Backport tests' installed-test (autopkgtest) support from 3.20160121,
+    adjusted for compatibility with the older pkg-perl-autopkgtest in jessie
+    - d/control: add enough build-dependencies to run all tests, except for
+      non-git VCSs
 
  -- Simon McVittie <smcv@debian.org>  Wed, 11 Jan 2017 15:22:38 +0000
 
