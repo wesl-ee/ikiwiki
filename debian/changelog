@@ -14,6 +14,33 @@ ikiwiki (3.20141016.4) UNRELEASED; urgency=high
       po, rename: harden against similar issues that are not believed
       to be exploitable
   * t/passwordauth.t: new automated test for OVE-20170111-0001
+  * Backport IkiWiki::Plugin::git from 3.20170110 to fix the following
+    bugs, including one minor security vulnerability:
+    - Security: try revert operations before approving them. Previously,
+      automatic rename detection could result in a revert writing outside
+      the wiki srcdir or altering a file that the reverting user should not
+      be able to alter, an authorization bypass.
+      (CVE-2016-10026 represents the original vulnerability.)
+      The incomplete fix released in 3.20161219 was not effective for git
+      versions prior to 2.8.0rc0.
+      (CVE-2016-9645 represents that incomplete solution. Debian stable
+      was never vulnerable to this one.)
+    - Fix the warnings "cannot chdir to .../ikiwiki-temp-working: No such
+      file or directory" seen in the initial fixes for those security issues
+    - If no committer identity is known, set it to
+      "IkiWiki <ikiwiki.info>" in .git/config. This resolves commit errors
+      in versions of git that require a non-trivial committer identity.
+    - Use git log --no-renames to generate recentchanges, fixing the git
+      test-case with git 2.9 (Closes: #835612)
+    - Don't issue a warning if the rcsinfo CGI parameter is undefined
+    - Do not fail to commit changes with a recent git version
+      and an anonymous committer
+    - Do not fail on filenames starting with a dash
+      (patch from Florian Wagner)
+    - Don't add a redundant "--" and run "git rev-list ... -- -- ..."
+  * Backport t/git-cgi.t from 3.20170110 to have automated test coverage
+    for using the CGI with git, including tests for CVE-2016-10026
+     - Build-depend on libipc-run-perl for better build-time test coverage
   * Backport IkiWiki::Plugin::img from 3.20160905 to fix a regression
     in 3.20141016.3:
     - img: ignore the case of the extension when detecting image format,
