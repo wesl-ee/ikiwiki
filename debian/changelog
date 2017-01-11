@@ -14,6 +14,11 @@ ikiwiki (3.20141016.4) UNRELEASED; urgency=high
       po, rename: harden against similar issues that are not believed
       to be exploitable
   * t/passwordauth.t: new automated test for OVE-20170111-0001
+  * Backport IkiWiki::Plugin::img from 3.20160905 to fix a regression
+    in 3.20141016.3:
+    - img: ignore the case of the extension when detecting image format,
+      fixing the regression that *.JPG etc. would not be displayed
+      (patch from Amitai Schleier)
 
  -- Simon McVittie <smcv@debian.org>  Wed, 11 Jan 2017 15:22:38 +0000
 
