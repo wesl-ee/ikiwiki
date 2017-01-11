@@ -47,6 +47,12 @@ ikiwiki (3.20120629.2+deb7u2) UNRELEASED; urgency=medium
   * Split CFLAGS into words when building wrapper, fixing build-time test
     failure. Closes: #682237 (patch from Joey Hess, backported from
     3.20120630)
+  * In the CGI wrapper, incorporate $config{ENV} into the environment
+    before executing Perl code, so that PERL5LIB can point to a
+    non-system-wide installation of IkiWiki. Some build-time tests rely
+    on this, in particular t/git-cgi.t.
+    (patch from Lafayette Chamber Singers Webmaster, backported from
+    3.20140916)
 
  -- Simon McVittie <smcv@debian.org>  Wed, 11 Jan 2017 15:22:38 +0000
 
