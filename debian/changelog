@@ -1,5 +1,6 @@
-ikiwiki (3.20120629.2+deb7u2) UNRELEASED; urgency=medium
+ikiwiki (3.20120629.2+deb7u2) wheezy-security; urgency=medium
 
+  [ Simon McVittie ]
   * Security: force CGI::FormBuilder->field to scalar context where
     necessary, avoiding unintended function argument injection
     analogous to CVE-2014-1572.
@@ -54,7 +55,10 @@ ikiwiki (3.20120629.2+deb7u2) UNRELEASED; urgency=medium
     (patch from Lafayette Chamber Singers Webmaster, backported from
     3.20140916)
 
- -- Simon McVittie <smcv@debian.org>  Wed, 11 Jan 2017 15:22:38 +0000
+  [ Emilio Pozuelo Monfort ]
+  * Upload to wheezy-security.
+
+ -- Emilio Pozuelo Monfort <pochu@debian.org>  Tue, 31 Jan 2017 19:00:50 +0100
 
 ikiwiki (3.20120629.2+deb7u1) wheezy-security; urgency=medium
 
