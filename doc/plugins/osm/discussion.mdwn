@@ -28,9 +28,9 @@ For usability it would be great if it was possible to display the active waypoin
 
 ## Updated plugin needs review and merge
 
-[[!template id=gitbranch branch=tincho-osm author="[[tincho]]"]]
+[[!template id=gitbranch branch=tincho-osm author="[[users/Tincho]]"]]
 
-[[schmonz]] here. I recently tried to use this plugin, had some trouble, and discovered on IRC that [[tincho]] has a largely [rewritten version](https://blog.tincho.org/posts/OSM_in_IkiWiki/) that looks good [on his site](https://blog.tincho.org/Mingle/), but hadn't gotten around to submitting for merge. So we remote-paired on it today, improved a few things, and wrote down what we noticed:
+[[schmonz]] here. I recently tried to use this plugin, had some trouble, and discovered on IRC that [[users/Tincho]] has a largely [rewritten version](https://blog.tincho.org/posts/OSM_in_IkiWiki/) that looks good [on his site](https://blog.tincho.org/Mingle/), but hadn't gotten around to submitting for merge. So we remote-paired on it today, improved a few things, and wrote down what we noticed:
 
 ### Features removed
 
@@ -64,7 +64,7 @@ For usability it would be great if it was possible to display the active waypoin
 - Given this is backward-incompatible, dhould we call it something other than "osm"?
 - What needs scrubbing? Have we covered all the bases? Too many bases?
 - Should we vendor Leaflet into an underlay, instead of needing a URL to load it from a CDN? [[schmonz]] somewhat prefers this, so we avoid needing external resources by default, avoid breaking when the Leaflet CDN is down, etc.
-- Should we write some tests before merging? `osm.pm` hadn't had any, FWIW -- [[Tincho]] Done
+- Should we write some tests before merging? `osm.pm` hadn't had any, FWIW -- [[users/Tincho]] Done
 
 Bump! Tincho would like to see us merge his effort, and FWIW I'd also
 rather not have to carry around a local copy of his work to get a map
@@ -83,4 +83,4 @@ Looks like good changes to me!
 
 --[[kjs]]
 
-> The issue about not getting all the waipoints until you rebuild has been solved, the current plugin had issues with keeping track of updated and deleted waypoints which is now fixed in my branch. --[[Tincho]]
+> The issue about not getting all the waipoints until you rebuild has been solved, the current plugin had issues with keeping track of updated and deleted waypoints which is now fixed in my branch. --[[users/Tincho]]
