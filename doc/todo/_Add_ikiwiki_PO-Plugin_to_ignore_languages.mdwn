@@ -4,4 +4,4 @@
 In order to be able to prepare more translations before publishing them, it is a good a idea to have disabled languages.
 Currently there are some small issues that need to cleanup before able to push this into ikiwiki upstream.
 
-See also downstream bug report in tails: https://labs.riseup.net/code/issues/15355
+See also downstream bug report in tails: <https://labs.riseup.net/code/issues/15355>
