@@ -84,3 +84,5 @@ Looks like good changes to me!
 --[[kjs]]
 
 > The issue about not getting all the waipoints until you rebuild has been solved, the current plugin had issues with keeping track of updated and deleted waypoints which is now fixed in my branch. --[[users/Tincho]]
+
+I've done some initial testing now and I'm wondering if behaviour has changed with regards to the waypoint link. With the old plugin I get a map marker and link to the main map from each waypoint. See <http://img.kalleswork.net/Peter_Celsing-Filmhuset/IMGP7104/> for example, the marker is below the image. My initial tests with your plugin doesn't create this link as far as I can tell. Have I misconfigured something or is it indeed missing? --[[users/kjs]]
