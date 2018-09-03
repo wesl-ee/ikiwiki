@@ -1,7 +1,7 @@
 [[!meta author="anarcat"]]
 [[!template id=plugin name=bootstrap author="[[anarcat]]"]]
 [[!tag type/chrome]]
-[[!template  id=gitbranch branch=anarcat/bootstrap author="[[anarcat]]"]]
+[[!template  id=gitbranch branch=anarcat/bootstrap-plugin author="[[anarcat]]"]]
 
 ## Rationale
 
