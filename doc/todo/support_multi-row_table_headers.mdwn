@@ -77,3 +77,22 @@ It would be great if it were possible to support multi-row table headers in the 
 > > addressed my immediate need so it's the one I'm deploying at $ork for the
 > > time being. I'm unlikely to have time to implement this solution in the
 > > near future. -- [[Jon]]
+
+----
+
+I'd quite like to revisit this if that's ok. I'm still carrying a fork of
+table.pm locally to add this feature as I find it so useful. The main objection
+you made back in 2014 seems to be overloading the header= parameter, and I agree
+that this is not ideal. So I'm happy to resubmit this with an alternative parameter
+name for the new purpose. But I balked at the idea of implementing something like 
+an NLP processor to define the header range. And I must stress how useful it is in
+practise to separate out the header definition from the data: quite often I don't
+want headers in my CSV files at all, for example, so I can perform rudimentary analysis
+on them with command line tools without having to factor in a header line (how many
+records?  = `wc -l`; sorting on fields simply with `sort -k` etc.). Having them
+separate means I can have machine-generated or manipulated CSV files of data and then
+use ikiwiki to mark them up for human reading, but change or regenerate the data quickly
+and easily underneath.
+
+I'd appreciate your take on the above suggestions [[smcv]] before I roll my sleeves up.
+Thanks! — [[Jon]] (2018-09-24)
