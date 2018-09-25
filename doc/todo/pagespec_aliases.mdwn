@@ -167,3 +167,11 @@ Unfortunately I haven't figured out how to do the dependencies - I'd really appr
 >>>>> Do you mean that you want them to work in any pagespec, or that you *don't* want them to work in any pagespec? -- [[KathrynAndersen]]
 
 >>>>>> I mean I would want them to work in any pagespec. — [[Jon]]
+
+----
+
+Hi, it's been 7 years since I last looked at this, and I'm surprised to find
+that I'd got it up to a merge-request state; I've dusted it off and done some
+clean up and testing, but it's working (albeit not via websetup). I've revamped
+the docs and rebased the branch. Can someone please consider merging ([[joeyh]]
+or [[smcv]]?) or otherwise feed back on this? Thanks! — [[Jon]] (2018-09-25)
