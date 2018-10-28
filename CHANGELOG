@@ -7,6 +7,10 @@ ikiwiki (3.20180312) UNRELEASED; urgency=medium
   [ Simon McVittie ]
   * Hide popup template content from documentation (Closes: #898836)
 
+  [ Joey Hess ]
+  * aggregate: Fix aggregation of posts without a title.
+    Thanks, Alexandre Oliva
+
  -- Simon McVittie <smcv@debian.org>  Wed, 16 May 2018 13:09:27 +0100
 
 ikiwiki (3.20180311) upstream; urgency=medium
