@@ -70,7 +70,7 @@ think about merging them. This is recommended. :-)
 * [[users/leg]] `git://at.magma-soft.at/ikiwiki.info`
 * [[thcipriani]] `https://github.com/thcipriani/ikiwiki.git` ([[browse|https://github.com/thcipriani/ikiwiki]])
 * [[tincho]] `git@github.com:TheTincho/ikiwiki.git` ([[browse|https://github.com/TheTincho/ikiwiki]])
-* hefee `https://salsa.debian.org/hefee/ikiwiki`
+* [[hefee]] `https://salsa.debian.org/hefee/ikiwiki.git/` ([[browse|https://salsa.debian.org/hefee/ikiwiki]])
 ## branches
 
 Current branches of ikiwiki are listed on [[branches]].
