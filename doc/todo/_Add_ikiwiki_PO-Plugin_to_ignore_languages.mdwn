@@ -1,7 +1,9 @@
-[[!tag patch]]
 [[!template  id=gitbranch branch=feature/15355-po-plugin-disable-languages author="[[hefee]]"]]
 
-In order to be able to prepare more translations before publishing them, it is a good a idea to have disabled languages.
-Currently there are some small issues that need to cleanup before able to push this into ikiwiki upstream.
+`po_disabled_languages` is used to disable languages on the website. It
+can be used to prepare new translations, while it will hide those from
+the end-user. More precisely, PO files for these languages are updated
+normally, however, HTML creation will be disabled and no reference to
+these translations will be visible on the website.
 
 See also downstream bug report in tails: <https://labs.riseup.net/code/issues/15355>
