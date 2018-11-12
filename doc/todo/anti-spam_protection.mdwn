@@ -55,3 +55,36 @@ That removed 2265 comments. I reviewed the remaining 643 by hand and deleted the
 Now, I don't want to point fingers, but there sure seems to be some problems with china there and i'm tempted to just block those entire networks. :/
 
 Anyways... Someone mentioned Spamassassin in the original request, and I just [read](https://lwn.net/SubscriberLink/769917/130e156925fc690e/) that some people *are* using spamassassin for website spam control. Has anyone gave that a try? --[[anarcat]]
+
+----
+
+Another note that might be of interest here... One of the things that script was doing was to generate a list of IPs to be inserted into `ikiwiki.setup`. Unfortunately, that doesn't seem to work:
+
+    $ ~anarcat/bin/ikiwiki-comment-moderate 
+    found 165 pending comments
+    IP distribution:
+          1  ip="110.86.179.146"
+    [...]
+         10  ip="175.44.35.10"
+         11  ip="175.44.35.236"
+    banlist would look like:
+    - ip(110.86.179.146)
+    # 112.111.162.159 already present
+    # 112.111.163.216 already present
+    [...]
+    # 36.250.185.52 already present
+    # 36.250.185.55 already present
+    # 36.250.186.113 already present
+    - ip(59.60.123.211)
+    to remove comments from a specific IP, use this, for example:
+    find . -name '*._comment_pending' | xargs grep -l 'ip="$ip"'| xargs rm
+    to flush all pending comments, use:
+    find . -name '*._comment_pending' -delete
+
+In other words, many of the comments in moderation are actually
+supposed to be blocked, as their IPs are in the `banned_users`
+list. Now I know my way around a UNIX system well enough to deal with
+this another way - I'm thinking of fail2ban or a simple Apache rewrite
+table (and it might easier and faster too) - but I wonder why those
+IPs can still post comments when they are listed in
+`banned_users`... -- [[anarcat]]
