@@ -1,0 +1,15 @@
+Table directive can not deal with Chinese, when format csv
+
+    \[[!table format=csv data="""
+    a,b,c
+    1,2,你好
+    """
+    ]]
+
+But the below example works well.
+
+    \[[!table format=csv data="""
+    a,b,c
+    1,2,3
+    """
+    ]]
