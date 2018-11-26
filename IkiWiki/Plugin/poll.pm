@@ -69,8 +69,8 @@ sub preprocess (@) {
 			$ret.="<input type=\"hidden\" name=\"num\" value=\"$num\" />\n";
 			$ret.="<input type=\"hidden\" name=\"page\" value=\"$params{page}\" />\n";
 			$ret.="<input type=\"hidden\" name=\"choice\" value=\"$choice\" />\n";
-			if (defined $params{postvote}) {
-				$ret.="<input type=\"hidden\" name=\"postvote\" value=\"".linkpage($params{postvote})."\" />\n";
+			if (defined $params{postlink}) {
+				$ret.="<input type=\"hidden\" name=\"postlink\" value=\"".linkpage($params{postlink})."\" />\n";
 			}
 			if (defined $params{posttrail}) {
 				$ret.="<input type=\"hidden\" name=\"posttrail\" value=\"".linkpage($params{posttrail})."\" />\n";
@@ -119,8 +119,8 @@ sub sessioncgi ($$) {
 		}
 
 		my $postvote=urlto($page);
-		if (defined $cgi->param('postvote') && length $cgi->param('postvote')) {
-			$postvote=urlto(bestlink($page, $cgi->param('postvote')));
+		if (defined $cgi->param('postlink') && length $cgi->param('postlink')) {
+			$postvote=urlto(bestlink($page, $cgi->param('postlink')));
 		}
 		elsif (defined $cgi->param('posttrail') && length $cgi->param('posttrail')) {
 			my $trailname=bestlink($page, $cgi->param('posttrail'));
