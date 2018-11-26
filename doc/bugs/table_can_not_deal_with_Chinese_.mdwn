@@ -17,7 +17,7 @@ But the below example works well.
 
 The below example works well too
 
-    [[!table format=dsv delimiter=, data="""
+    \[[!table format=dsv delimiter=, data="""
     a,b,c
     1,2,你好
     """
