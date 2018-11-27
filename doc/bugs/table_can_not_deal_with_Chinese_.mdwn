@@ -22,3 +22,11 @@ The below example works well too
     1,2,你好
     """
     ]]
+
+----
+
+> You don't say what actually happens when you try this, but I hit something similar trying unicode symbols in a CSV-based table. (I wasn't aware of the DSV work-around. Thanks!) The specific error  I get trying is
+
+    [\[!table Error: Cannot decode string with wide characters at /usr/lib/x86_64-linux-gnu/perl/5.24/Encode.pm line 243.]]
+
+> That file is owned by the `libperl5` package, but I think I've seen an error mentioning `Text::CSV` i.e. `libtext-csv-perl` when I've encountered this before. -- [[Jon]]
