@@ -30,3 +30,5 @@ The below example works well too
     [\[!table Error: Cannot decode string with wide characters at /usr/lib/x86_64-linux-gnu/perl/5.24/Encode.pm line 243.]]
 
 > That file is owned by the `libperl5` package, but I think I've seen an error mentioning `Text::CSV` i.e. `libtext-csv-perl` when I've encountered this before. -- [[Jon]]
+
+>> A related problem, also fixed by using DSV, is messing up the encoding of non-ASCII, non-wide characters, e.g. £ (workaround was to use &amp;pound; instead) -- [[Jon]]
