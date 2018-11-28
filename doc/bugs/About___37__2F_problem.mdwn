@@ -1,0 +1,16 @@
+I use inline to create a blog like the below:
+
+    \[[!inline pages="./bugs/* and !./bugs/done and !./bugs/discussion and 
+    !link(patch) and !link(./bugs/done) and !./bugs/*/*"
+    actions=yes rootpage="./bugs" postform="yes" postformtext="请用一句话简述问题，然后点击 Edit 按钮添加具体细节" show=0]]
+
+
+When I use posform to add a new page, it show:
+
+> Error: bad page name 
+
+Its url include a %2F, like below:
+
+> http://172.16.0.109/ikiwiki.cgi?do=blog&from=.%2Fbugs&subpage=1&title=aaa
+
+I use ikiwiki 3.20180311
