@@ -14,3 +14,10 @@ Its url include a %2F, like below:
 > http://172.16.0.109/ikiwiki.cgi?do=blog&from=.%2Fbugs&subpage=1&title=aaa
 
 I use ikiwiki 3.20180311
+
+----
+
+I have found that it is not "%2F"'s problem, it just that inline directive can
+not deal with Chinese char, the below link can work
+
+    http://172.16.0.109/ikiwiki.cgi?do=blog&from=aaa%2Fbugs&subpage=1&title=aaa
