@@ -108,14 +108,12 @@ Looking back at the history of the `po` plugin, it seems that the
 `alreadyfiltered` mechanism was introduced (under a different name,
 with less abstraction) by [[intrigeri]] in commit 1e874b3f:
 
-```
-po plugin[filter]: avoid converting more than once per destfile
+    po plugin[filter]: avoid converting more than once per destfile
 
-Only the first filter function call on a given {page,destpage} must convert it
-from the PO file, subsequent calls must leave the passed $content unmodified.
+    Only the first filter function call on a given {page,destpage} must convert it
+    from the PO file, subsequent calls must leave the passed $content unmodified.
 
-Else, preprocessing loops are the rule.
-```
+    Else, preprocessing loops are the rule.
 
 I don't understand this. Under what circumstances would we pass content
 through the filter hooks, and then pass it back through the same filter
