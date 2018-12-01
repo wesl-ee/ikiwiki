@@ -71,6 +71,31 @@ rather not have to carry around a local copy of his work to get a map
 with waypoints on my HTTPS site. [[smcv]], can you spare some round
 tuits to give us your thoughts? --[[schmonz]]
 
+> I've never used the osm plugin, so I don't know how well it works at the moment.
+> I think the lack of test coverage has been a significant factor in it not actually
+> working. Even if we don't have test-driven development, the next best thing is
+> bug-driven testing: every time something regresses, we should have a test that
+> asserts it doesn't fail like that again.
+>
+> If the current osm plugin is at all usable, then we'd need to look at the specific
+> ways in which the new one is incompatible, but if the current osm plugin doesn't
+> actually work anyway, then the new one can't break working sites...
+>
+> Determining whether there's HTML injection is certainly an important thing to
+> review. We need to be able to say what's trusted, what's attacker-controlled, and
+> what was originally attacker-controlled but has been sanitized or escaped and
+> hence has reached a trusted state.
+>
+> As an upstream developer, I would say that my preferred approach to Leaflet would
+> be to vendor it and use the vendored copy by default, but have a configuration
+> parameter to load it from a CDN instead. In the Debian package, to avoid the
+> situation we've got into with jQuery where we have a vendored copy that we
+> don't dare to update to a new version because we don't know what it will break,
+> I think there should be a dependency on libjs-leaflet and a dpkg trigger to
+> copy its files into our underlay (ideally we'd symlink it, but ikiwiki doesn't
+> follow symlinks, and I don't think an approach to symlinks in underlays that
+> isn't a security flaw is going to happen any time soon). --[[smcv]]
+
 ----
 
 Just stumbled onto this. 
