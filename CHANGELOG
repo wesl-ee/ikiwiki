@@ -1,3 +1,18 @@
+ikiwiki (3.20190208) UNRELEASED; urgency=medium
+
+  * po: Always filter .po files.
+    The po plugin in previous ikiwiki releases made the second and
+    subsequent filter call per (page, destpage) pair into a no-op,
+    apparently in an attempt to prevent *recursive* filtering (which as
+    far as we can tell can't happen anyway), with the undesired effect
+    of interpreting the raw .po file as page content (e.g. Markdown)
+    if it was inlined into the same page twice, which is apparently
+    something that tails.org does. Simplify this by deleting the code
+    that prevented repeated filtering. Thanks, intrigeri
+    (Closes: #911356)
+
+ -- Simon McVittie <smcv@debian.org>  Sun, 24 Feb 2019 17:11:39 +0000
+
 ikiwiki (3.20190207) upstream; urgency=medium
 
   [ Amitai Schleier ]
