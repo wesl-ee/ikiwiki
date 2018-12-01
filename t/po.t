@@ -3,6 +3,7 @@
 use warnings;
 use strict;
 use File::Temp qw{tempdir};
+use utf8;
 
 BEGIN {
 	unless (eval { require Locale::Po4a::Chooser }) {
@@ -17,7 +18,7 @@ BEGIN {
 	}
 }
 
-use Test::More tests => 114;
+use Test::More;
 
 BEGIN { use_ok("IkiWiki"); }
 
@@ -44,7 +45,7 @@ $config{po_slave_languages} = {
 			       es => 'Castellano',
 			       fr => "Français"
 			      };
-$config{po_translatable_pages}='index or test1 or test2 or translatable';
+$config{po_translatable_pages}='index or test1 or test2 or translatable or debian*';
 $config{po_link_to}='negotiated';
 IkiWiki::loadplugins();
 ok(IkiWiki::loadplugin('meta'), "meta plugin loaded");
@@ -67,8 +68,15 @@ $pagesources{'translatable'}='translatable.mdwn';
 $pagesources{'translatable.fr'}='translatable.fr.po';
 $pagesources{'translatable.es'}='translatable.es.po';
 $pagesources{'nontranslatable'}='nontranslatable.mdwn';
+$pagesources{'debian911356'}='debian911356.mdwn';
+$pagesources{'debian911356.fr'}='debian911356.fr.po';
+$pagesources{'debian911356-inlined'}='debian911356-inlined.mdwn';
+$pagesources{'debian911356-inlined.fr'}='debian911356-inlined.fr.po';
+my $now=time;
 foreach my $page (keys %pagesources) {
 	$IkiWiki::pagecase{lc $page}=$page;
+	$IkiWiki::pagectime{$page}=$now;
+	$IkiWiki::pagemtime{$page}=$now;
 }
 
 ### populate srcdir
@@ -80,6 +88,42 @@ writefile('test2.mdwn', $config{srcdir}, 'test2 content');
 writefile('test3.mdwn', $config{srcdir}, 'test3 content');
 writefile('translatable.mdwn', $config{srcdir}, '[[nontranslatable]]');
 writefile('nontranslatable.mdwn', $config{srcdir}, '[[/]] [[translatable]]');
+writefile('debian911356.mdwn', $config{srcdir}, <<EOF);
+Before first inline
+
+[[!inline pages="debian911356-inlined" raw="yes"]]
+
+Between inlines
+
+[[!inline pages="debian911356-inlined" raw="yes"]]
+
+After inlines
+EOF
+writefile('debian911356-inlined.mdwn', $config{srcdir}, <<EOF);
+English content
+EOF
+writefile('debian911356.fr.po', $config{srcdir}, <<EOF);
+msgid "" msgstr ""
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+
+msgid "Before first inline"
+msgstr "Avant la première inline"
+
+msgid "[[!inline pages=\\"debian911356-inlined\\" raw=\\"yes\\"]]\\n"
+msgstr "[[!inline pages=\\"debian911356-inlined.fr\\" raw=\\"yes\\"]]\\n"
+
+msgid "Between inlines"
+msgstr "Entre les inlines"
+
+msgid "After inlines"
+msgstr "Après les inlines"
+EOF
+writefile('debian911356-inlined.fr.po', $config{srcdir}, <<EOF);
+msgid "English content"
+msgstr "Contenu français"
+EOF
 
 ### istranslatable/istranslation
 # we run these tests twice because memoization attempts made them
@@ -248,3 +292,68 @@ ok(IkiWiki::Plugin::po::islanguagecode('es'));
 ok(IkiWiki::Plugin::po::islanguagecode('arn'));
 ok(! IkiWiki::Plugin::po::islanguagecode('es_'));
 ok(! IkiWiki::Plugin::po::islanguagecode('_en'));
+
+# Actually render translated pages
+use IkiWiki::Render;
+
+my %output;
+foreach my $page (keys %pagesources) {
+	my $source = "$config{srcdir}/$pagesources{$page}";
+	if (-e $source) {
+		IkiWiki::scan($pagesources{$page});
+		my $content = readfile($source);
+		print STDERR "-------------------------------------\n";
+		#print STDERR "SOURCE: $page: $content\n";
+		$content = IkiWiki::filter($page, $page, $content);
+		#print STDERR "FILTERED: $page: $content\n";
+		$content = IkiWiki::preprocess($page, $page, $content);
+		#print STDERR "PREPROCESSED: $page: $content\n";
+		$content = IkiWiki::linkify($page, $page, $content);
+		#print STDERR "LINKIFIED: $page: $content\n";
+		$content = IkiWiki::htmlize($page, $page, IkiWiki::pagetype($pagesources{$page}), $content);
+		print STDERR "HTMLIZED: $page: $content\n";
+		$output{$page} = $content;
+		ok(utf8::is_utf8($content), "htmlized content should be utf8");
+	}
+}
+
+like($output{debian911356}, qr{
+	<p>Before\sfirst\sinline</p>
+	\s*
+	<p>English\scontent</p>
+	\s*
+	<p>Between\sinlines</p>
+	\s*
+	<p>English\scontent</p>
+	\s*
+	<p>After\sinlines</p>
+}sx);
+
+like($output{'debian911356.fr'}, qr{
+	<p>Avant\sla\spremière\sinline</p>
+	\s*
+	<p>Contenu\sfrançais</p>
+	\s*
+	<p>Entre\sles\sinlines</p>
+	\s*
+	.*	# TODO: This paragraph gets mangled (Debian #911356)
+	\s*
+	<p>Après\sles\sinlines</p>
+}sx);
+
+TODO: {
+local $TODO = "Debian bug #911356";
+like($output{'debian911356.fr'}, qr{
+	<p>Avant\sla\spremière\sinline</p>
+	\s*
+	<p>Contenu\sfrançais</p>
+	\s*
+	<p>Entre\sles\sinlines</p>
+	\s*
+	<p>Contenu\sfrançais</p>
+	\s*
+	<p>Après\sles\sinlines</p>
+}sx);
+};
+
+done_testing;

@@ -95,5 +95,13 @@
 
 > I've filed this in Debian GNU/Linux at https://bugs.debian.org/911356 — [[lamby]], Thu, 18 Oct 2018 20:18:58 -0400
 
-
-
+>> As I said on the Debian bug, I think we badly need test coverage for
+>> this sort of thing, otherwise it *will* regress. The po plugin is
+>> relatively complicated and hooks into lots of places in ikiwiki,
+>> and I don't think any of the active ikiwiki maintainers use it
+>> themselves, which means it can easily break (or have pre-existing
+>> bugs) without anyone realising.
+>>
+>> For now I've added a failing test-case for this particular bug.
+>> I'll try to review this soon and understand the po plugin, the patch,
+>> why the bug exists and why the patch fixes it. --[[smcv]]
