@@ -170,3 +170,10 @@ commit was actually relevant to `po` users?
 Naming is the easy part of this review: the `alreadyfiltered` family of
 functions are not named like cache getter/setter functions. This could
 be resolved by renaming.
+
+---
+
+[[!template id=gitbranch branch=smcv/wip/po-filter-every-time browse="https://git.pseudorandom.co.uk/smcv/ikiwiki.git/log/refs/heads/wip/po-filter-every-time" author="[[Simon_McVittie|smcv]]"]]
+
+If it's valid to remove the `alreadyfiltered` mechanism, my
+`wip/po-filter-every-time` branch does that. Please test?
