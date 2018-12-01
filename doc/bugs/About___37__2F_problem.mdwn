@@ -21,3 +21,14 @@ I have found that it is not "%2F"'s problem, it just that inline directive can
 not deal with Chinese char, the below link can work
 
     http://172.16.0.109/ikiwiki.cgi?do=blog&from=aaa%2Fbugs&subpage=1&title=aaa
+
+---
+
+> I don't think this is actually caused by the Chinese text. The problem is that
+> you used `rootpage="./bugs"`, which leads to the `blog` request handler
+> generating an invalid page name. If you change it to `rootpage="bugs"` does
+> that fix the error?
+>
+> Ideally either the `inline` directive or the `blog` request handler would
+> understand and remove `./`, if it's something that makes sense in this context.
+> --[[smcv]]
