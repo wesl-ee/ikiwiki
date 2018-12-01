@@ -5,13 +5,13 @@ copyright headers!) being inserted into the page instead.
 
 For example, given a "index.mdwn" containing:
 
-    [[!inline pages="inline" raw="yes"]]
-    [[!inline pages="inline" raw="yes"]]
+    \[[!inline pages="inline" raw="yes"]]
+    \[[!inline pages="inline" raw="yes"]]
 
 … and an "index.de.po" of:
 
-    msgid "[[!inline pages=\"inline\" raw=\"yes\"]]\n"
-    msgstr "[[!inline pages=\"inline.de\" raw=\"yes\"]]\n"
+    msgid "\[[!inline pages=\"inline\" raw=\"yes\"]]\n"
+    msgstr "\[[!inline pages=\"inline.de\" raw=\"yes\"]]\n"
 
 … together with an "inline.mdwn" of:
 
