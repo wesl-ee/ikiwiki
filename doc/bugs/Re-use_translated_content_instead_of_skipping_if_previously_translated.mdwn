@@ -37,7 +37,7 @@ This would result in the following translation:
     This is the inlined content.
     This is the inlined content.
 
-[[Initially proposed patch from Chris Lamb|20180628-patch.txt]]
+[[Initially proposed patch from Chris Lamb|bugs/Re-use_translated_content_instead_of_skipping_if_previously_translated/20180628-patch.txt]]
 
 [[!tag patch]]
 
