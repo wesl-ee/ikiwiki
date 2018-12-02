@@ -32,3 +32,38 @@ not deal with Chinese char, the below link can work
 > Ideally either the `inline` directive or the `blog` request handler would
 > understand and remove `./`, if it's something that makes sense in this context.
 > --[[smcv]]
+
+---
+
+> I have found the problem, it is inline plugin can not decode_utf8 "from", the below is patch:
+
+    From f79dde20b275707f70df2d481919a079abec6c19 Mon Sep 17 00:00:00 2001
+    From: Feng Shu <tumashu@163.com>
+    Date: Sun, 2 Dec 2018 08:38:34 +0800
+    Subject: [PATCH 1/2] Fix inline plugin can no set rootpage to a UTF-8 page
+    
+    ---
+     IkiWiki/Plugin/inline.pm | 2 +-
+     1 file changed, 1 insertion(+), 1 deletion(-)
+    
+    diff --git a/IkiWiki/Plugin/inline.pm b/IkiWiki/Plugin/inline.pm
+    index a85cd5d2f..f40956821 100644
+    --- a/IkiWiki/Plugin/inline.pm
+    +++ b/IkiWiki/Plugin/inline.pm
+    @@ -125,7 +125,7 @@ sub sessioncgi ($$) {
+     			error(gettext("please enter a page title"));
+     		}
+     		# if the page already exists, munge it to be unique
+    -		my $from=$q->param('from');
+    +		my $from=decode_utf8($q->param('from'));
+     		my $add="";
+     		while (exists $IkiWiki::pagecase{lc($from."/".$page.$add)}) {
+     			$add=1 unless length $add;
+    -- 
+    2.19.0
+    
+
+2.19.0
+
+
+
