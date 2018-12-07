@@ -10,3 +10,5 @@ Instead of oddmuse style longtable, we can use YAML as table format:
     -
       a: 3
       b: 4
+
+> I think this is a great idea. It could be handled in the existing [[plugins/table]] plugin, with a new format= parameter. YAML sounds more attractive to me than oddmuse. -- [[Jon]]
