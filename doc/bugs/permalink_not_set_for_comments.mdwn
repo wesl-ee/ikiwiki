@@ -1,0 +1,16 @@
+Changes to comments result in notifyemail sending emails with broken urls like 
+"http://whatever/foo/comment_1_10a49d69282155c5c3e66dc58f64f956/"
+
+notifyemail uses meta permalink if set, so it must not be set for comment
+pages.
+
+In the comments plugin, there's this code, which is supposed to set
+permalink:
+
+        if ($params{page} =~ m/\/\Q$config{comments_pagename}\E\d+_/) {
+                $pagestate{$page}{meta}{permalink} = urlto(IkiWiki::dirname($params{page})).
+                        "#".page_to_id($params{page});
+        }
+
+`comments_pagename` is `comment_` so the above code needs a comment page to contain
+two underscores. I think that is the root of the bug. --[[Joey]]
