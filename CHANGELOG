@@ -11,6 +11,7 @@ ikiwiki (3.20180312) UNRELEASED; urgency=medium
   * aggregate: Fix aggregation of posts without a title.
     Thanks, Alexandre Oliva
   * poll: Added postlink and posttrail options for better multi-page polls.
+  * Fix permalink to comments.
 
  -- Simon McVittie <smcv@debian.org>  Wed, 16 May 2018 13:09:27 +0100
 
