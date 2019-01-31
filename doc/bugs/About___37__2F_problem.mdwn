@@ -80,9 +80,11 @@ not deal with Chinese char, the below link can work
 > are handled, without affecting what would happen to a `rootpage` that starts
 > with `./`; so I'm confused about what the bug was, and what you are fixing?
 >
-> I've added tests to `t/git-cgi.t` which demonstrate a blog form for a `rootpage`
-> named `writable/blog` working correctly (which passes), and a `rootpage` named
-> `writable/¬blog` not working correctly (which fails, and is marked as *TODO*).
+> I've added tests to `t/git-cgi.t` which demonstrate
+> [a blog form for a `rootpage` named `writable/blog` working correctly](http://source.ikiwiki.branchable.com/?p=source.git;a=commitdiff;h=9c0694b14c0c8ed0dee4ff4ed57f689919707cd7;hp=a10d86bbaebee2d6a30b66b4366d3f0247264678)
+> (which passes), and
+> [a `rootpage` named `writable/¬blog` not working correctly](http://source.ikiwiki.branchable.com/?p=source.git;a=commitdiff;h=2bd72cd0e01b8bb433b368e11ff9db779a21ccef;hp=9c0694b14c0c8ed0dee4ff4ed57f689919707cd7)
+> (which fails, and is marked as *TODO*).
 > The patch above doesn't seem to make the second new test pass.
 >
 > You can run all the tests with:
