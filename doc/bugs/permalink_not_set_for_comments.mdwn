@@ -23,3 +23,18 @@ two underscores. I think that is the root of the bug. --[[Joey]]
 > preprocessed again, not immediately. That's ok for notifyemail,
 > but other uses of permalink might need a wiki rebuild to get the bug fix.
 > --[[Joey]]
+>
+>> I'm not sure that I see how the regexp was wrong? It's looking for,
+>> for example,
+>>
+>>     foo/comment_1_eaab671848ee6129f6fe9399474eeac0._comment
+>>        sccccccccdu
+>>
+>> where
+>>
+>> * *s* marks the literal `/`
+>> * *cccc* marks `comments_pagename`
+>> * *d* marks `\d+` (one or more digits)
+>> * *u* marks the literal `_`
+>>
+>> --[[smcv]]
