@@ -62,6 +62,39 @@ not deal with Chinese char, the below link can work
     -- 
     2.19.0
     
+---
 
-
-
+> Please could you try to make a minimal example or test, perhaps in the [[sandbox]]
+> on this wiki or as a unit test in `t/git-cgi.t` in the ikiwiki source code, that
+> demonstrates this bug and would be fixed by your patch? I tried to write a test
+> for this, and I was able to make a test that uses a UTF-8 `rootpage` and fails;
+> but your patch doesn't seem to fix it, so you must be seeing something different.
+> I think there might be more than one bug here.
+>
+> If you've found multiple bugs, a separate example or test for each one would be
+> easiest to deal with.
+>
+> In your original report, you said the `rootpage` was ASCII and started with `./`:
+> `./bugs`. Then you mentioned Chinese characters (any non-ASCII character like é or ¬
+> should behave the same as Chinese here) and attached a patch that alters how those
+> are handled, without affecting what would happen to a `rootpage` that starts
+> with `./`; so I'm confused about what the bug was, and what you are fixing?
+>
+> I've added tests to `t/git-cgi.t` which demonstrate a blog form for a `rootpage`
+> named `writable/blog` working correctly (which passes), and a `rootpage` named
+> `writable/¬blog` not working correctly (which fails, and is marked as *TODO*).
+> The patch above doesn't seem to make the second new test pass.
+>
+> You can run all the tests with:
+>
+>     ./Makefile.PL
+>     make
+>     make test
+>
+> or a single test with something like:
+>
+>     ./Makefile.PL
+>     make
+>     PERL5LIB=. ./t/git-cgi.t
+>
+> --[[smcv]]
