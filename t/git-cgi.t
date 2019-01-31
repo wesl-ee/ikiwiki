@@ -35,7 +35,7 @@ my $installed = $ENV{INSTALLED_TESTS};
 
 my @command;
 if ($installed) {
-	@command = qw(ikiwiki);
+	@command = qw(ikiwiki --plugin inline);
 }
 else {
 	ok(! system("make -s ikiwiki.out"));
@@ -165,6 +165,8 @@ sub test {
 	write_old_file('doc/writable/two.mdwn', 't/tmp/in', 'This is the second test page');
 	write_old_file('doc/writable/three.mdwn', 't/tmp/in', 'This is the third test page');
 	write_old_file('doc/writable/three.bin', 't/tmp/in', 'An attachment');
+	write_old_file('doc/writable/blog.mdwn', 't/tmp/in',
+		'[[!inline pages="writable/blog/*" actions=yes rootpage=writable/blog postform=yes show=0]]');
 
 	unless ($installed) {
 		ok(! system(qw(cp -pRL doc/wikiicons t/tmp/in/doc/)));
@@ -315,6 +317,18 @@ sub test {
 	like($content, qr{This is the third test page});
 	$content = readfile('t/tmp/out/writable/three.bin');
 	like($content, qr{An attachment});
+
+	$content = readfile('t/tmp/out/writable/blog/index.html');
+	like($content, qr{<input type="hidden" name="from" value="writable/blog"});
+	$content = run_cgi(method => 'get',
+		params => {
+			do => 'blog',
+			from => 'writable/blog',
+			subpage => '1',
+			title => 'hello',
+		},
+	);
+	like($content, qr{<option selected="selected" value="writable/blog/hello">writable/blog/hello</option>});
 }
 
 test();
