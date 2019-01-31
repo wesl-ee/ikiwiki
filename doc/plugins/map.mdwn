@@ -15,5 +15,5 @@ Example:
 
 It's also possible to search for specific tags or links:
 
-    [[!map pages="todo/* and !todo/done and !link(todo/done)]]
+    \[[!map pages="todo/* and !todo/done and !link(todo/done)"]]
 """]]
