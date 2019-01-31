@@ -112,6 +112,7 @@ sub run_cgi {
 
 	my $cgi = CGI->new($args{params});
 	my $query_string = $cgi->query_string();
+	diag $query_string;
 
 	if ($method eq 'POST') {
 		$defaults{REQUEST_METHOD} = 'POST';
