@@ -80,7 +80,9 @@ The below patch seem to deal with this problem:
      			debug(sprintf(gettext('parse fail at line %d: %s'), 
     -- 
     2.19.0
-    
+
+> Thanks, I've applied that patch and added test coverage. [[done]] --[[smcv]]
+
 ----
 
 I can confirm that the above patch fixes the issue for me. Thanks! I'm not an ikiwiki committer, but I would encourage them to consider the above. Whilst I'm at it, I would be *really* grateful for some input on [[todo/support_multi-row_table_headers]] which relates to the same plugin. [[Jon]]
