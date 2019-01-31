@@ -3,9 +3,17 @@ ikiwiki (3.20180312) UNRELEASED; urgency=medium
   [ Amitai Schleier ]
   * emailauth: When email can't be sent, show the error message
   * osm: Don't raise errors if tags don't have attached icons
+  * cgi: Avoid C compiler warnings for waitpid() on NetBSD
 
   [ Simon McVittie ]
   * Hide popup template content from documentation (Closes: #898836)
+  * meta: Make [[!meta date]] show an error if dates are invalid or
+    Date::Parse can't be loaded
+  * inline: Add basic test coverage for [[!inline rootpage]]
+  * table: Cope with non-ASCII content in CSV format tables.
+    Thanks, Feng Shu
+  * table: Add basic test coverage
+  * po: Add enough test coverage to reproduce Debian #911356
 
   [ Joey Hess ]
   * aggregate: Fix aggregation of posts without a title.
