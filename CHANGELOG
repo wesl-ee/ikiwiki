@@ -15,6 +15,8 @@ ikiwiki (3.20180312) UNRELEASED; urgency=medium
   * table: Cope with non-ASCII content in CSV format tables.
     Thanks, Feng Shu
   * trail: Allow unescaped punctuation in `pagenames` parameter
+  * comments: Hide "add comment" link from print stylesheet.
+    Thanks, Antoine Beaupré
   * debian: Allow Breezy as an alternative to bzr
     Thanks, Jelmer Vernooĳ
   * inline: Add basic test coverage for [[!inline rootpage]]

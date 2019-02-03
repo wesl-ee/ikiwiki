@@ -45,4 +45,6 @@ Thanks! -- [[anarcat]]
 [remove]: https://gitlab.com/anarcat/ikiwiki-bootstrap-anarcat/commit/94521766f4206882c44764253452ec666d90d5c1
 [this patch]: https://gitlab.com/anarcat/ikiwiki/commit/33630b561623b8dca946916b733807e9b8c97849.patch
 
+> [[Applied|done]] --[[smcv]]
+
 [[!tag patch]]
