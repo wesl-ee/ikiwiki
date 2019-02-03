@@ -39,7 +39,7 @@ $comment = <<EOF;
   date="1969-02-12T07:00:00Z"
   content="I explored"]]
 EOF
-writefile("post/comment_2._comment", "t/tmp/in", $comment);
+writefile("post/comment_2_10a49d69282155c5c3e66dc58f64f956._comment", "t/tmp/in", $comment);
 
 $comment = <<EOF;
 [[!comment username="william"
@@ -50,7 +50,7 @@ writefile("post/comment_1._comment", "t/tmp/in", $comment);
 
 # Give the files mtimes in the wrong order
 ok(utime(111111111, 111111111, "t/tmp/in/post/comment_3._comment"));
-ok(utime(222222222, 222222222, "t/tmp/in/post/comment_2._comment"));
+ok(utime(222222222, 222222222, "t/tmp/in/post/comment_2_10a49d69282155c5c3e66dc58f64f956._comment"));
 ok(utime(333333333, 333333333, "t/tmp/in/post/comment_1._comment"));
 
 # Build the wiki
