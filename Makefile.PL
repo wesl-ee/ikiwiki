@@ -89,9 +89,11 @@ extra_clean: perl_shebangs_clean
 	rm -f *.man $(outprogs) ikiwiki.setup plugins/*.pyc
 	$(MAKE) -C po clean
 
-# Joey uses this before committing.
-myclean: clean
+reset-generated:
 	git checkout po ikiwiki.spec
+
+# Joey uses this before committing.
+myclean: clean reset-generated
 
 underlay_install:
 	install -d $(DESTDIR)$(PREFIX)/share/ikiwiki
