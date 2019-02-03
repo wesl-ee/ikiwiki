@@ -68,6 +68,18 @@ sub slurp {
 
 my $content = slurp("t/tmp/out/post/index.html");
 ok(defined $content);
-ok($content =~ m/I conquered.*I explored.*I landed/s);
+like($content, qr/I conquered.*I explored.*I landed/s);
+
+$content = slurp("t/tmp/out/post/index.atom");
+ok(defined $content);
+like($content, qr{
+	<link\s*href="http://example\.com/post/[#]comment-[[:xdigit:]]+"
+	.*
+	<link\s*href="http://example\.com/post/[#]comment-[[:xdigit:]]+"
+	.*
+	<link\s*href="http://example\.com/post/[#]comment-[[:xdigit:]]+"
+}sx, 'Each comment gets an appropriate permalink in <link>');
+unlike($content, qr{<link\s*href=.*/post/comment_[123]/});
+unlike($content, qr{<link\s*href=.*/post/comment_[123]_[[:xdigit:]]+/});
 
 done_testing();
