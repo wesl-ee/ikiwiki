@@ -15,6 +15,8 @@ is(pagetitle("foo_bar__1234__baz"), "foo bar&#1234;baz", 'Unicode in BMP');
 is(pagetitle("foo_bar__8800__baz"), "foo bar&#8800;baz", 'Unicode in BMP');
 is(pagetitle("foo_bar___33___baz"), "foo bar &#33; baz", 'Exclamation mark');
 is(pagetitle("foo_bar___95___baz"), "foo bar &#95; baz", 'Underscore');
+is(pagetitle("中文"), "中文", 'Chinese');
+is(pagetitle("Кириллица"), "Кириллица", 'Cyrillic');
 # Outside basic multilingual plane: &#128169 is U+1F4A9 PILE OF POO
 is(pagetitle("foo_bar__128169__baz"), "foo bar&#128169;baz", 'Unicode outside BMP');
 
@@ -24,6 +26,8 @@ is(pagetitle("foo_bar__1234__baz", undef), "foo bar&#1234;baz", 'Unicode in BMP'
 is(pagetitle("foo_bar__8800__baz", undef), "foo bar&#8800;baz", 'Unicode in BMP');
 is(pagetitle("foo_bar___33___baz", ""), "foo bar &#33; baz", 'Exclamation mark');
 is(pagetitle("foo_bar___95___baz", 0), "foo bar &#95; baz", 'Underscore');
+is(pagetitle("中文", 0), "中文", 'Chinese');
+is(pagetitle("Кириллица", 0), "Кириллица", 'Cyrillic');
 is(pagetitle("foo_bar__128169__baz", 0), "foo bar&#128169;baz", 'Unicode outside BMP');
 
 # pagetitle(x, true) => unescaped form of page title
@@ -36,6 +40,8 @@ is(chr(8800), "\x{2260}");
 is(pagetitle("foo_bar__8800__baz", 1), "foo bar\x{2260}baz", 'Unicode in BMP');
 is(pagetitle("foo_bar___33___baz", 1), "foo bar ! baz");
 is(pagetitle("foo_bar___95___baz", 1), "foo bar _ baz");
+is(pagetitle("中文", 1), "中文", 'Chinese');
+is(pagetitle("Кириллица", 1), "Кириллица", 'Cyrillic');
 is(chr(128169), "\x{0001F4A9}");
 is(pagetitle("foo_bar__128169__baz", 1), "foo bar\x{0001F4A9}baz", 'Unicode outside BMP');
 
