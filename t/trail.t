@@ -186,13 +186,10 @@ check_no_trail("snake.html", "wind_in_the_willows");
 
 check_trail("self_referential.html", "n= p=", "self_referential");
 
-TODO: {
-local $TODO = 'should be able to specify page names without using numeric escapes';
 check_trail("unicode/__172__.html", "n=unicode/\x{04D2} p=", "unicode");
 check_trail("unicode/\x{04D2}.html", "n=unicode/__8800__ p=unicode/__172__", "unicode");
 check_trail("unicode/__8800__.html", "n=unicode/__128169__ p=unicode/\x{04D2}", "unicode");
 check_trail("unicode/__128169__.html", "n= p=unicode/__8800__", "unicode");
-}
 
 check_trail("unicode/__172__.html", "n=unicode/\x{04D2} p=", "unicode2");
 check_trail("unicode/\x{04D2}.html", "n=unicode/__8800__ p=unicode/__172__", "unicode2");
