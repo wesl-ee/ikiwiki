@@ -303,6 +303,4 @@ ok($blob =~ /\^ the new title \^/m);
 check_no_trail("untrail/a.html");
 check_no_trail("untrail/b.html");
 
-ok(! system("rm -rf t/tmp"));
-
 done_testing();

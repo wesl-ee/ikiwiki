@@ -87,6 +87,7 @@ sysconfdir:
 extra_clean: perl_shebangs_clean
 	$(PERL) -Iblib/lib $(extramodules) $(tflag) ikiwiki.in --setup docwiki.setup --clean
 	rm -f *.man $(outprogs) ikiwiki.setup plugins/*.pyc
+	rm -fr t/tmp t/manual/*/git/ t/manual/*/html/ t/tinyblog/.ikiwiki/ t/tinypodcast/.ikiwiki/
 	$(MAKE) -C po clean
 
 reset-generated:

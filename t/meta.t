@@ -28,11 +28,11 @@ push @command, $srcdir, $destdir;
 
 sub write_build_read_compare {
 	my ($pagename, $input, $expected_output) = @_;
+	ok(! system("rm -rf $tmp"), q{setup});
 	ok(! system("mkdir -p $srcdir"), q{setup});
 	writefile("$pagename.mdwn", $srcdir, $input);
 	ok(! system(@command), q{build});
 	like(readfile("$destdir/$pagename/index.html"), $expected_output);
-	ok(! system("rm -rf $tmp"), q{teardown});
 }
 
 write_build_read_compare(
