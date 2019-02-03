@@ -37,4 +37,7 @@ two underscores. I think that is the root of the bug. --[[Joey]]
 >> * *d* marks `\d+` (one or more digits)
 >> * *u* marks the literal `_`
 >>
+>> The old regexp would have failed for the older format
+>> `foo/comment_1._comment`, though.
+>>
 >> --[[smcv]]
