@@ -1,6 +1,7 @@
 ikiwiki (3.20180312) UNRELEASED; urgency=medium
 
   [ Amitai Schleier ]
+  * graph: Add an optional "file" parameter
   * emailauth: When email can't be sent, show the error message
   * osm: Don't raise errors if tags don't have attached icons
   * cgi: Avoid C compiler warnings for waitpid() on NetBSD
