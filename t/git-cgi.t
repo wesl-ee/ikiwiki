@@ -1,7 +1,9 @@
 #!/usr/bin/perl
+use utf8;
 use warnings;
 use strict;
 
+use Encode;
 use Test::More;
 
 BEGIN {
@@ -133,7 +135,7 @@ sub run_cgi {
 		} keys(%envvars);
 	});
 
-	return $out;
+	return decode_utf8($out);
 }
 
 sub run_git {
@@ -169,6 +171,8 @@ sub test {
 		'[[!inline pages="writable/blog/*" actions=yes rootpage=writable/blog postform=yes show=0]]');
 	write_old_file('doc/writable/__172__blog.mdwn', 't/tmp/in',
 		'[[!inline pages="writable/¬blog/*" actions=yes rootpage="writable/¬blog" postform=yes show=0]]');
+	write_old_file('doc/writable/中文.mdwn', 't/tmp/in',
+		'[[!inline pages="writable/中文/*" actions=yes rootpage="writable/中文" postform=yes show=0]]');
 
 	unless ($installed) {
 		ok(! system(qw(cp -pRL doc/wikiicons t/tmp/in/doc/)));
@@ -332,24 +336,20 @@ sub test {
 	);
 	like($content, qr{<option selected="selected" value="writable/blog/hello">writable/blog/hello</option>});
 
-	# This attempts to reproduce the bug from
-	# doc/bugs/About___37__2F_problem, in which you can't make new posts
-	# to a blog with a non-ASCII rootpage.
-	$content = readfile('t/tmp/out/writable/__172__blog/index.html');
-	like($content, qr{<input type="hidden" name="from" value="writable/¬blog"});
-	TODO: {
-	local $TODO = 'doc/bugs/About___37__2F_problem';
+	# Regression test for a bug in which we couldn't use an
+	# alphanumeric, but non-ASCII, root page.
+	$content = readfile('t/tmp/out/writable/中文/index.html');
+	like($content, qr{<input type="hidden" name="from" value="writable/中文"});
 	$content = run_cgi(method => 'get',
 		params => {
 			do => 'blog',
-			from => 'writable/¬blog',
+			from => 'writable/中文',
 			subpage => '1',
 			title => 'hello',
 		},
 	);
-	like($content, qr{<option selected="selected" value="writable/¬blog/hello">writable/¬blog/hello</option>});
+	like($content, qr{<option selected="selected" value="writable/中文/hello">writable/中文/hello</option>});
 	unlike($content, qr{Error: bad page name});
-	}
 }
 
 test();
