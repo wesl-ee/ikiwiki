@@ -17,6 +17,10 @@ ikiwiki (3.20180312) UNRELEASED; urgency=medium
   * trail: Allow unescaped punctuation in `pagenames` parameter
   * comments: Hide "add comment" link from print stylesheet.
     Thanks, Antoine Beaupré
+  * recentchangesdiff, relativedate, toggle:
+    Import JavaScript at the end of the page content, not the beginning,
+    so that the browser can render content as soon as possible.
+    Thanks, Antoine Beaupré
   * debian: Allow Breezy as an alternative to bzr
     Thanks, Jelmer Vernooĳ
   * inline: Add basic test coverage for [[!inline rootpage]]
