@@ -1,4 +1,4 @@
-ikiwiki (3.20180312) UNRELEASED; urgency=medium
+ikiwiki (3.20190207) upstream; urgency=medium
 
   [ Amitai Schleier ]
   * graph: Add an optional "file" parameter
@@ -35,7 +35,7 @@ ikiwiki (3.20180312) UNRELEASED; urgency=medium
   * poll: Added postlink and posttrail options for better multi-page polls.
   * Fix permalink to comments.
 
- -- Simon McVittie <smcv@debian.org>  Wed, 16 May 2018 13:09:27 +0100
+ -- Simon McVittie <smcv@debian.org>  Thu, 07 Feb 2019 11:07:44 +0000
 
 ikiwiki (3.20180311) upstream; urgency=medium
 
