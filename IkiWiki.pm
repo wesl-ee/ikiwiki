@@ -2455,6 +2455,7 @@ sub useragent () {
 		cookie_jar => $config{cookiejar},
 		env_proxy => 1,		# respect proxy env vars
 		agent => $config{useragent},
+		protocols_allowed => [qw(http https)],
 	);
 }
 
