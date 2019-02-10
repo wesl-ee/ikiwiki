@@ -2448,6 +2448,9 @@ sub add_autofile ($$$) {
 }
 
 sub useragent () {
+	eval q{use LWP};
+	error($@) if $@;
+
 	return LWP::UserAgent->new(
 		cookie_jar => $config{cookiejar},
 		env_proxy => 1,		# respect proxy env vars
