@@ -29,7 +29,7 @@ ikiwiki (3.20170111.1) stretch-security; urgency=high
     LWPx::ParanoidAgent was not installed, but this appears to have been
     unintended.
 
- -- Simon McVittie <smcv@debian.org>  Tue, 26 Feb 2019 21:13:51 +0000
+ -- Simon McVittie <smcv@debian.org>  Tue, 26 Feb 2019 22:57:58 +0000
 
 ikiwiki (3.20170111) unstable; urgency=high
 
