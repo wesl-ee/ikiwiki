@@ -1,5 +1,4 @@
 [[!template id=links]]
-## Machine Brain
 
 Ikiwiki is a **wiki compiler**. It converts wiki pages into HTML pages
 suitable for publishing on a website. Ikiwiki stores pages and history in a
