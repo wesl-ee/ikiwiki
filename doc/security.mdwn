@@ -612,7 +612,7 @@ in version 3.20141016.4.
 
 ([[!debcve CVE-2017-0356]]/OVE-20170111-0001)
 
-## Server-side request forgery via aggregate plugin
+## <span id="cve-2019-9187">Server-side request forgery via aggregate plugin</span>
 
 The ikiwiki maintainers discovered that the [[plugins/aggregate]] plugin
 did not use [[!cpan LWPx::ParanoidAgent]]. On sites where the
