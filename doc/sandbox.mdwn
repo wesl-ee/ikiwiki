@@ -1,5 +1,7 @@
 ###Is this a heading? 
 
+[[!color  foreground=white background=#ff0000 text="White text on red background"]]
+
 Sure it is. 
 
 Nope my friend.
