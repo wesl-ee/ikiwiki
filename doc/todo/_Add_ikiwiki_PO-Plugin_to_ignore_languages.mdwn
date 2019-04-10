@@ -30,4 +30,4 @@ See also downstream bug report in tails: <https://labs.riseup.net/code/issues/15
 >> Happy to squash all this into a single commit if you prefer.
 >> --[[intrigeri]]
 
-[[!tags patch]]
+[[!tag patch]]
