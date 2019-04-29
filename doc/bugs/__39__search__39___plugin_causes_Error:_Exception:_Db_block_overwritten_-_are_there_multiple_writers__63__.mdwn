@@ -1,0 +1,19 @@
+When the `search` plugin is enabled, with the options:
+
+```
+# search plugin
+# path to the omega cgi program
+omega_cgi: /usr/lib/cgi-bin/omega/omega
+# use google site search rather than internal xapian index?
+google_search: 0
+```
+
+Then we see the following error when editing a page from the web browser UI or running `ikiwiki --rebuild`:
+
+```
+Error: Exception: Db block overwritten - are there multiple writers?
+```
+
+The issue goes away when we disable the 'search' plugin.
+
+We're running ikiwiki version 3.20180228-1.
