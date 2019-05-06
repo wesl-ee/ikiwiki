@@ -17,3 +17,13 @@ Error: Exception: Db block overwritten - are there multiple writers?
 The issue goes away when we disable the 'search' plugin.
 
 We're running ikiwiki version 3.20180228-1.
+
+> Every time?
+> I used to see an error (this one, I think) intermittently on OS X, on incremental rebuilds only.
+> Haven't seen it in a while, though.
+> Maybe something got fixed upstream.
+> What OS, and what version of Xapian and Omega?
+> (1.4.11 for me.)
+> Maybe worth blowing away `.ikiwiki/xapian/`, as described in [[tips/inside_dot_ikiwiki]]?
+> 
+> --[[schmonz]]
