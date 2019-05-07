@@ -27,3 +27,12 @@ We're running ikiwiki version 3.20180228-1.
 > Maybe worth blowing away `.ikiwiki/xapian/`, as described in [[tips/inside_dot_ikiwiki]]?
 > 
 > --[[schmonz]]
+> 
+>> We've removed the `.ikiwiki/xapian` directory before performing a rebuild, including actually rebooting the host OS. The search appears to work for a while, but once the wiki has been live for a while (and subject to edits on the web interface), the issue reappears.
+>> 
+>> * OS: Ubuntu 18.04.2 LTS (GNU/Linux 4.15.0-47-generic x86_64)
+>> * xapian-tools/bionic-updates,bionic-security,now 1.4.5-1ubuntu0.1 amd64
+>> * xapian-omega/bionic,now 1.4.5-1 amd64
+>> 
+>> I've upgraded our installations of both Xapian components and will let you know if that fixes it.
+>> -- jsewell
