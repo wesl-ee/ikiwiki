@@ -36,3 +36,6 @@ We're running ikiwiki version 3.20180228-1.
 >> 
 >> I've upgraded our installations of both Xapian components and will let you know if that fixes it.
 >> -- jsewell
+>>
+>>> Updating appeared to fix it. Sorry for not trying that sooner. Thanks for the help.
+>>> -- jsewell
