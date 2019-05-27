@@ -62,10 +62,10 @@ sub checkconfig () {
 	if (! exists $config{filetypes_conf}) {
 	  if (! $data_dir ) {
 		$config{filetypes_conf}= "/etc/highlight/filetypes.conf";
-	      } elsif ( $data_dir -> can('searchFile') ) {
-		# 3.18 +
+	      } elsif ( $data_dir -> can('getFiletypesConfPath') ) {
+		# 3.14 +
 		$config{filetypes_conf}=
-		  $data_dir -> searchFile("filetypes.conf");
+		  $data_dir -> getFiletypesConfPath("filetypes");
 	      } else {
 		# 3.9 +
 		$config{filetypes_conf}=
