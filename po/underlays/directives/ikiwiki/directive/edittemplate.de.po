@@ -1,11 +1,11 @@
 # German translation of directives/ikiwiki/directive/edittemplate page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-07-18 22:29+0000\n"
-"PO-Revision-Date: 2017-12-21 22:00+0100\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 15:10+0200\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
 "Language: de\n"
@@ -26,18 +26,21 @@ msgstr ""
 msgid ""
 "This directive allows registering template pages, that provide default "
 "content for new pages created using the web frontend. To register a "
-"template, insert a [[ikiwiki/directive/template]] directive on some other "
-"page."
-msgstr ""
-"Diese Anweisung erlaubt es, Vorlagen-Seiten zu registrieren, die einen "
-"Standardinhalt für neue Seiten bereitstellen, die über das Webfrontend "
-"angelegt werden. Um eine Vorlage zu registrieren, fügt man eine [[ikiwiki/"
-"directive/template]]-Anweisung auf einer anderen Seite ein."
+"template, insert an [[ikiwiki/directive/edittemplate]] directive on some "
+"other page."
+msgstr "Diese Anweisung erlaubt es, Vorlagen-Seiten zu registrieren, die einen Standardinhalt für neue Seiten bereitstellen, die über das Webfrontend angelegt werden. Um eine Vorlage zu registrieren, fügt man eine [[ikiwiki/directive/edittemplate]]-Anweisung auf einer anderen Seite ein."
 
 #. type: Plain text
 #, no-wrap
 msgid "\t\\[[!edittemplate template=\"bugtemplate\" match=\"bugs/*\"]]\n"
 msgstr "\t\\[[!edittemplate template=\"bugtemplate\" match=\"bugs/*\"]]\n"
+
+#. type: Plain text
+msgid ""
+"A recommended place to put the directive is on the parent page of the pages "
+"that will be created using the template. So the above example would be put "
+"on the bugs page. (Do not put the directive on the template page itself.)"
+msgstr "Der empfohlene Ort für die Anweisungen ist die Elternseite der mit der Vorlage erzeugten Seiten. Das obige Beispiel würde also auf der bugs-Seite platziert. (Verwende die Anweisung nicht auf der Vorlagenseite selbst.)"
 
 #. type: Plain text
 msgid ""
@@ -54,53 +57,86 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "Often the template page contains a simple skeleton for a particular type of "
-"page. For the bug report pages in the above example, it might look something "
-"like:"
-msgstr ""
-"Oft enthält eine Vorlagen-Seite ein einfaches Skelett für einen bestimmten "
-"Seitentyp. Für die Fehlerberichte aus dem obigen Beispiel könnte sie "
-"folgendermaßen aussehen:"
+"page, wrapped in a [[templatebody]] directive. For the bug report pages in "
+"the above example, it might look something like:"
+msgstr "Oft enthält eine Vorlagen-Seite eine [[templatebody]]-Anweisung mit einem einfachen Skelett für einen bestimmten Seitentyp. Für die Fehlerberichte aus dem obigen Beispiel könnte sie folgendermaßen aussehen:"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
+"\t\\[[!templatebody <<ENDBODY\n"
 "\tPackage: \n"
 "\tVersion: \n"
 "\tReproducible: y/n\n"
 "\tDetails:\n"
+"\tENDBODY]]\n"
 msgstr ""
+"\t\\[[!templatebody <<ENDBODY\n"
 "\tPaket: \n"
 "\tVersion: \n"
 "\tReproduzierbar: ja/nein\n"
 "\tDetails:\n"
-
-#. type: Plain text
-#, no-wrap
-msgid ""
-"The template page can also contain [[!cpan HTML::Template]] directives,\n"
-"like other ikiwiki [[templates]]. Currently only one variable is\n"
-"set: `<TMPL_VAR name>` is replaced with the name of the page being\n"
-"created.\n"
-msgstr ""
-"Wie andere ikiwiki-[[Vorlagen|templates]] kann eine Seiten-Vorlage\n"
-"[[!cpan HTML::Template]]-Anweisungen enthalten. Derzeit wird nur eine Variable\n"
-"gesetzt: `<TMPL_VAR name>` wird durch den Namen der erstellten Seite ersetzt.\n"
+"\tENDBODY]]\n"
 
 #. type: Plain text
 msgid ""
-"It's generally not a good idea to put the `edittemplate` directive in the "
-"template page itself, since the directive would then be included as part of "
-"the template on new pages, which would then in turn be registered as "
-"templates. If multiple pages are registered as templates for a new page, an "
-"arbitrary one is chosen, so that could get confusing."
-msgstr ""
-"Es ist im allgemeinen keine gute Idee, die `edittemplate`-Anweisung in der\n"
-"Vorlagenseite selbst zu verwenden, da die Anweisung dann auch in den neuen Seiten\n"
-"enthalten sein würde, die dadurch ihrerseits zu Vorlagen würden. Wenn mehrere\n"
-"Seiten als Vorlage für eine Seite registriert sind, wird willkürlich eine davon\n"
-"ausgewählt, was leicht zu Verwirrung führen kann."
+"The template page can also contain [[!cpan HTML::Template]] directives, like "
+"other ikiwiki [[templates]]."
+msgstr "Wie andere ikiwiki-[[Vorlagen|templates]] kann eine Seiten-Vorlage [[!cpan HTML::Template]]-Anweisungen enthalten."
+
+#. type: Plain text
+msgid "These variables might be set:"
+msgstr "Diese Variablen können gesetzt werden:"
+
+#. type: Bullet: '* '
+msgid "`<TMPL_VAR name>` is replaced with the name of the page being created."
+msgstr "`<TMPL_VAR name>` wird durch den Namen der erzeugten Seite ersetzt."
+
+#. type: Bullet: '* '
+msgid ""
+"`<TMPL_VAR uuid>` is replaced with a version 4 (random) UUID suitable for "
+"use in `\\[[!meta guid=\"urn:uuid:<TMPL_VAR uuid>\"]]`.  (Requires the "
+"`UUID::Tiny` Perl module if not running on Linux.)"
+msgstr "`<TMPL_VAR uuid>` wird eine (zufällige) Version-4-UUID ersetzt, die geeignet ist zur Verwendung in `\\[[!meta guid=\"urn:uuid:<TMPL_VAR uuid>\"]]`. (Erfordert das Perl-Modul `UUID::Tiny` oder Linux.)"
+
+#. type: Bullet: '* '
+msgid ""
+"`<TMPL_VAR time>` is replaced with the current (template generation)  time "
+"using a fixed format (RFC 3339, `%Y-%m-%dT%H:%M:%SZ`), suitable for use in `"
+"\\[[!meta date=\"<TMPL_VAR time>\"]]` (see [[meta]]) or `\\[[!date "
+"\"<TMPL_VAR time>\"]]` (see [[date]])."
+msgstr "`<TMPL_VAR time>` wird ersetzt durch die aktuelle Zeit (bei Vorlagen-Erstellung) in einem festen Format  (RFC 3339, `%Y-%m-%dT%H:%M:%SZ`), das geeignet ist zur Verwendung in `\\[[!meta date=\"<TMPL_VAR time>\"]]` (siehe [[meta]]) oder `\\[[!date \"<TMPL_VAR time>\"]]` (siehe [[date]])."
+
+#. type: Plain text
+msgid ""
+"Text outside the [[templatebody]] directive is not part of the template, and "
+"can be used to document it."
+msgstr "Text außerhalb der [[templatebody]]-Anweisung ist nicht Teil der Vorlage und kann verwendet werden, um diese zu dokumentieren."
+
+#. type: Plain text
+msgid ""
+"If the template does not contain a [[templatebody]] directive, the entire "
+"source of the page is used for the template. This is deprecated."
+msgstr "Wenn die Vorlage keine [[templatebody]]-Anweisung enthält, wird der gesamte Dateiinhalt der Quellseite als Vorlage verwendet. Dies ist überholt."
 
 #. type: Plain text
 #, no-wrap
 msgid "[[!meta robots=\"noindex, follow\"]]\n"
 msgstr "[[!meta robots=\"noindex, follow\"]]\n"
+
+#~ msgid ""
+#~ "It's generally not a good idea to put the `edittemplate` directive in the "
+#~ "template page itself, since the directive would then be included as part "
+#~ "of the template on new pages, which would then in turn be registered as "
+#~ "templates. If multiple pages are registered as templates for a new page, "
+#~ "an arbitrary one is chosen, so that could get confusing."
+#~ msgstr ""
+#~ "Es ist im allgemeinen keine gute Idee, die `edittemplate`-Anweisung in "
+#~ "der\n"
+#~ "Vorlagenseite selbst zu verwenden, da die Anweisung dann auch in den "
+#~ "neuen Seiten\n"
+#~ "enthalten sein würde, die dadurch ihrerseits zu Vorlagen würden. Wenn "
+#~ "mehrere\n"
+#~ "Seiten als Vorlage für eine Seite registriert sind, wird willkürlich eine "
+#~ "davon\n"
+#~ "ausgewählt, was leicht zu Verwirrung führen kann."

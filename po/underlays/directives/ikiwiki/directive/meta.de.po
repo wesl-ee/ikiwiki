@@ -1,11 +1,11 @@
 # German translation of directives/ikiwiki/directive/meta page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-07-18 22:29+0000\n"
-"PO-Revision-Date: 2017-12-21 22:09+0100\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 17:34+0200\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
 "Language: de\n"
@@ -42,11 +42,9 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "The first form sets a given field to a given value, while the second form "
-"also specifies some additional sub-parameters."
-msgstr ""
-"In der ersten Form wird das angegebene Feld auf den angegebenen Wert "
-"gesetzt. In der zweiten Form werden zusätzlich einige Unter-Parameter "
-"angegeben."
+"also specifies some additional sub-parameters. You can have only one field "
+"per `meta` directive, use more directives if you want to specify more fields."
+msgstr "In der ersten Form wird das angegebene Feld auf den angegebenen Wert gesetzt. In der zweiten Form werden zusätzlich einige Unter-Parameter angegeben. Pro `meta`-Anweisung kann nur ein Feld gesetzt werden; um mehrere Felder anzugeben bitte die `meta`-Anweisung wiederholt verwenden."
 
 #. type: Plain text
 msgid ""
@@ -56,9 +54,10 @@ msgstr ""
 "Die Feldwerte können HTML-Entities enthalten, zum Beispiel kann durch `&quot;"
 "` ein Anführungszeichen eingefügt werden."
 
-#. type: Plain text
-msgid "Supported fields:"
-msgstr "Unterstützte Felder:"
+#. type: Title ##
+#, no-wrap
+msgid "Supported fields"
+msgstr "Unterstützte Felder"
 
 #. type: Bullet: '* '
 msgid "title"
@@ -177,6 +176,26 @@ msgstr ""
 "  [[map]]-Anweisung ausgegeben werden.\n"
 
 #. type: Bullet: '* '
+msgid "keywords"
+msgstr "Schlüsselwörter"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  Specifies keywords summarizing the contents of the page. This\n"
+"  information will be put in the html header.  Only letters,\n"
+"  numbers, spaces and commas are allowed in this string; other\n"
+"  characters are stripped.  Note that the majority of search\n"
+"  engines, including Google, do not use information from the\n"
+"  keywords header.\n"
+msgstr ""
+"  Gibt die Schlüsselwörter an, die den Inhalt der Seite zusammenfassen. Diese\n"
+"  Information wird im HTML-Header ausgegeben. Nur Buchstaben, Ziffern,\n"
+"  Leerzeichen und Kommas sind zulässig, andere Zeichen werden entfernt. Die\n"
+"  meisten Suchmaschinen (u.a. Google) ignorieren Informationen im\n"
+"  keywords-Header.\n"
+
+#. type: Bullet: '* '
 msgid "permalink"
 msgstr "`permalink`"
 
@@ -196,12 +215,20 @@ msgstr "`date`"
 #. type: Plain text
 #, no-wrap
 msgid ""
-"  Specifies the creation date of the page. The date can be entered in\n"
-"  nearly any format, since it's parsed by [[!cpan TimeDate]].\n"
+"  Specifies the creation date of the page. This creates a \n"
+"  `<meta name=\"date\" content=\"...\">` header in the HTML output, but also\n"
+"  modifies the internal `ctime` in the\n"
+"  [[!iki tips/inside_dot_ikiwiki desc=\"internal index\"]].\n"
+"  The date can be entered in nearly any format, since it's parsed by\n"
+"  [[!cpan TimeDate]] but invalid dates yield an error in 3.20180321\n"
+"  or later.\n"
 msgstr ""
-"  Gibt das Erstellungsdatum der Seite an. Das Datum kann in\n"
-"  nahezu beliebigem Format angegeben werden, da es durch\n"
-"  [[!cpan TimeDate]] interpretiert wird.\n"
+"  Gibt das Erstellungsdatum der Seite an. Die erzeugt einen\n"
+"  `<meta name=\"date\" content=\"...\">`-Header in der HTML-Ausgabe und setzt die\n"
+"  interne `ctime` für den [[!iki tips/inside_dot_ikiwiki desc=\"internen Index\"]].\n"
+"  Das Datum kann in nahezu jedem Format angegeben werden, da es durch\n"
+"  [[!cpan TimeDate]] ausgewertet wird. Allerdings führen ungültige Werte seit\n"
+"  Version 3.20180321 zu Fehlern.\n"
 
 #. type: Bullet: '* '
 msgid "stylesheet"
@@ -226,6 +253,44 @@ msgid ""
 msgstr ""
 "\t\\[[!meta stylesheet=somestyle rel=\"alternate stylesheet\"\n"
 "\ttitle=\"somestyle\"]]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  However, this will be scrubbed away if the \n"
+"  [[!iki plugins/htmlscrubber desc=htmlscrubber]] plugin is enabled,\n"
+"  since it can be used to insert unsafe content.\n"
+msgstr ""
+"  Allerdings wird diese zweite Syntax entfernt, wenn die\n"
+"  [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Erweiterung aktiviert ist,\n"
+"  weil auf diese Weise unsichere Inhalte eingefügt werden können.\n"
+
+#. type: Bullet: '* '
+msgid "script"
+msgstr "`script`"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  Adds a script to a page. The script is treated as a wiki link to\n"
+"  a `.js` file in the wiki, so it cannot be used to add links to external\n"
+"  scripts. The optional `defer` and `async` keywords can be used to set\n"
+"  the corresponding HTML4 and HTML5 script options. Example:\n"
+msgstr ""
+"  Fügt ein Skript zu der Seite hinzu. Der angegebene Name wird als\n"
+"  WikiLink zu einer `.js`-Datei im Wiki behandelt, es können also keine\n"
+"  externen Skripte eingebunden werden. Die optionalen Schlüsselwörter `defer`\n"
+"  und `async` setzen die entsprechenden HTML4- und HTML5-Optionen. Beispiel:\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "\t\\[[!meta script=somescript defer async]]\n"
+msgstr "\t\\[[!meta script=einskript defer async]]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "  The tag is subject to scrubbing as with the stylesheet and link fields.\n"
+msgstr "Der Tag unterliegt den gleichen [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Einschränkungen wie die Felder stylesheet und link."
 
 #. type: Bullet: '* '
 msgid "openid"
@@ -271,13 +336,13 @@ msgstr "  Beispiel:\n"
 #. type: Plain text
 #, no-wrap
 msgid ""
-"\t\\\\[[!meta openid=\"http://joeyh.myopenid.com/\"\n"
+"\t\\[[!meta openid=\"http://joeyh.myopenid.com/\"\n"
 "\tserver=\"http://www.myopenid.com/server\"\n"
-"\txrds-location=\"http://www.myopenid.com/xrds?username=joeyh.myopenid.com\"\"]]\n"
+"\txrds-location=\"http://www.myopenid.com/xrds?username=joeyh.myopenid.com\"]]\n"
 msgstr ""
-"\t\\\\[[!meta openid=\"http://joeyh.myopenid.com/\"\n"
+"\t\\[[!meta openid=\"http://joeyh.myopenid.com/\"\n"
 "\tserver=\"http://www.myopenid.com/server\"\n"
-"\txrds-location=\"http://www.myopenid.com/xrds?username=joeyh.myopenid.com\"\"]]\n"
+"\txrds-location=\"http://www.myopenid.com/xrds?username=joeyh.myopenid.com\"]]\n"
 
 #. type: Bullet: '* '
 msgid "link"
@@ -324,6 +389,21 @@ msgstr ""
 "  weil auf diese Weise unsichere Inhalte eingefügt werden können.\n"
 
 #. type: Bullet: '* '
+msgid "enclosure"
+msgstr "`enclosure`"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  Specifies a link to a file to be rendered as an \"enclosure\" in\n"
+"  RSS/Atom feeds (and a plain old link in HTML). Useful for\n"
+"  [[!iki podcast desc=podcasting]].\n"
+msgstr ""
+"  Gibt einen Link zu einer Datei an, der als \"enclosure\" in RSS-/Atom-Feeds\n"
+"  verwendet werden soll (und als einfacher Link in HTML). Nützlich für \n"
+"  [[!iki podcast desc=Podcasts]].\n"
+
+#. type: Bullet: '* '
 msgid "redir"
 msgstr "`redir`"
 
@@ -340,11 +420,11 @@ msgstr "  \t\\[[!meta redir=andereseite]]\n"
 #. type: Plain text
 #, no-wrap
 msgid ""
-"  Optionally, a delay (in seconds) can be specified. The default is to\n"
-"  redirect without delay.\n"
+"  The default is to redirect without delay.\n"
+"  Optionally, a delay (in seconds) can be specified: \"delay=10\"\n"
 msgstr ""
-"  Es kann optional eine Verzögerung (`delay=seconds`) angegeben\n"
-"  werden. Voreingestellt ist, ohne Verzögerung weiterzuleiten.\n"
+"  Voreingestellt ist die Weiterleitung ohne Verzögerung. Optional kann eine\n"
+"  Verzögerung (in Sekunden) angegeben werden: \"delay=10\"\n"
 
 #. type: Plain text
 #, no-wrap
@@ -407,23 +487,21 @@ msgstr "`guid`"
 #. type: Plain text
 #, no-wrap
 msgid ""
-"  Specifies a globally unique ID for a page. This guid should be a URI\n"
-"  (in particular, it can be `urn:uuid:` followed by a UUID, as per\n"
-"  [[!rfc 4122]]), and it will be used to identify the page's entry in RSS\n"
+"  Specifies a globally unique ID for a page. This guid should be a URI,\n"
+"  and it will be used to identify the page's entry in RSS\n"
 "  and Atom feeds. If not given, the default is to use the page's URL as its\n"
 "  guid.\n"
 msgstr ""
 "  Gibt eine global einmalige ID für die Seite an. Diese guid sollte eine\n"
-"  URI sein (insbesondere kann sie nach [[!rfc 4122]] `urn:uuid:`\n"
-"  gefolgt von einer UUID sein). Sie wird verwendet, um den Eintrag der\n"
-"  Seite in RSS- und Atom-Feeds zu identifizieren. Wird keine guid\n"
-"  angegeben, wird an dieser Stelle die URL der Seite verwendet.\n"
+"  URI sein und wird verwendet, um den Eintrag der Seite in RSS- und Atom-Feeds\n"
+"  zu identifizieren. Wird keine guid angegeben, wird an dieser Stelle die URL\n"
+"  der Seite verwendet.\n"
 
 #. type: Plain text
 #, no-wrap
 msgid ""
 "  This is mostly useful when a page has moved, to keep the guids for\n"
-"  pages unchanged and avoid_flooding_aggregators\n"
+"  pages unchanged and avoid flooding aggregators\n"
 "  (see [[!iki tips/howto_avoid_flooding_aggregators]]).\n"
 msgstr ""
 "  Diese Angabe ist in erster Linie dann nützlich, wenn eine Seite\n"
@@ -443,7 +521,8 @@ msgid ""
 "  modification time, like Planet: for instance, when editing an old blog post\n"
 "  to add tags, you could set `updated` to be one second later than the original\n"
 "  value. The date/time can be given in any format that\n"
-"  [[!cpan TimeDate]] can understand, just like the `date` field.\n"
+"  [[!cpan TimeDate]] can understand, just like the `date` field and maps to the\n"
+"  `<meta name=\"updated\" content=\"...\">` HTML header and internal `mtime` field.\n"
 msgstr ""
 "  Gibt eine gefälschte Änderungszeit für die Seite an, die dann von RSS-\n"
 "  und Atom-Feeds ausgegeben wird. Dies ist nützlich, um Aggregatoren\n"
@@ -452,22 +531,86 @@ msgstr ""
 "  Tags hinzuzufügen), kann man `updated` auf eine Sekunde später als\n"
 "  den ursprünglichen Wert setzen. Das Datum mit Uhrzeit kann in jedem\n"
 "  Format angegeben werden, das von [[!cpan TimeDate]] verstanden\n"
-"  wird, genauso wie im Feld `date`.\n"
+"  wird, genauso wie im Feld `date`. Außerdem wird das hier angegebene Datum als\n"
+"  `<meta name=\\\"updated\\\" content=\\\"...\\\">` HTML-Header ausgegeben und als\n"
+"  interner `mtime`-Wert verwendet.\n"
+
+#. type: Bullet: '* '
+msgid "foaf"
+msgstr "`foaf`"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  Adds a Friend of a Friend ([FOAF](http://wiki.foaf-project.org/w/Autodiscovery))\n"
+"  reference to a page.\n"
+msgstr "  Fügt eine Freund-eines-Freundes-Referenz (Friend of a Friend, [FOAF](http://wiki.foaf-project.org/w/Autodiscovery)) zu einer Seite hinzu.\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "  \t\\[[!meta foaf=foaf.rdf]]\n"
+msgstr "  \t\\[[!meta foaf=foaf.rdf]]\n"
+
+# `name`
+#. type: Bullet: '* '
+msgid "name"
+msgstr "`name`"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"  Adds a HTML `<meta>` header with this `name` attribute. Its other attributes are\n"
+"  taken from the other parameters, so for example\n"
+"  `\\[[!meta name=\"foo\" content=\"bar\" x-non-standard-attribute=\"baz\"]]`\n"
+"  becomes `<meta name=\"foo\" content=\"bar\" x-non-standard-attribute=\"baz\">`. This\n"
+"  won't be allowed if the [[!iki plugins/htmlscrubber desc=htmlscrubber]] plugin is enabled,\n"
+"  since it can be used to insert unsafe content.\n"
+msgstr ""
+"  Fügt einen HTML-`<meta>`-Header mit diesem `name`-Attribut hinzu. Weitere\n"
+"  Attribute werden von den übrigen Parametern übernommen, so wird zum Beispiel\n"
+"  `\\[[!meta name=\"foo\" content=\"bar\" x-non-standard-attribute=\"baz\"]]`\n"
+"  zu `<meta name=\"foo\" content=\"bar\" x-non-standard-attribute=\"baz\">`. Dies ist\n"
+"  nicht erlaubt falls das [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Plugin\n"
+"  aktiviert ist, da sonst unsichere Inhalte eingefügt werden könnten.\n"
+
+#. type: Title ##
+#, no-wrap
+msgid "Other fields"
+msgstr "Weitere Felder"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"If the field is not one of the above predefined fields, the metadata will be\n"
+"written to the generated html page as a &lt;meta&gt; header. For example,\n"
+"`\\[[!meta foo=\"bar\"]]` becomes `<meta name=\"foo\" content=\"bar\">`. As\n"
+"with `name`, this won't be allowed if the [[!iki plugins/htmlscrubber\n"
+"desc=htmlscrubber]] plugin is enabled.\n"
+msgstr "Wenn das Feld nicht eines der oben vordefinierten ist, werden die Metadaten als &lt;meta&gt;-Header in die generierte Seite geschrieben. Zum Beispiel wird `[[!meta foo=\"bar\"]]` zu `<meta name=\"foo\" content=\"bar\">`. Wie bei `name` ist dies allerdings nicht erlaubt, wenn die [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Erweiterung aktiv ist."
 
 #. type: Plain text
 msgid ""
-"If the field is not one of the above predefined fields, the metadata will be "
-"written to the generated html page as a &lt;meta&gt; header. However, this "
-"won't be allowed if the [[!iki plugins/htmlscrubber desc=htmlscrubber]] "
-"plugin is enabled, since it can be used to insert unsafe content."
-msgstr ""
-"Wenn das Feld nicht eines der oben vordefinierten ist, werden die Metadaten "
-"als &lt;meta&gt;-Header in die generierte Seite geschrieben. Dies ist "
-"allerdings nicht erlaubt, wenn die [[!iki plugins/htmlscrubber "
-"desc=htmlscrubber]]-Erweiterung aktiv ist, da auf diese Weise unsichere "
-"Inhalte eingefügt werden können."
+"This syntax cannot be used for meta headers with unusual names, in "
+"particular names containing `:` such as `flattr:id` and `twitter:card`.  "
+"Please use `\\[[!meta name=\"...\" content=\"...\"]]` for those headers."
+msgstr "Diese Syntax kann nicht für meta-Header mit ungewöhnlichen Namen verwendet werden, insbesondere Namen die `:` enthalten wie etwa `flattr:id` und `twitter:card`. Für diese bitte `\\[[!meta name=\"...\" content=\"...\"]]` verwenden."
 
 #. type: Plain text
 #, no-wrap
 msgid "[[!meta robots=\"noindex, follow\"]]\n"
 msgstr "[[!meta robots=\"noindex, follow\"]]\n"
+
+#~ msgid ""
+#~ "  Specifies the creation date of the page. The date can be entered in\n"
+#~ "  nearly any format, since it's parsed by [[!cpan TimeDate]].\n"
+#~ msgstr ""
+#~ "  Gibt das Erstellungsdatum der Seite an. Das Datum kann in\n"
+#~ "  nahezu beliebigem Format angegeben werden, da es durch\n"
+#~ "  [[!cpan TimeDate]] interpretiert wird.\n"
+
+#~ msgid ""
+#~ "  Optionally, a delay (in seconds) can be specified. The default is to\n"
+#~ "  redirect without delay.\n"
+#~ msgstr ""
+#~ "  Es kann optional eine Verzögerung (`delay=seconds`) angegeben\n"
+#~ "  werden. Voreingestellt ist, ohne Verzögerung weiterzuleiten.\n"

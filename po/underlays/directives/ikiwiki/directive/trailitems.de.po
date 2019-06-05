@@ -1,0 +1,63 @@
+# German translation of basewiki/ikiwiki page for ikiwiki.
+# Copyright © 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Redistribution and use in source and compiled forms, with or without
+# modification, are permitted under any circumstances. No warranty.
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-04 00:03+0200\n"
+"Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
+"Language-Team: None\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+msgid ""
+"The `trailitems` directive is supplied by the [[!iki plugins/trail "
+"desc=trail]] plugin. It adds pages to the trail represented by the current "
+"page, without producing any output on that page."
+msgstr "Die `trailitems`-Anweisung wird durch das [[!iki plugins/trail desc=trail]]-Plugin bereitgestellt. Es fügt Seiten zu dem durch die aktuelle Seite repräsentierten Pfad (trail) hinzu, ohne eine sichtbare Ausgabe auf der Seite zu erzeugen."
+
+#. type: Plain text
+#, no-wrap
+msgid "    \\[[!trailitems pages=\"posts/*\" sort=\"age\"]]\n"
+msgstr "    \\[[!trailitems pages=\"posts/*\" sort=\"age\"]]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "    \\[[!trailitems pagenames=\"a b c\"]]\n"
+msgstr "    \\[[!trailitems pagenames=\"a b c\"]]\n"
+
+#. type: Plain text
+msgid "Options are similar to [[!iki ikiwiki/directive/inline desc=inline]]:"
+msgstr "Optionen sind ähnlich zur [[!iki ikiwiki/directive/inline desc=inline]]-Anweisung:"
+
+#. type: Bullet: '* '
+msgid ""
+"`pages`: adds pages that match a [[ikiwiki/PageSpec]] to the trail (cannot "
+"be used with `pagenames`)"
+msgstr "`pages`: fügt die Seiten, die auf eine [[ikiwiki/PageSpec]] passen, zum Pfad (trail) hinzu (kann nicht mit `pagemames` verwendet werden)"
+
+#. type: Bullet: '* '
+msgid ""
+"`pagenames`: if used instead of `pages`, this is interpreted as a "
+"space-separated list of absolute page names ([[SubPage/LinkingRules]] are "
+"not taken into account)  to add to the trail"
+msgstr "`pagenames`: wenn dies anstelle von `pages` verwendet wird, wird es als durch Leerzeichen getrennte Liste von absoluten Seitennamen interpretiert die zum Pfad (trail) hinzugefügt werden ([[SubPage/LinkingRules]] werden nicht berücksichtigt)"
+
+#. type: Bullet: '* '
+msgid ""
+"`sort`: add the pages matched by `pages` to the trail in this "
+"[[ikiwiki/pagespec/sorting]] order (cannot be used with `pagenames`)"
+msgstr "`sort`: füge die durch `pages` ausgewählten Seiten in dieser [[Sortierung|ikiwiki/pagespec/sorting]] zum Pfad (trail) hinzu (kann nicht mit `pagenames` verwendet werden)"
+
+#. type: Bullet: '* '
+msgid "`reverse`: reverse the order of `sort` (cannot be used with `pagenames`)"
+msgstr "`reverse`: kehre die Reihenfolge von `sort` um (kann nicht mit `pagenames` verwendet werden)"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!meta robots=\"noindex, follow\"]]\n"
+msgstr "[[!meta robots=\"noindex, follow\"]]\n"

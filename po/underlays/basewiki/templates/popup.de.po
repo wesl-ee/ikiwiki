@@ -1,11 +1,11 @@
 # German translation of basewiki/templates/popup page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-07-18 22:29+0000\n"
-"PO-Revision-Date: 2017-12-21 21:44+0100\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 14:42+0200\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
 "Language: de\n"
@@ -17,7 +17,6 @@ msgstr ""
 #. type: Plain text
 #, no-wrap
 msgid ""
-"<TMPL_UNLESS mouseover>\n"
 "Use this template to create a popup window that is displayed when the mouse\n"
 "is over part of the page. This template has two parameters:\n"
 "<ul>\n"
@@ -29,12 +28,7 @@ msgid ""
 "</ul>\n"
 "Note that browsers that do not support the CSS will display the popup\n"
 "inline in the page, inside square brackets.\n"
-"</TMPL_UNLESS>\n"
-"<span class=\"popup\"><TMPL_VAR mouseover>\n"
-"<span class=\"paren\">[</span><span class=\"balloon\"><TMPL_VAR popup></span><span class=\"paren\">]</span>\n"
-"</span>\n"
 msgstr ""
-"<TMPL_UNLESS mouseover>\n"
 "Verwende diese Vorlage, um ein Popup-Fenster anzuzeigen, wenn sich die Maus\n"
 "über diesem Teil der Seite befindet. Dies Vorlage hat zwei Parameter:\n"
 "<ul>\n"
@@ -46,7 +40,18 @@ msgstr ""
 "</ul>\n"
 "Beachte, dass Browser, die CSS nicht unterstützen, das Popup innerhalb\n"
 "der Seite anzeigen, eingerahmt durch eckige Klammern.\n"
-"</TMPL_UNLESS>\n"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"[[!templatebody <<ENDBODY\n"
 "<span class=\"popup\"><TMPL_VAR mouseover>\n"
 "<span class=\"paren\">[</span><span class=\"balloon\"><TMPL_VAR popup></span><span class=\"paren\">]</span>\n"
 "</span>\n"
+"ENDBODY]]\n"
+msgstr ""
+"[[!templatebody <<ENDBODY\n"
+"<span class=\"popup\"><TMPL_VAR mouseover>\n"
+"<span class=\"paren\">[</span><span class=\"balloon\"><TMPL_VAR popup></span><span class=\"paren\">]</span>\n"
+"</span>\n"
+"ENDBODY]]\n"

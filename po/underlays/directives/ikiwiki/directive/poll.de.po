@@ -1,10 +1,10 @@
 # German translation of directives/ikiwiki/directive/poll page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2017 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-03-12 09:29+0530\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
 "PO-Revision-Date: 2017-12-21 22:15+0100\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
@@ -19,15 +19,16 @@ msgid ""
 "The `poll` directive is supplied by the [[!iki plugins/poll desc=poll]] "
 "plugin."
 msgstr ""
-"Die `poll`-Anweisung wird durch die [[!iki plugins/poll desc=poll]]-Erweiterung "
-"bereitgestellt."
+"Die `poll`-Anweisung wird durch die [[!iki plugins/poll desc=poll]]-"
+"Erweiterung bereitgestellt."
 
 #. type: Plain text
 msgid ""
 "This directive allows you to create online polls in the wiki. Here's an "
 "example use:"
 msgstr ""
-"Diese Anweisung erlaubt es, Online-Umfragen im Wiki durchzuführen. Zum Beispiel:"
+"Diese Anweisung erlaubt es, Online-Umfragen im Wiki durchzuführen. Zum "
+"Beispiel:"
 
 #. type: Plain text
 #, no-wrap
@@ -39,9 +40,9 @@ msgid ""
 "The numbers indicate how many users voted for that choice. When a user votes "
 "for a choice in the poll, the page is modified and the number incremented."
 msgstr ""
-"Die Zahlen geben an, wie viele Benutzer für diese Möglichkeit gestimmt haben. "
-"Wenn ein Benutzer seine Stimme abgibt, wird die Seite modifiziert und die "
-"entsprechende Zahl hochgezählt."
+"Die Zahlen geben an, wie viele Benutzer für diese Möglichkeit gestimmt "
+"haben. Wenn ein Benutzer seine Stimme abgibt, wird die Seite modifiziert und "
+"die entsprechende Zahl hochgezählt."
 
 #. type: Plain text
 msgid ""
@@ -51,11 +52,12 @@ msgid ""
 "page that the poll is in is locked, users can even edit the page and change "
 "the numbers!"
 msgstr ""
-"Obwohl einige einfache Vorsichtsmaßnahmen getroffen wurden, damit Benutzer nicht "
-"ausversehen mehrmals abstimmen, sollte diese Art Umfrage nicht als besonders "
-"verlässlich angesehen werden; alle üblichen Bedenken bezüglich webbasierten "
-"Abstimmungen treffen zu. Wenn die Seite mit der Abstimmung nicht zum Bearbeiten "
-"gesperrt ist, können Benutzer sogar direkt die Zahlen verändern!"
+"Obwohl einige einfache Vorsichtsmaßnahmen getroffen wurden, damit Benutzer "
+"nicht ausversehen mehrmals abstimmen, sollte diese Art Umfrage nicht als "
+"besonders verlässlich angesehen werden; alle üblichen Bedenken bezüglich "
+"webbasierten Abstimmungen treffen zu. Wenn die Seite mit der Abstimmung "
+"nicht zum Bearbeiten gesperrt ist, können Benutzer sogar direkt die Zahlen "
+"verändern!"
 
 #. type: Plain text
 msgid "Parameters:"
@@ -66,11 +68,18 @@ msgid ""
 "`open` - Whether voting is still open. Set to \"no\" to close the poll to "
 "voting."
 msgstr ""
-"`open` - Ob die Abstimmung noch offen ist. Beim Wert `no` werden keine weiteren "
-"Stimmen angenommen."
+"`open` - Ob die Abstimmung noch offen ist. Beim Wert `no` werden keine "
+"weiteren Stimmen angenommen."
 
 #. type: Bullet: '* '
-msgid "`total` - Show total number of votes at bottom of poll. Default is \"yes\"."
+msgid ""
+"`expandable` - Set to \"yes\" to make this poll have an interface to add "
+"another choice to the poll."
+msgstr ""
+
+#. type: Bullet: '* '
+msgid ""
+"`total` - Show total number of votes at bottom of poll. Default is \"yes\"."
 msgstr ""
 "`total` - Zeige die bisherige Anzahl der Stimmen unterhalb des "
 "Abstimmungsformulars an. Voreingestellt ist `yes`."
@@ -78,11 +87,25 @@ msgstr ""
 #. type: Bullet: '* '
 msgid "`percent` - Whether to display percents. Default is \"yes\"."
 msgstr ""
-"`percent` - Ob Prozentzahlen angezeigt werden sollen. Voreingestellt ist `yes`."
+"`percent` - Ob Prozentzahlen angezeigt werden sollen. Voreingestellt ist "
+"`yes`."
+
+#. type: Bullet: '* '
+msgid ""
+"`postlink` - By default after voting the updated page containing the poll is "
+"displayed. This parameter allows advancing onward to another page.  This is "
+"useful for multi-page polls."
+msgstr ""
+
+#. type: Bullet: '* '
+msgid ""
+"`posttrail` - Similar to postvote, but allows advancing to the next page on "
+"a trail after a vote. The value of the parameter is the name of the page "
+"that defines the trail to follow. The trail plugin must be enabled for this "
+"to work."
+msgstr ""
 
 #. type: Plain text
 #, no-wrap
 msgid "[[!meta robots=\"noindex, follow\"]]\n"
 msgstr "[[!meta robots=\"noindex, follow\"]]\n"
-
-

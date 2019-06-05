@@ -1,0 +1,34 @@
+# German translation of basewiki/ikiwiki page for ikiwiki.
+# Copyright © 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Redistribution and use in source and compiled forms, with or without
+# modification, are permitted under any circumstances. No warranty.
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-05 16:27+0200\n"
+"Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
+"Language-Team: None\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+msgid ""
+"The `commentmoderation` directive is supplied by the [[!iki plugins/comments "
+"desc=comments]] plugin, and is used to link to the comment moderation queue."
+msgstr "Die `commentmoderation`-Anweisung wird durch das [[!iki plugins/comments desc=comments]]-Plugin bereitgestellt. Sie wird verwendet, um die Kommentar-Moderations-Warteschlange zu verlinken."
+
+#. type: Plain text
+msgid "Example:"
+msgstr "Beispiel:"
+
+#. type: Plain text
+#, no-wrap
+msgid "\t\\[[!commentmoderation desc=\"here is the comment moderation queue\"]]\n"
+msgstr "\t\\[[!commentmoderation desc=\"Hier ist die Warteschlange der zu moderierenden Kommentare\"]]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!meta robots=\"noindex, follow\"]]\n"
+msgstr "[[!meta robots=\"noindex, follow\"]]\n"

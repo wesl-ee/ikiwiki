@@ -1,0 +1,114 @@
+# German translation of basewiki/ikiwiki page for ikiwiki.
+# Copyright © 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Redistribution and use in source and compiled forms, with or without
+# modification, are permitted under any circumstances. No warranty.
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 15:26+0200\n"
+"Last-Translator: Sebastian-Kuhnert <mail@sebastian-kuhnert.de>\n"
+"Language-Team: None\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+msgid ""
+"The `flattr` directive is supplied by the [[!iki plugins/flattr "
+"desc=flattr]] plugin."
+msgstr "Die `flattr`-Anweisung wird durch das [[!iki plugins/flattr desc=flattr]]-Plugin bereitgestellt."
+
+#. type: Plain text
+msgid "This directive allows easily inserting Flattr buttons onto wiki pages."
+msgstr "Diese Anweisung ermöglicht es, auf einfache Weise Flattr-Buttons in eine Wiki-Seite einzufügen."
+
+#. type: Plain text
+msgid ""
+"Flattr supports both static buttons and javascript buttons. This directive "
+"only creates dynamic javascript buttons. If you want to insert a static "
+"Flattr button, you can simply copy the html code for it from Flattr, "
+"instead.  Note that this directive inserts javascript code into the page, "
+"that loads more javascript code from Flattr.com. So only use it if you feel "
+"comfortable with that."
+msgstr "Flattr unterstützt sowohl statische Buttons als auch Javascript-Buttons. Diese Anweisung fügt nur dynamische Javascript-Buttons ein. Um einen statischen Button einzufügen, kann stattdessen einfach der von Flattr bereitgestellte HTML-Code in die Seite eingefügt werden. Bitte beachten: Diese Anweisung fügt Javascript-Code in die Seite ein, der weiteren Javascript-Code von flattr.com nachlädt. Also nur verwenden, wenn du dich damit wohlfühlst."
+
+#. type: Plain text
+msgid ""
+"The directive can be used to display a button for a thing you have already "
+"manually submitted to Flattr. In this mode, the only parameter you need to "
+"include is the exact url to the thing that was submitted to Flattr.  (If the "
+"button is for the current page, you can leave that out.) For example, this "
+"is the Flattr button for ikiwiki. Feel free to add it to all your pages. ;)"
+msgstr "Diese Anweisung erzeugt einen Button für eine Seite, die bereits manuell bei flattr.com eingereicht wurde. In diesem Modus muss als einziger Parameter nur die genaue URL der Seite angegeben werden, die bei flattr.com eingereicht wurde. (Wenn der Button für die aktuelle Seite ist, kann dieser Parameter weggelassen werden.) Zum Beispiel ist dies der Flattr-Button für ikiwiki -- er kann gerne zu allen Seiten hinzugefügt werden ;)"
+
+#. type: Plain text
+#, no-wrap
+msgid "\t\\[[!flattr url=\"http://ikiwiki.info/\" button=compact]]\n"
+msgstr "\t\\[[!flattr url=\"http://ikiwiki.info/\" button=compact]]\n"
+
+#. type: Plain text
+msgid ""
+"The directive can also be used to create a button that automatically submits "
+"a page to Flattr when a user clicks on it. In this mode you need to include "
+"parameters to specify your uid, and a title, category, tags, and description "
+"for the page. For example, this is a Flattr button for a blog post:"
+msgstr "Die Anweisung kann auch einen Button erzeugen, der eine Seite automatisch bei Flattr einreicht, wenn ein Nutzer darauf klickt. In diesem Modus müssen deine uid, sowie Titel, Kategorie, Tags und Beschreibung angegeben werden. Zum Beispiel ist dies ein Flattr-Button für einen Blog-Post:"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"\t\\[[!flattr uid=25634 title=\"my new blog post\" category=text\n"
+"\ttags=\"blog,example\" description=\"This is a post on my blog.\"]]\n"
+msgstr ""
+"\t\\[[!flattr uid=25634 title=\"Mein neuer Blog-Post\" category=text\n"
+"\ttags=\"blog,beispiel\" description=\"Dies ist ein Beitrag auf meinem Blog.\"]]\n"
+
+#. type: Plain text
+msgid "Here are all possible parameters you can pass to the Flattr directive."
+msgstr "Die folgenden Parameter können der flattr-Anweisung übergeben werden:"
+
+#. type: Bullet: '* '
+msgid "`button` - Set to \"compact\" for a small button."
+msgstr "`button` - Auf \"compact\" setzen für einen kleineren Button."
+
+#. type: Bullet: '* '
+msgid ""
+"`url` - The url to the thing to be Flattr'd. If omitted, defaults to the url "
+"of the current page."
+msgstr "`url` - Die URL der Seite, die geflattrt werden soll. Falls nicht angegeben, wird die URL der aktuellen Seite verwendet."
+
+#. type: Bullet: '* '
+msgid ""
+"`uid` - Your numeric Flattr userid. Not needed if the flattr plugin has been "
+"configured with a global `flattr_userid`."
+msgstr "`uid` - Deine numerische Flattr-Benutzer-ID. Nicht erforderlich, falls das flattr-Plugin mit einer globalen `flattr_userid` konfiguriert wurde."
+
+#. type: Bullet: '* '
+msgid "`title` - A short title for the thing, to show on its Flattr page."
+msgstr "`title` - Ein kurzer Titel, der auf der Flattr-Seite angezeigt werden soll."
+
+#. type: Bullet: '* '
+msgid "`description` - A description of the thing, to show on its Flattr page."
+msgstr "`description` - Eine Beschreibung, die auf der Flattr-Seite angezeigt werden soll."
+
+#. type: Bullet: '* '
+msgid "`category` - One of: text, images, video, audio, software, rest."
+msgstr "`category` - Eins von: text, images, video, audio, software, rest."
+
+#. type: Bullet: '* '
+msgid "`tags` - A list of tags separated by a comma."
+msgstr "`tags` - Eine Liste von Tags, getrennt durch Kommas."
+
+#. type: Bullet: '* '
+msgid "`language` - A language code."
+msgstr "`language` - Ein Sprach-Code."
+
+#. type: Bullet: '* '
+msgid "`hidden` - Set to 1 to hide the button from listings on Flattr.com."
+msgstr "`hidden` - Auf 1 setzen, um den Button in Listen auf flattr.com zu verstecken."
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!meta robots=\"noindex, follow\"]]\n"
+msgstr "[[!meta robots=\"noindex, follow\"]]\n"

@@ -1,11 +1,11 @@
 # German translation of directives/ikiwiki/directive/comment page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-07-18 22:29+0000\n"
-"PO-Revision-Date: 2017-12-21 21:53+0100\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 14:54+0200\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
 "Language: de\n"
@@ -17,15 +17,19 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "The `comment` directive is supplied by the [[!iki plugins/comments "
-"desc=comments]] plugin, and is used to add a comment to a page. Typically, "
-"the directive is the only thing on a comment page, and is filled out by the "
-"comment plugin when a user posts a comment."
-msgstr ""
-"Die `comment`-Anweisung wird durch die [[!iki plugins/comments "
-"desc=comments]]-Erweiterung bereitgestellt, und wird zum Hinzufügen von "
-"Kommentaren zu einer Seite verwendet. Typischerweise ist diese Anweisung das "
-"Einzige auf einer Kommentarseite, und wird von der comment-Erweiterung "
-"ausgefüllt, wenn ein Benutzer einen Kommentar veröffentlicht."
+"desc=comments]] plugin. There should be one comment directive in each source "
+"file with extension `._comment` or `._comment_pending`, and the directive "
+"should not appear anywhere else. Comments are normally created via the web, "
+"in which case ikiwiki automatically creates a suitable `._comment` file."
+msgstr "Die `comment`-Anweisung wird durch die [[!iki plugins/comments desc=comments]]-Erweiterung bereitgestellt. In jeder Quelldatei mit Endung `._comment` oder `._comment_pending` sollte eine solche Anweisung vorkommen, und die Anweisung sollte nirgendwo sonst vorkommen. Kommentare werden üblicherweise über das Web erzeugt, in diesem Fall erzeugt ikiwiki automatisch eine passende `._comment`-Datei."
+
+#. type: Plain text
+msgid ""
+"Wiki administrators can also commit comment files to the version control "
+"system directly: they should be named starting with the *comments"
+"\\_pagename* config option (usually `comment_`)  and ending with `."
+"_comment`, for instance `comment_42._comment`."
+msgstr "Wiki-Administratoren können Kommentar-Dateien auch direkt zum Versionskontrollsystem hinzufügen: Ihr Dateiname sollte mit der Konfigurations-Option *comments\\_pagename* beginnen (üblicherweise `comment_`) und mit `._comment` enden, also zum Beispiel `comment_42._comment`."
 
 #. type: Plain text
 msgid "Example:"
@@ -68,10 +72,9 @@ msgstr "Verwendung"
 #. type: Plain text
 msgid ""
 "The only required parameter is `content`, the others just add or override "
-"metadata of the comment."
-msgstr ""
-"Der einzige erforderliche Parameter ist `content`, die übrigen fügen nur "
-"Metadaten zu dem Kommentar hinzu oder ändern diese."
+"metadata for the comment. Many parameters are shortcuts for [[meta]] "
+"directives."
+msgstr "Der einzige erforderliche Parameter ist `content`, die übrigen fügen nur Metadaten zu dem Kommentar hinzu oder ändern diese. Viele Parameter sind Abkürzungen für [[Meta|meta]]-Anweisungen."
 
 #. type: Bullet: '* '
 msgid ""
@@ -114,7 +117,9 @@ msgstr ""
 msgid ""
 "`nickname` - Name to display for a logged in commenter.  (Optional; used for "
 "OpenIDs.)"
-msgstr "`nickname` - Name der für einen angemeldeten Kommentator angezeigt wird. (Optional, wird für OpenIDs verwendet.)"
+msgstr ""
+"`nickname` - Name der für einen angemeldeten Kommentator angezeigt wird. "
+"(Optional, wird für OpenIDs verwendet.)"
 
 #. type: Bullet: '* '
 msgid ""

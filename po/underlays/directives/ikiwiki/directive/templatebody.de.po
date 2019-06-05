@@ -1,0 +1,80 @@
+# German translation of basewiki/ikiwiki page for ikiwiki.
+# Copyright © 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Redistribution and use in source and compiled forms, with or without
+# modification, are permitted under any circumstances. No warranty.
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 23:43+0200\n"
+"Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
+"Language-Team: None\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+msgid ""
+"The `templatebody` directive is supplied by the [[!iki plugins/templatebody "
+"desc=templatebody]] plugin."
+msgstr "Die `templatebody`-Anweisung wird durch das [[!iki plugins/templatebody desc=templatebody]]-Plugin bereitgestellt."
+
+#. type: Plain text
+msgid ""
+"This directive allows wiki pages to be used as templates for the "
+"[[template]] or [[edittemplate]] directive, without having [[!cpan "
+"HTML::Template]] markup interpreted as wiki markup when that page is built."
+msgstr "Diese Anweisung erlaubt es, Seiten als Vorlagen für die Anweisungen [[template]] und [[edittemplate]] zu verwenden, ohne dass [[!cpan HTML::Template]]-Auszeichungen als Wiki-Auszeichnungen interpretiert werden, wenn die Seite ausgegeben wird."
+
+#. type: Plain text
+msgid ""
+"This directive does not produce any output in the wiki page that defines the "
+"template; the rest of that page can be used to to document how to use the "
+"template."
+msgstr "Diese Anweisung erzeugt keine Ausgabe auf der Wiki-Seite, die die Vorlage definiert. Der Rest dieser Seite kann verwendet werden, um die Vorlage zu dokumentieren."
+
+#. type: Plain text
+msgid ""
+"The first, un-named parameter is the content of the template.  Because "
+"templates often contain [[directives|ikiwiki/directive]], it's convenient to "
+"use the \"here-document\" syntax for it:"
+msgstr "Der erste, nicht benannte Parameter ist der Inhalt der Vorlage. Da Vorlagen häufig [[Anweisungen|ikiwiki/directive]] enthalten, ist es hilfreich, die \"Hier-Dokument\"-Syntax zu verwenden:"
+
+#. type: Plain text
+#, no-wrap
+msgid "\t\\[[!templatebody <<ENDBODY\n"
+msgstr "\t\\[[!templatebody <<ENDBODY\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "\t[[!meta title=\"<TMPL_VAR name>\"]]\n"
+msgstr "\t[[!meta title=\"<TMPL_VAR name>\"]]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"\t\\[[!tag person]]\n"
+"\t<dl>\n"
+"\t<dt>Name:</dt><dd><TMPL_VAR name></dd>\n"
+"\t<dt>Age:</dt><dd><TMPL_VAR age></dd>\n"
+"\t</dl>\n"
+msgstr ""
+"\t\\[[!tag person]]\n"
+"\t<dl>\n"
+"\t<dt>Name:</dt><dd><TMPL_VAR name></dd>\n"
+"\t<dt>Alter:</dt><dd><TMPL_VAR alter></dd>\n"
+"\t</dl>\n"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"\t<TMPL_VAR description>\n"
+"\tENDBODY]]\n"
+msgstr ""
+"\t<TMPL_VAR beschreibung>\n"
+"\tENDBODY]]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!meta robots=\"noindex, follow\"]]\n"
+msgstr "[[!meta robots=\"noindex, follow\"]]\n"

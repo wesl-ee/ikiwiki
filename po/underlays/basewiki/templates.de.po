@@ -1,11 +1,11 @@
 # German translation of basewiki/templates page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-07-18 22:29+0000\n"
-"PO-Revision-Date: 2017-12-21 21:40+0100\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 14:37+0200\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
 "Language: de\n"
@@ -17,23 +17,18 @@ msgstr ""
 #. type: Plain text
 msgid ""
 "[[Ikiwiki]] uses many templates for many purposes. By editing its templates, "
-"you can fully customise this site."
-msgstr "[[Ikiwiki]] nutzt Vorlagen für viele Zwecke. Durch Bearbeiten dieser Vorlagen kann diese Seite vollständig angepasst werden."
-
-#. type: Plain text
-msgid ""
-"Templates are located in `/usr/share/ikiwiki/templates` by default; the "
-"`templatedir` setting can be used to make another directory be searched "
-"first. Customised templates can also be placed inside the \"templates/\" "
-"directory in your wiki's source."
-msgstr "Vorlagen befinden sich standardmäßig unter `/usr/share/ikiwiki/templates`; wenn in den Einstellungen ein `templatedir` angegeben ist, wird das dort genannte Verzeichnis zuerst durchsucht. Angepasste Vorlagen können auch im Unterverzeichnis \"templates/\" des Wiki-Quelltextes platziert werden."
+"you can fully customise its appearance, and avoid duplicate content."
+msgstr "[[Ikiwiki]] nutzt viele Vorlagen für viele Zwecke. Durch Bearbeiten dieser Vorlagen kann das Aussehen dieser Seite vollständig angepasst und Wiederholungen im Inhalt vermieden werden."
 
 #. type: Plain text
 msgid ""
 "Ikiwiki uses the HTML::Template module as its template engine. This supports "
 "things like conditionals and loops in templates and is pretty easy to learn. "
 "All you really need to know to modify templates is this:"
-msgstr "Ikiwiki verwendet das Modul HTML::Template für Vorlagen. Das unterstützt Bedingungen und Schleifen, außerdem ist es ziemlich einfach zu lernen. Um Vorlagen anzupassen, genügt es Folgendes zu wissen:"
+msgstr ""
+"Ikiwiki verwendet das Modul HTML::Template für Vorlagen. Das unterstützt "
+"Bedingungen und Schleifen, außerdem ist es ziemlich einfach zu lernen. Um "
+"Vorlagen anzupassen, genügt es Folgendes zu wissen:"
 
 #. type: Bullet: '* '
 msgid "To insert the value of a template variable, use `<TMPL_VAR variable>`."
@@ -43,18 +38,23 @@ msgstr "Um den Wert einer Variable einzufügen, verwende `<TMPL_VAR Variable>`."
 msgid ""
 "To make a block of text conditional on a variable being set use `<TMPL_IF "
 "variable>text</TMPL_IF>`."
-msgstr "Wenn ein Textblock nur dann angezeigt werden soll, wenn eine Variable gesetzt ist, verwende `<TMPL_IF Variable>Text</TMPL_IF>`."
+msgstr ""
+"Wenn ein Textblock nur dann angezeigt werden soll, wenn eine Variable "
+"gesetzt ist, verwende `<TMPL_IF Variable>Text</TMPL_IF>`."
 
 #. type: Bullet: '* '
 msgid ""
 "To use one block of text if a variable is set and a second if it's not, use "
 "`<TMPL_IF variable>text<TMPL_ELSE>other text</TMPL_IF>`"
-msgstr "Um einen Textblock anzuzeigen, wenn eine Variable gesetzt ist, und einen anderen, wenn sie es nicht ist, verwende `<TMPL_IF Variable>Text<TMPL_ELSE>anderer Text</TMPL_IF>`."
+msgstr ""
+"Um einen Textblock anzuzeigen, wenn eine Variable gesetzt ist, und einen "
+"anderen, wenn sie es nicht ist, verwende `<TMPL_IF "
+"Variable>Text<TMPL_ELSE>anderer Text</TMPL_IF>`."
 
 #. type: Plain text
 #, no-wrap
-msgid "[[!if test=\"enabled(template)\" then=\"\"\"\n"
-msgstr "[[!if test=\"enabled(template)\" then=\"\"\"\n"
+msgid "[[!if test=\"enabled(template) or enabled(edittemplate)\" then=\"\"\"\n"
+msgstr "[[!if test=\"enabled(template) or enabled(edittemplate)\" then=\"\"\"\n"
 
 #. type: Title ##
 #, no-wrap
@@ -63,27 +63,37 @@ msgstr "Vorlagen-Seiten"
 
 #. type: Plain text
 msgid ""
+"Template pages are regular wiki pages containing a [[!iki ikiwiki/directive/"
+"templatebody desc=\"templatebody directive\"]], used as templates for other "
+"pages. The parts of the template page outside the directive can be used to "
+"document it."
+msgstr "Vorlagenseiten sind normale Wiki-Seiten, die eine [[!iki ikiwiki/directive/templatebody desc=\\\"templatebody-Anweisung\\\"]] enthalten; sie werden als Vorlagen für andere Seiten verwendet. Die Teile der Vorlagenseite, die außerhalb dieser Anweisung liegen, können zur Dokumentation der Vorlage genutzt werden."
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!if test=\"enabled(template)\" then=\"\"\"\n"
+msgstr "[[!if test=\"enabled(template)\" then=\"\"\"\n"
+
+#. type: Plain text
+msgid ""
 "The [[!iki ikiwiki/directive/template desc=\"template directive\"]] allows "
-"wiki pages to be used as templates, filled out and inserted into other pages "
-"in the wiki."
-msgstr "Die [[!iki ikiwiki/directive/template desc=\"template-Anweisung\"]] erlaubt es, Wiki-Seiten als Vorlagen zu verwenden, die in anderen Wiki-Seiten ausgefüllt und verwendet werden können."
+"template pages to be filled out and inserted into other pages in the wiki."
+msgstr "Die [[!iki ikiwiki/directive/template desc=\"template-Anweisung\"]] erlaubt es, Vorlagen-Seiten auszufüllen und auf anderen Wiki-Seiten zu verwenden."
 
 #. type: Plain text
 #, no-wrap
 msgid "[[!if test=\"enabled(edittemplate)\" then=\"\"\"\n"
 msgstr "[[!if test=\"enabled(edittemplate)\" then=\"\"\"\n"
 
-#. type: Title ##
-#, no-wrap
-msgid "default content for new pages"
-msgstr "Standard-Inhalt für neue Seiten"
-
 #. type: Plain text
 msgid ""
 "The [[!iki ikiwiki/directive/edittemplate desc=\"edittemplate directive\"]] "
 "can be used to make new pages default to containing text from a template "
 "page, which can be filled out as the page is edited."
-msgstr "Die [[!iki ikiwiki/directive/edittemplate desc=\"edittemplate-Anweisung\"]] kann verwendet werden, damit neue Seiten zunächst den Text einer Vorlagenseite enthalten, die dann beim Bearbeiten ausgefüllt werden kann."
+msgstr ""
+"Die [[!iki ikiwiki/directive/edittemplate desc=\"edittemplate-Anweisung\"]] "
+"kann verwendet werden, damit neue Seiten zunächst den Text einer "
+"Vorlagenseite enthalten, die dann beim Bearbeiten ausgefüllt werden kann."
 
 #. type: Plain text
 #, no-wrap
@@ -95,32 +105,57 @@ msgstr ""
 "and enabled(inline)\" then=\"\"\"\n"
 
 #. type: Plain text
+msgid "These template pages are currently available:"
+msgstr "Diese Vorlagenseiten sind aktuell verfügbar:"
+
+#. type: Plain text
 #, no-wrap
 msgid ""
 "[[!inline pages=\"templates/* and !*.tmpl and !templates/*/* and !*/discussion\"\n"
 "feeds=no archive=yes sort=title template=titlepage\n"
-"rootpage=templates postformtext=\"Add a new template named:\"]]\n"
+"rootpage=templates postformtext=\"Add a new template page named:\"]]\n"
 msgstr ""
 "[[!inline pages=\"templates/* and !*.tmpl and !templates/*/* and !*/discussion\"\n"
 "feeds=no archive=yes sort=title template=titlepage\n"
-"rootpage=templates postformtext=\"Füge eine neue Vorlage mit diesem Namen hinzu:\"]]\n"
+"rootpage=templates postformtext=\"Füge eine neue Vorlagenseite mit diesem Namen hinzu:\"]]\n"
+
+#. type: Plain text
+msgid ""
+"If the template does not contain a `templatebody` directive, the entire "
+"source of the page is used for the template. This is deprecated."
+msgstr "Wenn die Vorlage keine `templatebody`-Anweisung enthält, wird die gesamte Seite als Vorlage verwendet. Dies ist überholt."
 
 #. type: Title ##
 #, no-wrap
-msgid "wiki templates"
-msgstr "Wiki-Vorlagen"
+msgid "template files"
+msgstr "Vorlagendateien"
 
 #. type: Plain text
 msgid ""
-"These templates are used to build the wiki. The aim is to keep almost all "
-"html out of ikiwiki and in the templates."
-msgstr "Diese Vorlagen werden verwendet, um das Wiki zu erzeugen. Das Ziel ist, alles HTML außerhalb von ikiwiki und in den Vorlagen zu halten."
+"Template files are unlike template pages in that they have the extension `."
+"tmpl`. Template files are used extensively by Ikiwiki to generate html.  "
+"They can contain html that would not normally be allowed on a wiki page."
+msgstr "Vorlagendateien unterscheiden sich von Vorlagenseiten dadurch, dass sie die Endung `.tmpl` haben. Vorlagendateien werden ausgiebig von Ikiwiki genutzt, um HTML zu erzeugen. Sie können HTML enthalten, dass auf einer Wiki-Seite normalerweise nicht erlaubt ist."
+
+#. type: Plain text
+msgid ""
+"Template files are located in `/usr/share/ikiwiki/templates` by default; the "
+"`templatedir` setting can be used to make another directory be searched "
+"first. Customised template files can also be placed inside the \"templates/"
+"\" directory in your wiki's source -- files placed there override ones in "
+"the `templatedir`."
+msgstr "Vorlagendateien befinden sich standardmäßig unter `/usr/share/ikiwiki/templates`; wenn in den Einstellungen ein `templatedir` angegeben ist, wird das dort genannte Verzeichnis zuerst durchsucht. Angepasste Vorlagendateien können auch im Unterverzeichnis \"templates/\" des Wiki-Quelltextes platziert werden -- Dateien dort übersteuern jene im `templatedir`."
+
+#. type: Plain text
+msgid "Here is a full list of the template files used:"
+msgstr "Die folgenden Vorlagendateien werden verwendet:"
 
 #. type: Bullet: '* '
 msgid ""
 "`page.tmpl` - Used for displaying all regular wiki pages. This is the key "
-"template to customise. [[!if test=\"enabled(pagetemplate)\" then=\"\"\""
-msgstr "`page.tmpl` - Wird verwendet, um normale Wiki-Seiten anzuzeigen. Dies ist die wichtigste Vorlage für Anpassungen. [[!if test=\"enabled(pagetemplate)\" then=\"\"\""
+"template to customise to change the look and feel of Ikiwiki.  [[!if test="
+"\"enabled(pagetemplate)\" then=\"\"\""
+msgstr "`page.tmpl` - Wird verwendet, um normale Wiki-Seiten anzuzeigen. Dies ist die wichtigste Vorlage, um das Aussehen von Ikiwiki anzupassen. [[!if test=\"enabled(pagetemplate)\" then=\"\"\""
 
 #. type: Plain text
 #, no-wrap
@@ -150,11 +185,16 @@ msgid ""
 "* `autotag.tmpl` - Filled in by the tag plugin to make tag pages.\n"
 "* `calendarmonth.tmpl`, `calendaryear.tmpl` - Used by ikiwiki-calendar to\n"
 "  make calendar archive pages.\n"
+"* `trails.tmpl` - Used by the trail plugin to generate links on each page\n"
+"  that is a member of a trail.\n"
+"* `notifyemail.tmpl` - Used by the notifymail plugin to generate mails about\n"
+"  changed pages.\n"
 "* `editpage.tmpl`, `editconflict.tmpl`, `editcreationconflict.tmpl`,\n"
 "  `editfailedsave.tmpl`, `editpagegone.tmpl`, `pocreatepage.tmpl`,\n"
 "  `editcomment.tmpl` `commentmoderation.tmpl`, `renamesummary.tmpl`,\n"
-"  `passwordmail.tmpl`, `openid-selector.tmpl` - Parts of ikiwiki's user\n"
-"  interface; do not normally need to be customised.\n"
+"  `passwordmail.tmpl`, `emailauth.tmpl`, `login-selector.tmpl`, \n"
+"  `revert.tmpl` - Parts of ikiwiki's user interface; do not normally need\n"
+"  to be customised.\n"
 msgstr ""
 "  (Die [[!iki ikiwiki/directive/pagetemplate desc=\"pagetemplate-Anweisung\"]]\n"
 "  kann verwendet werden, um auf einer Seite eine andere Vorlage als `page.tmpl`\n"
@@ -194,16 +234,34 @@ msgstr ""
 "* `autotag.tmpl` - Wird vom tag-Plugin verwendet, um Tag-Seiten zu erzeugen.\n"
 "* `calendarmonth.tmpl`, `calendaryear.tmpl` - Wird von ikiwiki-calendar\n"
 "  verwendet, um Kalender-Archiv-Seiten zu erstellen.\n"
+"* `trails.tmpl` - Wird vom trail-Plugin verwendet, um Links auf jeder Seite zu\n"
+"  erzeugen, die Teil des Pfads (trail) sind.\n"
+"* `notifyemail.tmpl` - Wird vom notifymail-Plugin verwendet, um E-Mails über\n"
+"  geänderte Seiten zu erzeugen.\n"
 "* `editpage.tmpl`, `editconflict.tmpl`, `editcreationconflict.tmpl`,\n"
 "  `editfailedsave.tmpl`, `editpagegone.tmpl`, `pocreatepage.tmpl`,\n"
 "  `editcomment.tmpl` `commentmoderation.tmpl`, `renamesummary.tmpl`,\n"
-"  `passwordmail.tmpl`, `openid-selector.tmpl` - Teile der Benutzerschnittstelle\n"
-"  von ikiwiki, die normalerweise nicht angepasst werden müssen.\n"
+"  `passwordmail.tmpl`, `emailauth.tmpl`, `login-selector.tmpl`, `revert.tmpl` -\n"
+"  Teile der Benutzerschnittstelle von ikiwiki, die normalerweise nicht angepasst\n"
+"  werden müssen.\n"
 
 #. type: Plain text
 #, no-wrap
 msgid "[[!meta robots=\"noindex, follow\"]]\n"
 msgstr "[[!meta robots=\"noindex, follow\"]]\n"
+
+#~ msgid "default content for new pages"
+#~ msgstr "Standard-Inhalt für neue Seiten"
+
+#~ msgid "wiki templates"
+#~ msgstr "Wiki-Vorlagen"
+
+#~ msgid ""
+#~ "These templates are used to build the wiki. The aim is to keep almost all "
+#~ "html out of ikiwiki and in the templates."
+#~ msgstr ""
+#~ "Diese Vorlagen werden verwendet, um das Wiki zu erzeugen. Das Ziel ist, "
+#~ "alles HTML außerhalb von ikiwiki und in den Vorlagen zu halten."
 
 #~ msgid ""
 #~ "[[!if test=\"enabled(template)\"\n"
@@ -233,8 +291,12 @@ msgstr "[[!meta robots=\"noindex, follow\"]]\n"
 #~ msgid "Using a template works like this:"
 #~ msgstr "Eine Vorlage kann folgendermaßen verwendet werden:"
 
-#~ msgid "\t\\[[!template id=note text=\"\"\"Here is the text to insert into my note.\"\"\"]]\n"
-#~ msgstr "\t\\[[!template id=note text=\"\"\"Hier ist der Text, der in meine Notiz eingefügt werden soll.\"\"\"]]\n"
+#~ msgid ""
+#~ "\t\\[[!template id=note text=\"\"\"Here is the text to insert into my "
+#~ "note.\"\"\"]]\n"
+#~ msgstr ""
+#~ "\t\\[[!template id=note text=\"\"\"Hier ist der Text, der in meine Notiz "
+#~ "eingefügt werden soll.\"\"\"]]\n"
 
 #~ msgid ""
 #~ "This fills out the [[note]] template, filling in the `text` field with "
@@ -256,8 +318,12 @@ msgstr "[[!meta robots=\"noindex, follow\"]]\n"
 #~ "Anführungszeichen können so große Mengen an zu formatierendem Text in die "
 #~ "Vorlage eingefügt werden:"
 
-#~ msgid "        \\[[!template id=foo name=\"Sally\" color=\"green\" age=8 notes=\"\"\"\n"
-#~ msgstr "        \\[[!template id=foo name=\"Anna\" color=\"grün\" age=8 notes=\"\"\"\n"
+#~ msgid ""
+#~ "        \\[[!template id=foo name=\"Sally\" color=\"green\" age=8 notes="
+#~ "\"\"\"\n"
+#~ msgstr ""
+#~ "        \\[[!template id=foo name=\"Anna\" color=\"grün\" age=8 notes="
+#~ "\"\"\"\n"
 
 #~ msgid "\\[[Charley]]'s sister."
 #~ msgstr "\\[[Thomas]] Schwester."

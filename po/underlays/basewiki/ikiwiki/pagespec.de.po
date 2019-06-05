@@ -1,11 +1,11 @@
 # German translation of basewiki/ikiwiki/pagespec page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-07-18 22:29+0000\n"
-"PO-Revision-Date: 2017-12-21 21:00+0100\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 12:46+0200\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
 "Language: de\n"
@@ -95,6 +95,7 @@ msgid ""
 "  tags matched by a glob)\n"
 "* \"`backlink(page)`\" - matches only pages that a given page links to\n"
 "* \"`creation_month(month)`\" - matches only files created on the given month\n"
+"  number\n"
 "* \"`creation_day(mday)`\" - or day of the month\n"
 "* \"`creation_year(year)`\" - or year\n"
 "* \"`created_after(page)`\" - matches only files created after the given page\n"
@@ -113,7 +114,8 @@ msgid ""
 "* \"`admin()`\" - tests whether a modification is being made by one of the\n"
 "  wiki admins.\n"
 "* \"`ip(address)`\" - tests whether a modification is being made from the\n"
-"  specified IP address.\n"
+"  specified IP address. Glob patterns can be used in the address. For\n"
+"  example, `ip(127.0.0.*)`\n"
 "* \"`comment(glob)`\" - matches comments to a page matching the glob.\n"
 "* \"`comment_pending(glob)`\" - matches unmoderated, pending comments.\n"
 "* \"`postcomment(glob)`\" - matches only when comments are being \n"
@@ -150,7 +152,7 @@ msgstr ""
 "* \"`admin()`\" - prüft, ob eine Änderung durch einen der Wiki-Administratoren\n"
 "  vorgenommen wird.\n"
 "* \"`ip(Adresse)`\" - prüft, ob eine Änderung von der angegebenen IP-Adresse aus\n"
-"  kommt.\n"
+"  kommt. Es können auch Muster wie `ip(127.0.0.*)` verwendet werden.\n"
 "* \"`comment(Muster)`\" - passt auf Kommentare zu Seiten, die auf das angegebene\n"
 "  Muster passen.\n"
 "* \"`comment_pending(Muster)`\" - passt auf Kommentare, die noch nicht moderiert wurden.\n"
@@ -185,6 +187,15 @@ msgstr ""
 "`index and SandBox` zu sagen, da keine Seite auf beide Ausdrücke passen kann."
 
 #. type: Plain text
+msgid "If you want to include only one level of subpages, you can use"
+msgstr "Wenn nur eine Ebene von Unterseiten eingebettet werden soll, kann folgendes verwendet werden:"
+
+#. type: Plain text
+#, no-wrap
+msgid "    blog/* and !blog/*/*\n"
+msgstr "    blog/* and !blog/*/*\n"
+
+#. type: Plain text
 msgid ""
 "More complex expressions can also be created, by using parentheses for "
 "grouping. For example, to match pages in a blog that are tagged with either "
@@ -212,6 +223,13 @@ msgstr ""
 "weder auf `a/foo` noch auf `a/b/foo` passen. Um relative Pfade zum "
 "Verzeichnis der Seite, die die PageSpec enthält, zu verwenden, kannst du `./"
 "` verwenden. Zum Beispiel passt `./foo` auf der Seite `a/b` auf `a/foo`."
+
+#. type: Plain text
+msgid ""
+"To indicate the name of the page the PageSpec is used in, you can use a "
+"single dot. For example, `link(.)` matches all the pages linking to the page "
+"containing the PageSpec."
+msgstr "Ein einfacher Punkt bezeichnet die Seite, auf der die PageSpec verwendet wird. Zum Beispiel passt `link(.)` auf alle Seiten, die auf die Seite verlinken, die die PageSpec enthält."
 
 #~ msgid ""
 #~ "\"`link(page)`\" - matches only pages that link to a given page (or glob)"
@@ -275,13 +293,13 @@ msgstr ""
 #~ "verwendete Seiten erfasst, auf die normale Muster nicht passen."
 
 #~ msgid ""
-#~ "\"`title(glob)`\", \"`author(glob)`\", \"`authorurl(glob)`\", \"`license"
-#~ "(glob)`\", \"`copyright(glob)`\" - match pages that have the given "
-#~ "metadata, matching the specified glob."
+#~ "\"`title(glob)`\", \"`author(glob)`\", \"`authorurl(glob)`\", "
+#~ "\"`license(glob)`\", \"`copyright(glob)`\" - match pages that have the "
+#~ "given metadata, matching the specified glob."
 #~ msgstr ""
-#~ "\"`title(glob)`\", \"`author(glob)`\", \"`authorurl(glob)`\", \"`license"
-#~ "(glob)`\", \"`copyright(glob)`\" - passt auf Seiten, deren Metadaten auf "
-#~ "die angegebenen Muster passen."
+#~ "\"`title(glob)`\", \"`author(glob)`\", \"`authorurl(glob)`\", "
+#~ "\"`license(glob)`\", \"`copyright(glob)`\" - passt auf Seiten, deren "
+#~ "Metadaten auf die angegebenen Muster passen."
 
 #~ msgid ""
 #~ "\"`user(username)`\" - tests whether a modification is being made by a "

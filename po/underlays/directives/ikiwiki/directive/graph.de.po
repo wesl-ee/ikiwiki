@@ -1,11 +1,11 @@
 # German translation of directives/ikiwiki/directive/graph page for ikiwiki.
-# Copyright © 2010 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Copyright © 2010, 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
 # Redistribution and use in source and compiled forms, with or without
 # modification, are permitted under any circumstances. No warranty.
 msgid ""
 msgstr ""
-"POT-Creation-Date: 2010-03-12 09:29+0530\n"
-"PO-Revision-Date: 2017-12-21 22:01+0100\n"
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 15:54+0200\n"
 "Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
 "Language-Team: None\n"
 "Language: de\n"
@@ -19,12 +19,12 @@ msgid ""
 "The `graph` directive is supplied by the [[!iki plugins/graphviz "
 "desc=graphviz]] plugin."
 msgstr ""
-"Die `graph`-Anweisung wird durch die [[!iki plugins/graphviz "
-"desc=graphviz]]-Erweiterung bereitgestellt."
+"Die `graph`-Anweisung wird durch die [[!iki plugins/graphviz desc=graphviz]]-"
+"Erweiterung bereitgestellt."
 
 #. type: Plain text
 msgid ""
-"This directive allows embedding [graphviz](http://www.graphviz.org/) graphs "
+"This directive allows embedding [graphviz](http://www.graphviz.org/)  graphs "
 "in a page.  Example usage:"
 msgstr ""
 "Diese Anweisung erlaubt es, von [graphviz](http://www.graphviz.org/) "
@@ -37,53 +37,98 @@ msgstr "\t\\[[!graph src=\"a -> b -> c; a -> c;\"]]\n"
 
 #. type: Plain text
 msgid ""
-"Note that graphs will only show up in previews if your browser has "
-"[[!wikipedia data: URI]] support, or if the same graph already exists on "
-"that page."
+"Nodes on the graph can link to external urls using regular graphviz syntax, "
+"and a clickable imagemap will be created. As a special extension for "
+"ikiwiki, [[WikiLinks|ikiwiki/wikilink]] can also be used. For example:"
+msgstr "Knoten des Graphen können mit der üblichen graphviz-Syntax auf externe Seiten verlinken, hierzu wird eine klickbare imagemap erzeugt. Als eine besondere Erweiterung für ikiwiki können auch [[WikiLinks|ikiwiki/wikilink]] verwendet werden. Zum Beispiel:"
+
+#. type: Plain text
+#, no-wrap
+msgid "\t\\[[!graph src=\"\"\"\n"
+msgstr "\t\\[[!graph src=\"\"\"\n"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"\tgoogle [ href=\"http://google.com/\" ]\n"
+"\tsandbox [ href=\\[[SandBox]] ]\n"
+"\thelp [ href=\\[[ikiwiki/formatting]] ]\n"
+"\tnewpage [ href=\\[[NewPage]] ]\n"
 msgstr ""
-"Zu beachten ist, dass der Graph nur dann in der Vorschau auftaucht, wenn der "
-"verwendete Browser [[!wikipedia data: URI]] unterstützt, oder wenn derselbe "
-"Graph bereits auf der Seite existiert."
+"\tgoogle [ href=\"http://google.com/\" ]\n"
+"\tsandkasten [ href=\\[[SandBox]] ]\n"
+"\thilfe [ href=\\[[ikiwiki/formatting]] ]\n"
+"\tneueseite [ href=\\[[NewPage]] ]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "\tgoogle -> sandbox -> help -> newpage -> help -> google;\n"
+msgstr "\tgoogle -> sandkasten -> hilfe -> neueseite -> hilfe -> google;\n"
 
 #. type: Plain text
 msgid "The `graph` directive supports the following parameters:"
 msgstr "Die `graph`-Anweisung unterstützt die folgenden Parameter:"
 
-#. type: Bullet: '- '
-msgid "`src` - The graphviz source to render."
-msgstr "`src` - Der graphviz-Quelltext des zu erzeugenden Graphen."
-
-#. type: Bullet: '- '
+#. type: Plain text
+#, no-wrap
 msgid ""
-"`type` - The type of graph to render: `graph` or `digraph`.  Defaults to "
-"`digraph`."
+"- `src` - The graphviz source to render.\n"
+"* `file` - A file in the wiki containing the graphviz source.\n"
+"- `type` - The type of graph to render: `graph` or `digraph`.  Defaults to\n"
+"  `digraph`.\n"
+"- `prog` - The graphviz program to render with: `dot`, `neato`, `fdp`, `twopi`,\n"
+"  or `circo`.  Defaults to `dot`.\n"
+"- `height`, `width` - Limit the size of the graph to a given height and width,\n"
+"  in inches. You must specify both to limit the size; otherwise, graphviz will\n"
+"  choose a size, without any limit.\n"
 msgstr ""
-"`type` - Die Art des zu erzeugenden Graphen: `graph` oder `digraph`. "
-"Voreingestellt ist `digraph`."
-
-#. type: Bullet: '- '
-msgid ""
-"`prog` - The graphviz program to render with: `dot`, `neato`, `fdp`, "
-"`twopi`, or `circo`.  Defaults to `dot`."
-msgstr ""
-"`prog` - Das graphviz-Programm, mit dem der Graph erzeugt werden soll: "
-"`dot`, `neato`, `fdp`, "
-"`twopi` oder `circo`.  Voreingestellt ist `dot`."
-
-#. type: Bullet: '- '
-msgid ""
-"`height`, `width` - Limit the size of the graph to a given height and width, "
-"in inches. You must specify both to limit the size; otherwise, graphviz will "
-"choose a size, without any limit."
-msgstr ""
-"`height`, `width` - Begrenzt die Größe des erzeugten Graphen durch die in "
-"Inch angegebene Höhe und Breite. Es müssen beide angegeben werden, um die "
-"Größe zu beschränken, graphviz sucht sich sonst selbst eine Größe aus, ohne "
-"jede Beschränkung."
+"- `src` - Der graphviz-Quelltext der dargestellt werden soll.\n"
+"* `file` - Eine Datei im Wiki, die die graphviz-Quelle enthält.\n"
+"- `type` - Der zu erzeugende Graphtyp: `graph` oder `digraph`. Die\n"
+"  Voreinstellung ist `digraph`.\n"
+"- `prog` - Das graphviz-Programm, mit dem die Darstellung erzeugt werden soll:\n"
+"  `dot`, `neato`, `fdp`, `twopi`, or `circo`. Die Voreinstellung ist `dot`.\n"
+"- `height`, `width` - Begrenze die Größe des Graphen auf die angegebene Höhe und\n"
+"  Breite (in Inch). Beide müssen angegeben werden, um die Größe zu begrenzen;\n"
+"  sonst wird graphviz selbst eine Größe wählen, ohne jede Beschränkung.\n"
 
 #. type: Plain text
 #, no-wrap
 msgid "[[!meta robots=\"noindex, follow\"]]\n"
 msgstr "[[!meta robots=\"noindex, follow\"]]\n"
 
+#~ msgid ""
+#~ "Note that graphs will only show up in previews if your browser has [[!"
+#~ "wikipedia data: URI]] support, or if the same graph already exists on "
+#~ "that page."
+#~ msgstr ""
+#~ "Zu beachten ist, dass der Graph nur dann in der Vorschau auftaucht, wenn "
+#~ "der verwendete Browser [[!wikipedia data: URI]] unterstützt, oder wenn "
+#~ "derselbe Graph bereits auf der Seite existiert."
 
+#~ msgid "`src` - The graphviz source to render."
+#~ msgstr "`src` - Der graphviz-Quelltext des zu erzeugenden Graphen."
+
+#~ msgid ""
+#~ "`type` - The type of graph to render: `graph` or `digraph`.  Defaults to "
+#~ "`digraph`."
+#~ msgstr ""
+#~ "`type` - Die Art des zu erzeugenden Graphen: `graph` oder `digraph`. "
+#~ "Voreingestellt ist `digraph`."
+
+#~ msgid ""
+#~ "`prog` - The graphviz program to render with: `dot`, `neato`, `fdp`, "
+#~ "`twopi`, or `circo`.  Defaults to `dot`."
+#~ msgstr ""
+#~ "`prog` - Das graphviz-Programm, mit dem der Graph erzeugt werden soll: "
+#~ "`dot`, `neato`, `fdp`, `twopi` oder `circo`.  Voreingestellt ist `dot`."
+
+#~ msgid ""
+#~ "`height`, `width` - Limit the size of the graph to a given height and "
+#~ "width, in inches. You must specify both to limit the size; otherwise, "
+#~ "graphviz will choose a size, without any limit."
+#~ msgstr ""
+#~ "`height`, `width` - Begrenzt die Größe des erzeugten Graphen durch die in "
+#~ "Inch angegebene Höhe und Breite. Es müssen beide angegeben werden, um die "
+#~ "Größe zu beschränken, graphviz sucht sich sonst selbst eine Größe aus, "
+#~ "ohne jede Beschränkung."

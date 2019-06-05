@@ -1,0 +1,188 @@
+# German translation of basewiki/ikiwiki page for ikiwiki.
+# Copyright © 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Redistribution and use in source and compiled forms, with or without
+# modification, are permitted under any circumstances. No warranty.
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-03 23:17+0200\n"
+"Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
+"Language-Team: None\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+msgid "The `osm` directive is supplied by the [[!iki plugins/osm desc=osm]] plugin."
+msgstr "Die `osm`-Anweisung wird durch das [[!iki plugins/osm desc=osm]]-Plugin bereitgestellt."
+
+#. type: Plain text
+msgid ""
+"This directive inserts an OpenStreetMap map onto a page.  It is typically "
+"combined with the [[waypoint]] directive to add points to the map."
+msgstr "Diese Anweisung fügt eine OpenStreetMap-Karte in eine Seite ein. Sie wird typischerweise mit der [[waypoint]]-Anweisung kombiniert, um Punkte zur Karte hinzuzufügen."
+
+#. type: Title ##
+#, no-wrap
+msgid "examples"
+msgstr "Beispiele"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"    \\[[!osm]]\n"
+"    \\[[!waypoint lat=\"45°30N\" lon=\"73°40W\" name=\"My city\" "
+"tag=\"city\"]]\n"
+msgstr ""
+"    \\[[!osm]]\n"
+"    \\[[!waypoint lat=\"45°30N\" lon=\"73°40W\" name=\"Meine Stadt\" tag=\"Stadt\"]]\n"
+
+#. type: Plain text
+msgid ""
+"The osm directive will display the actual map, while the waypoint directive "
+"adds waypoints to the map."
+msgstr "Die osm-Anweisung zeigt die Karte an, während die waypoint-Anweisungen Punkte zur Karte hinzufügen."
+
+#. type: Plain text
+msgid "The above can also be shortened as:"
+msgstr "Das obige Beispiel kann verkürzt werden:"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"    \\[[!waypoint lat=\"45°30N\" lon=\"73°40W\" name=\"My city\" "
+"tag=\"city\" embed]]\n"
+msgstr "    \\[[!waypoint lat=\"45°30N\" lon=\"73°40W\" name=\"Meine Stadt\" tag=\"Stadt\" embed]]\n"
+
+#. type: Plain text
+msgid ""
+"The tag is also taken from the tags elsewhere in the page, so the above is "
+"equivalent to:"
+msgstr "Der Tag wird auch von den übrigen Tags auf der Seite übernommen, sodass das folgende äquivalent ist:"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"    \\[[!waypoint lat=\"45°30N\" lon=\"73°40W\" name=\"My city\" embed]]\n"
+"    \\[[!tag city]]\n"
+msgstr ""
+"    \\[[!waypoint lat=\"45°30N\" lon=\"73°40W\" name=\"Meine Stadt\" embed]]\n"
+"    \\[[!tag Stadt]]\n"
+
+#. type: Plain text
+msgid ""
+"The icon is also taken from the tag if attached to the tag page as icon.png "
+"(default, modifiable).."
+msgstr "Das Symbol wird auch vom Tag abgeleitet, falls es der Tag-Seite als icon.png angehängt ist (Voreinstellung, kann geändert werden)."
+
+#. type: Title ##
+#, no-wrap
+msgid "map display"
+msgstr "Karten-Anzeige"
+
+#. type: Bullet: ' * '
+msgid "`map` - map to display, defaults to \"map\""
+msgstr "`map` - die anzuzeigende Karte, voreingestellt ist \"map\""
+
+#. type: Bullet: ' * '
+msgid "`zoom` - the level to zoom to on the OSM map"
+msgstr "`zoom` - die anfängliche Zoom-Stufe der OSM-Karte"
+
+#. type: Bullet: ' * '
+msgid "`loc` - lattitude and longitude of the map center"
+msgstr "`loc` - Breiten- und Längengrad des Kartenmittelpunkts"
+
+#. type: Bullet: ' * '
+msgid "`lat` - lattitude"
+msgstr "`lat` - Breitengrad"
+
+#. type: Bullet: ' * '
+msgid "`lon` - longitude"
+msgstr "`lon` - Längengrad"
+
+#. type: Bullet: ' * '
+msgid "`editable` - add edit controls in a separate layer"
+msgstr "`editable` - Werkzeuge zum Bearbeiten in einer zusätzlichen Schicht anzeigen"
+
+#. type: Bullet: ' * '
+msgid "`right` - float the map right"
+msgstr "`right` - die Karte rechts neben dem Text schweben lassen"
+
+#. type: Bullet: ' * '
+msgid "`left` - float the map left (default)"
+msgstr "`left` - die Karte links neben dem Text schweben lassen (Voreinstellung)"
+
+#. type: Bullet: ' * '
+msgid "`width` - width of the map"
+msgstr "`width` - Breite der Karte"
+
+#. type: Bullet: ' * '
+msgid "`height` - height of the map"
+msgstr "`height` - Höhe der Karte"
+
+#. type: Title ##
+#, no-wrap
+msgid "waypoints"
+msgstr "Wegpunkte"
+
+#. type: Plain text
+msgid ""
+"Waypoints can be added to any page. By default the waypoint takes the name "
+"of the page, which allows you to easily tag pages and make them appear on "
+"the central map."
+msgstr "Wegpunkte können zu beliebigen Seiten hinzugefügt werden. In der Voreinstellung nimmt der Wegpunkt den Namen der Seite an, auf diese Weise können Seiten leicht mit Koordinaten versehen und auf einer zentralen Karte angezeigt werden."
+
+#. type: Plain text
+msgid ""
+"Waypoints, by default, show up as a image (the `icon` parameter) link to the "
+"main map (or the `map` parameter provided). That markup can be hidden with "
+"the `hidden` parameter."
+msgstr "Wegpunkte erscheinen in der Voreinstellung als Bild (siehe Parameter `icon`), das auf die Hauptkarte verlinkt (oder auf die mit `map` angegebene Karte). Dies kann mit dem Parameter `hidden` unterbunden werden."
+
+#. type: Bullet: ' * '
+msgid ""
+"`name` - the name of this point, defaults to the page name (!) must be "
+"unique, otherwise later incantation will overwrite previous ones."
+msgstr "`name` - der Name dieses Punkts, voreingestellt ist der Seitenname. Er muss einmalig sein, sonst überschreiben spätere Wegpunkte die früheren."
+
+#. type: Bullet: ' * '
+msgid "`map` - the map to add the point to (defaults to \"map\")"
+msgstr "`map` - die Karte, zu der der Wegpunkt hinzugefügt werden soll (voreingestellt ist \"map\")"
+
+#. type: Bullet: ' * '
+msgid "`desc` - description to embed in the map"
+msgstr "`desc` - Beschreibung, die in der Karte eingebettet werden soll"
+
+#. type: Bullet: ' * '
+msgid "`loc` - lattitude and longitude"
+msgstr "`loc` - Breiten- und Längengrad"
+
+#. type: Bullet: ' * '
+msgid "`tag` - the type of points, maps to an icon in the osm_types array"
+msgstr "`tag` - der Typ des Punkts, verweist auf ein Symbol im Array `osm_types`"
+
+#. type: Bullet: ' * '
+msgid "`hidden` - do not display the link to the map (will not affect `embed`)"
+msgstr "`hidden` - keinen Link zur Karte anzeigen (hat keinen Einfluss auf `embed`)"
+
+#. type: Bullet: ' * '
+msgid "`icon` - URL to the icon to show in the link to the map and within the map"
+msgstr "`icon` - URL zu einem Symbol, das im Link zur Karte und auf der Karte angezeigt werden soll"
+
+#. type: Bullet: ' * '
+msgid ""
+"`embed` - embed the map display alongside the point, in which case the "
+"regular arguments to the map display can be used"
+msgstr "`embed` - die Karte zusammen mit dem Punkt anzeigen; hierbei können alle Argumente zur Kartenanzeige verwendet werden"
+
+#. type: Title ##
+#, no-wrap
+msgid "Links"
+msgstr "Verknüpfungen"
+
+#. type: Plain text
+msgid ""
+"If two pages with waypoints have a link between them, that link will "
+"magically show up on the map. Now how awesome is that?"
+msgstr "Wenn zwei Seiten mit Wegpunkten miteinander verknüpft sind, wird diese Verknüpfung auf magische Weise auf der Karte angezeigt. Wie großartig ist das?"

@@ -1,0 +1,59 @@
+# German translation of basewiki/ikiwiki page for ikiwiki.
+# Copyright © 2019 Sebastian Kuhnert <mail@sebastian-kuhnert.de>
+# Redistribution and use in source and compiled forms, with or without
+# modification, are permitted under any circumstances. No warranty.
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-06-03 12:25+0200\n"
+"PO-Revision-Date: 2019-06-04 00:08+0200\n"
+"Last-Translator: Sebastian Kuhnert <mail@sebastian-kuhnert.de>\n"
+"Language-Team: None\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. type: Plain text
+msgid "The `traillink` directive is supplied by the"
+msgstr "Die `traillink`-Anweisung wird durch das Plugin"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!iki plugins/trail desc=trail]]\n"
+msgstr "[[!iki plugins/trail desc=trail]]\n"
+
+#. type: Plain text
+msgid ""
+"plugin. It generates a visible [[ikiwiki/WikiLink]], and also adds the "
+"linked page to the trail represented by the page containing the directive."
+msgstr "bereitgestellt. Sie erzeugt einen sichtbaren [[ikiwiki/WikiLink]] und fügt zusätzlich die verknüpfte Seite zu dem Pfad (trail) der Seite hinzu, die die Anweisung enthält."
+
+#. type: Plain text
+msgid "In its simplest form, the first parameter is like the content of a WikiLink:"
+msgstr "In der einfachsten Form ist der erste Parameter wie der Inhalt eines WikiLink:"
+
+#. type: Plain text
+#, no-wrap
+msgid "    \\[[!traillink some_other_page]]\n"
+msgstr "    \\[[!traillink eine_andere_seite]]\n"
+
+#. type: Plain text
+msgid ""
+"The displayed text can also be overridden, either with a `|` symbol or with "
+"a `text` parameter:"
+msgstr "Der angezeigte Text kann auch übersteuert werden, entweder mit dem `|`-Symbol oder mit dem `text`-Parameter:"
+
+#. type: Plain text
+#, no-wrap
+msgid ""
+"    \\[[!traillink Click_here_to_start_the_trail|some_other_page]]\n"
+"    \\[[!traillink some_other_page text=\"Click here to start the "
+"trail\"]]\n"
+msgstr ""
+"    \\[[!traillink Hier_klicken_um_den_Pfad_zu_starten|eine_andere_seite]]\n"
+"    \\[[!traillink eine_andere_seite text=\"Hier klicken um den Pfad zu starten\"]]\n"
+
+#. type: Plain text
+#, no-wrap
+msgid "[[!meta robots=\"noindex, follow\"]]\n"
+msgstr "[[!meta robots=\"noindex, follow\"]]\n"
