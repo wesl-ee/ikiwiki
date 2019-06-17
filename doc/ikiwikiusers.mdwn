@@ -222,3 +222,4 @@ Personal sites and blogs
 * [Svetlana Tkachenko's personal website](http://svetlana.nfshost.com/index.en.html) - personal site, no blog
 * [re:fi.64's personal wiki](https://wiki.refi64.com/)
 * [canvon's blog](https://blog.canvon.de/)
+* [Coyote Works](http://coyote.works/) - Work In Progress site of Stephen Michael Kellat
