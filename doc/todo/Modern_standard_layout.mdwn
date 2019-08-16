@@ -71,3 +71,15 @@ Thanks, [[users/Jon]]. (2017-12-28)
 9 month ping, does [[Joey]] or [[smcv]] have any kind of opinion on this matter,
 subsequent to my last comment? I ask because both of your takes on the issue are from
 way back in 2011. — [[Jon]] (2018-09-24)
+
+----
+
+saw this "typesetter CSS" and was reminded of the anti-theme (and my 18 month old appeal to revisit that decision):
+[typesetter-css](https://screwtapello.gitlab.io/typesetter-css/example/demo.html):
+
+> HTML is a semantic markup language, but web-browsers' default presentation of semantic HTML is more based on compatibility with decades-old browsers than with readability. There are browser-addons that will take a page, strip out the presentational markup and try to present the result in a readable format, but that shouldn't be necessary if you've got sensible semantic markup to begin with.
+> 
+> Typesetter.css is a custom stylesheet designed to present generic, semantic HTML in the most readable way possible.
+
+The readability problems with unstyled HTML that this project talks about are exactly why I think the anti-theme
+as default for the main site should be revisited. — [[Jon]] (2019-08-16)
