@@ -63,3 +63,18 @@ Rather than coding plugins for the Perl ikiwiki in Haskell, I wonder how easily 
 -----
 
 I'm very keen on this, and would be interested in helping. I've been wanting to use ikiwiki for years, but the idea of investing time in the perl ecosystem and perl-based implementation stops me. -- [[Simon Michael]]
+
+-----
+
+I've recently been wondering whether I could migrate my personal blog (powered by IkiWiki) to Hakyll.
+I'm really fond of Ikiwiki's wiki link syntax, as well as the linking rules, and many of the features
+offered by plugins. Therefore I set out to see how easily (and whether it's even feasible) to implement
+them on top of Hakyll. I'm totally new to Hakyll so I don't fully understand some of the concepts but
+I've made some promising initial progress. I decided to share my work in progress experiments here:
+<https://github.com/jmtd/hakyll-ikiwiki>
+
+I can recognise and parse out wiki links and directives. Wikilinks are translated into HTML links, but
+the page-linking rules are not yet implemented (the wiki link target is passed through as-is). For
+Directives, I've written basic implementations of `meta` and `tag`. In both cases, I build up Hakyll
+`Metadata`, which is really a hash map. I've yet to figure out plumbing that back into Hakyll, though.
+I've got an idea of how to handle `template`, but haven't tried coding it up yet. — [[Jon]]
