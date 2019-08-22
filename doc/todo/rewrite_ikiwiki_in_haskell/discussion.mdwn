@@ -79,7 +79,7 @@ Directives, I've written basic implementations of `meta` and `tag`. In both case
 `Metadata`, which is really a hash map. I've yet to figure out plumbing that back into Hakyll, though.
 I've got an idea of how to handle `template`, but haven't tried coding it up yet. — [[Jon]]
 
-——-
+-----
 
 Cool, Jon. Have you thought about Shake + pandoc as an interesting alternative to Hakyll,
 perhaps a little more lightweight and flexible ? Here’s a [bit of Shake code](https://github.com/simonmichael/hledger/blob/master/Shake.hs#L421)
