@@ -84,3 +84,5 @@ I've got an idea of how to handle `template`, but haven't tried coding it up yet
 Cool, Jon. Have you thought about Shake + pandoc as an interesting alternative to Hakyll,
 perhaps a little more lightweight and flexible ? Here’s a [bit of Shake code](https://github.com/simonmichael/hledger/blob/master/Shake.hs#L421)
 I use for rendering wiki-like pages. —[[Simon Michael]]
+
+> I've not looked at Shake yet, thanks, I'll give it a look! — [[Jon]]
