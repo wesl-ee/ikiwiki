@@ -35,4 +35,4 @@ I've been running with this patch to fix it:
     -- 
     2.21.0.595.g6364b05174
 
-[[!tags patch]]
+[[!tag patch]]
