@@ -138,3 +138,9 @@ The `-m` may be overzealous. I have some sites running as users with `/sbin/nolo
 >>> and thorough option might be to make the run-as-user command
 >>> configurable, with some strong suggestions and warnings. Thoughts?
 >>> --[[schmonz]]
+
+>>>> Here's what I'm experimenting with now:
+>>>>
+>>>>     my $ret=system("sudo", "-n", "-s", "-u", $user, "/bin/sh", "-c", "--", "$0", "--nonglobal", @ARGV);
+>>>> 
+>>>> --[[schmonz]]
