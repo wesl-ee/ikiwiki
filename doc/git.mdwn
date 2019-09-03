@@ -63,6 +63,8 @@ think about merging them. This is recommended. :-)
 * [[thcipriani]] `https://github.com/thcipriani/ikiwiki.git` ([[browse|https://github.com/thcipriani/ikiwiki]])
 * [[tincho]] `git@github.com:TheTincho/ikiwiki.git` ([[browse|https://github.com/TheTincho/ikiwiki]])
 * [[hefee]] `https://salsa.debian.org/hefee/ikiwiki.git/` ([[browse|https://salsa.debian.org/hefee/ikiwiki]])
+* bsv `https://bico.media/1EZF5WfG6t35iwFpyVVptxT1MB4DKt6G2U`
+  bsv blockchain repo using ([[git-remote-bsv|https://github.com/xloem/git-remote-bsv]])
 ## branches
 
 Current branches of ikiwiki are listed on [[branches]].
