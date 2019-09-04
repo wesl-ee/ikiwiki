@@ -56,7 +56,7 @@ sub checkconfig () {
 	$config{mdwn_alpha_lists} = 0 unless defined $config{mdwn_alpha_lists};
 }
 
-my $markdown_sub;
+our $markdown_sub;
 sub htmlize (@) {
 	my %params=@_;
 	my $content = $params{content};
@@ -77,9 +77,7 @@ sub htmlize (@) {
 				$markdown_sub=sub {
 					my %flags=( use_metadata => 0 );
 
-					if ($config{mdwn_footnotes}) {
-						$flags{disable_footnotes}=1;
-					}
+					$flags{disable_footnotes}=not $config{mdwn_footnotes};
 
 					Text::MultiMarkdown::markdown(shift, \%flags);
 				}

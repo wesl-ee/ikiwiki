@@ -9,12 +9,36 @@ BEGIN { use_ok("IkiWiki"); }
 %config=IkiWiki::defaultconfig();
 $config{srcdir}=$config{destdir}="/dev/null";
 $config{disable_plugins}=["htmlscrubber"];
-IkiWiki::loadplugins();
-IkiWiki::checkconfig();
 
-is(IkiWiki::htmlize("foo", "foo", "mdwn",
-	"C. S. Lewis wrote books\n"),
-	"<p>C. S. Lewis wrote books</p>\n", "alphalist off by default");
+foreach my $multimarkdown (qw(1 0)) {
+	$config{multimarkdown} = $multimarkdown;
+	undef $IkiWiki::Plugin::mdwn::markdown_sub
+		if defined $IkiWiki::Plugin::mdwn::markdown_sub;
+	IkiWiki::loadplugins();
+	IkiWiki::checkconfig();
+
+	is(IkiWiki::htmlize("foo", "foo", "mdwn",
+		"C. S. Lewis wrote books\n"),
+		"<p>C. S. Lewis wrote books</p>\n",
+		"alphalist off by default for multimarkdown = $multimarkdown");
+
+	like(IkiWiki::htmlize("foo", "foo", "mdwn",
+		"This works[^1]\n\n[^1]: Sometimes it doesn't.\n"),
+		qr{<p>This works.*fnref:1.*},
+		"footnotes on by default for multimarkdown = $multimarkdown");
+
+	$config{mdwn_footnotes} = 0;
+	unlike(IkiWiki::htmlize("foo", "foo", "mdwn",
+		"An unusual link label: [^1]\n\n[^1]: http://example.com/\n"),
+		qr{<p>An unusual link label: .*fnref:1.*},
+		"footnotes can be disabled for multimarkdown = $multimarkdown");
+
+	$config{mdwn_footnotes} = 1;
+	like(IkiWiki::htmlize("foo", "foo", "mdwn",
+		"This works[^1]\n\n[^1]: Sometimes it doesn't.\n"),
+		qr{<p>This works.*fnref:1.*},
+		"footnotes can be enabled for multimarkdown = $multimarkdown");
+}
 
 $config{mdwn_alpha_lists} = 1;
 like(IkiWiki::htmlize("foo", "foo", "mdwn",
@@ -27,20 +51,6 @@ like(IkiWiki::htmlize("foo", "foo", "mdwn",
 	"A. One\n".
 	"B. Two\n"),
 	qr{<p>A. One\sB. Two</p>\n}, "alphalist can be disabled");
-
-like(IkiWiki::htmlize("foo", "foo", "mdwn",
-	"This works[^1]\n\n[^1]: Sometimes it doesn't.\n"),
-	qr{<p>This works<sup\W}, "footnotes on by default");
-
-$config{mdwn_footnotes} = 0;
-like(IkiWiki::htmlize("foo", "foo", "mdwn",
-	"An unusual link label: [^1]\n\n[^1]: http://example.com/\n"),
-	qr{<a href="http://example\.com/">\^1</a>}, "footnotes can be disabled");
-
-$config{mdwn_footnotes} = 1;
-like(IkiWiki::htmlize("foo", "foo", "mdwn",
-	"This works[^1]\n\n[^1]: Sometimes it doesn't.\n"),
-	qr{<p>This works<sup\W}, "footnotes can be enabled");
 
 SKIP: {
 	skip 'set $IKIWIKI_TEST_ASSUME_MODERN_DISCOUNT if you have Discount 2.2.0+', 4
