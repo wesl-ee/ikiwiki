@@ -36,3 +36,8 @@ I've been running with this patch to fix it:
     2.21.0.595.g6364b05174
 
 [[!tag patch]]
+[[done]]
+
+> Applied (along with some accompanying tests) in e642784. Thanks for
+> finding and fixing the bug.
+> --[[schmonz]]
