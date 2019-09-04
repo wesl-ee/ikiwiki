@@ -144,3 +144,8 @@ The `-m` may be overzealous. I have some sites running as users with `/sbin/nolo
 >>>>     my $ret=system("sudo", "-n", "-s", "-u", $user, "/bin/sh", "-c", "--", "$0", "--nonglobal", @ARGV);
 >>>> 
 >>>> --[[schmonz]]
+
+>>>>> [[!template id=gitbranch branch=schmonz/sudo-mass-rebuild author="[[schmonz]]"]]
+>>>>> Works well for me on macOS and NetBSD. Does it look right? Can
+>>>>> someone vouch that there is indeed no functional change on Debian?
+>>>>> --[[schmonz]]
