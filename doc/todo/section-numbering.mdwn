@@ -5,3 +5,5 @@ Optional automatic section numbering would help reading: otherwise, a reader (li
 I guess it is implementable with complex CSS... but one has first to compose this CSS in any case. So, this wish still has a todo status. --Ivan Z.
 
 And another aspect why this is related to ikiwiki, not just authoring a CSS, is that the style of the numbers (genereated by CSS probably) should match the style of the numbers in ikiwiki's [[plugins/toc]]. --Ivan Z.
+
+<https://codepen.io/X-Raym/pen/dBprG> - a known CSS technique.  works well.  adapted here due to that numbering starting from h2, where ikiwiki (incorrectly) starts headings from h1 <http://libre-riscv.org/local.css> --lkcl
