@@ -109,7 +109,7 @@ msgid ""
 "[[templatebody]] directive are used as the template. Anything outside that "
 "directive is not included in the template, and is usually used as "
 "documentation describing the template."
-msgstr "Die Vorlage ist eine normale Wiki-Seite, die um Unterverzeichnis `templates/` des Quellverzeichnisses des Wikis liegt. Der Inhalt der [[templatebody]]-Anweisung wird als Vorlage verwendet. Alles außerhalb dieser Anweisung ist nicht Teil der Vorlage und wird üblicherweise zu deren Dokumentation genutzt.\n"
+msgstr "Die Vorlage ist eine normale Wiki-Seite, die um Unterverzeichnis `templates/` des Quellverzeichnisses des Wikis liegt. Der Inhalt der [[templatebody]]-Anweisung wird als Vorlage verwendet. Alles außerhalb dieser Anweisung ist nicht Teil der Vorlage und wird üblicherweise zu deren Dokumentation genutzt."
 
 #. type: Plain text
 msgid ""

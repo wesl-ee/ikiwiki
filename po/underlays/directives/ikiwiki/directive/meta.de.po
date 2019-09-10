@@ -290,7 +290,7 @@ msgstr "\t\\[[!meta script=einskript defer async]]\n"
 #. type: Plain text
 #, no-wrap
 msgid "  The tag is subject to scrubbing as with the stylesheet and link fields.\n"
-msgstr "Der Tag unterliegt den gleichen [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Einschränkungen wie die Felder stylesheet und link."
+msgstr "Der Tag unterliegt den gleichen [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Einschränkungen wie die Felder stylesheet und link.\n"
 
 #. type: Bullet: '* '
 msgid "openid"
@@ -586,7 +586,7 @@ msgid ""
 "`\\[[!meta foo=\"bar\"]]` becomes `<meta name=\"foo\" content=\"bar\">`. As\n"
 "with `name`, this won't be allowed if the [[!iki plugins/htmlscrubber\n"
 "desc=htmlscrubber]] plugin is enabled.\n"
-msgstr "Wenn das Feld nicht eines der oben vordefinierten ist, werden die Metadaten als &lt;meta&gt;-Header in die generierte Seite geschrieben. Zum Beispiel wird `[[!meta foo=\"bar\"]]` zu `<meta name=\"foo\" content=\"bar\">`. Wie bei `name` ist dies allerdings nicht erlaubt, wenn die [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Erweiterung aktiv ist."
+msgstr "Wenn das Feld nicht eines der oben vordefinierten ist, werden die Metadaten als &lt;meta&gt;-Header in die generierte Seite geschrieben. Zum Beispiel wird `[[!meta foo=\"bar\"]]` zu `<meta name=\"foo\" content=\"bar\">`. Wie bei `name` ist dies allerdings nicht erlaubt, wenn die [[!iki plugins/htmlscrubber desc=htmlscrubber]]-Erweiterung aktiv ist.\n"
 
 #. type: Plain text
 msgid ""
