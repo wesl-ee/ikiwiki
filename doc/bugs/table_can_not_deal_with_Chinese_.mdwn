@@ -86,3 +86,14 @@ The below patch seem to deal with this problem:
 ----
 
 I can confirm that the above patch fixes the issue for me. Thanks! I'm not an ikiwiki committer, but I would encourage them to consider the above. Whilst I'm at it, I would be *really* grateful for some input on [[todo/support_multi-row_table_headers]] which relates to the same plugin. [[Jon]]
+
+----
+
+I've hit this bug with an inline-table and 3.20190228-1 (so: patch applied), with the following definition
+
+    [[\!table class=fullwidth_table delimiter="      " data="""    
+     
+    Number  Title   Own?    Read?    
+    I (HB1), 70 (PB1), 5 (PB50)     Dune    O       ✓"""]]
+
+I'm going to attempt to work around it by moving to an external CSV. ­— [[Jon]]
