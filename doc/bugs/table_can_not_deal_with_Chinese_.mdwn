@@ -97,3 +97,17 @@ I've hit this bug with an inline-table and 3.20190228-1 (so: patch applied), wit
     I (HB1), 70 (PB1), 5 (PB50)     Dune    O       ✓"""]]
 
 I'm going to attempt to work around it by moving to an external CSV. ­— [[Jon]]
+
+> What version of Text::CSV (Debian: `libtext-csv-perl`) are you using?
+> What version of Text::CSV::XS (Debian: `libtext-csv-xs-perl`) are you
+> using, if any?
+>
+> I could't reproduce this with `libtext-csv-perl_2.00-1` and
+> `libtext-csv-xs-perl_1.39-1`, assuming that the whitespace in
+> `delimiter="..."` was meant to be a literal tab character, and that
+> the data row has literal tabs before Dune, before O and before ✓.
+>
+> It would be great if you could modify `t/table.t` to include a failing
+> test-case, and push it to your github fork or something, so I can apply
+> it without having to guess precisely what the whitespace should be.
+> --[[smcv]]
