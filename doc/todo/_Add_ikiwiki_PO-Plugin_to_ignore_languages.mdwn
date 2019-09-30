@@ -30,4 +30,8 @@ See also downstream bug report in tails: <https://labs.riseup.net/code/issues/15
 >> Happy to squash all this into a single commit if you prefer.
 >> --[[intrigeri]]
 
+>>> Please let me know if the added test coverage is sufficient to unblock
+>>> the merge of this branch. Thanks in advance!
+>>> --[[intrigeri]]
+
 [[!tag patch]]
