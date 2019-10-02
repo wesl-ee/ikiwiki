@@ -5,7 +5,11 @@ See <https://anarc.at/>. I have home pages like this on tons of other wikis incl
 Submitted patches
 =================
 
-[[!inline pages="tagged(patch) and link(users/anarcat)" sort=mtime feeds=no actions=yes archive=yes show=0]]
+[[!inline pages="tagged(patch) and link(users/anarcat) and !link(todo/done)" sort=mtime feeds=no actions=yes archive=yes show=0]]
+
+## Done
+
+[[!inline pages="tagged(patch) and link(users/anarcat) and link(todo/done)" sort=mtime feeds=no actions=yes archive=yes show=0]]
 
 
 My todos
@@ -14,13 +18,13 @@ My todos
 ... or the ones I commented it, to be more precise.
 
 [[!inline pages="todo/* and !todo/done and !link(todo/done) and
-link(users/anarcat) and !todo/*/*" sort=mtime feeds=no actions=yes archive=yes show=0]]
+link(users/anarcat) and !todo/*/* and !tagged(patch)" sort=mtime feeds=no actions=yes archive=yes show=0]]
 
 Done
 ----
 
 [[!inline pages="todo/* and !todo/done and link(todo/done) and
-link(users/anarcat) and !todo/*/*" feeds=no actions=yes archive=yes show=0]]
+link(users/anarcat) and !todo/*/* and !tagged(patch)" feeds=no actions=yes archive=yes show=0]]
 
 My bugs
 =======
@@ -28,10 +32,10 @@ My bugs
 ... same.
 
 [[!inline pages="bugs/* and !bugs/done and !link(bugs/done) and
-link(users/anarcat) and !bugs/*/*" sort=mtime feeds=no actions=yes archive=yes show=0]]
+link(users/anarcat) and !bugs/*/* and !tagged(patch)" sort=mtime feeds=no actions=yes archive=yes show=0]]
 
 Fixed
 -----
 
 [[!inline pages="bugs/* and !bugs/done and link(bugs/done) and
-link(users/anarcat) and !bugs/*/*" feeds=no actions=yes archive=yes show=0]]
+link(users/anarcat) and !bugs/*/* and !tagged(patch)" feeds=no actions=yes archive=yes show=0]]
