@@ -134,4 +134,6 @@ I'm going to attempt to work around it by moving to an external CSV. ­— [[Jon
 >> Post Buster-upgrade, and it's *still* broken on my webhost, which shows
 >> `[\[!table Error: Wide character at /usr/lib/x86_64-linux-gnu/perl/5.28/Encode.pm line 296.]]`
 >> with libperl5.28:amd64	5.28.1-6, libtext-csv-perl	1.99-1 and 
->> libtext-csv-xs-perl	1.38-1. Further fiddling will commence. — [[Jon]]
+>> libtext-csv-xs-perl	1.38-1. Further fiddling will commence.
+>> (removing libtext-csv-xs-perl does not help.)
+— [[Jon]]
