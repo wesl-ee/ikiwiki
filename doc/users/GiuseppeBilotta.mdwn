@@ -1,5 +1,5 @@
 Custom patches to IkiWiki can be found in select branches of
-<http://git.oblomov.eu>.
+<http://git.oblomov.eu/ikiwiki>.
 
 Patches proposed/discussed:
 [[!map pages="link(users/GiuseppeBilotta) and (todo/* or bugs/*) and
