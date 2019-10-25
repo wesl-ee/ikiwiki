@@ -10,7 +10,7 @@ sysadmins.
   [[tips/untrusted_git_push]]); 'jmtd.net', 'jmtd.livejournal.com', 
   'jmtd' if I've forgotten to set my local git config properly,
   or once upon a time 'alcopop.org/me/openid/' or 'jondowland'.
-* My [homepage](http://jmtd.net/) is powered by ikiwiki
+* My [homepage](https://yalanci.neocities.org/) is powered by ikiwiki
 
 I gave a talk at the [UK UNIX User's Group](http://www.ukuug.org/) annual
 [Linux conference](http://www.ukuug.org/events/linux2008/) in 2008 about
