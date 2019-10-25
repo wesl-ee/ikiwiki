@@ -1,6 +1,6 @@
 Website: [pseudorandom.co.uk](http://www.pseudorandom.co.uk/)
 
-Blog: [smcv.pseudorandom.co.uk](http://smcv.pseudorandom.co.uk/)
+Blog: [smcv.pseudorandom.co.uk](https://yalanci.neocities.org/)
 
 My repository containing ikiwiki branches:
 
