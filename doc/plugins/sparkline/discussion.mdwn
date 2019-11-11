@@ -5,3 +5,5 @@ php5 is no longer available in Debian stable (or oldstable).
 the libphp-sparkline package is broken with php7 CLI (it redefines "Object" which is now reserved).
 
 Perhaps reverting to the Perl sparkline would make sense now? — [[Jon]]
+
+> oh, now I see [[bugs/remove orphaned sparkline-php from Suggests]].
