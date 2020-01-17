@@ -69,6 +69,22 @@ supporting [IRIs](https://tools.ietf.org/html/rfc3987): `<a href="#visiting-北�
 >> In practice, minor or old browsers are probably insecure anyway, so I don't care
 >> too much about supporting them perfectly... --s
 
+> After thinking more about this, I don't feel that IRIs are a good
+> solution. Sure, there are machine-readable ways of encoding
+> non-ASCII characters in URLs. But that's not the point here: the
+> point here is to have *human* readable URLs. In the example I give
+> in the plugin documentation, I mention the french word "liberté"
+> which can easily be transliterated to "liberte". By using the
+> RFC3987 scheme, we could use unicode directly in the links (`a
+> href="#liberté"`), but the actual URL would be encoded as
+> `#libert%e9`, which is really not as pretty.
+>
+> I understand you not wanting to introduce another dependency. And I
+> also worry about the transliteration not being stable across
+> releases. After all, it might not even be stable across Unicode
+> releases either! But I'm ready to live with that inconvenience for
+> the user-friendliness of the resulting URLs. --[[anarcat]]
+
 ----
 
 Documentation says:
@@ -101,6 +117,19 @@ htmlize layer, or stop using Text::MultiMarkdown.
 > headinganchors plugins had issues I had to fix. So it was better and easier
 > for me to just override whatever attributes were there for testing and 
 > fixing this in the short term... -- [[anarcat]]
+
+> To bounce on this again: my problem with keeping existing IDs is
+> that it basically makes headinganchors fail to do anything if
+> something else adds the anchors. So I understand where you're coming
+> from with this, but that "bug" was introduced on purpose, to
+> actually fix a problem I was having.
+>
+> So I understand you might not want to *replace* headinganchors
+> completely with this module, but could we at least merge it in so I
+> wouldn't have to carry this patch around forever? :) Or what's our
+> way forward here?
+>
+> Thanks! -- [[anarcat]]
 
 ----
 
