@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-02-26 23:01+0000\n"
+"POT-Creation-Date: 2020-02-02 20:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -600,7 +600,7 @@ msgstr ""
 msgid "multimarkdown is enabled, but Text::MultiMarkdown is not installed"
 msgstr ""
 
-#: ../IkiWiki/Plugin/mdwn.pm:180
+#: ../IkiWiki/Plugin/mdwn.pm:178
 #, perl-format
 msgid "failed to load Markdown.pm perl module (%s) or /usr/bin/markdown (%s)"
 msgstr ""
