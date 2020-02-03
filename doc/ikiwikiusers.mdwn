@@ -224,3 +224,4 @@ Personal sites and blogs
 * [re:fi.64's personal wiki](https://wiki.refi64.com/)
 * [canvon's blog](https://blog.canvon.de/)
 * [Coyote Works](http://coyote.works/) - Work In Progress site of Stephen Michael Kellat
+* [cat.chessmuse.com](https://cat.chessmuse.com) - alip's chess blog
