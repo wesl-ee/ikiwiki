@@ -107,6 +107,7 @@ Projects & Organizations
 * [[nb instrument|http://nb-instrument.com]] a workshop for beautifully handcrafted musical instruments, located in Hamburg, Germany (also one of our rather complex builds using ikiwiki only, providing CGI access for the customer)
 * [[coido architects|http://coido.de]] architectural company, located in Hamburg, Germany and Rotterdam, Netherlands (also rather complex build adding masonry and gallery scripts and some pjaxing to the picture, providing CGI access for the customer)
 * [[guppy|http://guppy.branchable.com/index.en.html]] an internationalized modular Python IRC bot
+* [[ChessWOB|https://www.chesswob.org]] Chess Without Boundaries
 
 Personal sites and blogs
 ========================
