@@ -26,3 +26,5 @@ That is hard to fix without changing the theme significantly. ikiwiki themes fre
 There should really be a way to skip those entries. The patch mentioned here does this by doing a tiny modification to `toc.pm` to skip headings with the magic `nocount` class. The naming comes from [Phil Archer's Automatic Heading Numbering CSS hack](https://philarcher.org/diary/2013/headingnumbers) and could be changed, but it seemed logical to me. The result can be seen in action in: <https://anarc.at/blog/2019-11-20-file-monitoring-tools/>.
 
 Thank you for your consideration.
+
+[[!tag patch]]
