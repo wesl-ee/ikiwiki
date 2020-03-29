@@ -3,7 +3,7 @@
 Why doesn't the following work?..
 [[!color  foreground=white background=#ff0000 text="White text on red background"]]
 
-Sure it is.
+Sure it is.sss
 ===========
 
 I hope baby.
