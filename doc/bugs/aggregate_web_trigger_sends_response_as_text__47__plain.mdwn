@@ -38,3 +38,7 @@ something like
 So it would be nice if the payload was sent with a HTML content-type (which wouldn't hurt cron jobs or clients that ignore the body anyway)
 
 *— [[Jon]], 2020-04-20*
+
+> Oh, haha, the issue here is that the aggregation is *failing*. In the failure case, the above happens (there's an error wrapped up in HTML and delivered as text/plain).
+> In the success case, the output to browser is just plain text. 
+> *— [[Jon]], 2020-04-20*
