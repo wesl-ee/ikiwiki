@@ -41,3 +41,9 @@ further down the list, but of course then you are outside the hover region.
 > 
 > Yet another idea: Find some more refined CSS for handling a variable
 > size popup.. --[[Joey]] 
+
+>> The HTML5 "Details" tag would be perfect:
+>> <https://www.w3schools.com/TAGS/tag_details.asp>
+>> <details><summary>example</summary>here's an example</details>
+>> The above works for me on ikiwiki.info which does not have `html5:1`
+>> so far as I can tell *— [[Jon]], 2020-04-21*
