@@ -37,6 +37,8 @@ own RPM.
 
 NetBSD, Mac OS X, Solaris, and many other platforms: [pkgsrc](http://www.pkgsrc.org/) has an [ikiwiki package](http://pkgsrc.se/www/ikiwiki).
 
+pkg install -U ikiwiki
+
 FreeBSD has ikiwiki in its
 [ports collection](http://www.freshports.org/www/ikiwiki/).
 
