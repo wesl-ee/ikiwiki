@@ -17,4 +17,10 @@ The [[ikiwiki/directive/map]] directive sort by pagename. That looks kind of odd
 
 >>>> You might want to check if the [[plugins/contrib/report]] plugin solves your problem.  It can sort by title, among other things. --[[KathrynAndersen]]
 
+>>>> I realise OP posted this 10 years ago, but here's how I do it: I generate <https://jmtd.net/log/all/> using
+>>>> `inline` with `archive=yes` and a custom template which defines the LI element content for each post. I then include
+>>>> these inlines (one per calendar year) via *another* template, which has the wrapping UL elements in it. These
+>>>> templates are `.tmpl` files (and live in my custom `templatedir`, although that might not matter) which means
+>>>> they avoid the htmlscrubber. *— [[Jon]], 2020-04-27* 
+
 >> See also: [[todo/sort_parameter_for_map_plugin_and_directive]] --[[smcv]]
