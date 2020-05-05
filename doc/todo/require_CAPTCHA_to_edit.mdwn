@@ -91,6 +91,7 @@ ignored.
 >>>> prusue my idea of not doing the captcha validation in the validate
 >>>> hook.
 
+[[!format diff """
 --- a/IkiWiki/Plugin/openid.pm
 +++ b/IkiWiki/Plugin/openid.pm
 @@ -18,6 +18,7 @@ sub getopt () {
@@ -129,6 +130,7 @@ ignored.
  		return_to => IkiWiki::cgiurl(do => "postsignin"),
  		trust_root => $config{cgiurl},
 
+"""]]
 
 Instructions
 =====
@@ -136,8 +138,10 @@ Instructions
 You need to go to <http://recaptcha.net/api/getkey> and get a key set.
 The keys are added as options.
 
-	reCaptchaPubKey => "LONGPUBLICKEYSTRING",
-	reCaptchaPrivKey => "LONGPRIVATEKEYSTRING",
+[[!format perl """
+reCaptchaPubKey => "LONGPUBLICKEYSTRING",
+reCaptchaPrivKey => "LONGPRIVATEKEYSTRING",
+"""]]
 
 You can also use "signInSSL" if you're using ssl for your login screen.
 
@@ -146,6 +150,7 @@ The following code is just inline.  It will probably not display correctly, and 
 
 ----------
 
+[[!format perl """
 #!/usr/bin/perl
 # Ikiwiki password authentication.
 package IkiWiki::Plugin::recaptcha;
@@ -327,3 +332,4 @@ sub check_answer {
 }
 
 1;
+"""]]
