@@ -39,10 +39,6 @@ Copy the `ikiwiki_nav.vim` file to your `.vim/ftplugin` directory.
 The official releases of the plugin are in the
 [vim.org script page](http://www.vim.org/scripts/script.php?script_id=2968)
 
-The latest version of this script can be found in the following location 
-
-<http://git.devnull.li/cgi-bin/gitweb.cgi?p=ikiwiki-nav.git;a=blob;f=ftplugin/ikiwiki_nav.vim;hb=HEAD>
-
 Any feedback you can provide is appreciated; the contact details can be found
 inside the plugin
 
