@@ -6,4 +6,6 @@ anyone worked on a patch or plugin for that? maybe it could be another plugin th
 
 alternatively, i'm thinking of a cronjob that runs daily and notifies me of new comments...
 
+update: I ended up doing the latter, see [[todo/commandline_comment_moderation]].
+
 -- [[anarcat]]
