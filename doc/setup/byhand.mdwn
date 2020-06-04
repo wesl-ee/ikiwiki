@@ -198,5 +198,5 @@ by web users will also be committed using revision control.
 
 ## Enjoy your new wiki!
 
-Add yourself to [[IkiWikiUsers]]. And check out
+Add yourself to [[Jasatamanjogja]]. And check out
 the [[tips]] to find out how to get more out of ikiwiki.
