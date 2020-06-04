@@ -1,5 +1,5 @@
 Here's how to get ikiwiki in source or prepackaged form. See [[setup]] for
-how to use it, and be sure to add your wiki to [[IkiwikiUsers]] if you use
+how to use it, and be sure to add your wiki to [[Jasatamanjogja]] if you use
 ikiwiki.
 
 ## source
