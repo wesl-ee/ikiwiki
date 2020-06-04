@@ -1,4 +1,4 @@
-When you edited [[ikiwikiusers]] all the utf-8 on the page was removed. Is this an issue with the web browser you used? I've fixed the utf-8 damage. --[[Joey]]
+When you edited [[jasatamanjogja]] all the utf-8 on the page was removed. Is this an issue with the web browser you used? I've fixed the utf-8 damage. --[[Joey]]
 
 > Ooops!  Sorry - yes, my fault - I was using w3m, which spawned nano to edit the text, and I'm not setup for utf-8.  I'll be more careful in future.  --[[KarlMW]]
 
