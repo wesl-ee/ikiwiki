@@ -145,7 +145,7 @@ setup file.
 
 ## Enjoy your new wiki!
 
-Add yourself to [[Jasatamanjogja]]. And check out
+Add yourself to [[IkiWikiUsers]]. And check out
 the [[tips]] to find out how to get more out of ikiwiki.
 
 ----

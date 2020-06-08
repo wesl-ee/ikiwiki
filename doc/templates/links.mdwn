@@ -6,7 +6,7 @@
 <li>[[Download]]</li>
 <li>[[Setup]]</li>
 <li>[[Security]]</li>
-<li>[[Users|Jasatamanjogja]]</li>
+<li>[[Users|IkiWikiUsers]]</li>
 <li>[[SiteMap]]</li>
 <li>[[Contact]]</li>
 <li>[[TipJar]]</li>
