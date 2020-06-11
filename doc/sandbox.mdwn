@@ -1,4 +1,4 @@
-###Is this a heading? 
+### Is this a heading?
 
 Why doesn't the following work?..
 [[!color  foreground=white background=#ff0000 text="White text on red background"]]
@@ -59,7 +59,7 @@ markdown `inline` single-backquotes?
 
 - foo
 
-## two
+## two {#alt-link-name-not-working}
 
 - bar
 
