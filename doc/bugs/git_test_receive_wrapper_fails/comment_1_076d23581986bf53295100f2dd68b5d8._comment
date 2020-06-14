@@ -1,0 +1,45 @@
+[[!comment format=mdwn
+ username="joey"
+ subject="""comment 1"""
+ date="2020-06-14T00:17:35Z"
+ content="""
+Stracing git-daemon -f I noticed this:
+
+	[pid 22616] lstat64("/home/b-ikiwiki/source.git/HEAD", {st_mode=S_IFREG|0664, st_size=23, ...}) = 0
+	[pid 22616] openat(AT_FDCWD, "/home/b-ikiwiki/source.git/HEAD", O_RDONLY|O_LARGEFILE) = 3
+	[pid 22616] read(3, "ref: refs/heads/master\n", 255) = 23
+	[pid 22616] read(3, "", 232)            = 0
+	[pid 22616] close(3)                    = 0
+	[pid 22616] lstat64("/home/b-ikiwiki/source.git/commondir", 0xbf83896c) = -1 ENOENT (No such file or directory)
+	[pid 22616] access("/home/b-ikiwiki/source.git/./objects/incoming-gXNPXm", X_OK) = -1 EACCES (Permission denied)
+	[pid 22616] stat64("/home/b-ikiwiki", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+
+So the git diff is in the right cwd, it gets as far as reading HEAD. But then
+this permissions error on this incoming directory happens, and it then seems to
+give up and search for a different git repo to use in the parent directory (and all the way up to root).
+
+The directory is created by git earlier in the strace:
+
+	[pid 22559] mkdir("./objects/incoming-gXNPXm", 0700) = 0
+
+And here's how it looks:
+
+	drwx------+ 7 ikiwiki-anon ikiwiki-anon 4096 Jun 14 00:22 incoming-y6a8pe/
+
+And I think that's the problem, by the time ikiwiki runs it's switched
+away from the ikiwiki-anon user that git-daemon uses, and over to the
+site user. Which can't read that.
+
+source.git has an ACL set to let ikiwiki-anon write to it. 
+
+	ikisite:		eval { shell("setfacl", "-R", "-m", "d:g:$config{gitdaemonuser}:rwX,d:g:$user:rwX,g:$config{gitdaemonuser}:rwX,g:$user:rwX", "$home/source.git") };
+
+Can this ACL be adjusted so that all directories created under it will be readable
+ by the site user (b-ikiwiki)? I don't know ACLs very well.
+
+Alternatively, `GIT_QUARANTINE_PATH` is set to the directory, so
+the C wrapper could fix up its permissions. The wrapper is suid,
+so either would need to switch user ID back to ikiwiki-anon, if that's allowed,
+or there would need to be an outer wrapper that's not suid (just a shell
+script would work) that then runs the regular suid wrapper.
+"""]]
