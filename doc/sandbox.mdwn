@@ -6,8 +6,6 @@ Why doesn't the following work?..
 Sure it is.
 ===========
 
-I hope baby.
-
 ~~~
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 ~~~
