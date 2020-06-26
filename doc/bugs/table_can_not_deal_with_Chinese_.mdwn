@@ -137,3 +137,8 @@ I'm going to attempt to work around it by moving to an external CSV. ­— [[Jon
 >> libtext-csv-xs-perl	1.38-1. Further fiddling will commence.
 >> (removing libtext-csv-xs-perl does not help.)
 — [[Jon]]
+
+>>> Still hitting this [[plugins/table]] bug, using ikiwiki=3.20200202.3, buster system, no libtext-csv-perl installed,
+>>> libperl5.28:amd64       5.28.1-6, no libtext-csv-xs-perl. Workaround is to set format=tsv,
+>>> even though I'm overriding the delimiter to \t. This reproduces easily in the  quay.io/jdowland/opinionated-ikiwiki
+>>> container FWIW. *— [[Jon]], 2020-06-26*
