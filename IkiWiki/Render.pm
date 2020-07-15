@@ -123,6 +123,7 @@ sub genpage ($$) {
 	}
 
 	$template->param(
+		page => $page,
 		title => $page eq 'index' 
 			? $config{wikiname} 
 			: pagetitle(basename($page)),
