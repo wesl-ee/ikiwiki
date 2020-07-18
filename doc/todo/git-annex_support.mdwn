@@ -242,3 +242,8 @@ This [[!taglink patch]] still applies - anything else I should be doing here to 
 > > No problem at all, glad that you still have that in the queue, and I hope
 > > my work was somewhat useful in pushing this forward! Thanks for taking
 > > care of the Imagetragick situation... :/ --[[anarcat]]
+
+Yet another option
+==================
+
+If you happen to use rsync to deploy, instead of git, this is [much easier](https://www.cs.unb.ca/~bremner/blog/posts/big-files).
