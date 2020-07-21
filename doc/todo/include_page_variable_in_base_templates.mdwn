@@ -36,3 +36,12 @@ Thanks!
 PS: I think it would be great if we had a way to figure out which variables are available in a template... I couldn't find out how to do that in HTML::Template, and wonder if we could have some way to do that, to ease such diagnostics in the future...
 
 [[!tag patch]]
+
+---
+
+you're not alone: I think this is very similar to [[forum/how_to_put_a_permalink_on_each_post]].
+
+> PS: I think it would be great if we had a way to figure out which variables are available in a template
+
+I agree! Perhaps a subroutine that enumerated them all and a plugin to expose it or something.
+I definitely wold find that useful too. *­— [[Jon]], 2020-07-21*
