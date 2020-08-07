@@ -123,3 +123,14 @@ screenshot of what the help page would look like, to give you an idea
 of the results:
 
 <img src="http://paste.anarc.at/snaps/snap-2016.04.15-18.07.39.png" />
+
+---
+
+I like the idea of admonitions. I've done something vaguely similar on my own site ([e.g.](https://jmtd.net/film/blade_runner/)), but I just
+use `\[[!template` and put up with the verbosity.I like that `\[[!tip` is shorter than `\[[!template id=…`. If
+I was being a total purist I'd argue that the correct change would be to make a syntax shortcut
+for the template syntax, since functionally that's what `tip` is doing, and include the
+admonition styles in either `style.css` or in every shipped theme. But I'm more of a pragmatist
+and your current plugin actually exists and IkiWiki is starving for contributors (IMHO)
+so I encourage maintainers to merge it. I will probably merge it into [opinionated ikiwiki](https://jmtd.net/log/opinionated_ikiwiki/)
+in either case (which will at least mean there'll be another avenue for people to check it out)  *— [[Jon]], 2020-08-07*
