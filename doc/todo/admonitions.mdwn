@@ -134,3 +134,7 @@ admonition styles in either `style.css` or in every shipped theme. But I'm more 
 and your current plugin actually exists and IkiWiki is starving for contributors (IMHO)
 so I encourage maintainers to merge it. I will probably merge it into [opinionated ikiwiki](https://jmtd.net/log/opinionated_ikiwiki/)
 in either case (which will at least mean there'll be another avenue for people to check it out)  *— [[Jon]], 2020-08-07*
+
+> One quick tip/request, [[anarcat]]: If you could update the "master" branch in your IkiWiki
+> fork to match the merge base for your branches, it would be easy to use Gitlab's "compare"
+> feature in-browser to see a combined diff of your changes.  *— [[Jon]], 2020-08-07*
