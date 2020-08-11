@@ -140,3 +140,5 @@ in either case (which will at least mean there'll be another avenue for people t
 > feature in-browser to see a combined diff of your changes.  *— [[Jon]], 2020-08-07*
 
 > > Thanks for your support and comments! :) I don't have the time to manage another extra branch on top of the stack I already have unfortunately. but it might be simpler for me in the future... I keep on hoping all patches get merged and that i don't need to (more officially) fork `master`, but it seems that's where I need to go myself... In the meantime you can see the list of patches I maintain in [[users/anarcat]] and [my maintenance log](https://anarc.at/services/wiki/). I hope that helps! -- [[anarcat]]
+
+> > Turns out I found the time. I merged all my active branches in the `master` branch on gitlab. not sure what you'd compare it against, but there, it's done. :) [[anarcat]]
