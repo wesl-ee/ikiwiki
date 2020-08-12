@@ -142,3 +142,10 @@ in either case (which will at least mean there'll be another avenue for people t
 > > Thanks for your support and comments! :) I don't have the time to manage another extra branch on top of the stack I already have unfortunately. but it might be simpler for me in the future... I keep on hoping all patches get merged and that i don't need to (more officially) fork `master`, but it seems that's where I need to go myself... In the meantime you can see the list of patches I maintain in [[users/anarcat]] and [my maintenance log](https://anarc.at/services/wiki/). I hope that helps! -- [[anarcat]]
 
 > > Turns out I found the time. I merged all my active branches in the `master` branch on gitlab. not sure what you'd compare it against, but there, it's done. :) [[anarcat]]
+
+>>> Thanks for that! I'll try to explain what I meant in terms of an example. your `admonitions` is  a series of commits that ultimately sit on top of
+>>> upstream's `d0099568` ("Prepare release for unstable"). If I want to see a quick combined diff of all the changes made in that branch, I can try to
+>>> use GitLab's "Compare" feature, but it does not let me specify a SHA to compare against, only a ref-name such as (your) `master`, which (at the time)
+>>> was a much earlier commit than `d0099568`, so "Compare" would include all the unrelated upstream changes. If instead either `master` was `d0099568`, or
+>>> `admonitions` was rebased on top of whatever your `master` was, then GitLab's "Compare" would be useful. As it is, I cloned locally and did the necessary
+>>> `git` incantation. *— [[Jon]], 2020-08-12*
