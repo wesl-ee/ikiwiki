@@ -25,8 +25,8 @@ sub import {
 		"sip", "sips", "snmp", "tel", "urn", "wais", "xmpp",
 		"z39.50r", "z39.50s",
 		# Selected unofficial schemes
-		"aim", "callto", "cvs", "ed2k", "feed", "fish", "gg",
-		"irc", "ircs", "lastfm", "ldaps", "magnet", "mms",
+		"aim", "callto", "cvs", "ed2k", "feed", "fish", "geo",
+		"gg", "irc", "ircs", "lastfm", "ldaps", "magnet", "mms",
 		"msnim", "notes", "rsync", "secondlife", "skype", "ssh",
 		"sftp", "smb", "sms", "snews", "webcal", "ymsgr",
 		"bitcoin", "git", "svn", "bzr", "darcs", "hg"
