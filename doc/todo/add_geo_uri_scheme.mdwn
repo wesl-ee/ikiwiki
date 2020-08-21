@@ -1,6 +1,6 @@
 [[!template  id=gitbranch branch=anarcat/geo-scheme author="[[anarcat]]"]]
 
-Trivial patch to add the `geo:` URI scheme:
+Trivial [[!taglink patch]] to add the `geo:` URI scheme:
 
 [[!format diff """
 modified   IkiWiki/Plugin/htmlscrubber.pm
