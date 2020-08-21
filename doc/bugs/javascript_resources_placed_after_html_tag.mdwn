@@ -65,3 +65,6 @@ I think the simplest solution is to add a newline when we add the javascript blo
 Sorry for the trouble, HTH! :)
 
 PS: Note that it seems like browsers are happy to ignore the spec and load stuff outside of the `<html>` tag, thankfully. So this is mostly a cosmetic/conformity thing...
+
+
+[[!tag patch]]
