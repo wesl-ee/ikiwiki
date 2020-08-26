@@ -34,7 +34,7 @@ CPAN to install modules from your local machine after you extract the ikiwiki ta
 
 Then to build and install ikiwiki:
 
-	perl Makefile.PL # PREFIX=/dir to install elsewhere
+	perl Makefile.PL # INSTALL_BASE= PREFIX=/dir to install elsewhere
 	make
 	make test # optional
 	make install
