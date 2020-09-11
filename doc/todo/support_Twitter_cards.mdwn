@@ -9,3 +9,5 @@ Disclaimer: I don't know anything about Perl or the internals of ikiwiki but I m
 Twitter is not really picky about HTML and actually parses `<meta>` tags outside of the `<head>` section, so there's currently a workaround.
 
 That's what I did on the [donation page of Tails](https://gitlab.tails.boum.org/tails/tails/-/commit/6dbde9fa926e574b3bab4170caf65fe3c394fe48) for now.
+
+[[!tag patch]]
