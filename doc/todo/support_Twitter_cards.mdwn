@@ -1,0 +1,11 @@
+[Twitter cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image) work by using `<meta>` tags with names that include a colon: `twitter:card`, `twitter:site`, `twitter:creator`, etc.
+
+The current parsing of ikiwiki's directive doesn't support using colons in names.
+
+This patch fixes it.
+
+Disclaimer: I don't know anything about Perl or the internals of ikiwiki but I managed to "make it work". It might still be flawed in many ways.
+
+Twitter is not really picky about HTML and actually parses `<meta>` tags outside of the `<head>` section, so there's currently a workaround.
+
+That's what I did on the [donation page of Tails](https://gitlab.tails.boum.org/tails/tails/-/commit/6dbde9fa926e574b3bab4170caf65fe3c394fe48) for now.
