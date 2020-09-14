@@ -10,8 +10,10 @@ The pubdate REQUIRES a date, so e.g. `pubdate="2009-03-24T18:02:14Z"`
 > --[[Joey]] 
 >> awesome, thanks for fixing my fix ;) --[[simonraven]]
 >>> This seems to be happening either still or again with version 3.20200202.3-1. I'm getting strings generated like
->>> Posted <time datetime="2007-12-06T05:00:00Z" pubdate="pubdate">Thu 06 Dec 2007 12:00:00 AM EST</time>
->>> which shows up as an error on https://validator.w3.org/
+>>>
+>>> Posted &lt;time datetime="2007-12-06T05:00:00Z" pubdate="pubdate"&gt;Thu 06 Dec 2007 12:00:00 AM EST&lt;/time&gt;
+>>>
+>>> which shows up as an error on https://validator.w3.org/ --Luke Schierer
  
 
 Otherwise the XML parser chokes.
