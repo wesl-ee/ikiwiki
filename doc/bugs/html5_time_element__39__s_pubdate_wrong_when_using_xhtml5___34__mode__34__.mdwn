@@ -13,8 +13,16 @@ The pubdate REQUIRES a date, so e.g. `pubdate="2009-03-24T18:02:14Z"`
 >>>
 >>> Posted &lt;time datetime="2007-12-06T05:00:00Z" pubdate="pubdate"&gt;Thu 06 Dec 2007 12:00:00 AM EST&lt;/time&gt;
 >>>
->>> which shows up as an error on https://validator.w3.org/ --Luke Schierer
- 
+>>> which shows up as an error on https://validator.w3.org/ --Luke Schierer 
+
+>>>> My reading of Joey's response, above, was that (according to the spec at the time), `pubdate="pubdate"` is what
+>>>> should be generated, *not* `pubdate="timestamp"`, and so what you are seeing is expected. However, looking at
+>>>> the *current* Spec (linked elsewhere in this page), `pubdate` is not actually a valid attribute any more at
+>>>> all. And indeed, running my own blog through the Validator, I see:
+>>>>> `Error: Attribute pubdate not allowed on element time at this point.`
+>>>> *— [[Jon]], 2020-10-05*
+
+
 
 Otherwise the XML parser chokes.
 
