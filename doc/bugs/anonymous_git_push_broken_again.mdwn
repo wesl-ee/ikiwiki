@@ -1,0 +1,10 @@
+This might not be the same cause or solution as [[git_test_receive_wrapper_fails]] so filing
+it separately.
+
+Anon git push is broken again
+
+    remote: error: cannot lock ref 'HEAD': Unable to create '/home/b-ikiwiki/source.git/./HEAD.lock': Permission denied
+    To git://git.ikiwiki.info/
+     ! [remote rejected]     master -> master (failed to update ref)
+
+*—[[Jon]], 2020-10-06*
