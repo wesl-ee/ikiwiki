@@ -10,4 +10,11 @@ Twitter is not really picky about HTML and actually parses `<meta>` tags outside
 
 That's what I did on the [donation page of Tails](https://gitlab.tails.boum.org/tails/tails/-/commit/6dbde9fa926e574b3bab4170caf65fe3c394fe48) for now.
 
-[[!tag patch]]
+> Hi! Thanks for looking at this. Correct me if I misunderstand your message. I think you are saying
+> that this bug with colons remains in IkiWiki's parser, and you have not fixed that, but you have a
+> a workaround, namely putting the meta tags as HTML into the body of the page? That's a useful
+> workaround and worthy of documenting, but it's not a "patch" so I have removed the patch tag.
+> 
+> If, instead, you have actually got a patch for the IkiWiki parser, please post it and I can take a
+> look: I'm not an IkiWiki maintainer but I can review it and give my opinion at least. If that's the
+> case, please share it, and re-add `\[[!tag patch]]`. Thanks! *—[[Jon]], 2020-10-13*
