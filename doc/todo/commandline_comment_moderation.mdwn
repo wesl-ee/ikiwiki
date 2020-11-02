@@ -103,3 +103,12 @@ the comment. The default (`i`) is to ignore the comment.
 I find that this is generally faster than going through a web browser, although to be as fast as the CGI interface, there would need to be a final dialog that says "delete all ignored comments" like in the CGI. Exercise for the reader or, I guess, myself when I got too many junk comments to process...
 
 Feedback, as usual, welcome. -- [[anarcat]]
+
+> great stuff, thanks! I've got a similar-ish script that sends me an email summary, but I don't
+> have the CLI stuff myself. What I'd like to see on the web form is: display the IP (or user)
+> responsible for each comment and enable banning them at the same time as moderating the comment.
+> However I'd also like to expand the data attached to the banlist, so it's clear *why* an entry
+> was added (e.g. blog spam), and when — because I would prefer all such bans to be time limited.
+> (implementation wise, this might be easiest achieved if one of the comment plugins was responsible
+> for maintaining a separate data structure with this info which was processed into a ban list to
+> append to the main one.) *—[[Jon]], 2020-11-02*
