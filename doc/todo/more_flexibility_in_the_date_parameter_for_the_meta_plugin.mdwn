@@ -33,3 +33,5 @@ index cd367da70..dbcf99aea 100644
 luke@schierer@opus001:~/src/ikiwiki/ikiwiki$ 
 ```
 
+[[!tag patch]]
+
