@@ -1,0 +1,1 @@
+Changing from perl Date::Parse to Date::Manip causes it to accept some strings that it otherwise could not.  This is mostly dealing with situations where it has to infer values from partial date strings, but sometimes that is useful. 
