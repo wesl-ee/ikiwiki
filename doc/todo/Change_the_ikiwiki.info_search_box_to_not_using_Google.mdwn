@@ -11,3 +11,6 @@ With both engines adding the "site:ikiwiki.info" string to the search terms limi
 > duckduckgo](https://github.com/jmtd/ikiwiki/tree/duckduckgo).
 > It's also live on <https://jmtd.net/>. — [[Jon]] [[!tag patch]]
 
+>> I've just updated this branch to not require JavaScript (I learned about a hidden parameter to
+>> the search form for specifying the URLs to search under). In case this wasn't clear already, I
+>> think this is ready for review and to consider merging to IkIWiki proper. *— [[Jon]], 2020-12-11*
