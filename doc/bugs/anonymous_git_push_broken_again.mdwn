@@ -8,3 +8,12 @@ Anon git push is broken again
      ! [remote rejected]     master -> master (failed to update ref)
 
 *—[[Jon]], 2020-10-06*
+
+> It does not seem related to the other problem. I don't understand how it
+> could have broken in a new way since I fixed it before. git has not been
+> upgraded in the meantime. This is affecting more than one site, and the
+> permissions do not seem obviously broken.
+> 
+> Since this is now seeming so fragile -- after working for about a decade,
+> it's broken twice in a matter of months -- I'm questioning whether it's
+> worth trying to keep the feature working. --[[Joey]]
