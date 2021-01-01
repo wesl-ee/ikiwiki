@@ -255,3 +255,10 @@ imported blog comments with full fidelity. OK to commit?
 > Ship it. --[[smcv]]
 
 >> Thanks, have done. --[[schmonz]]
+
+
+## Keeping comments separate from content to avoid triggering rebuilds
+
+Is there a way of preventing comments from triggering long chains of rebuilds? Currently comments trigger the same chain of events as if the page itself had been modified (at least this seems to be the case). A way of keeping comments lightweight and out of ikiwiki would be great. This has obvious consequences but currently comments are to slow for my users. My site is complex with tags and trails (albums) so commenting the wrong page leads to several minutes of rebuild (being conservative here...). For my use case comments don't need wikilinks or any wiki features. 
+
+To my thinking it could be useful to have comments as a very lightweight type of data that enables interactivity but not the full force of ikiwiki. Any thoughts?
