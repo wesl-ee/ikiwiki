@@ -232,5 +232,8 @@ you have disabled a plugin that defined a PageSpec name and you want to substitu
 what it would have expanded to with something else, for example.
 
 I will (after writing this) rebase my branch. Please take another look!
+(just in case the rebase and/or the "-" in the branchnames causes problems
+with IkiWiki's auto-mirror-pull, the branch is here:
+<https://github.com/jmtd/ikiwiki/tree/pagespec-alias>)
 
 *— [[Jon]], 2020-01-10*
