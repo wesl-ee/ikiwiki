@@ -211,3 +211,26 @@ or [[smcv]]?) or otherwise feed back on this? Thanks! — [[Jon]] (2018-09-25)
 > this works.)
 >
 > --[[smcv]]
+
+----
+
+Thank you for the review (nearly a year ago, I've just noticed!). I've
+added checks for the issues you outline above, and test coverage for all
+those issues.
+I've also decided to rename the plugin (back) to just "alias":
+I mooted that right back when I started this but I was worried about
+potential ambiguity. That was ten years ago and I think the concern has
+prove unfounded. I've left the config key as `pagespec_aliases` though,
+as that's one area I think its clearer.
+
+With regards `aliasname()` versus `alias(aliasname)`:
+I've given this some thought. Pros and cons of that approach: it would be
+a little uglier; you would not inadvertently clash with a PageSpec defined
+elsewhere. However, I wonder if someone might actually *want* to define a
+PageSpec this way that was the same as that defined by something else: Perhaps,
+you have disabled a plugin that defined a PageSpec name and you want to substitute
+what it would have expanded to with something else, for example.
+
+I will (after writing this) rebase my branch. Please take another look!
+
+*— [[Jon]], 2020-01-10*
