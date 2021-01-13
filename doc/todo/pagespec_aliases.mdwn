@@ -236,8 +236,8 @@ I will (after writing this) rebase my branch. Please take another look!
 with IkiWiki's auto-mirror-pull, the branch is here:
 <https://github.com/jmtd/ikiwiki/tree/pagespec-alias>)
 
-*— [[Jon]], 2020-01-10*
+*— [[Jon]], 2021-01-10*
 
-> Scratch that, more work needed ☹ *— [[Jon]], 2020-01-11*
+> Scratch that, more work needed ☹ *— [[Jon]], 2021-01-11*
 
->> This is really ready now. *— [[Jon]], 2020-01-13*
+>> This is really ready now. *— [[Jon]], 2021-01-13*
