@@ -17,3 +17,11 @@ Anon git push is broken again
 > Since this is now seeming so fragile -- after working for about a decade,
 > it's broken twice in a matter of months -- I'm questioning whether it's
 > worth trying to keep the feature working. --[[Joey]]
+
+>> Of course, that's got to be your call. I haven't made a great deal of use
+>> of it, but it *does* seem more convenient if one is working on an IkiWiki
+>> patch, as I can write the website notes about it in the same tree (although
+>> I then have to cherry-pick to push that to the live site, of course.). If
+>> you decide to drop it from `ikiwiki.info`, would you leave the code as-is,
+>> or drop it as broken? Any further clues what went wrong this time?
+>> *—[[Jon]], 2021-01-13*
