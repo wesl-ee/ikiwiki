@@ -9,7 +9,7 @@ With both engines adding the "site:ikiwiki.info" string to the search terms limi
 > I've had a first stab at implementing this. It's in [my fork on
 > GitHub](https://github.com/jmtd/ikiwiki/tree/duckduckgo), specifically [branch
 > duckduckgo](https://github.com/jmtd/ikiwiki/tree/duckduckgo).
-> It's also live on <https://jmtd.net/>. — [[Jon]] [[!tag patch]]
+> It's also live on <https://jmtd.net/>. — [[Jon]] (2019) [[!tag patch]]
 
 >> I've just updated this branch to not require JavaScript (I learned about a hidden parameter to
 >> the search form for specifying the URLs to search under). In case this wasn't clear already, I
