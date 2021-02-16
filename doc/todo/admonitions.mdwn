@@ -150,6 +150,8 @@ in either case (which will at least mean there'll be another avenue for people t
 >>> `admonitions` was rebased on top of whatever your `master` was, then GitLab's "Compare" would be useful. As it is, I cloned locally and did the necessary
 >>> `git` incantation. *— [[Jon]], 2020-08-12*
 
+>>>> I have rebased all my current branches onto `debian/3.20190228-1` because that's what I'm patching in production, and I have updated my `master` branch on GitLab to follow that. The branches are admonitions, [bootstrap-plugin](https://ikiwiki.info/plugins/contrib/bootstrap), [toc-skip](https://ikiwiki.info/todo/allow_toc_to_skip_entries), [page-template-variable](https://ikiwiki.info/todo/include_page_variable_in_base_templates), [js-newline](https://ikiwiki.info/bugs/javascript_resources_placed_after_html_tag/), [i18n-headinganchors](https://ikiwiki.info/plugins/contrib/i18nheadinganchors), [dev/git-annex-support](https://ikiwiki.info/todo/git-annex_support/), and [geo-scheme](https://ikiwiki.info/todo/add_geo_uri_scheme/). Phew. Is that what you needed? It's still kind of a mess, but it should make it easier for you to review... --[[anarcat]]
+
 ----
 
 I've finally started playing around with this plugin. I think the default CSS needs
@@ -160,3 +162,5 @@ the actiontab theme enabled:
 
 <img src=https://jmtd.net/tmp/admonition.png alt="pic demoing admonitions" />
 *— [[Jon]], 2021-02-15*
+
+> I had kind of given up on this guy here, to be honest, but if you want to see a working version, you can look at [my sandbox](https://anarc.at/sandbox/). Obviously, the CSS does need more tweaking, but it seems it's not my specialty. ;) -- [[anarcat]]
