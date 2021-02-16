@@ -149,3 +149,14 @@ in either case (which will at least mean there'll be another avenue for people t
 >>> was a much earlier commit than `d0099568`, so "Compare" would include all the unrelated upstream changes. If instead either `master` was `d0099568`, or
 >>> `admonitions` was rebased on top of whatever your `master` was, then GitLab's "Compare" would be useful. As it is, I cloned locally and did the necessary
 >>> `git` incantation. *— [[Jon]], 2020-08-12*
+
+----
+
+I've finally started playing around with this plugin. I think the default CSS needs
+tweaking. I see "warning" has `padding` to try to account for the icon size, but 
+the other admonitions do not. Perhaps they need to inherit some style from a common
+class? Either way, the padding does not seem to work. This is a fresh ikiwiki with
+the actiontab theme enabled:
+
+<img src=https://jmtd.net/tmp/admonition.png alt="pic demoing admonitions" />
+*— [[Jon]], 2021-02-15*
