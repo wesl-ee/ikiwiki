@@ -166,3 +166,5 @@ the actiontab theme enabled:
 > I had kind of given up on this guy here, to be honest, but if you want to see a working version, you can look at [my sandbox](https://anarc.at/sandbox/). Obviously, the CSS does need more tweaking, but it seems it's not my specialty. ;) -- [[anarcat]]
 
 >> It turned out to be a simple fix, a missing semicolon. [patch here](https://github.com/jmtd/ikiwiki/commit/3e31200ed258ba1f7ab1652d6bc2d035a9e5c990). The rest of that branch is just your admonitions branch rebased onto `3.20200202.3`. *—[[Jon]], 2021-02-18*
+
+>>> Interesting. That was of course, a missing semicolon, not sure how I missed that. I cherry-picked your patch, but I wonder why I wasn't seeing the problem on my end... Maybe I had other padding that was covering for this... Thanks, in any case! :) -- [[anarcat]]
