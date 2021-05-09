@@ -2,7 +2,9 @@ Hey,
 using the "ikistrap" theme, and just trying to generate a tagcloud in the index/home page of the site nothiing will show - as a table, it works though! the tag pages are created, but not found by pagestats it seems to me...
 Does someone have an idea why that is?
 Thanks, Flo
----
+
+----
+
 I am trying to create a tag cloud using:  
            
      \[[!pagestats  pages="tags/*"]]
