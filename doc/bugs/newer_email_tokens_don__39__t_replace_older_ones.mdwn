@@ -1,0 +1,1 @@
+if I request more than one email login link, the first token received still has to be used. Using a later one triggers "bad token" error
