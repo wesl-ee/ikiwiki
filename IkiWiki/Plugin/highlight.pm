@@ -54,7 +54,13 @@ sub checkconfig () {
 	eval q{use highlight};
 	if (highlight::DataDir->can('new')) {
 		$data_dir=new highlight::DataDir();
-		$data_dir->searchDataDir("");
+		if ( $data_dir->can('initSearchDirectories') ) {
+			# 4.0+
+			$data_dir -> initSearchDirectories("");
+		} else {
+			# pre-4.0
+			$data_dir -> searchDataDir("");
+		}
 	} else {
 		$data_dir=undef;
 	}
