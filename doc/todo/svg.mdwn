@@ -75,3 +75,7 @@ Of course, this way to display an image one needs to click a link, but it may be
 > then this is a security hole, and the htmlscrubber
 > needs to lock it down more. Darn, now I have to spend my afternoon making
 > security releases! --[[Joey]] 
+
+* * * 
+
+This would be really neat, including the svg with an img tag limits the functionality because then any text in the svg is not parsed for [[WikiLinks|ikiwiki/wikilink]] or similar.  You could do some neat things like a timeline or a family tree where you would want mixed text and graphic elements by mixing markdown and svg on the same page. 
