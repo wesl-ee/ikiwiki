@@ -1,0 +1,1 @@
+To enable linking to specific parts of long ikiwiki pages, like the git-annex man page, auto-generate named anchors for all sections, based e.g. on section names (`<a name="My_section">`).  Maybe also do this for list items.
