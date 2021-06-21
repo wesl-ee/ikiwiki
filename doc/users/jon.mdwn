@@ -8,7 +8,7 @@ since 2008, as well as a number of private instances.
 I've worked on a few different issues and bugs over the years (they
 are probably linked in "Backlinks", below) but these days my main
 effort is the [Opinionated Ikiwiki](https://github.com/jmtd/opinionated-ikiwiki/)
-[[containers|container]].
+[[container|containers]].
 
 ## historic
 
