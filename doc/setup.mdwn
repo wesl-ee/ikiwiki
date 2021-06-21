@@ -7,9 +7,7 @@ This tutorial will walk you through setting up a wiki with ikiwiki.
 If you're using Debian or Ubuntu, ikiwiki is an <code><a href="http://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_basic_package_management_operations">apt-get</a> install ikiwiki</code> away.
 If you're not, see the [[download]] and [[install]] pages.
 
-You may also want to try out a sandboxed [[Docker image|https://github.com/dgsb/docker-ikiwiki]]
-with ikiwiki pre-installed which will use a volume to access a local git repository
-for the wiki content.
+You may also want to try out IkiWiki in a [[container|containers]].
 
 ## Create your wiki
 
