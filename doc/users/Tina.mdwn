@@ -1,0 +1,3 @@
+[Martina Ferrari](https://tina.pm/blog/)
+
+Long time user of ikiwiki. Made a [rewrite](https://tina.pm/blog/posts/OSM_in_IkiWiki/) of the OSM plugin, still pending merge.
