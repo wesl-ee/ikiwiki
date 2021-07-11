@@ -10,3 +10,8 @@ I'd appreciate additional careful review from another maintainer,
 including about the points raised at [[plugins/osm/discussion]].
 
 --[[schmonz]]
+
+It has been over 2 years since I created this patch... I have even changed my name and gender in the meantime :)
+Any chances of it being merged into master? At this point I am considering if it makes sense to keep using ikiwiki if I have to keep maintaining local patches for years.
+
+--[[Tina]]
