@@ -1,4 +1,4 @@
-[[Tincho]] has an updated [[plugins/osm]] that fixes some basic usages,
+[[Tina]] has an updated [[plugins/osm]] that fixes some basic usages,
 greatly simplifies the code, and would let us close
 [[replace openlayers with leaflet]]
 and
