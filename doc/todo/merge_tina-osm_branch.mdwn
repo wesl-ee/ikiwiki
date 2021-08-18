@@ -16,23 +16,23 @@ Any chances of it being merged into master? At this point I am considering if it
 
 --[[Tina]]
 
->> Hi, I can understand your frustration with having outstanding patches for
->> review/merge. You aren't alone. It's clear that the IkiWiki maintainers are
->> overloaded at the moment. IkiWiki maintainers, is there anything that we can
->> do to help?
->> 
->> In my case I started [collecting together stuff that I was requesting be merged](https://github.com/jmtd/ikiwiki/compare/3.20200202.3...jmtd:opinionated?expand=1)
->> into IkiWiki, by myself and others, in a branch that I use for the *Opinionated
->> Ikiwiki* [[container|containers]].
->> 
->> The *Opinionated IkiWiki* container was not intended to be a "clearing house"
->> for patches, as such, but it could potentially be a way for pending stuff to
->> get some exposure, which might increase the overburdened maintainers confidence
->> in the patches. (Would it)? Supposing that anyone is using the container of
->> course.
->> 
->> I've personally not used the OSM plugin at all, but I took a quick look after
->> you posted the above message. It looks cool! I would probably accept a PR
->> against the "opinionated" branch in my fork, above, if that was of any interest.
->> 
->> -- *[[Jon]], 2021-08-18*
+> Hi, I can understand your frustration with having outstanding patches for
+> review/merge. You aren't alone. It's clear that the IkiWiki maintainers are
+> overloaded at the moment. IkiWiki maintainers, is there anything that we can
+> do to help?
+> 
+> In my case I started [collecting together stuff that I was requesting be merged](https://github.com/jmtd/ikiwiki/compare/3.20200202.3...jmtd:opinionated?expand=1)
+> into IkiWiki, by myself and others, in a branch that I use for the *Opinionated
+> Ikiwiki* [[container|containers]].
+> 
+> The *Opinionated IkiWiki* container was not intended to be a "clearing house"
+> for patches, as such, but it could potentially be a way for pending stuff to
+> get some exposure, which might increase the overburdened maintainers confidence
+> in the patches. (Would it)? Supposing that anyone is using the container of
+> course.
+> 
+> I've personally not used the OSM plugin at all, but I took a quick look after
+> you posted the above message. It looks cool! I would probably accept a PR
+> against the "opinionated" branch in my fork, above, if that was of any interest.
+> 
+> -- *[[Jon]], 2021-08-18*
