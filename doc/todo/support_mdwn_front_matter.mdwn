@@ -18,7 +18,7 @@ prefixed by '%'). Quoting `mdwn.pm` (here in the section that handles
     $always_flags |= Text::Markdown::Discount::MKD_NOHEADER();
 
 It would be good to support YAML-formatted pre-pended metadata,
-translating recognised keys into [[meta]] definitions, to aid
+translating recognised keys into [[plugins/meta]] definitions, to aid
 migration between IkiWiki and other static site generators: it
 would aid the same source files being useable in multiple systems.
 
