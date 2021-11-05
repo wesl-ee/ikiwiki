@@ -1,0 +1,18 @@
+With Ikiwiki, mdwn, and discount configured, the following syntax
+
+    [some link with parens in it](http://foo.com/parens(yeah))
+
+Has a broken URI (missing the closing parenthesis) and renders the second parenthesis outside of the link.
+
+Here's it live on ikiwiki.info: [some link with parens in it](http://foo.com/parens(yeah))
+
+Bug present in at least discount 2.2.6 and 2.2.7 and merely exposed by IkiWiki. Note that upstream
+consider this to be not-a-bug/"behavior follows specs": https://github.com/Orc/discount/issues/241
+
+The following alternative markdown implementations get this right:
+
+ * libtext-markdown-perl 1.000031 (debian -3) 
+ * multimarkdown 1.000035 (debian -2)
+
+
+*— [[Jon]], 2021-11-05*
