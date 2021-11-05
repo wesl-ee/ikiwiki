@@ -13,6 +13,8 @@ The following alternative markdown implementations get this right:
 
  * libtext-markdown-perl 1.000031 (debian -3) 
  * multimarkdown 1.000035 (debian -2)
+ * [commonmark](https://spec.commonmark.org/dingus/?text=%5Bsome%20stupid%20thing%5D(https%3A%2F%2Ffoo.com%2Fmoo(baah)))
 
+I note the irony of the commonmark URI being an apt demo of the problem.
 
 *— [[Jon]], 2021-11-05*
