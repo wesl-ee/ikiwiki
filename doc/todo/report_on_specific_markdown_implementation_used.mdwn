@@ -2,3 +2,7 @@ The [[plugins/mdwn]] plugin can use one of several markdown implementations depe
 
 It would be good to have a way to report exactly which version ended up being chosen for a given invocation. Either as a verbose log message, or
 by setting a variable that could be echoed into content by another command. *— [[Jon]], 2021-11-08*.
+
+Patch: <https://github.com/jmtd/ikiwiki/commit/79297a0879e4f05f421b560bbbc74c2278dddc61>
+[[!tag patch]]
+[[!template id=gitbranch branch=jon/mdwn-debug-log-chosen-impl author="[[Jon]]"]]
