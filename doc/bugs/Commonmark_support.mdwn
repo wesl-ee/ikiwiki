@@ -18,3 +18,12 @@ I've found that switching my own non-ikiwiki projects to https://github.com/jgm/
 >
 > However, if you want to add optional Commonmark support to the
 > [[plugins/mdwn]] plugin, I'd review a patch. --[[smcv]]
+
+----
+
+A very initial patch is here. There might be ikiwiki-to-commonmark option translation
+to do.
+
+Patch: <https://github.com/jmtd/ikiwiki/commit/c76eeac8152604ce3d7d1672fe404c8ee8ef2dd8>
+[[!tag patch]]
+[[!template id=gitbranch branch=jon/commonmark author="[[Jon]]"]]
