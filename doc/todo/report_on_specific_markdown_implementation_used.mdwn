@@ -1,0 +1,4 @@
+The [[plugins/mdwn]] plugin can use one of several markdown implementations depending on some settings and what's available in the (Perl) environment.
+
+It would be good to have a way to report exactly which version ended up being chosen for a given invocation. Either as a verbose log message, or
+by setting a variable that could be echoed into content by another command. *— [[Jon]], 2021-11-08*.
