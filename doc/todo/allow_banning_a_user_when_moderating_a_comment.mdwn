@@ -5,3 +5,5 @@ If a logged-in user is both a comment moderator and an admin, it would be nice i
 >> Thanks. I moderate all my comments and send myself a nightly email, but I was sending the list of *all* unmoderated comments in each mail,
 >> rather than just new ones. If I switch to just the new ones, as you have, I could indeed just ignore the mails that are clearly all spam.
 >> Thanks for the tip! *— [[Jon]], 2021-12-06*
+
+>>> I don't actually think my script is that smart: it keeps sending me mail for *all* unmoderated comments, every night. I just ignore those mails for a while until they have valid content. ;) *-- [[anarcat]], 2021-12-06*
