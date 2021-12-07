@@ -7,3 +7,7 @@ If a logged-in user is both a comment moderator and an admin, it would be nice i
 >> Thanks for the tip! *— [[Jon]], 2021-12-06*
 
 >>> I don't actually think my script is that smart: it keeps sending me mail for *all* unmoderated comments, every night. I just ignore those mails for a while until they have valid content. ;) *-- [[anarcat]], 2021-12-06*
+
+>>>> Haha well, you've inadvertently improved my process anyway :-) I just added `-mtime -2` to a `find`. Ultimately I wonder if
+>>>> I'll move to reviewing and publishing comments by filing mail, and/or applying my (remarkably good, crm114) mail filters to
+>>>> blog comments. *— [[Jon]], 2021-12-07*
