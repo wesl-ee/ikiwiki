@@ -590,6 +590,10 @@ sub aggregate (@) {
 				title => defined $entry->title ? decode_entities($entry->title) : "untitled",
 				author => defined $entry->author ? decode_entities($entry->author) : "",
 				link => $entry->link,
+				enclosureurl => defined $entry->enclosure ? $entry->enclosure->url : "",
+				enclosureimage => (defined $entry->enclosure && $entry->enclosure->type =~ m/image\//) ? "1" : "",
+				enclosureaudio => (defined $entry->enclosure && $entry->enclosure->type =~ m/audio\//) ? "1" : "",
+				enclosurevideo => (defined $entry->enclosure && $entry->enclosure->type =~ m/video\//) ? "1" : "",
 				content => (defined $c && defined $c->body) ? $c->body : "",
 				guid => defined $entry->id ? $entry->id : time."_".$feed->{name},
 				ctime => $entry->issued ? ($entry->issued->epoch || time) : time,
@@ -700,6 +704,14 @@ sub write_page ($$$$$) {
 		if defined $params{copyright} && length $params{copyright};
 	$template->param(permalink => IkiWiki::urlabs($params{link}, $feed->{feedurl}))
 		if defined $params{link};
+	$template->param(enclosureurl => $params{enclosureurl})
+		if defined $params{enclosureurl} && length $params{enclosureurl};
+	$template->param(enclosureimage => $params{enclosureimage})
+		if defined $params{enclosureimage} && length $params{enclosureimage};
+	$template->param(enclosureaudio => $params{enclosureaudio})
+		if defined $params{enclosureaudio} && length $params{enclosureaudio};
+	$template->param(enclosurevideo => $params{enclosurevideo})
+		if defined $params{enclosurevideo} && length $params{enclosurevideo};
 	if (ref $feed->{tags}) {
 		$template->param(tags => [map { tag => $_ }, @{$feed->{tags}}]);
 	}
