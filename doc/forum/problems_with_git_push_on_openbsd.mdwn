@@ -1,0 +1,53 @@
+running ikiwiki on openbsd under user 'w' 
+
+src dir /home/w/mysite.src 
+
+destination dir /var/www/htdocs/wiki/ 
+
+git dir /home/w/mysite.git 
+
+error message:
+
+```
+
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 298 bytes | 99.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: Can't locate IkiWiki.pm in @INC (you may need to install the IkiWiki module) (@INC contains: /usr/local/libdata/perl5/site_perl/amd64-openbsd /usr/local/libdata/perl5/site_perl /usr/libdata/perl5/amd64-openbsd /usr/libdata/perl5) at /home/w/usr/usr/local/bin/ikiwiki line 7.
+remote: BEGIN failed--compilation aborted at /home/w/usr/usr/local/bin/ikiwiki line 7.
+To /home/w/mysite.git
+   4bc21d3..6f7a2ec  master -> master
+$
+
+```
+
+~/.profile :
+
+```
+# $OpenBSD: dot.profile,v 1.7 2020/01/24 02:09:51 okan Exp $
+#
+# sh/ksh initialization
+
+PATH=$HOME/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
+export PATH HOME TERM
+eval `perl -I ~/perl5/lib/perl5 -Mlocal::lib`
+export MANPATH=$HOME/perl5/man:$MANPATH
+
+export PATH=$PATH:/home/w/usr/usr/local/bin/
+export PERL5LIB=$PERL5LIB:/home/w/usr/usr/local/libdata/perl5/site_perl/
+````
+
+env var:
+
+
+```
+$ echo $PERL5LIB
+/home/w/perl5/lib/perl5:/home/w/usr/usr/local/libdata/perl5/site_perl/:/home/w/usr/usr/local/libdata/perl5/site_perl/
+$ 
+
+```
+
+How can I further debug this issue, please? In /var/www/htdocs/wiki/  nothing gets created.
