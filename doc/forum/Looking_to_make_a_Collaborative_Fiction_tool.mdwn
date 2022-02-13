@@ -1,0 +1,45 @@
+Hello, I'm looking to make a Collaborative Fiction tool meant for multiple users and I was wondering if Ikiwiki would be a good base for that. Its plugin system looks very powerful, but I'm worried if I'd have to lock down too many things for it to be viable.
+
+Heres the requirements list that I've made so far
+
+> I want something that can easily let me see information about my friends' world building.
+> 
+> World building involves
+> 
+> - Characters
+> - Player Characters
+> - Settings
+> - Major Events
+> - Cool Things (Magic Items for example)
+> 
+> I want to be able to see whatever they feel like is the best entrypoint
+> 
+> I want to be able to see a general list of everything they make
+> 
+> I want them to be able to choose who can see their work
+> 
+> I want them to be able to choose who can **edit** their work
+> 
+> I want people to be able to contribute to the same World or Project
+> 
+> I want people to be able to receive suggestions on their work?
+> 
+> I want people to be able to use their characters and settings to write stories in both realtime and asynchronously
+
+As for implementation. My original idea for this was to build a wrapper around git. This wrapper would allow someone to log in using Discord. If it is a new account, it would create a new git repo for them. Each user only has 1 git repo for simplicity's sake.
+
+The repo has folders and files in it, and each folder and file has user controlled access on it. A file or folder can be publicly viewable, only viewable to themselves, or only viewable to others they choose.
+
+On top of that, they can allow others to edit their files.
+
+I figure this is easily doable by just having the wrapper handling all this role based stuff. I'm not sure if a database or the files themselves would have the information for this rbac feature.
+
+I also figure having it be built on git would also allow people to use their own choice in editor, instead of whatever client I create. This has been a pretty important use case to people I talk to about this project.
+
+When I looked over ikiwiki's abilities, it seemed like most of this was already done by ikiwiki and I'd like to avoid doing work someone else has already done, and contribute to a project. Pushing free software is always great.
+
+I figure it could be implemented by giving every user their own ikiwiki, having some sort of centralized auth server that does the rbac and login. I'd also probably want to tighten the git access to be more similar to traditional git hosting web services.
+
+My users aren't developers, and should have the more confusing but powerful features of git left to git. They're just people who have fun writing fiction about their original characters and fiction with no intent of publishing anything. So the focus is entirely on making sure the software is enjoyable to use.
+
+I was wondering if anyone could tell me if this is outside the scope of ikiwiki's abilities, or if theres a more intelligent way for me to implement this idea using ikiwiki. 
