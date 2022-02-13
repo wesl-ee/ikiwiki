@@ -1,0 +1,24 @@
+[[!comment format=mdwn
+ username="kinostl"
+ avatar="http://cdn.libravatar.org/avatar/3687dfd12f6338c547718b7839959617"
+ subject="Clarifications for gry"
+ date="2022-02-13T19:06:25Z"
+ content="""
+Hi gry, thanks for the questions.
+
+> \"I want them to be able to choose who can see their work, I want them to be able to choose who can edit their work\" - how do you see this controlled?
+
+I'm imagining a user can go to a page and go to a \"permissions\" tab, then add people to different roles such as \"editor\" and \"reader\". Non-logged in users, and any user, would be presented as an individual user on this page, to make it easier on the user. 
+
+> \"I want people to be able to use their characters and settings to write stories\" - what do you mean - other than have one pages 'My list of characters' and anorher page 'My story' - what else does the software need to be able to do?
+
+I pretty much just mean people having pages and a good index, yes. 
+
+> \"in both realtime and asynchronously\" -- could you please tell more details about this feature? Do you mean 'live' collaborative editing when there are several users editing a page at the same time?
+
+I should have left this part out, I realized its essentially a whole different project. I just mean real time comments.
+
+> Thanks.
+
+Thanks for pointing out where I could be more clear!
+"""]]
