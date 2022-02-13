@@ -1,0 +1,17 @@
+[[!comment format=mdwn
+ username="gry"
+ avatar="http://cdn.libravatar.org/avatar/5821f2dec97d186ce3b455b806d33035"
+ subject="comment 3"
+ date="2022-02-13T19:21:55Z"
+ content="""
+Okay, a few points
+
+* by default anonymous users cannot edit the wiki, this can be controlled by [anonok plugin](http://ikiwiki.info/plugins/anonok/)
+* in ikiwiki once you are logged in you can read and edit any pages. the only wiki engine that allows precise control over permissions similar to what you described is dokuwiki, and i find it is less elegant than ikiwiki. please consider whether you really need this feature.
+* comments currently are not inline, not attached to any particular pagagraph of the page. they are like what we are writing here right now. ( via [this](http://ikiwiki.info/plugins/comments/) ) personally, when I need real time communication, I use IRC chat, like OFTC or Libera.Chat, that is open in another tab. For smaller wikis it means only those present in the chat can read it. This can be overcome by publishing IRC chat logs (software exists for this) or by scheduling meetups at a particular hour when everyone is more likely to be online.
+* ikiwiki is in my view really good for putting pages and stories in an organized way. there are nested page names, there are page tags, there are links between pages. ikiwiki corrects dead links for each page rename. I can not as of today imagine a better more organized way to index and link pages than what ikiwiki does. it supports attachments and image upload too.
+* about seeing what each user does. ikiwiki uses a revision control as backend. if you click [recent changes](http://ikiwiki.info/recentchanges/) and click the goggles, it will show you a diff. I don't think it is possible to view contibutions of one particular user on-wiki by clicking their nick, but I think in git this is possible, see [this example](https://stackoverflow.com/questions/4259996/how-can-i-view-a-git-log-of-just-one-users-commits). I think it is possible (someone more experienced than me should correct me if not) to implement a plugin that shows a user's contributions, like the recent changes link does.
+* \"I want people to be able to receive suggestions on their work?\" - two options - either via 'Comment' like what you are reading now, those can be moderated if needed, i.e. require manual approval by admin; or via 'Discussion' tab at the top of the page, which is another page, and is not moderated.
+
+Hope it helps.
+"""]]
