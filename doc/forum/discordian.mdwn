@@ -1,0 +1,12 @@
+Hi Team- 
+I can't figure out this error I'm getting on my blog - it shows up at the bottom of every post: 
+
+```Posted some time or other (Can't locate DateTime/Calendar/Discordian.pm in @INC (you may need to install the DateTime::Calendar::Discordian module) (@INC contains: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.32.1 /usr/local/share/perl/5.32.1 /usr/lib/x86_64-linux-gnu/perl5/5.32 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.32 /usr/share/perl/5.32 /usr/local/lib/site_perl) at (eval 1479) line 3. BEGIN failed--compilation aborted at (eval 1479) line 3. -- hail Eris!)```
+
+I'm using a freedombox, and I did something to the preferences of my ikiwiki blog, and don't know what I did wrong. Please help, it's kinda ugly.... ;) 
+
+blog is located here: 
+
+https://mudbox.freedombox.rocks/ikiwiki/NotesfromtheMudbox/
+
+(Hi Joey!)
