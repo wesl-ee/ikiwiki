@@ -32,7 +32,6 @@ my $dir = tempdir("ikiwiki-test-po.XXXXXXXXXX",
 %config=IkiWiki::defaultconfig();
 $config{srcdir} = "$dir/src";
 $config{destdir} = "$dir/dst";
-$config{destdir} = "$dir/dst";
 $config{underlaydirbase} = "/dev/null";
 $config{underlaydir} = "/dev/null";
 $config{url} = "http://example.com";
