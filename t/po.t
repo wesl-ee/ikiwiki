@@ -44,7 +44,7 @@ $config{po_slave_languages} = {
 			       es => 'Castellano',
 			       fr => "Français"
 			      };
-$config{po_translatable_pages}='index or test1 or test2 or translatable or debian*';
+$config{po_translatable_pages}='index or test1 or test2 or translatable or debian* or utf8';
 $config{po_link_to}='negotiated';
 IkiWiki::loadplugins();
 ok(IkiWiki::loadplugin('meta'), "meta plugin loaded");
@@ -75,6 +75,8 @@ $pagesources{'debian911356-inlined'}='debian911356-inlined.mdwn';
 $pagesources{'debian911356-inlined.fr'}='debian911356-inlined.fr.po';
 $pagesources{'templates/feedlink.tmpl'}='templates/feedlink.tmpl';
 $pagesources{'templates/inlinepage.tmpl'}='templates/inlinepage.tmpl';
+$pagesources{'utf8'}='utf8.mdwn';
+$pagesources{'utf8.fr'}='utf8.fr.po';
 my $now=time;
 foreach my $page (keys %pagesources) {
 	$IkiWiki::pagecase{lc $page}=$page;
@@ -166,6 +168,19 @@ writefile('templates/inlinepage.tmpl', $config{srcdir}, <<EOF);
 <h6><TMPL_VAR TITLE></h6>
 <TMPL_VAR CONTENT>
 </div><!--inlinecontent-->
+EOF
+# Pages with UTF-8 contents
+writefile('utf8.mdwn', $config{srcdir}, <<EOF);
+Tails takes ½ hour to install
+EOF
+writefile('utf8.fr.po', $config{srcdir}, <<EOF);
+msgid "" msgstr ""
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+
+msgid "Tails takes ½ hour to install"
+msgstr "L'installation de Tails dure ½ heure"
 EOF
 
 ### istranslatable/istranslation
@@ -316,6 +331,7 @@ refresh_n_scan('test1.mdwn');
 is($pagestate{'test1'}{meta}{title}, 'test1 title');
 is($pagestate{'test1.es'}{meta}{title}, 'test1 title');
 is($pagestate{'test1.fr'}{meta}{title}, 'test1 title');
+refresh_n_scan('utf8.mdwn');
 
 ### istranslatedto
 ok(IkiWiki::Plugin::po::istranslatedto('index', 'es'));
@@ -506,6 +522,18 @@ like($output{'debian911356ish.fr'}, qr{
 	</div><!--inlinecontent-->
 	\s*
 	<p>Après\sles\sinlines</p>
+}sx);
+
+# UTF-8 input vs. po4a
+like($output{'utf8'}, qr{
+	\s*
+	Tails\stakes\s½\shour\sto\sinstall
+	\s*
+}sx);
+like($output{'utf8.fr'}, qr{
+	.*
+	L'installation\sde\sTails\sdure\s½\sheure
+	.*
 }sx);
 
 done_testing;
