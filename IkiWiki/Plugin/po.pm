@@ -901,12 +901,13 @@ sub refreshpot ($) {
 	my $masterfile=shift;
 
 	my $potfile=potfile($masterfile);
+
 	my $doc=Locale::Po4a::Chooser::new(po4a_type($masterfile),
 					   po4a_options($masterfile));
-	$doc->{TT}{utf_mode} = 1;
-	$doc->{TT}{file_in_charset} = 'UTF-8';
-	$doc->{TT}{file_out_charset} = 'UTF-8';
 	$doc->read($masterfile);
+	$doc->{TT}{utf_mode} = 1;
+	$doc->detected_charset('UTF-8');
+	$doc->{TT}{po_in}->set_charset('UTF-8');
 	# let's cheat a bit to force porefs option to be passed to
 	# Locale::Po4a::Po; this is undocument use of internal
 	# Locale::Po4a::TransTractor's data, compulsory since this module
