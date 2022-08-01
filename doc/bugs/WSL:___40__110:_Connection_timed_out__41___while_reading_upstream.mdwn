@@ -1,0 +1,7 @@
+Hello.
+
+I've just installed ikiwiki on Debian WSL and what I tried so far is working, but a thing: the websetup page is loading until it reaches a timeout and I can't see any button to save preferences at the bottom of the page.
+
+This is the log:
+
+    2022/08/01 20:10:13 [error] 3881#3881: *2 upstream timed out (110: Connection timed out) while reading upstream, client: 172.26.16.1, server: cuspide, request: "POST /ikiwiki.cgi HTTP/1.1", upstream: "fastcgi://unix:/var/run/fcgiwrap.socket:", host: "cuspide:8080", referrer: "http://cuspide:8080/ikiwiki.cgi?do=prefs"
