@@ -1,0 +1,5 @@
+I recently migrated from the (no longer supported) mod_auth_kerb to its designated replacement, mod_auth_gssapi for HTTP authentication.
+
+mod_auth_kerb sets `REMOTE_USER` to the Krb5 name that authenticated (e.g., wouter@EXAMPLE.COM). mod_auth_gssapi does not do so; it sets it in the `GSS_NAME` variable, instead.
+
+It would be awesome if the httpauth plugin would accept a configuration value to set the variable in which to look for the username to account for cases like these.
