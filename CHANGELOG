@@ -2,6 +2,7 @@ ikiwiki (3.20200202.4) UNRELEASED; urgency=medium
 
   * aggregate: When a feed has an enclosure that is an image, audio, or
     video, include the enclosure in the generated page.
+  * aggregate: Also support feeds with media:content tags.
 
  -- Joey Hess <id@joeyh.name>  Sat, 25 Dec 2021 12:41:34 -0400
 

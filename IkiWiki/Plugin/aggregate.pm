@@ -535,6 +535,14 @@ sub aggregate (@) {
 			next;
 		}
 		my $content=$res->content;
+
+		# This is a hack to support the media:content extension
+		# to RSS. XML::Feed does not support it, but it's the same
+		# as an enclosure, so converting it to that tag will let it
+		# parse.
+		$content=~s/<media:content/<enclosure/g;
+		$content=~s/<\/media:content/<\/enclosure/g;
+
 		my $f=eval{XML::Feed->parse(\$content)};
 		if ($@) {
 			# One common cause of XML::Feed crashing is a feed
