@@ -1,0 +1,13 @@
+the w3 validator fails on the main ikiwiki website because of the way inline scripts are handled. For example, [validating](https://validator.w3.org/nu/?doc=https%3A%2F%2Fikiwiki.info%2Fforum%2Fconvention_for_signing_posts_to_ikiwiki.info%2F) the post [[forum/convention_for_signing_posts_to_ikiwiki.info]] leads to this warning:
+
+[[!format txt """
+Warning: The charset attribute on the script element is obsolete.
+
+From line 271, column 1; to line 271, column 78
+
+>↩↩</div>↩<script src="../../ikiwiki/ikiwiki.js" type="text/javascript" charset="utf-8"></scri
+"""]]
+
+Seems like a low-hanging fruit... 
+
+-- [[anarcat]] 2022-09-01
