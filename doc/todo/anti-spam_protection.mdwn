@@ -88,3 +88,7 @@ this another way - I'm thinking of fail2ban or a simple Apache rewrite
 table (and it might easier and faster too) - but I wonder why those
 IPs can still post comments when they are listed in
 `banned_users`... -- [[anarcat]]
+
+----
+
+I made a new TODO item for this, specifically to be able to block certain expressions. See [[todo/bad_content_support]] for a followup on that. -- [[anarcat]]
