@@ -8,4 +8,6 @@ I am not sure we should follow the MoinMoin mechanism, where the list is a wiki 
 
 Failing that, it could also simply be a list in the `ikiwiki.setup`. But my experience with managing a block list of IP addresses there has not been fun: you need to context switch (to another branch, or to the ikiwiki.setup file) and rebuild the wiki at each change, which is rather disruptive... 
 
+The "pie-in-the-sky" plugin here would of course to just plug the checkcontent hook straight into spamassassin or something similar. Then you possibly get bayesian filtering, all sorts of rules, Razor, etc.
+
 -- [[anarcat]]
