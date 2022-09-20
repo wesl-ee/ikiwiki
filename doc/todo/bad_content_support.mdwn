@@ -1,0 +1,11 @@
+One of the suggestions that came out of the [[todo/anti-spam_protection]] is to have the [MoinMoin technique](http://moinmo.in/HelpOnSpam) of having a list of [bad content](http://moinmo.in/BadContent) which is basically a list of regexes. Typically, you'd add a URL in there, but really, it's just any "bad content": it could be forbidden words or whatever.
+
+This, by the way, only worked so far with MoinMoin. Spammers did find a way around it, and the list's last update dates back to 2014. But that doesn't mean the list is not at least somewhat effective. In my specific use case right now, I moderate all incoming comments and there's this one spammer which repeatedly tries to post the same stupid URL. I delete the comment and move on, but it's repetitive and frustrating: if I had a way to just block that one piece of bad content, it could make my life easier.
+
+I think this could be a plugin, which hooks into the `checkcontent` hook [[joeyh]] made in the [[anti-spam_protection]] work. This todo is to track the work on writing such a plugin and, ultimately and hopefully, include it directly in ikiwiki.
+
+I am not sure we should follow the MoinMoin mechanism, where the list is a wiki page, but why not? The only downside to this is that I'm not sure how to fetch content from an arbitrary page from inside a plugin. The other problem, of course, is that you then publish a list of bad URLs on your website, which is pretty much exactly the opposite of what you want to do... So maybe some file inside `.ikiwiki` or outside the published tree could be used.
+
+Failing that, it could also simply be a list in the `ikiwiki.setup`. But my experience with managing a block list of IP addresses there has not been fun: you need to context switch (to another branch, or to the ikiwiki.setup file) and rebuild the wiki at each change, which is rather disruptive... 
+
+-- [[anarcat]]
