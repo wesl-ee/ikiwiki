@@ -531,6 +531,10 @@ should return a message stating what the problem is, or a function
 that can be run to perform whatever action is necessary to allow the user
 to post the content.
 
+If the hook is ran on a comment, it will be put in the moderation queue if
+anything but `undef` is returned. The function or error message will not
+be ran or displayed.
+
 ### <a name="editcontent">editcontent</a>
 
 	hook(type => "editcontent", id => "foo", call => \&editcontent);
