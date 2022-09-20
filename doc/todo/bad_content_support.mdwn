@@ -11,3 +11,8 @@ Failing that, it could also simply be a list in the `ikiwiki.setup`. But my expe
 The "pie-in-the-sky" plugin here would of course to just plug the checkcontent hook straight into spamassassin or something similar. Then you possibly get bayesian filtering, all sorts of rules, Razor, etc.
 
 -- [[anarcat]]
+
+
+> I looked into this briefly, and it seems like what I want (specifically: discard incoming comments if they have bad content) is fundamentally impossible with the current way the `checkcontent` hook is setup. When *pages* are inspected for content, yes, it's possible to just discard the submission, but not when *comments* are submitted, because the `IkiWiki::check_content` wrapper is called with `nonfatal => 1` which makes it skip any possible interception (returning a function or error message) that would abort submissions. This is because the comments module hardcodes the fact that a `checkcontent` failure is "soft" and means "this comment should be moderated"...
+>
+> So either a new hook needs to be written, or this one needs to be fixed, and either case it cannot be done simply with a plugin. I documented this odd behavior in [[plugins/write]]. --[[anarcat]]
