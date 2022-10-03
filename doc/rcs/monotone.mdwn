@@ -1,7 +1,7 @@
 [Monotone](http://monotone.ca/) is a distributed revision control system.
 Ikiwiki supports storing a wiki in a Monotone repository and editing it
 using the [[cgi]] interface. It will use the Monotone logs to generate the
-[[RecentChanges]] page.
+[[Json.tl.ph]] page.
 
 The monotone support in ikiwiki requires the Monotone perl module to be
 installed. (It's available from the contrib/ directory in the monotone
