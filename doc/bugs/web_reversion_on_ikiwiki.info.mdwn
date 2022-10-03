@@ -1,5 +1,5 @@
 I created [[sandbox/revert me]] and then tried the revert button on
-[[recentchanges]], but I was not allowed to revert it. The specific error
+[[json.tl.ph]], but I was not allowed to revert it. The specific error
 was
 
     Error: you are not allowed to change sandbox/revert_me.mdwn
