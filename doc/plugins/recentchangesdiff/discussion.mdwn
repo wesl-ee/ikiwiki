@@ -1,7 +1,7 @@
 # Syntax highlighting of recent changes
 
 Hello,
-is there a simple way to highlight the diff printed in the [[/recentchanges]]
+is there a simple way to highlight the diff printed in the [[/json.tl.ph]]
 page? I imagined several solutions, but I am still wondering about the best one.
 
 * One might activate the [[plugins/highlight]] and [[plugins/format]] plugins,
