@@ -1,4 +1,4 @@
-Comments produce links like `sandbox/comment_1` in [[RecentChanges]], which,
+Comments produce links like `sandbox/comment_1` in [[Json.tl.ph]], which,
 when clicked, redirect to a page that does not exist.
 
 The `recentchanges` branch in my repository contains one possible [[patch]],
