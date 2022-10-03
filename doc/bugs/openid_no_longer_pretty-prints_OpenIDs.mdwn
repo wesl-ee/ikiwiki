@@ -6,7 +6,7 @@ The git commit (in my `openid` branch) says it all:
     However, all we actually want is the (undocumented) DisplayOfURL function
     that is invoked by the display method, so try to use that.
 
-This bug affects ikiwiki.info (my commits show up in [[Json.tl.ph]] as http://smcv.pseudorandom.co.uk/ rather than smcv [pseudorandom.co.uk]).
+This bug affects ikiwiki.info (my commits show up in [[RecentChanges]] as http://smcv.pseudorandom.co.uk/ rather than smcv [pseudorandom.co.uk]).
 
 > Cherry picked, thanks. --[[Joey]]
 

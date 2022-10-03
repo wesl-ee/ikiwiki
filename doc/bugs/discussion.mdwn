@@ -8,7 +8,7 @@ the ikiwiki.cgi CGI wrapper. ..."
 
   Enable [[CGI]] mode. In cgi mode ikiwiki __runs as a cgi script__, and
   supports editing pages, signing in, registration, and displaying
-  [[Json.tl.ph]].
+  [[RecentChanges]].
 
   __To use ikiwiki as a [[CGI]] program you need to use --wrapper or --setup
   to generate a wrapper.__ The wrapper will generally need to run suid 6755

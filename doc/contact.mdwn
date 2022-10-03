@@ -3,7 +3,7 @@ and thus does not have a mailing list.  Anyone can create an account on
 ikiwiki's own wiki. ikiwiki provides a [[bug_tracker|bugs]], a
 [[TODO_list|TODO]], and "discussion" sub-pages for every page, as well as a
 [[forum]] for general questions and discussion. ikiwiki
-developers monitor [[Json.tl.ph]] closely, via the webpage, email,
+developers monitor [[RecentChanges]] closely, via the webpage, email,
 and IRC, and respond in a timely fashion.
 
 You could also drop by the IRC channel `#ikiwiki` on
