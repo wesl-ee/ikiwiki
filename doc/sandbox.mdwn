@@ -258,3 +258,11 @@ I must **emphasise** this.
       cout << "secondvalue is " << secondvalue << '\n';
       return 0;
     }
+
+testeteset
+
+Install ikiwiki
+
+If you're using Debian or Ubuntu, ikiwiki is an apt-get install ikiwiki away. If you're not, see the download and install pages.
+
+You may also want to try out IkiWiki in a container.
