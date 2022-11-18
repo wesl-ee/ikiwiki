@@ -34,7 +34,7 @@ gnomes will convert them to css files..)
 
 * **[[02_Template.css]]**, contributed and adapted by [maxx](http://martin.wuertele.net/), [original](http://www.openwebdesign.org/viewdesign.phtml?id=3057)
   designed by [jarico](http://www.openwebdesign.org/userinfo.phtml?user=jcarico) 
-  (License: [public domain](https://simthanhdat.net/)). You'll need a modified page.tmpl
+  (License: public domain). You'll need a modified page.tmpl
   **[[css_market/02_Template.tmpl]]**. If you prefer 
   [my header image](http://martin.wuertele.net/images/header.png) you can 
   use it under the terms of the MIT License (see png comment).
