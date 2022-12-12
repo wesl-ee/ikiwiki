@@ -1,0 +1,19 @@
+[[!tag wishlist]]
+
+Modern OSes and browsers can now report a user's preference for a "dark mode"
+setting. See <https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/>
+for some background on technical specifics.
+
+The default IkiWiki anti-theme leaves most styling decisions up to the browser.
+Nevertheless, the anti-theme will always be rendered as Light, regardless of a
+user's preference for dark-mode, as a site's css needs to explicitly indicate
+that it *can* support dark-mode in order for it to be available.
+
+IkiWiki's anti-theme almost entirely supports dark-mode out of the box by virtue
+of delegating the style decisions to browser defaults. We should add the minimum
+required CSS to let it be enabled.
+
+(The only example of default theme which does not appear to look good in dark
+mode, in my testing, is the styling around [[RecentChanges]].)
+
+—­[[Jon]], *2022-12-12*
