@@ -1,0 +1,7 @@
+I'm getting truly fed up with spam in my wiki. At this point, all comments are manually approved and I still get trouble: now it's scammers spamming the registration form with dummy accounts, which bounce back to me when I make new posts, or just generate backscatter for the confirmation email. It's really bad. I have hundreds of users registered on my blog, and I don't know which are spammy, which aren't.
+
+So. I'm considering ditching ikiwiki comments altogether and I'm turning towards Mastodon as a commenting platforms. Others (JAK) have implemented this [as a server](https://github.com/julian-klode/mastodon-comments) but a more interesting approach for me is to simply load them dynamically from the server, which is what [this person has done](https://carlschwan.eu/2020/12/29/adding-comments-to-your-static-blog-with-mastodon/). They are using Hugo, however, so they can easily embed page metadata in the template to load the right server with the right comment ID.
+
+I'm not sure how to do this in ikiwiki: how can we access page-specific data in [[templates]]?
+
+Or maybe i just need to make a new template and insert it in my blog posts... pondering. --[[anarcat]]
