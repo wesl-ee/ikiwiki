@@ -5,3 +5,5 @@ So. I'm considering ditching ikiwiki comments altogether and I'm turning towards
 I'm not sure how to do this in ikiwiki: how can we access page-specific data in [[templates]]?
 
 Or maybe i just need to make a new template and insert it in my blog posts... pondering. --[[anarcat]]
+
+> I have tried to make a template, and that (obviously) fails because the `<script>` stuff gets sanitized. It seems I would need to split the javascript out of the template into a base template and then make the page template refer to a function in there. It's kind of horrible and messy. I wish there was a way to just access page metadata from the page template itself... I see that the [[plugins/meta]] plugin passes along its metadata, but that's not extensible, so i'd need to either patch that or make yet another plugin. Ugh.
