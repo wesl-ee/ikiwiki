@@ -7,3 +7,9 @@ I'm not sure how to do this in ikiwiki: how can we access page-specific data in 
 Or maybe i just need to make a new template and insert it in my blog posts... pondering. --[[anarcat]]
 
 > I have tried to make a template, and that (obviously) fails because the `<script>` stuff gets sanitized. It seems I would need to split the javascript out of the template into a base template and then make the page template refer to a function in there. It's kind of horrible and messy. I wish there was a way to just access page metadata from the page template itself... I see that the [[plugins/meta]] plugin passes along its metadata, but that's not extensible, so i'd need to either patch that or make yet another plugin. Ugh.
+
+>> Update: I did it. I have something that kind of works that's a combination of a `page.tmpl` patch and a plugin. The plugin adds a `[[!mastodon]]` directive that feeds the `page.tmpl` with the right stuff, and adds comments through Javascript and the API. It's not pretty, but it works. You need [this page.tmpl](https://gitlab.com/anarcat/ikiwiki-bootstrap-anarcat/-/blob/01524241a1346211bad2d681f0ed634af29d5c38/templates/page.tmpl) (or at least [this patch](https://gitlab.com/anarcat/ikiwiki-bootstrap-anarcat/-/commit/491dd6bfba3bee3ce702545e7f445e227dc66b30) and [that one](https://gitlab.com/anarcat/ikiwiki-bootstrap-anarcat/-/commit/c0abd79e53b8fee60cf4582971df35e6feb957fd)) and the [mastodon.pm plugin](https://gitlab.com/anarcat/ikiwiki/-/blob/2400baee8f5bc06f810b5ed96395ee84b05943ed/IkiWiki/Plugin/mastodon.pm) from my [mastodon-plugin](https://gitlab.com/anarcat/ikiwiki/-/tree/mastodon-plugin) branch.
+>>
+>> I'm not even sure this is a good idea. The first test I did was a "test comment" which led to half a dozen "test reply" and then I realized i couldn't redact individual posts from there. Ugh. I don't even know if, when I mute a user, it actually gets hidden from everyone else too...
+>>
+>> So I'll test this for a while, I guess.
