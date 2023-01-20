@@ -11,3 +11,10 @@ I have tried to use the sparkline plugin today and it failed with:
 But really, maybe, the sparkline Perl library should be examined again. Surely it's not *that* bad that we need PHP around here, do we? It looks like [SVG::Sparkline](https://metacpan.org/pod/SVG::Sparkline) could be a good candidate although there's also [Text::Sparkline](https://metacpan.org/pod/Text::Sparkline).
 
 Or maybe sparklines are dead... <http://sparkline.org> doesn't even resolve... Time flies, doesn't it? -- [[anarcat]]
+
+> I hit this a little while ago and ended up ditching the sparkline plugin. But, if it
+> is to be resurrected, I would agree with ditching PHP here, too. For my use-case the
+> data changes so infrequently ([this graph](https://jmtd.net/log/all/500x-graph.png) of
+> blog posts by year, not including the current year) that I manually generate something
+> in LibreCalc annually, and copy the resulting picture in.
+> *— [[Jon]], 2023-01-20*
