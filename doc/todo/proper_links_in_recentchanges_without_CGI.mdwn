@@ -1,0 +1,3 @@
+[[!template  id=gitbranch branch=anarcat/recent-changes-plain-url author="[[anarcat]]"]]
+
+After turning off CGI on my wiki, I was surprised to find out that the RSS feed was basically broken. I was relying on the feed to fetch the list of recently changed pages to feed into a link checker, an archiver, and so on, but now I only get links to anchors inside the recent changes page. Boooring. ;) Here's a patch to restore this functionality which was dropped, possibly mistakenly, in 2008 (!). -- [[anarcat]]
