@@ -178,6 +178,11 @@ sub store ($$$) {
 					pagetitle($_->{page}).
 					"</a>"
 			}
+                        elsif (length $config{url}) {
+				$_->{link} = "<a href=\"$config{url}/".
+					urlto($_->{page},"")."\">".
+					IkiWiki::pagetitle($_->{page})."</a>";
+			}
 			else {
 				$_->{link} = pagetitle($_->{page});
 			}
@@ -210,6 +215,11 @@ sub store ($$$) {
 			do => "goto",
 			page => IkiWiki::userpage($change->{author}),
 		);
+        }
+	elsif (length $config{url}) {
+		$change->{authorurl}="$config{url}/".
+			(length $config{userdir} ? "$config{userdir}/" : "").
+			$change->{user};
 	}
 
 	if (ref $change->{message}) {
