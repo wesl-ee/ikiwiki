@@ -93,4 +93,4 @@ handled by this plugin.
 
 # Download and install
 
-Code and documentation: [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Sidebar2]].
+Code and documentation: [[https://spalax.frama.io/gresille-ikiwiki/sidebar2]].

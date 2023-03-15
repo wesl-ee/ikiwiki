@@ -58,6 +58,6 @@ To allow CSS customization, the following classes are used.
 
 ## Download and install
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Taskreport]]
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/taskreport]]
 
 -- [[Louis|spalax]]

@@ -11,4 +11,4 @@ The `taglink` directive is changed as well: instead of displaying the leaf of th
 
 ## Code
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Parenttag]].
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/parenttag]].

@@ -1,10 +1,10 @@
 [[!meta title="Louis Paternault"]]
 
-User of IkiWiki (my [professional website](http://ababsurdo.fr), among others).
+[[Former user|forum/Some_thoughts_about_Ikiwiki]] of IkiWiki.
 
 # Plugins
 
-I wrote and maintain a few plugins, which are available here: [[https://atelier.gresille.org/projects/gresille-ikiwiki]].
+I wrote and maintain a few plugins, which are available here: [[https://framagit.org/spalax/gresille-ikiwiki]].
 
 [[!map pages="plugins/contrib/* and ! plugins/contrib/*/* and author(spalax)"]]
 

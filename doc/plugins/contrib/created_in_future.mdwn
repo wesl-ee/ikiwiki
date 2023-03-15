@@ -25,5 +25,5 @@ It can be used to display a list of upcoming events.
 
 ## Code
 
-Code and documentation this way: [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Created_in_future]].
+Code and documentation this way: [[https://spalax.frama.io/gresille-ikiwiki/created_in_future]].
 """]]

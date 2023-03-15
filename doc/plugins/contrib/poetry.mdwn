@@ -104,4 +104,4 @@ website](http://barricades.int.eu.org/repertoire/bread_and_roses/).
 
 ## Code
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Poetry]].
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/poetry]].

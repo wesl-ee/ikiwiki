@@ -80,4 +80,4 @@ I am not sure that this plugin is the solution to the problem of debugging exter
 
 # Download and install
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/VerboseRPC]].
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/verboserpc]].

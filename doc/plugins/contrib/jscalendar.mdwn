@@ -45,6 +45,6 @@ options of the directive.
 
 You can see this plugin in action on [[our website|http://www.gresille.org]].
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Jscalendar]]
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/jscalendar]]
 
 -- Louis

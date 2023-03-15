@@ -32,4 +32,4 @@ This directive accepts no setup options.
 
 # Download and install
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Redirect]].
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/redirect]].

@@ -70,4 +70,4 @@ the following code to your CSS.
 
 ## Code
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Addtag]].
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/addtag]].

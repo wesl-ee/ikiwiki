@@ -225,4 +225,4 @@ displaying it on your website, you can use as a template:
 
 # Download
 
-Code and documentation can be found here : [[https://atelier.gresille.org/projects/gresille-ikiwiki/wiki/Compile]].
+Code and documentation can be found here : [[https://spalax.frama.io/gresille-ikiwiki/compile]].
