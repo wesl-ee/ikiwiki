@@ -1,2 +1,2 @@
 > htaccess
->> Just to write, this is something I've considered writing to for the [opinionated-ikiwiki](https://github.com/jmtd/opinionated-ikiwiki) [[containers]], in order to have one account DB shared between IkiWiki CGI and Git CGI. &emdash; *[[Jon]], 2023-04-03*
+>> Just to write, this is something I've considered writing to for the [opinionated-ikiwiki](https://github.com/jmtd/opinionated-ikiwiki) [[containers]], in order to have one account DB shared between IkiWiki CGI and Git CGI. &mdash; *[[Jon]], 2023-04-03*
