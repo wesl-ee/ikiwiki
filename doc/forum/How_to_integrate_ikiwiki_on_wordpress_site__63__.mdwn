@@ -1,1 +1,5 @@
 How to integrate ikiwiki on wordpress site?
+
+> Your question is a little bit too vague, there may be some way to achieve
+> it in some very specific circumstances, but I think the general answer is:
+> you can't. *&mdash; [[Jon]], 2023-06-07*
