@@ -351,7 +351,7 @@ sub merge_past ($$$) {
 		run_or_die_in($config{srcdir}, 'git', 'checkout', $config{gitmaster_branch});
 
 		# Attempt to merge without complaining.
-		if (!run_or_non_in($config{srcdir}, 'git', 'pull', '--no-commit', '.', $branch)) {
+		if (!run_or_non_in($config{srcdir}, 'git', 'pull', '--no-rebase', '--no-commit', '.', $branch)) {
 			$conflict = readfile($target);
 			run_or_die_in($config{srcdir}, 'git', 'reset', '--hard');
 		}
@@ -601,7 +601,7 @@ sub rcs_update () {
 	ensure_committer($config{srcdir});
 
 	if (length $config{gitorigin_branch}) {
-		run_or_cry_in($config{srcdir}, 'git', 'pull', '--prune', $config{gitorigin_branch});
+		run_or_cry_in($config{srcdir}, 'git', 'pull', '--no-rebase', '--prune', $config{gitorigin_branch});
 	}
 }
 
