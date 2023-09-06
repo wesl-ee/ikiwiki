@@ -1,0 +1,33 @@
+In a few places, it is recommended to try the `ispage()` pagespec, described at [[ikiwiki/pagespec/attachment]] but provided by the (supposedly independent) plugin [[plugins/filecheck]].
+
+I've had trouble getting it to work so put together a minimal test-case. Very basic wiki with filecheck enabled (but attachment not).
+
+File structure as follows
+
+```
+index.mdwn
+a/foo.mdwn
+a/bar.txt
+a/pic.png
+```
+
+index containing
+
+```
+\[[!map pages="a/*"]]
+\[[!map pages="a/* and ispage()"]]
+```
+
+The first map expands, as expected, to
+
+ *  bar.txt
+ *  foo
+ *  pic.png
+
+The second is empty. Expected behaviour:
+
+ * foo
+
+(with [[plugins/txt]] not enabled)
+
+*&mdash; [[Jon]], 2023-09-06*
