@@ -31,3 +31,14 @@ The second is empty. Expected behaviour:
 (with [[plugins/txt]] not enabled)
 
 *&mdash; [[Jon]], 2023-09-06*
+
+> here's a trace of what happens to `ispage()` when applied to the above example.
+> 
+> * `match_ispage` gets called with argument "a/foo"
+> * it calls `Ikiwiki::pagetype` with that argument unmodified
+> * the first branch checks for a period, so fails
+> * base is calculated to be "foo"
+> * the next branch fails as $hooks{htmlize}{foo} is false
+> * the function returns undefined.
+> 
+> *&mdash; [[Jon]], 2023-09-06*
