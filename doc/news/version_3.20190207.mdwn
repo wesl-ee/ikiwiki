@@ -32,9 +32,3 @@ ikiwiki 3.20190207 released with [[!toggle text="these changes"]]
      Thanks, Alexandre Oliva
    * poll: Added postlink and posttrail options for better multi-page polls.
    * Fix permalink to comments."""]]
-
-
-
-
-
-[[!img favicon.svg align="right" size="" alt=""]]
