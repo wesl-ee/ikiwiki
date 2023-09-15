@@ -1,17 +1,16 @@
 ### testing graph directive...
 
 [[!graph   src=""""
-google [ href="http://google.com/" ]
+google [ href="http://google.com/"]
 sandbox [ href=[[SandBox]] ]
-help [ href=[[ikiwiki/formatting]] ]
-newpage [ href=[[NewPage]] ]
+help [ href=[[ikiwiki/formatting]]]
+newpage [ href=[[NewPage]]]
 
 google -> sandbox -> help -> newpage -> help -> google;
 """"]]
 
 ### Is this a heading?
 
-Why doesn't the following work?..
 [[!color  foreground=white background=#ff0000 text="White text on red background"]]
 
 Sure it is.
