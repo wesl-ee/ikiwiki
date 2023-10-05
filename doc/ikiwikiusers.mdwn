@@ -52,6 +52,7 @@ Projects & Organizations
   * [Børneuniversitetet](http://support.borneuni.dk/) ([source](http://source.borneuni.dk/))
 * [CampusGrün Hamburg](http://www.campusgruen.org/)
 * The [awesome window manager homepage](http://awesome.naquadah.org/)
+* [notqmail](https://notqmail.org)
 * [vcs-home](http://vcs-home.madduck.net)
 * [Public Domain collection of Debian related tips & tricks](http://dabase.com/tips/) - please add any tips too
 * [Finnish Debian community](http://debian.fi)
