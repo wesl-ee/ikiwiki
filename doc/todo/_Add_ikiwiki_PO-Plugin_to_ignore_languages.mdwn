@@ -6,7 +6,7 @@ the end-user. More precisely, PO files for these languages are updated
 normally, however, HTML creation will be disabled and no reference to
 these translations will be visible on the website.
 
-See also downstream bug report in tails: <https://labs.riseup.net/code/issues/15355>
+See also downstream bug report in tails: <https://gitlab.tails.boum.org/tails/tails/-/issues/15355>
 
 > From the downstream bug report it appears this branch is not yet
 > considered ready (as of February 2019), so I haven't attempted to
@@ -22,7 +22,7 @@ See also downstream bug report in tails: <https://labs.riseup.net/code/issues/15
 > --[[smcv]]
 
 >> I've put this branch into a shape that I now dare submitting:
->> https://salsa.debian.org/tails-team/ikiwiki/tree/feature/15355-po-plugin-disable-languages.
+>> https://gitlab.tails.boum.org/tails/ikiwiki/-/tree/feature/15355-po-plugin-disable-languages.
 >> It adds a little bit test coverage in the form of integration tests
 >> for the proposed feature, that incidentally exercise the rest of the
 >> basic functionality of the PO plugin.
