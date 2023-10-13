@@ -2,7 +2,7 @@
 
 With po4a 0.58+, the po plugin incorrectly extracts UTF-8 strings from source pages.
 
-I've prepared a branch to fix this: https://salsa.debian.org/tails-team/ikiwiki/-/tree/po-fix-utf8
+I've prepared a branch to fix this: https://gitlab.tails.boum.org/tails/ikiwiki/-/tree/po-fix-utf8
 
 This branch adds a test case that fails on current `master`.
 That test case passes from my branch on Debian sid with po4a 0.55 (Buster), 0.62 (Bullseye), and 0.66 (sid).
