@@ -1,3 +1,5 @@
+[[Number.MAXIMUM_VALUE]]
+
 ### testing graph directive...
 
 [[!graph   src=""""
