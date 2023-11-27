@@ -278,3 +278,5 @@ Install ikiwiki
 If you're using Debian or Ubuntu, ikiwiki is an apt-get install ikiwiki away. If you're not, see the download and install pages.
 
 You may also want to try out IkiWiki in a container.
+
+This line was added using the web interface.
