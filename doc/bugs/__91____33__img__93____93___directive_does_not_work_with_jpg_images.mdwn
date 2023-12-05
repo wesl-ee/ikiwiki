@@ -1,3 +1,5 @@
 The following error is displayed when trying to include a `jpg` image: 
 
 `[[!img Error: failed to read filename.jpg: Exception 435: unable to open image 'jpeg:/path/to/source/folder/filename.jpg[0]': No such file or directory @ error/blob.c/OpenBlob/3569]]`
+
+> I routinely include JPEGs via img. Can you share a) exactly the directive you've tried to use to generate that error and b), if possible, the source image? &mdash; *[[Jon]], 2023-12-05*
