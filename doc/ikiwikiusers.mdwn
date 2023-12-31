@@ -1,4 +1,4 @@
-General information
+General Information
 ===================
 
 Feel free to add your own ikiwiki site! In case you have created a custom theme consider adding it to [the theme list](http://ikiwiki.info/themes/)
