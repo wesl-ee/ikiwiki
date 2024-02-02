@@ -65,6 +65,8 @@ think about merging them. This is recommended. :-)
 * [[hefee]] `https://salsa.debian.org/hefee/ikiwiki.git/` ([[browse|https://salsa.debian.org/hefee/ikiwiki]])
 * bsv `https://bico.media/1EZF5WfG6t35iwFpyVVptxT1MB4DKt6G2U`
   bsv blockchain repo using ([[git-remote-bsv|https://github.com/xloem/git-remote-bsv]])
+* urosm `https://git.kompot.si/urosm/ikiwiki.git`
+
 ## branches
 
 Current branches of ikiwiki are listed on [[branches]].
