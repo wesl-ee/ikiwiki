@@ -1,0 +1,12 @@
+[[!comment format=mdwn
+ username="ewen"
+ avatar="http://cdn.libravatar.org/avatar/842f85937fe6a92934d188f1c86109e6"
+ subject="Basic Homebrew Tap for ikiwiki"
+ date="2024-02-05T02:58:58Z"
+ content="""
+Since no one else had done it, I've created a basic Homebrew Tap (ie non-core Formula) for ikiwiki, now that Homebrew has support for external (ie, non-core) Formulas developed by end users:
+
+[https://github.com/naosnz/homebrew-ikiwiki](https://github.com/naosnz/homebrew-ikiwiki)
+
+Only tested on macOS 13 (Ventura) so far, and only with very basic ikiwiki features from the command line which is pretty much all I need for my purpose.  (Lots of the more advanced ikiwiki features/plugins will need more Perl modules installed, which anyone who needs them will need to figure out; there are some examples of having Homebrew install ikiwiki Perl \"resources\" in the formula for essential Perl modules which might be a guide how to add more.)
+"""]]
