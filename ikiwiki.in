@@ -31,8 +31,8 @@ sub getconfig () {
 		Getopt::Long::Configure('pass_through');
 		GetOptions(
 			"setup|s=s" => \&setup,
-			"dumpsetup|s=s" => \$config{dumpsetup},
-			"changesetup|s=s" => sub {
+			"dumpsetup=s" => \$config{dumpsetup},
+			"changesetup=s" => sub {
 				$config{changesetup}=$_[1];
 				$config{genwrappers}=1;
 				$config{refresh}=1;
