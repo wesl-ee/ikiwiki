@@ -12,6 +12,11 @@ Patch: <https://github.com/jmtd/ikiwiki/commit/79297a0879e4f05f421b560bbbc74c227
 >> I should have done something like `"mdwn: ".gettext("using ")."Text::Markdown::markdown"`.
 >> I bow to the superior gettext knowledge of just about anyone. *— [[Jon]], 2021-11-10* 
 
+>>> I dropped the `gettext` in the end: the only localizable bit of the strings was 'using'
+>>> so there wasn't much point. Thanks! &mdash; *[[Jon]], 2024-02-22*
+
 [[!tag patch]]
 [[!template id=gitbranch branch=jon/mdwn-debug-log-chosen-impl author="[[Jon]]"]]
 
+> [[done]]: <http://source.ikiwiki.branchable.com/?p=source.git;a=commitdiff;h=4996866181cbcce15ebb98f9c9142af26f2e80e7>
+> &mdash; *[[Jon]], 2024-02-22*
