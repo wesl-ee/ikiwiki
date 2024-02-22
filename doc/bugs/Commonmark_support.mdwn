@@ -27,3 +27,18 @@ to do.
 Patch: <https://github.com/jmtd/ikiwiki/commit/c76eeac8152604ce3d7d1672fe404c8ee8ef2dd8>
 [[!tag patch]]
 [[!template id=gitbranch branch=jon/commonmark author="[[Jon]]"]]
+
+> I'm starting to review outstanding IkiWiki patches, and this one was an
+> early candidate because it's so trivial, but I have some questions to resolve.
+>
+> 1. In order of preference, I've inserted this after multimarkdown and
+>    Discount, but those are only enabled if they are explicitly selected;
+>    Commonmark is ahead of the remaining implementations that are checked
+>    for (`Text::Markdown`, `Markdown`, `/usr/bin/markdown`), and so if
+>    available, would take precedence. Is this reasonable?
+> 2. Should one be able to explicitly force Commonmark, like one can with multimarkdown and Discount?
+> 3. I'd not use `gettext` in the debug print now.
+> 4. I need to double check why I've used `->` instead of `::` (thanks [[users/anarcat]])
+> 5. Per [[smcv]]'s comment above, what's the status of the Commonmark library in Debian now?
+>
+> &mdash; *[[Jon]], 2024-02-22*
