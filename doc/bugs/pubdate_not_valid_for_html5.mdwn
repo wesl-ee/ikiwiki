@@ -9,3 +9,5 @@ Patch: <https://github.com/jmtd/ikiwiki/commit/a137103d3004cc8cec42459205684ec48
 *—[[Jon]], 2020-10-06*
 
 > LGTM. In [[bugs/charset_attribute_on_the_script_element_is_obsolete]], I found that `itemprop="datePublished"` was another way to do this, but it seems like there is no real standard way to do this anymore, so I'm happy with anything that doesn't break validators. :) *--[[anarcat]], 2022-09-06*
+
+[[done]]. Thanks for the ACK &mdash; *[[Jon]], 2024-02-22*
