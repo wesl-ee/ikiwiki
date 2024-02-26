@@ -18,3 +18,20 @@ required CSS to let it be enabled.
 mode, in my testing, is the styling around [[RecentChanges]].)
 
 —­[[Jon]], *2022-12-12*
+
+> [[reviewed]]: more work is needed before this should be considered. For the
+> anti-theme, several plugins and features have CSS with hardcoded color values
+> that might not make sense in a dark mode: some are easy to fix (any `border:
+> black` can have the color spec removed; black is the default in light-mode,
+> and a better choice will be made for dark-mode) but others will require more
+> work (recentchanges and changelog force black-on-white with `!important`, and
+> before removing that I need to answer why).
+> 
+> Then we get onto the themes supplied by IkiWiki: they will need surveying since
+> they will inherit the settings from `doc/style.css`.
+> 
+> And finally we should think about the impact this would have on downstream users
+> and custom themes not supplied in IkiWiki; at the very least we would need to be
+> clear in release notes that this might be a problem, and how to avoid it.
+> 
+> — [[Jon]], *2024-02-26*
