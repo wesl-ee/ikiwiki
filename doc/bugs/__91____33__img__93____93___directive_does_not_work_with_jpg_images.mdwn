@@ -6,4 +6,4 @@ The following error is displayed when trying to include a `jpg` image:
 
 > marking [[!taglink done]] (invalid) for now, I think this is some kind of user-error.
 > feel free to untag done if you return to this and answer my Q above. Thanks!
-> &mdash; *[[Jon]], 2023-12-05*
+> &mdash; *[[Jon]], 2024-02-26*
