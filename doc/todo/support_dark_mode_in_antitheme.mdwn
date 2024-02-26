@@ -19,7 +19,7 @@ mode, in my testing, is the styling around [[RecentChanges]].)
 
 —­[[Jon]], *2022-12-12*
 
-> [[reviewed]]: more work is needed before this should be considered. For the
+> [[!tag reviewed]] more work is needed before this should be considered. For the
 > anti-theme, several plugins and features have CSS with hardcoded color values
 > that might not make sense in a dark mode: some are easy to fix (any `border:
 > black` can have the color spec removed; black is the default in light-mode,
