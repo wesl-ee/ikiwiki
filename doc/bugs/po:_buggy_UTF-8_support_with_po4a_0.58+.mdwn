@@ -6,3 +6,5 @@ I've prepared a branch to fix this: https://gitlab.tails.boum.org/tails/ikiwiki/
 
 This branch adds a test case that fails on current `master`.
 That test case passes from my branch on Debian sid with po4a 0.55 (Buster), 0.62 (Bullseye), and 0.66 (sid).
+
+[[!template id=gitbranch branch=intrigeri/po-fix-utf8 author="[[intrigeri]]"]]
