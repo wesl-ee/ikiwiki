@@ -1,0 +1,35 @@
+[Reported to Debian](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1050377):
+
+> The latest upload of highlight effectively breaks any ikiwiki install
+> using the highlight plugin, since the plugin crashes trying to run the
+> searchDataDir() method.
+> 
+> The attached patch switches to calling initSearchDirectories, per
+> upstream's migration guide. It seems to work on my site.
+
+[[!taglink patch]]:
+
+```
+From: David Bremner <bremner@debian.org>
+Date: Wed, 23 Aug 2023 14:54:34 -0300
+Subject: Migrate highlight plugin to highlight 4.0
+
+Highlight upstream has changed the API as of highlight 4.0
+---
+ IkiWiki/Plugin/highlight.pm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/IkiWiki/Plugin/highlight.pm b/IkiWiki/Plugin/highlight.pm
+index 04c554a..e70817b 100644
+--- a/IkiWiki/Plugin/highlight.pm
++++ b/IkiWiki/Plugin/highlight.pm
+@@ -54,7 +54,7 @@ sub checkconfig () {
+ 	eval q{use highlight};
+ 	if (highlight::DataDir->can('new')) {
+ 		$data_dir=new highlight::DataDir();
+-		$data_dir->searchDataDir("");
++		$data_dir->initSearchDirectories("");
+ 	} else {
+ 		$data_dir=undef;
+ 	}
+```
