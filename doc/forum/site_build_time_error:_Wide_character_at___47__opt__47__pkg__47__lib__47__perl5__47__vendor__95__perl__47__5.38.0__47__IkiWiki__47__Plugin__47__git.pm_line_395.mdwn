@@ -44,3 +44,9 @@ sub decode_git_file ($$) {
 ```
 
 Any idea how to fix the issue? My site uses CJK characters in file names and Git commit messages. Would it be OK?
+
+> Are the CJK characters you are using Unicode characters?
+> Would you be able to share some of the recent git commit messages, or
+> the filenames of recently added or modified files (aiming to select the
+> ones that are most likely to have triggered this bug)? That would be
+> a big help in debugging this. Thanks *&mdash; [[Jon]], 2024-03-04*
