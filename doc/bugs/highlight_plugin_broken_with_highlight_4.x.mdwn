@@ -33,3 +33,7 @@ index 04c554a..e70817b 100644
  		$data_dir=undef;
  	}
 ```
+
+> This patch is safe for (at least) version 3.41 in Debian stable, (dating from
+> 2017-12-09) which has both symbols. I think it's safe for inclusion in
+> IkiWiki. *&mdash; [[Jon]], 2024-03-04*
