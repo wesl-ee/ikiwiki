@@ -37,3 +37,6 @@ index 04c554a..e70817b 100644
 > This patch is safe for (at least) version 3.41 in Debian stable, (dating from
 > 2017-12-09) which has both symbols. I think it's safe for inclusion in
 > IkiWiki. *&mdash; [[Jon]], 2024-03-04*
+>> Ah wait, it's fixed in master, with 9ea3f9dfe7c0341f4e002b48728b8139293e19d0
+>> which branches on the API major version, so should be safer for even older
+>> highlight versions. [[done]]. *&mdash; [[Jon]], 2024-03-04*
