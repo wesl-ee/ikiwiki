@@ -1,12 +1,24 @@
 ikiwiki (3.20200202.4) UNRELEASED; urgency=medium
 
+  [ Joey Hess ]
   * aggregate: When a feed has an enclosure that is an image, audio, or
     video, include the enclosure in the generated page.
   * aggregate: Also support feeds with media:content tags.
   * git: Pass --no-rebase when pulling, to avoid git warning messages 
     about pull.rebase.
 
- -- Joey Hess <id@joeyh.name>  Sat, 25 Dec 2021 12:41:34 -0400
+  [ Amitai Schleier ]
+  * highlight: Adapt to API change in highlight >= 4.0
+  * Avoid 'Duplicate specification' for option "s"
+
+  [ Jonathan Dowland ]
+  * html5: Switch from pubdate=pubdate to class=dt-published
+  * mdwn: debug() which implementation is chosen
+
+  [ Antoine Beaupré ]
+  * recentchanges: support non-CGI links
+
+ -- Jonathan Dowland <jmtd@debian.org>  Tue, 05 Mar 2024 14:03:55 +0000
 
 ikiwiki (3.20200202.3) upstream; urgency=medium
 
