@@ -27,3 +27,7 @@ not ok 126
 > I'm going to look at this a little closer as I'd like to merge it, perhaps I can resolve
 > this problem.
 > (existing test 119 fails for me on master, too) *&mdash; [[Jon]], 2024-03-06*
+>> Ah, wrong `PERL5LIB`. I've verified your new tests fail in `master`; pass in your
+>> branch rebased on current master and also pass on top of Buster's ikiwiki/po4a
+>> version. Since that's now `oldoldstable`, if this is the lower boundary of "works",
+>> I'm OK with that. Applied, thank you! [[done]]. *&mdash; [[Jon]], 2024-03-06*
