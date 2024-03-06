@@ -8,3 +8,22 @@ This branch adds a test case that fails on current `master`.
 That test case passes from my branch on Debian sid with po4a 0.55 (Buster), 0.62 (Bullseye), and 0.66 (sid).
 
 [[!template id=gitbranch branch=intrigeri/po-fix-utf8 author="[[intrigeri]]"]]
+
+> Testing these patches on current master with po4a 0.69 and the second new test fails for me
+
+```
+not ok 126
+#   Failed test at t/po.t line 533.
+#                   '<p>Tails takes  hour to install</p>
+# '
+#     doesn't match '(?^usx:
+# 	.*
+# 	L'installation\sde\sTails\sdure\s\sheure
+# 	.*
+# )'
+1..126
+```
+
+> I'm going to look at this a little closer as I'd like to merge it, perhaps I can resolve
+> this problem.
+> (existing test 119 fails for me on master, too) *&mdash; [[Jon]], 2024-03-06*
