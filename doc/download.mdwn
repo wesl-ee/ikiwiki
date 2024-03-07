@@ -19,13 +19,6 @@ To install with [apt](http://www.debian.org/doc/manuals/debian-reference/ch02.en
 
 Or download the deb from <http://packages.debian.org/unstable/web/ikiwiki>.
 
-There is a backport of a recent version of ikiwiki for Debian 5.0 at
-<http://packages.debian.org/lenny-backports/ikiwiki>.
-
-There is also an unofficial backport of ikiwiki for Ubuntu Jaunty, provided by
-[[Paweł_Tęcza|users/ptecza]],
-at [http://gpa.net.icm.edu.pl/ubuntu/](http://gpa.net.icm.edu.pl/ubuntu/index-en.html).
-
 ## RPM packages
 
 Fedora versions 8 and newer have RPMs of ikiwiki available.
