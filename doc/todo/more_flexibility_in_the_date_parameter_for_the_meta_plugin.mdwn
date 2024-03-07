@@ -35,3 +35,22 @@ luke@schierer@opus001:~/src/ikiwiki/ikiwiki$
 
 [[!tag patch]]
 
+> Thanks for the patch! I've [[!taglink reviewed]] it, and here's what I think.
+>
+> I can see the value of accepting more date formats for the field. But, I'd
+> like to see some concrete examples of useful forms that are not currently
+> accepted: both in terms of user-facing documentation (update
+> [[ikiwiki/directive/meta]]; in particular references to [[!cpan TimeDate]])
+> and test coverage (`./t/meta.pl`).
+> 
+> The cost of this feature is an additional dependency on the relevant Perl
+> module Debian package `libdate-manip-perl`, ~11.7MiB). Therefore, part of
+> evaluating the patch is weighing up the costs and benefits. Spelling out the
+> benefits better would help me.
+>
+> If/when that's done, that new [[!cpan Date::Manip]] dependency should be
+> recorded explicitly in the right places, which raises the question: what are
+> the right places? I think `Bundle/Ikiwiki.pm` needs updating, perhaps other
+> places (ignore `ikiwiki.spec` and `debian/*` for now).
+> 
+>  *&mdash; [[Jon]], 2024-03-07*
