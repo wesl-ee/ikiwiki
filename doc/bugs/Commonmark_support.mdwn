@@ -38,7 +38,17 @@ Patch: <https://github.com/jmtd/ikiwiki/commit/c76eeac8152604ce3d7d1672fe404c8ee
 >    available, would take precedence. Is this reasonable?
 > 2. Should one be able to explicitly force Commonmark, like one can with multimarkdown and Discount?
 > 3. I'd not use `gettext` in the debug print now.
-> 4. I need to double check why I've used `->` instead of `::` (thanks [[users/anarcat]])
+> 4. I need to double check why I've used `->` instead of `::` (thanks anarcat)
 > 5. Per [[smcv]]'s comment above, what's the status of the Commonmark library in Debian now?
 >
 > &mdash; *[[Jon]], 2024-02-22*
+
+> > I'd say:
+> > 
+> > 1. yes, new implementations should be deprioritised unless a strong rationale is given.
+> > 2. That would be great, but I wouldn't make that a blocker.
+> > 3. no opinion
+> > 4. nod
+> > 5. as far as I can tell from my [magic script](https://gitlab.com/anarcat/scripts/-/blob/a6dbda602d8d8e9c0ef810d308e35a09ff538836/in-debian), neither `libcmark` or `libperl-commonmark` are packaged. There isn't even a WNPP bug. I do wonder if that's a criteria for inclusion though; I wouldn't keep code away merely because it's not in Debian. (What *is* our criterion, actually? I'd say "unit tests and integration in CI", but, while we have the former, we don't have the latter, and not having Debian package might make testing this harder.... )
+> > 
+> > -- anarcat
