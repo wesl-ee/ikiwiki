@@ -28,12 +28,16 @@ own RPM.
 
 ## BSD ports
 
-NetBSD, Mac OS X, Solaris, and many other platforms: [pkgsrc](http://www.pkgsrc.org/) has an [ikiwiki package](http://pkgsrc.se/www/ikiwiki).
+NetBSD, Mac OS X, Solaris, and many other platforms:
+[pkgsrc](http://www.pkgsrc.org/) has an [ikiwiki package](http://pkgsrc.se/www/ikiwiki).
+`make install` to build from source, or on platforms with binary packages available:
 
-pkg install -U ikiwiki
+        pkg_add ikiwiki
 
 FreeBSD has ikiwiki in its
-[ports collection](http://www.freshports.org/www/ikiwiki/).
+[ports collection](http://www.freshports.org/www/ikiwiki/):
+
+        pkg install -U ikiwiki
 
 ## Other packages
 
