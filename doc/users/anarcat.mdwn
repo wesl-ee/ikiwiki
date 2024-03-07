@@ -1,41 +1,35 @@
 See <https://anarc.at/>. I have home pages like this on tons of other wikis including [MoinMoin](https://moinmo.in/TheAnarcat), [Wikipedia](https://en.wikipedia.org/wiki/User:TheAnarcat) and [Koumbit](https://wiki.koumbit.net/TheAnarcat).
 
-[[!toc]]
+[[!toc levels=2]]
 
-Submitted patches
-=================
+# Submitted patches ([[!pagecount pages="tagged(patch) and link(users/anarcat) and !link(bugs/done) and !link(todo/done)"]])
 
-[[!inline pages="tagged(patch) and link(users/anarcat) and !link(todo/done)" sort=mtime feeds=no actions=yes archive=yes show=0]]
+[[!inline pages="tagged(patch) and link(users/anarcat) and !link(bugs/done) and !link(todo/done)" sort=mtime feeds=no actions=yes archive=yes show=0]]
 
-## Done
+## Done ([[!pagecount pages="tagged(patch) and link(users/anarcat) and (link(todo/done) or link(bugs/done))"]])
 
-[[!inline pages="tagged(patch) and link(users/anarcat) and link(todo/done)" sort=mtime feeds=no actions=yes archive=yes show=0]]
+[[!inline pages="tagged(patch) and link(users/anarcat) and (link(todo/done) or link(bugs/done))" sort=mtime feeds=no actions=yes archive=yes show=0]]
 
-
-My todos
-========
+# My todos ([[!pagecount  pages="todo/* and !todo/done and !link(todo/done) and link(users/anarcat) and !todo/*/* and !tagged(patch)"]])
 
 ... or the ones I commented it, to be more precise.
 
 [[!inline pages="todo/* and !todo/done and !link(todo/done) and
 link(users/anarcat) and !todo/*/* and !tagged(patch)" sort=mtime feeds=no actions=yes archive=yes show=0]]
 
-Done
-----
+## Done ([[!pagecount pages="todo/* and !todo/done and link(todo/done) and link(users/anarcat) and !todo/*/* and !tagged(patch)"]])
 
 [[!inline pages="todo/* and !todo/done and link(todo/done) and
 link(users/anarcat) and !todo/*/* and !tagged(patch)" feeds=no actions=yes archive=yes show=0]]
 
-My bugs
-=======
+# My bugs ([[!pagecount  pages="bugs/* and !bugs/done and !link(bugs/done) and link(users/anarcat) and !bugs/*/* and !tagged(patch)"]])
 
 ... same.
 
 [[!inline pages="bugs/* and !bugs/done and !link(bugs/done) and
 link(users/anarcat) and !bugs/*/* and !tagged(patch)" sort=mtime feeds=no actions=yes archive=yes show=0]]
 
-Fixed
------
+## Fixed ([[!pagecount pages="bugs/* and !bugs/done and link(bugs/done) and link(users/anarcat) and !bugs/*/* and !tagged(patch)"]])
 
 [[!inline pages="bugs/* and !bugs/done and link(bugs/done) and
 link(users/anarcat) and !bugs/*/* and !tagged(patch)" feeds=no actions=yes archive=yes show=0]]
