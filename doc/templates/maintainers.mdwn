@@ -1,0 +1,6 @@
+The maintainers
+are [[Joey Hess|joey]] (<joey@kitenet.net>),
+[[Amitai Schleier|schmonz]] (<schmonz-web-ikiwiki@schmonz.com>)
+and
+[[Jonathan Dowland|jon]] (<jmtd@debian.org>).
+
