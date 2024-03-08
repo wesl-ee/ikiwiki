@@ -45,3 +45,24 @@ you're not alone: I think this is very similar to [[forum/how_to_put_a_permalink
 
 I agree! Perhaps a subroutine that enumerated them all and a plugin to expose it or something.
 I definitely wold find that useful too. *­— [[Jon]], 2020-07-21*
+
+---
+
+[[done]]. To address [[forum/how_to_put_a_permalink_on_each_post]], I'm considering
+something like this, rather than a separate plugin approach, but I'm not settled on
+the name 'permalink' for it:
+
+```
+--- a/IkiWiki/Render.pm
++++ b/IkiWiki/Render.pm
+@@ -123,6 +123,8 @@ sub genpage ($$) {
+ 
+ 	$template->param(
+ 		page => $page,
++		permalink => urlto($page,"",1),
+ 		title => $page eq 'index' 
+ 			? $config{wikiname} 
+ 			: pagetitle(basename($page)),
+```
+
+ *­— [[Jon]], 2024-03-08*
