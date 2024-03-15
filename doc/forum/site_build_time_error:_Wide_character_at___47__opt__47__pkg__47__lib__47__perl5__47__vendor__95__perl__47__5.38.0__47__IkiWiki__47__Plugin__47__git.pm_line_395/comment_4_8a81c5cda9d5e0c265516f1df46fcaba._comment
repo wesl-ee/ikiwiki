@@ -1,0 +1,24 @@
+[[!comment format=mdwn
+ username="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/cae0ebd82377a48ef9f1f14ff23b3e0f"
+ subject="comment 4"
+ date="2024-03-15T11:06:52Z"
+ content="""
+I'm not sure where/how to add the debug print you request, just yet, sorry.
+
+As a first step to try and reproduce it I've tried to create the following filenames in a test wiki:
+
+```
+'()_-.、《》「」一三上不与丛东中临之乐九习书事二于五些交京人仁介代令件价似体何作侄修债值兒入全八公.mdwn'
+六其具典养再写农出分划刘別剧劣励勇化北十千华南博卿历原参及变叠古句台史号名吳吴周命和品唐商問器回図国.mdwn
+图國圖在地培基堯塔士复夏多大天太女如姪媒子字孟学孫宋宗宝实客家寫寶小少局居屋属屿岛峽州工布帖常干年幽序.mdwn
+底庵廣建异式录心忠惯感成所打扫找技把投拳换支政效散数文料方日时明曲書月有期本术杂李杜杨松构枚果架标.mdwn
+校梅梦棠棣極楷楼歙止武殳毓比毛氏气水永汉江河治法波注泽洛流测济海測游湾滄漢漫潘澍激点牆片版牝猫献玄.mdwn
+王现理用甫电画登白百的目盲真石研硯碑礼社神秦程稱究章童笑笔第筆简算篆籍类紙素經網編红约纪细经结络网罗美.mdwn
+翻老考聲臣臨自舟般艺节苔若茅荒著藏蘭虎虚蜜蟹行衛表袁複要觀视言記訪試詩誌語记论试诠语说谷賦质资赋趙路.mdwn
+車轼辭还送通過邺部里重野量钓關间附陈院陳陵陸隔雅集音頫题颜風首馬魯鱼鸣鸰鹡黑默齐（），：0125aBcdeFgGhHiklmnorstWyz.mdwn
+```
+
+The first and last of those are rejected by Ikiwiki by default because of characters not in the range of `wiki_file_chars`.
+From your setup file can you share the value of `wiki_file_chars`?
+"""]]
