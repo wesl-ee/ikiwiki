@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-02 20:17+0000\n"
+"POT-Creation-Date: 2024-03-17 20:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,7 +55,7 @@ msgstr ""
 msgid "You are banned."
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:491 ../IkiWiki/CGI.pm:492 ../IkiWiki.pm:1675
+#: ../IkiWiki/CGI.pm:491 ../IkiWiki/CGI.pm:492 ../IkiWiki.pm:1677
 msgid "Error"
 msgstr ""
 
@@ -113,26 +113,26 @@ msgstr ""
 msgid "feed not found"
 msgstr ""
 
-#: ../IkiWiki/Plugin/aggregate.pm:543
+#: ../IkiWiki/Plugin/aggregate.pm:551
 #, perl-format
 msgid "(invalid UTF-8 stripped from feed)"
 msgstr ""
 
-#: ../IkiWiki/Plugin/aggregate.pm:551
+#: ../IkiWiki/Plugin/aggregate.pm:559
 #, perl-format
 msgid "(feed entities escaped)"
 msgstr ""
 
-#: ../IkiWiki/Plugin/aggregate.pm:561
+#: ../IkiWiki/Plugin/aggregate.pm:569
 msgid "feed crashed XML::Feed!"
 msgstr ""
 
-#: ../IkiWiki/Plugin/aggregate.pm:657
+#: ../IkiWiki/Plugin/aggregate.pm:669
 #, perl-format
 msgid "creating new page %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/aggregate.pm:687 ../IkiWiki/Plugin/edittemplate.pm:137
+#: ../IkiWiki/Plugin/aggregate.pm:699 ../IkiWiki/Plugin/edittemplate.pm:137
 msgid "failed to process template:"
 msgstr ""
 
@@ -422,7 +422,7 @@ msgstr ""
 msgid "%s is an attachment, not a page."
 msgstr ""
 
-#: ../IkiWiki/Plugin/git.pm:933 ../IkiWiki/Plugin/git.pm:997 ../IkiWiki.pm:1895
+#: ../IkiWiki/Plugin/git.pm:933 ../IkiWiki/Plugin/git.pm:997 ../IkiWiki.pm:1897
 #, perl-format
 msgid "you are not allowed to change %s"
 msgstr ""
@@ -462,17 +462,17 @@ msgstr ""
 msgid "prog not a valid graphviz program"
 msgstr ""
 
-#: ../IkiWiki/Plugin/highlight.pm:91
+#: ../IkiWiki/Plugin/highlight.pm:97
 #, perl-format
 msgid "tohighlight contains unknown file type '%s'"
 msgstr ""
 
-#: ../IkiWiki/Plugin/highlight.pm:102
+#: ../IkiWiki/Plugin/highlight.pm:108
 #, perl-format
 msgid "Source code: %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/highlight.pm:198
+#: ../IkiWiki/Plugin/highlight.pm:204
 msgid ""
 "warning: highlight perl module not available; falling back to pass through"
 msgstr ""
@@ -600,7 +600,7 @@ msgstr ""
 msgid "multimarkdown is enabled, but Text::MultiMarkdown is not installed"
 msgstr ""
 
-#: ../IkiWiki/Plugin/mdwn.pm:178
+#: ../IkiWiki/Plugin/mdwn.pm:183
 #, perl-format
 msgid "failed to load Markdown.pm perl module (%s) or /usr/bin/markdown (%s)"
 msgstr ""
@@ -773,54 +773,54 @@ msgid ""
 "translations will be renamed as well."
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:928
+#: ../IkiWiki/Plugin/po.pm:929
 #, perl-format
 msgid "POT file (%s) does not exist"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:942
+#: ../IkiWiki/Plugin/po.pm:943
 #, perl-format
 msgid "failed to copy underlay PO file to %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:950
+#: ../IkiWiki/Plugin/po.pm:951
 #, perl-format
 msgid "failed to update %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:956
+#: ../IkiWiki/Plugin/po.pm:957
 #, perl-format
 msgid "failed to copy the POT file to %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:992
+#: ../IkiWiki/Plugin/po.pm:993
 msgid "N/A"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1003
+#: ../IkiWiki/Plugin/po.pm:1004
 #, perl-format
 msgid "failed to translate %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1086
+#: ../IkiWiki/Plugin/po.pm:1087
 msgid "removed obsolete PO files"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1142 ../IkiWiki/Plugin/po.pm:1154
-#: ../IkiWiki/Plugin/po.pm:1193
+#: ../IkiWiki/Plugin/po.pm:1143 ../IkiWiki/Plugin/po.pm:1155
+#: ../IkiWiki/Plugin/po.pm:1194
 #, perl-format
 msgid "failed to write %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1152
+#: ../IkiWiki/Plugin/po.pm:1153
 msgid "failed to translate"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1205
+#: ../IkiWiki/Plugin/po.pm:1206
 msgid "invalid gettext data, go back to previous page to continue edit"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1248
+#: ../IkiWiki/Plugin/po.pm:1249
 #, perl-format
 msgid "%s has invalid syntax: must use CODE|NAME"
 msgstr ""
@@ -1200,64 +1200,64 @@ msgstr ""
 msgid "cannot determine id of untrusted committer %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:161
+#: ../IkiWiki/Render.pm:162
 #, perl-format
 msgid "scanning %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:284
+#: ../IkiWiki/Render.pm:285
 #, perl-format
 msgid ""
 "symlink found in srcdir path (%s) -- set allow_symlinks_before_srcdir to "
 "allow this"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:336 ../IkiWiki/Render.pm:397
+#: ../IkiWiki/Render.pm:337 ../IkiWiki/Render.pm:398
 #, perl-format
 msgid "skipping bad filename %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:353 ../IkiWiki/Render.pm:402
+#: ../IkiWiki/Render.pm:354 ../IkiWiki/Render.pm:403
 #, perl-format
 msgid "%s has multiple possible source files; one will be chosen at random"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:439
+#: ../IkiWiki/Render.pm:440
 #, perl-format
 msgid "querying %s for file creation and modification times.."
 msgstr ""
 
-#: ../IkiWiki/Render.pm:518
+#: ../IkiWiki/Render.pm:519
 #, perl-format
 msgid "removing obsolete %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:603
+#: ../IkiWiki/Render.pm:604
 #, perl-format
 msgid "building %s, which links to %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:612
+#: ../IkiWiki/Render.pm:613
 #, perl-format
 msgid "removing %s, no longer built by %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:695 ../IkiWiki/Render.pm:777
+#: ../IkiWiki/Render.pm:696 ../IkiWiki/Render.pm:778
 #, perl-format
 msgid "building %s, which depends on %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:790
+#: ../IkiWiki/Render.pm:791
 #, perl-format
 msgid "building %s, to update its backlinks"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:902
+#: ../IkiWiki/Render.pm:903
 #, perl-format
 msgid "building %s"
 msgstr ""
 
-#: ../IkiWiki/Render.pm:971
+#: ../IkiWiki/Render.pm:972
 #, perl-format
 msgid "ikiwiki: cannot build %s"
 msgstr ""
@@ -1376,36 +1376,36 @@ msgstr ""
 msgid "failed to load external plugin needed for %s plugin: %s"
 msgstr ""
 
-#: ../IkiWiki.pm:1652
+#: ../IkiWiki.pm:1654
 #, perl-format
 msgid "preprocessing loop detected on %s at depth %i"
 msgstr ""
 
-#: ../IkiWiki.pm:1851
+#: ../IkiWiki.pm:1853
 #, perl-format
 msgid "bad file name %s"
 msgstr ""
 
-#: ../IkiWiki.pm:2164
+#: ../IkiWiki.pm:2166
 #, perl-format
 msgid "template %s not found"
 msgstr ""
 
-#: ../IkiWiki.pm:2422
+#: ../IkiWiki.pm:2424
 msgid "yes"
 msgstr ""
 
-#: ../IkiWiki.pm:2626
+#: ../IkiWiki.pm:2628
 #, perl-format
 msgid "invalid sort type %s"
 msgstr ""
 
-#: ../IkiWiki.pm:2647
+#: ../IkiWiki.pm:2649
 #, perl-format
 msgid "unknown sort type %s"
 msgstr ""
 
-#: ../IkiWiki.pm:2796
+#: ../IkiWiki.pm:2798
 #, perl-format
 msgid "cannot match pages: %s"
 msgstr ""

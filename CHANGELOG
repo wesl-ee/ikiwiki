@@ -1,4 +1,4 @@
-ikiwiki (3.20200202.4) UNRELEASED; urgency=medium
+ikiwiki (3.20200202.4) upstream; urgency=medium
 
   [ Simon McVittie ]
   * build: Don't install an empty share/ikiwiki/examples/doc/examples
@@ -26,7 +26,7 @@ ikiwiki (3.20200202.4) UNRELEASED; urgency=medium
   [ intrigeri ]
   * po: fix support for UTF-8 with po4a 0.58+
 
- -- Jonathan Dowland <jmtd@debian.org>  Tue, 05 Mar 2024 14:03:55 +0000
+ -- Jonathan Dowland <jmtd@debian.org>  Sun, 17 Mar 2024 21:03:22 +0000
 
 ikiwiki (3.20200202.3) upstream; urgency=medium
 
