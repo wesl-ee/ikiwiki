@@ -1,0 +1,10 @@
+[[!comment format=mdwn
+ username="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/cae0ebd82377a48ef9f1f14ff23b3e0f"
+ subject="comment 6"
+ date="2024-03-18T13:29:13Z"
+ content="""
+> Did not even realize that is configurable. I probably should add a lot more characters?
+
+If you want to use those characters in filenames, yes. But please note that if you don't, you get a _different_ error message to the one you are experiencing (`skipping bad filename <problematic filename>`), so I don't think adjusting `wiki_file_chars` will fix your problem.
+"""]]
