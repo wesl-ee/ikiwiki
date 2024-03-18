@@ -1,28 +1,28 @@
 ikiwiki 3.20200202.4 released with [[!toggle text="these changes"]]
 [[!toggleable text="""
-  [ Simon McVittie ]
+* [ Simon McVittie ]
   * build: Don't install an empty share/ikiwiki/examples/doc/examples
 
-  [ Joey Hess ]
+* [ Joey Hess ]
   * aggregate: When a feed has an enclosure that is an image, audio, or
     video, include the enclosure in the generated page.
   * aggregate: Also support feeds with media:content tags.
   * git: Pass --no-rebase when pulling, to avoid git warning messages
     about pull.rebase.
 
-  [ Amitai Schleier ]
+* [ Amitai Schleier ]
   * highlight: Adapt to API change in highlight >= 4.0
   * Avoid 'Duplicate specification' for option "s"
 
-  [ Jonathan Dowland ]
+* [ Jonathan Dowland ]
   * html5: Switch from pubdate=pubdate to class=dt-published
   * mdwn: debug() which implementation is chosen
 
-  [ Antoine Beaupré ]
+* [ Antoine Beaupré ]
   * recentchanges: support non-CGI links
   * add geo: scheme
   * pass PAGE variable to templates
 
-  [ intrigeri ]
+* [ intrigeri ]
   * po: fix support for UTF-8 with po4a 0.58+
 """]]
