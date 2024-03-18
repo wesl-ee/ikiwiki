@@ -1,0 +1,8 @@
+[[!comment format=mdwn
+ username="DataComputist"
+ avatar="http://cdn.libravatar.org/avatar/a17d83194742f0bd57df1e9fc6858c8f"
+ subject="comment 7"
+ date="2024-03-18T19:28:47Z"
+ content="""
+I've changed wiki_file_chars to include more characters existing in file names but ther's still a big group of \"skipping bad filename\" errors for Emacs backup files whose names end with `.mdwn~`. These files are automatically created as backups when .mdwn files are edited Emacs and I do like to use that feature. However, seeing them printed at Ikiwiki build time is not useful as they're expected and the shear number makes other true problematic ones less visible. Is it possible to whitelist that?
+"""]]
