@@ -80,3 +80,17 @@ is probably the best way to implement this.
 	 }
 	 
 	 /* popup template and backlinks hiding */
+
+> Hi Joey! I started to look at this issue in
+> [[support_dark_mode_in_antitheme]]. I hadn't came to the same conclusion to
+> you wrt patching it in `style.css` (or not), but I was blocked on making sure
+> every snippet of CSS from every plugin was updated, let alone every theme
+> building on top, and that's just for internal styling: like you say, it would
+> still risk breaking external themes.
+> 
+> Perhaps do as you suggest and put it in a theme, and revisit patching
+> `style.css` on the [[roadmap]] for version 4 one day. I'm happy to work on
+> that, unless you want to.
+> 
+> If we add such a theme (name TBC), would you be happy to move `ikiwiki.info`
+> to it? — [[Jon]], *2024-03-18*
