@@ -1,0 +1,82 @@
+It's common now for web pages to support light and dark mode, so
+switching the OS into dark mode makes the background black and into light
+mode makes the background white. This feels to me like something lacking in
+ikiwiki's minimalistic default css.
+
+It's actually really easy to implement this with css. Just don't set any
+colors explicitly, and tell the browser to use the default color for the
+selected color scheme. The attached diff gets most of the way there though
+there will be things that need improvement.
+
+I think it probably does not make sense to apply these changes to style.css
+directly though, because it will likely break sites that start with
+style.css and then override parts of it in local.css. For example, if
+someone made their text a little bit lighter but still close to black,
+but relied on the  default white background, applying this would make their
+text almost unreadable in black mode.
+
+So, I think adding a theme that consists only of the patched css
+is probably the best way to implement this.
+--[[Joey]] 
+
+	--- /home/joey/src/ikiwiki/doc/style.css	2023-03-30 13:31:19.562667116 -0400
+	+++ style.css	2024-03-18 13:52:05.497866818 -0400
+	@@ -1,5 +1,9 @@
+	 /* ikiwiki style sheet */
+	 
+	+:root {
+	+	color-scheme: light dark;
+	+}
+	+
+	 /* Note that instead of modifying this style sheet, you can instead edit
+	  * local.css and use it to override or change settings in this one.
+	  */
+	@@ -8,6 +12,7 @@
+	 article,aside,details,figcaption,figure,
+	 footer,header,hgroup,menu,nav,section {
+	 	display: block;
+	+  	color-scheme: light dark;
+	 }
+	 
+	 div.header, header.header {
+	@@ -145,8 +150,7 @@
+	 	clear: both;
+	 	display: block;
+	 	padding: 1px 2px;
+	-	background: white !important;
+	-	color: black !important;
+	+	color-scheme: light dark;
+	 }
+	 .recentchanges .desc {
+	 	display: none;
+	@@ -219,9 +223,8 @@
+	 	margin-bottom: 4px;
+	 	margin-top: -1px;
+	 	padding: 0ex 2ex;
+	-	background: white;
+	 	border: 1px solid black;
+	-	color: black !important;
+	+  	color-scheme: light dark;
+	 }
+	 
+	 hr.poll {
+	@@ -297,8 +300,7 @@
+	 	margin-bottom: 1ex;
+	 	padding: 1ex 1ex;
+	 	border: 1px solid #aaa;
+	-	background: white;
+	-	color: black !important;
+	+  	color-scheme: light dark;
+	 }
+	 
+	 /* notebox template */
+	@@ -310,8 +312,7 @@
+	 	padding: 1ex 1ex;
+	 	border: 1px solid #aaa;
+	 	width: 25%;
+	-	background: white;
+	-	color: black !important;
+	+  	color-scheme: light dark;
+	 }
+	 
+	 /* popup template and backlinks hiding */
