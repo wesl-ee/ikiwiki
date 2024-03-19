@@ -4,10 +4,10 @@
  subject="comment 8"
  date="2024-03-19T10:07:14Z"
  content="""
-If you didn't get the warnings about the emacs backup files before adding/changing `wiki_file_chars`, and since adding/changing `wiki_file_chars` has no fixed the main problem here (has it?), Why not just revert back to your old setting (unset, if that's what it was)?
+If you didn't get the warnings about the emacs backup files before adding/changing `wiki_file_chars`, and since adding/changing `wiki_file_chars` has not fixed the main problem here (has it?), Why not just revert back to your old setting (unset, if that's what it was)?
 
 > However, seeing them printed at Ikiwiki build time is not useful as they're expected and the shear number makes other true problematic ones less visible. Is it possible to whitelist that? 
 
 So you don't want to publish them, but you want to suppress the warning about not publishing them?
-If that's right, please file a [[wishlist]] item for that.
+If that's right, please file a [[todo]] item for that tagged [[wishlist]].
 """]]
