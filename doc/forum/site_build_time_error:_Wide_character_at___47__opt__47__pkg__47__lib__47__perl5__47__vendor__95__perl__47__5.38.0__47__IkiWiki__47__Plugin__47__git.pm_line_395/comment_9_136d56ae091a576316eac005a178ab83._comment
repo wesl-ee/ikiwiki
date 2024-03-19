@@ -1,0 +1,22 @@
+[[!comment format=mdwn
+ username="DataComputist"
+ avatar="http://cdn.libravatar.org/avatar/a17d83194742f0bd57df1e9fc6858c8f"
+ subject="comment 9"
+ date="2024-03-19T19:53:49Z"
+ content="""
+Including more characters into `wiki_file_chars` did fix something, but I'm still deciding if all are fixed.
+
+That's why I wanted the reporting on `*.mdwn~` files which is the majority of the \"skipping bad filename XXX\" lines out of the way.
+
+I don't want `*.mdwn~` files to be built into the files deployed to the web site, but I do want to keep them in the source files so they are available as backups, i.e. their designed purpose for Emacs.
+
+I've found this setting that seem to be able to exclude file types:
+```
+exclude => '^(.*\\.bak|.*\\.[:alnum:]+~|#.*#)$',
+```
+
+Although it seems it requires single square brackets in `[:alnum:]` while the `wiki_file_chars` requires double square brackets. Isn't that odd?
+
+
+
+"""]]
