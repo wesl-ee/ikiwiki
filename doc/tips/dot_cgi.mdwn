@@ -160,3 +160,22 @@ Here's a [[complete site.conf|tips/nginx]] for nginx if that helps.
 Edit /etc/boa/boa.conf and make sure the following line is not commented:
 
     AddType application/x-httpd-cgi cgi
+
+# Caddy
+
+add a block to Caddyfile like this
+
+
+    www.myexample.net {
+        root * /home/ikiwiki/public_html/myexample
+        file_server
+
+        reverse_proxy /ikiwiki.cgi unix//var/run/fcgiwrap.socket {
+                transport fastcgi {
+                        root /home/ikiwiki/public_html/myexample
+                        env SCRIPT_FILENAME /home/ikiwiki/public_html/myexample/ikiwiki.cgi
+                }
+        }
+
+        encode zstd gzip
+    }
