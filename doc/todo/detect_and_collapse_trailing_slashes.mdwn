@@ -1,0 +1,20 @@
+[This was originally reported to
+Debian.](https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=600665)
+
+Specifying a setup `url` with a trailing slash (e.g. `url: https://example.org/`)
+results in feeds generated with double-slashes in them e.g. RSS:
+
+    <link>http://localhost//blog/donkey/</link>
+
+Atom
+
+    <id>http://localhost//blog/donkey/</id>
+
+The solution is not to specify `url` with a trailing slash. But if you have
+done, and later remove it, the newly-generated RSS/Atom feeds will have
+different IDs causing duplicate posts in feed aggregators.
+
+The request is to do one of
+
+ * detect trailing slash on `url` and remove it
+ * squash '//' to '/' in link-generation
