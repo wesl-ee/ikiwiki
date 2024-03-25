@@ -39,3 +39,5 @@ We're running ikiwiki version 3.20180228-1.
 >>
 >>> Updating appeared to fix it. Sorry for not trying that sooner. Thanks for the help.
 >>> -- jsewell
+
+[[done]]. — [[Jon]], 2024-03-25
