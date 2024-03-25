@@ -11,3 +11,9 @@ I am a bit at a loss now. Any ideas?
 > Can't help with the specific question but you won't get higher rating than
 > 85 due to the local.css link.[img.kalleswork.net pagespeed
 > results](https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Fimg.kalleswork.net) -[[kjs]]
+
+----
+
+I'm fairly certain this was addressed by
+[d16e34c736676256b7cd3ea12797313dc1332fc3](http://source.ikiwiki.branchable.com/?p=source.git;a=commitdiff;h=d16e34c736676256b7cd3ea12797313dc1332fc3).
+[[done]]. *&mdash; [[Jon]], 2024-03-25*
