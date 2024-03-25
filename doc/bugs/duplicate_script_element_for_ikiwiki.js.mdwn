@@ -1,0 +1,11 @@
+Originally reported to Debian at <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=598415>:
+
+> If both relativedate and toggle plugins are enabled and features of both
+> plugins are used on a wiki page, a <script> tag for ikiwiki.js is rendered
+> twice in the generated HTML for the page.
+
+At the time I'm reporting this here, the problem is evident at <https://ikiwiki.info/sandbox/>.
+
+Related: [[javascript resources placed after html tag]]
+
+*&mdash; [[Jon]], 2024-03-25*
