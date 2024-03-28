@@ -8,4 +8,4 @@
 
 > Hello, and welcome here! :)
 >
-> Interesting that there's an unofficial Matrix room! There's actually a semi-official *IRC* channel which means it is also somewhat accessible over Matrix, in <https://matrix.to/#/#oftc_ikiwki:matrix.org>. This should really be documented better, but it's mentioned in [[news/irc_channel]]. :) -- [[anarcat]]
+> Interesting that there's an unofficial Matrix room! There's actually a semi-official *IRC* channel which means it is also somewhat accessible over Matrix, in <https://matrix.to/#/#oftc_ikiwki:matrix.org>. This should really be documented better, but it's mentioned in [[news/irc_channel]]. Actually, it is in [[contact]] so i added the link to the bridge there. :) -- [[anarcat]]
