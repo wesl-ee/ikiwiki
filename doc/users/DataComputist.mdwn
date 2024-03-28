@@ -1,4 +1,6 @@
-* unofficial Matrix chat room on ikiwiki: <https://matrix.to/#/%23ikiwiki:matrix.org>
+* ~~unofficial Matrix chat room on ikiwiki: <https://matrix.to/#/%23ikiwiki:matrix.org>~~
+
+* official IRC chat room for ikiwiki via Matrix: https://matrix.to/#/#_oftc_#ikiwiki:matrix.org
 
 * Matrix protocol for real time communication: <https://en.wikipedia.org/wiki/Matrix_(protocol)>
 
