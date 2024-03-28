@@ -1,4 +1,4 @@
-* ~~unofficial Matrix chat room on ikiwiki: <https://matrix.to/#/%23ikiwiki:matrix.org>~~
+* ~~unofficial Matrix chat room on ikiwiki: <https://matrix.to/#/%23ikiwiki:matrix.org>~~ (How to delete it?)
 
 * official IRC chat room for ikiwiki via Matrix: <https://matrix.to/#/#_oftc_#ikiwiki:matrix.org>
 
