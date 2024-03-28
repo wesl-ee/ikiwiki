@@ -1,0 +1,5 @@
+* unofficial Matrix chat room on ikiwiki: <https://matrix.to/#/%23ikiwiki:matrix.org>
+
+* Matrix protocol for real time communication: <https://en.wikipedia.org/wiki/Matrix_(protocol)>
+
+* official web site of Matrix: <https://matrix.org/about/>
