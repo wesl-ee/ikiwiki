@@ -7,7 +7,7 @@ developers monitor [[RecentChanges]] closely, via the webpage, email,
 and IRC, and respond in a timely fashion.
 
 You could also drop by the IRC channel `#ikiwiki` on
-[OFTC](http://www.oftc.net/) (`irc.oftc.net`).
+[OFTC](http://www.oftc.net/) (`irc.oftc.net`). It can also be reached from Matrix on [#oftc_ikiwki:matrix.org](https://matrix.to/#/#oftc_ikiwki:matrix.org), but note that you will need your Matrix user to be registered on OFTC by talking first with [@_oftc_Nickserv:matrix.org](https://matrix.to/#/@_oftc_Nickserv:matrix.org) first.
 
 However, if you find a new security vulnerability, please email the maintainers
 privately instead of raising it in a public medium, so that we can
