@@ -1,0 +1,9 @@
+[[!comment format=mdwn
+ username="DataComputist"
+ avatar="http://cdn.libravatar.org/avatar/a17d83194742f0bd57df1e9fc6858c8f"
+ subject="comment 11"
+ date="2024-03-28T09:39:23Z"
+ content="""
+The changes to `wiki_file_chars =>` and `exclude =>` was to include files that should be included and exclude the ones that should NOT be, however it's only a useful digression from the original question asked -- the error in the title.
+
+"""]]
