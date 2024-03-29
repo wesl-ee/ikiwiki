@@ -27,3 +27,7 @@ I've achieved this as follows
 It is not quite as I envisaged it: the explanatory text would probably make sense on the indexpics "gallery" page, but since that includes the page, the wrong trouser-leg of the conditional is used.  But it works quite well.  Introducing a new index picture involves creating an appropriate page under indexpics and the rest happens automatically.
 
 [1] lie #1: the pagespec is a lot more complex as it has to exclude raw image filetypes
+
+----
+
+marking this [[done]]; nothing further to do here. *&mdash; [[Jon]], 2024-03-29*
