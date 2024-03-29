@@ -1,0 +1,9 @@
+[[!template id=gitbranch branch=jmtd/no-empty-parentlinks-span author="[[Jon]]"]]
+
+For the top-level wiki page, the `<span class=parentlink` is generated but its empty.
+
+This was reported in Debian in 2009 <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=523693>
+
+I actually closed it recently, because I disagreed with the suggested patch. However, there's a more agreeable fix: just wrap the parentlinks section in a test of HAS_PARENTLINKS. [[!tag patch]]
+
+*&mdash; [[Jon]], 2024-03-29*
