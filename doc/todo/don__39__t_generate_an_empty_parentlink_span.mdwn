@@ -6,4 +6,6 @@ This was reported in Debian in 2009 <https://bugs.debian.org/cgi-bin/bugreport.c
 
 I actually closed it recently, because I disagreed with the suggested patch. However, there's a more agreeable fix: just wrap the parentlinks section in a test of HAS_PARENTLINKS. [[!tag patch]]
 
+[[done]].
+
 *&mdash; [[Jon]], 2024-03-29*
