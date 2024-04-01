@@ -1,3 +1,5 @@
+[[!template id=gitbranch branch=jon/more-backlinks-details-tag author="[[Jon]]"]]
+
 I was just hovering over the '...' next to the backlinks on a page on
 <http://ikiwiki.info/>. In terms of the size of my browser window, this was
 towards the bottom-right of the screen.
@@ -49,5 +51,4 @@ further down the list, but of course then you are outside the hover region.
 >> so far as I can tell *— [[Jon]], 2020-04-21*
 
 >>> [[!tag patch]]Patch in my repo, commit f051f84f632c3eaf86c5cff172692ce71ad5375d.
->>> [[!template id=gitbranch branch=jon/more-backlinks-html5-use-details-tag author="[[Jon]]"]]
 >>> (I must say this looks *much* nicer, IMHO) *—[[Jon]], 2020-10-07*

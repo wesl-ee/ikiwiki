@@ -4,4 +4,4 @@ The (external) [[plugins/search]] plugin uses Google. For those who have
 privacy concerns about Google, it would be nice to have a drop-in replacement.
 Such as on that used "duckduckgo" instead.
 
-(See also:  [[todo/Change the ikiwiki.info search box to not using Google]]
+(See also:  [[todo/Change the ikiwiki.info search box to not using Google]])

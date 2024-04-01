@@ -2,6 +2,7 @@
 
 I've been using IkiWiki for [my personal site](https://jmtd.net/)
 since 2008, as well as a number of private instances.
+[[I joined the IkiWiki maintainers in 2024|contact]].
 
 ## contributions
 
@@ -19,3 +20,12 @@ was discussing IkiWiki in some technical detail and suggesting it as a good
 piece of software for this task.
 
  * slides at <http://www.staff.ncl.ac.uk/jon.dowland/unix/docs/>.
+
+## Review requested
+
+I prefer to have another pair of eyeballs ACK my own patches where
+possible. These are ready for a look:
+
+ * [[bugs/backlinks onhover thing can go weird]]
+ * [[todo/don't generate an empty parentlink span]]
+ * [[todo/add a search plugin that uses duckduckgo]]
