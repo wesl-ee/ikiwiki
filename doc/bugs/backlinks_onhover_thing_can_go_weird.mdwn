@@ -50,5 +50,5 @@ further down the list, but of course then you are outside the hover region.
 >> The above works for me on ikiwiki.info which does not have `html5:1`
 >> so far as I can tell *— [[Jon]], 2020-04-21*
 
->>> [[!tag patch]]Patch in my repo, commit f051f84f632c3eaf86c5cff172692ce71ad5375d.
+>>> [[!tag patch]]Patch in my repo, branch `more-backlinks-details-tag`.
 >>> (I must say this looks *much* nicer, IMHO) *—[[Jon]], 2020-10-07*
