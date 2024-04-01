@@ -7,9 +7,10 @@ since 2008, as well as a number of private instances.
 ## contributions
 
 I've worked on a few different issues and bugs over the years (they
-are probably linked in "Backlinks", below) but these days my main
-effort is the [Opinionated Ikiwiki](https://github.com/jmtd/opinionated-ikiwiki/)
-[[container|containers]].
+are probably linked in "Backlinks", below). I slowly maintain
+the [Opinionated Ikiwiki](https://github.com/jmtd/opinionated-ikiwiki/)
+[[container|containers]]. I have recently taken on the Debian packaging.
+My current focus is working upstream.
 
 ## historic
 
