@@ -37,3 +37,5 @@ Steps 1/2 and 3/4 should take place in different releases.
 Steps 3 and 4 should happen in the same release.
 
 *&mdash; [[Jon]], 2024-04-01*
+
+> I'd love to see this happen. Theming ikiwiki is Hard, partly because Perl's templating is rather unusual compared to more modern alternatives (e.g. PHP, ERB, Jinja), but also because there's a lot of legacy lying around... -- [[anarcat]]
