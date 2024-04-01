@@ -1,0 +1,37 @@
+We should get rid of the html5 config option, remove all the branching around
+it in the templates and unconditionally use the semantic container elements.
+The advantages are twofold: users will get the semantic containers by default
+and working with ikiwiki's templates will be greatly simplified.
+
+In 490a1eca (2014), we moved to always generating HTML (5) ([[cf|todo/generate_HTML5_by_default]])
+and the `html5` config option was re-purposed to control whether
+the template used newer HTML elements such as `section`, `footer`,
+etc. The option remained default to off, because ten years ago,
+a significant fraction of web users were using MSIE versions (≤ 8) that
+didn't support them.
+
+As of 2024, [caniuse report](https://caniuse.com/usage-table) IE8 usage at
+0.02%. There are no statistically signifiant browsers in use that do not
+support the elements we gate behind the `html5` config option.
+([cf](https://caniuse.com/html5semantic))
+
+We should take the following steps
+
+1. default `html5` config option to true. This would not
+   affect existing installations which have a fully-populated configuration
+   file, which will contain either the user's preference or the previous
+   default of 0. The exception is if the user has deleted the `html5` key
+   from the config file which is unlikely.
+
+2. Print a warning that the `html5` configuration option is deprecated if it is
+   set to 0, explaining that it will be removed in a future release. (Possibly
+   pointing at this page).
+
+3. Remove the template branching `<TMPL_IF HTML5>`, replacing it with the
+   true branch
+
+4. Remove the config option.
+
+I think steps 1 and 2 could take place in the same release.
+Steps 1/2 and 3/4 should take place in different releases.
+Steps 3 and 4 should happen in the same release.
