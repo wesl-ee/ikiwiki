@@ -1,3 +1,5 @@
+[[!template id=gitbranch branch=jon/finish-html5-migration author="[[Jon]]"]]
+
 We should get rid of the html5 config option, remove all the branching around
 it in the templates and unconditionally use the semantic container elements.
 The advantages are twofold: users will get the semantic containers by default
@@ -39,3 +41,9 @@ Steps 3 and 4 should happen in the same release.
 *&mdash; [[Jon]], 2024-04-01*
 
 > I'd love to see this happen. Theming ikiwiki is Hard, partly because Perl's templating is rather unusual compared to more modern alternatives (e.g. PHP, ERB, Jinja), but also because there's a lot of legacy lying around... -- [[anarcat]]
+
+>> Fab, thanks for the ACK. I've pushed (1). I've written (2) (linked to this
+>> page via the gitbranch template) but I'm not sure whether to put out a
+>> minor release before committing that, and see what response we get first
+>> (if any).
+>> +*&mdash; [[Jon]], 2024-04-02*
