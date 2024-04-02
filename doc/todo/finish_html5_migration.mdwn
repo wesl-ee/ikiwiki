@@ -45,5 +45,5 @@ Steps 3 and 4 should happen in the same release.
 >> Fab, thanks for the ACK. I've pushed (1). I've written (2) (linked to this
 >> page via the gitbranch template) but I'm not sure whether to put out a
 >> minor release before committing that, and see what response we get first
->> (if any).
->> +*&mdash; [[Jon]], 2024-04-02*
+>> (if any).[[!tag patch]]
+>> *&mdash; [[Jon]], 2024-04-02*
