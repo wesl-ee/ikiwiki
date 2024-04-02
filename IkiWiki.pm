@@ -274,7 +274,7 @@ sub getsetup () {
 	},
 	html5 => {
 		type => "boolean",
-		default => 0,
+		default => 1,
 		description => "use elements new in HTML5 like <section>?",
 		advanced => 0,
 		safe => 1,
