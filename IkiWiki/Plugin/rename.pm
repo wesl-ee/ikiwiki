@@ -122,7 +122,6 @@ sub rename_form ($$$) {
 		name => "rename",
 		title => sprintf(gettext("rename %s"), pagetitle($page)),
 		header => 0,
-		charset => "utf-8",
 		method => 'POST',
 		javascript => 0,
 		params => $q,

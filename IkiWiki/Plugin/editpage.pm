@@ -71,7 +71,6 @@ sub cgi_editpage ($$) {
 	error($@) if $@;
 	my $form = CGI::FormBuilder->new(
 		fields => \@fields,
-		charset => "utf-8",
 		method => 'POST',
 		required => [qw{editcontent}],
 		javascript => 0,

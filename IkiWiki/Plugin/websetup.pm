@@ -283,7 +283,6 @@ sub showform ($$) {
 		title => "setup",
 		name => "setup",
 		header => 0,
-		charset => "utf-8",
 		method => 'POST',
 		javascript => 0,
 		reset => 1,

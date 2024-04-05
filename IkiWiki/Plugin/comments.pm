@@ -326,7 +326,6 @@ sub editcomment ($$) {
 	my $form = CGI::FormBuilder->new(
 		fields => [qw{do sid page subject editcontent type author
 			email url subscribe anonsubscribe}],
-		charset => 'utf-8',
 		method => 'POST',
 		required => [qw{editcontent}],
 		javascript => 0,

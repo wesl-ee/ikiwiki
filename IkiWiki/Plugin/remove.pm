@@ -114,7 +114,6 @@ sub confirmation_form ($$) {
 	my $f = CGI::FormBuilder->new(
 		name => "remove",
 		header => 0,
-		charset => "utf-8",
 		method => 'POST',
 		javascript => 0,
 		params => $q,

@@ -82,7 +82,6 @@ sub sessioncgi ($$) {
 	my $form = CGI::FormBuilder->new(
 		name => "revert",
 		header => 0,
-		charset => "utf-8",
 		method => 'POST',
 		javascript => 0,
 		params => $q,

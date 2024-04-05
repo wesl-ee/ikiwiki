@@ -166,7 +166,6 @@ sub cgi_signin ($$;$) {
 	my $form = CGI::FormBuilder->new(
 		title => "signin",
 		name => "signin",
-		charset => "utf-8",
 		method => 'POST',
 		required => 'NONE',
 		javascript => 0,
@@ -245,7 +244,6 @@ sub cgi_prefs ($$) {
 		title => "preferences",
 		name => "preferences",
 		header => 0,
-		charset => "utf-8",
 		method => 'POST',
 		validate => {
 			email => 'EMAIL',
