@@ -1,3 +1,5 @@
+[[!template id=gitbranch branch=jon/form-attribute-accept-charset author="[[Jon]]"]][[!tag patch]]
+
 Originally reported to Debian in 2009 at <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=523701>
 
 IkiWiki generates `form` elements with `charset` attributes in a few places. The Debian bug pointed at the "add comment" form, but there are other instances.
