@@ -10,3 +10,5 @@ IkiWiki generates `form` elements with `charset` attributes in a few places. The
 The WHATWG spec page above suggests the only valid value for the attribute is UTF-8. Is it superfluous? Or does the presence of the attribute change browser behaviour?
  
 *&mdash; [[Jon]], 2024-04-05*
+
+> I don't think we should keep the attribute at all. According to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#accept-charset), it defaults to the page encoding, which seems fine to me, and much more reasonable than having to specify a (possibly different?!) charset everywhere... So I would just remove this. -- [[anarcat]]
