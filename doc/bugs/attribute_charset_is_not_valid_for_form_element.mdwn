@@ -1,0 +1,10 @@
+Originally reported to Debian in 2009 at <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=523701>
+
+IkiWiki generates `form` elements with `charset` attributes in a few places. The Debian bug pointed at the "add comment" form, but there are other instances.
+
+`charset` is not a valid attribute for the form element in HTML(5). We probably want `accept-charset`, instead:
+<https://html.spec.whatwg.org/multipage/forms.html#attr-form-accept-charset>
+
+The WHATWG spec page above suggests the only valid value for the attribute is UTF-8. Is it superfluous? Or does the presence of the attribute change browser behaviour?
+ 
+*&mdash; [[Jon]], 2024-04-05*
