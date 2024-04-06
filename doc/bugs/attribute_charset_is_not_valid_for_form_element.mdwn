@@ -14,3 +14,6 @@ The WHATWG spec page above suggests the only valid value for the attribute is UT
 > I don't think we should keep the attribute at all. According to [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form#accept-charset), it defaults to the page encoding, which seems fine to me, and much more reasonable than having to specify a (possibly different?!) charset everywhere... So I would just remove this. -- [[anarcat]]
 
 >> Thanks for the info! I've removed it in the linked branch. *&mdash; [[Jon]], 2024-04-05*
+
+>>> I've tested this out a little now and I think it's good to go.
+>>> [[done]]. *&mdash; [[Jon]], 2024-04-06*
