@@ -1,0 +1,26 @@
+Some other wikis offer a feature where a particular string in your
+text is substituted for a _signature_, e.g., `~~~~` is expanded to
+something of your choosing.
+
+If you are using [[git]], you can achieve something similar, at
+least for edits in a local clone of your repository, by leveraging
+Git filters.
+
+To set this up for a local clone:
+
+1. add this line to `.git/info/attributes`
+
+    *.mdwn filter=signature
+
+   You could choose to add this to `.gitattributes` instead, and
+   commit that to the repository as well. You could also adjust
+   the path match to your settings/tastes. Here, we are only
+   applying this for edits to [[plugins/mdwn]] files.
+
+2. Configure a "clean" filter for your local clone which performs
+   the substitution, e.g.
+
+    git config filter.signature.clean 'sed "s#~~~~#*— [[Jon]], $(date +%Y-%m-%d)*#"'
+
+   "signature" here can be anything so long as it matches the name
+   in the attributes file, above.
