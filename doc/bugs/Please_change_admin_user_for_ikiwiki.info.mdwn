@@ -1,0 +1,1 @@
+Please change the admin user password for ikiwiki.info as this is too weak
