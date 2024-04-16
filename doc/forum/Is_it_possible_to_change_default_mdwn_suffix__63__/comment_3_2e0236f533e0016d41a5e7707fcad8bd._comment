@@ -1,0 +1,14 @@
+[[!comment format=mdwn
+ username="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/cae0ebd82377a48ef9f1f14ff23b3e0f"
+ subject="comment 3"
+ date="2024-04-16T14:06:32Z"
+ content="""
+> why was I able to remove joey's comment
+
+IkiWiki is (largely) a Wiki, and the base behaviour of a Wiki is everyone can edit it, and anything can be reverted (including your deletion)
+
+A related, unanswered question: [[forum/Everyone can remove comments]]. I reported this as a bug, too: [[bugs/logged in users can remove any comments]].
+
+On a related note, I'll assume [this edit](http://source.ikiwiki.branchable.com/?p=source.git;a=blobdiff;f=doc/security/discussion.mdwn;h=f510eb21780143dc3ad1f6c0d033f05e623885b4;hp=ddf61c5f8771c581a449fd07f106f62cc3d60026;hb=8ac1f2d18a99a10e9783500710ade73d833c01e8;hpb=eecb06e7e55d3a77e8567b59892de38b7e8d507c) of yours was accidental; please don't deliberately nuke any more useful pages. We have a [[sandbox]] for experiments.
+"""]]
