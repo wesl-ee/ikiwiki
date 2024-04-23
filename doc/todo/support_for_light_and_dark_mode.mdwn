@@ -94,3 +94,23 @@ is probably the best way to implement this.
 > 
 > If we add such a theme (name TBC), would you be happy to move `ikiwiki.info`
 > to it? — [[Jon]], *2024-03-18*
+
+>> I've been poking at this a little bit more over the last couple of weeks.
+>> Besides <https://ikiwiki.info>, I'm not sure anyone would use a new
+>> "lightdark" theme. I strongly suspect most people either use an existing
+>> theme or something custom (I started a [[forum/theme poll]] to try and
+>> gather some data). So I don't think it's worth much effort _unless_
+>> <https://ikiwiki.info> was going to use it.
+>> 
+>> There's a third strand of work not mentioned here or in
+>> [[support dark mode in antitheme]]: making the other existing themes
+>> support light-and-dark mode. That could be valuable, at least in the
+>> short term.
+>> 
+>> I concur that adjusting the antitheme to support light/dark mode could
+>> be regarded as a breaking change for existing users. I think we should
+>> consider putting that on the [[roadmap]] for a 4.x, and/or extending
+>> [[ikiwiki-transition]] to handle this case. Perhaps a "lightdark" theme
+>> could be enabled as part of a transition if we can detect where it
+>> introduces a problem (or perhaps mechanically detecting that is impractical).
+>> — [[Jon]], *2024-04-23*
