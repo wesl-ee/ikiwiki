@@ -5,5 +5,5 @@ Existing IkiWiki users: which [[themes]] do you use on your site?
 0 blueview
 0 goldtype
 0 monochrome
-2 "other, including heavily modified versions of the above"
+3 "other, including heavily modified versions of the above"
 ]]
