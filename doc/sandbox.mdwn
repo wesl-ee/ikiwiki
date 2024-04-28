@@ -280,3 +280,5 @@ If you're using Debian or Ubuntu, ikiwiki is an apt-get install ikiwiki away. If
 You may also want to try out IkiWiki in a container.
 
 This line was added using the web interface.
+
+This is concurrent edit #1.
