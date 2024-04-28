@@ -281,4 +281,8 @@ You may also want to try out IkiWiki in a container.
 
 This line was added using the web interface.
 
+<<<<<<< HEAD
 This is concurrent edit #1.
+=======
+This is concurrent edit #2.
+>>>>>>> 2144dad74c4a4cd027c47bda480f13c1b901df45
