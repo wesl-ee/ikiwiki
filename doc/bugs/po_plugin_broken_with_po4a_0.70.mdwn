@@ -4,5 +4,6 @@ po plugin is broken.
 This was reported as a FTBFS bug in Debian: <https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1072760>
 
 I think this patch is sufficient: <https://salsa.debian.org/jmtd/ikiwiki/-/commit/65f13f08901806a3b458cd625369e27bf19722e0>
+[[!tag patch]]
 
 *— [[Jon]], 2024-06-11*
