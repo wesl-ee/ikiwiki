@@ -904,16 +904,13 @@ sub refreshpot ($) {
 
 	my $doc=Locale::Po4a::Chooser::new(po4a_type($masterfile),
 					   po4a_options($masterfile));
-	$doc->read($masterfile);
+	$doc->read($masterfile,"?");
 	$doc->{TT}{utf_mode} = 1;
-	$doc->detected_charset('UTF-8');
-	$doc->{TT}{po_in}->set_charset('UTF-8');
 	# let's cheat a bit to force porefs option to be passed to
 	# Locale::Po4a::Po; this is undocument use of internal
 	# Locale::Po4a::TransTractor's data, compulsory since this module
 	# prevents us from using the porefs option.
 	$doc->{TT}{po_out}=Locale::Po4a::Po->new({ 'porefs' => 'none' });
-	$doc->{TT}{po_out}->set_charset('UTF-8');
 	# do the actual work
 	$doc->parse;
 	IkiWiki::prep_writefile(basename($potfile),dirname($potfile));
