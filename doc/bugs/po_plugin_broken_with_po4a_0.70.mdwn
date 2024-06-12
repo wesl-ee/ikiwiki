@@ -9,6 +9,8 @@ I think this patch is sufficient: <https://salsa.debian.org/jmtd/ikiwiki/-/commi
 *— [[Jon]], 2024-06-11*
 
 > I've pushed a Debian package update with a slightly more involved patch:
+>
 > <https://salsa.debian.org/debian/ikiwiki/-/blob/debian/master/debian/patches/0001-Adjustments-for-po4a-0.7.0.patch?ref_type=heads>
+>
 > I'm unavailable for a couple of weeks so I'll let it "soak" in Debian before committing it here.
 > *— [[Jon]], 2024-06-12*
