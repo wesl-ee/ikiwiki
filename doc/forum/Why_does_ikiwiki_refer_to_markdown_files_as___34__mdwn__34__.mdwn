@@ -1,1 +1,3 @@
 I am going through the ikiwiki docs on this website, and I get confused by the docs' insistence of referring to markdown as "mdwn" files.  Mdwn files are normal markdown files, am I right?  Can ikiwiki understand and work with .md files, instead of mdwn?
+> Yes, ikiwiki can work with .md files just fine. The file extension is conventionally named after the plugin that parses the markup so that it's trivial to find it's name.
+> *&mdash; [[awesomeadam]], 2023-06-13*
