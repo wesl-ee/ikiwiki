@@ -4,7 +4,7 @@
 **<TMPL_VAR title>**|
 [[!img <TMPL_VAR image> size=425x caption="<TMPL_VAR imagecaption>"]]|
 Season|<TMPL_VAR partOfSeason>
-Episode|<TMPL_VAR episodeNumber> 
+Episode|<TMPL_VAR episodeNumber>
 Air date|<TMPL_VAR airDate>
 Writer|<TMPL_VAR writer>
 Director|<TMPL_VAR director>
