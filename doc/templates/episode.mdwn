@@ -29,4 +29,4 @@ these parameters:
 * previousEpisode - name of previous episode
 * nextEpisode - name of next episode
 
-This template uses the table and img directives.
+This template uses the [[plugins/table]] and [[plugins/img]] directives.
