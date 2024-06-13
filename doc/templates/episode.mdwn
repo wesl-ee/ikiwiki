@@ -10,7 +10,7 @@ Writer|<TMPL_VAR writer>
 Director|<TMPL_VAR director>
 Episode guide|
 Previous|Next
-[[<TMPL_VAR previousEpisode>]]|[[<TMPL_VAR nextEpisode>]]
+[[<TMPL_VAR raw_previousEpisode>]]|[[<TMPL_VAR raw_nextEpisode>]]
 """]]
 </div>
 ENDBODY]]
