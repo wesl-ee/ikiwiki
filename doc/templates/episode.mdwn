@@ -1,0 +1,32 @@
+[[!templatebody <<ENDBODY
+<div class="infobox">
+[[!table data="""
+**<TMPL_VAR title>**|
+[[!img <TMPL_VAR image> size=425x caption="<TMPL_VAR imagecaption>"]]|
+Season|<TMPL_VAR partOfSeason>
+Episode|<TMPL_VAR episodeNumber> 
+Air date|<TMPL_VAR airDate>
+Writer|<TMPL_VAR writer>
+Director|<TMPL_VAR director>
+Episode guide|
+Previous|Next
+[[<TMPL_VAR previousEpisode>]]|[[<TMPL_VAR nextEpisode>]]
+"""]]
+</div>
+ENDBODY]]
+
+This template is used to create an infobox for an episode of a TV show. It uses
+these parameters:
+
+* title - the title of the episode
+* image - the file path of an image in the wiki
+* imagecaption - the image caption
+* partOfSeason - the season number
+* episodeNumber - notes about the episode number
+* airDate - the date the episode aired
+* writer - list of writers involved
+* director - list of directors involved
+* previousEpisode - name of previous episode
+* nextEpisode - name of next episode
+
+This template uses the table and img directives.
