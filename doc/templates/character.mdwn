@@ -1,0 +1,44 @@
+[[!templatebody <<ENDBODY
+<div class="infobox">
+[[!table data="""
+**<TMPL_VAR name>**|
+[[!img img/<TMPL_VAR image> size=265x caption="<TMPL_VAR imagecaption>"]]|
+Aliases|<TMPL_VAR aliases>
+Relatives|<TMPL_VAR relatives>
+Affiliation|<TMPL_VAR affiliation>
+Occupation|<TMPL_VAR occupation>
+**Biographical Information**|
+Marital status|<TMPL_VAR marital>
+Date of birth|<TMPL_VAR birthDate>
+Place of birth|<TMPL_VAR birthPlace>
+**Physical Description**|
+Species|<TMPL_VAR species>
+Gender|<TMPL_VAR gender>
+**Appearances**|
+Portrayed by|<TMPL_VAR portrayedby>
+Appears in|<TMPL_VAR raw_appearsin>
+Debut|[[<TMPL_VAR raw_debut>]]
+"""]]
+</div>
+ENDBODY]]
+
+This template is used to create an infobox for a character of a TV show. It uses
+these parameters:
+
+* name - the name of the character
+* image - the file path of an image in the wiki
+* imagecaption - the image caption
+* aliases - the aliases of the character
+* relatives - the relatives of the character
+* affiliation - the affiliation of the character
+* occupation - the character's occupation
+* marital - the character's marital status
+* birthDate - the character's birth date
+* birthPlace - the character's birth place
+* species - the species of the character
+* gender - the gender of the character
+* portrayedby - the actors that portray the character
+* appearsin - notes about the episodes the character appears in
+* debut - the episode that debuts the character
+
+This template uses the [[table|plugins/table]] and [[img|plugins/img]] directives.
