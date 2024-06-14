@@ -64,4 +64,10 @@ and have it render like:
 >>
 >> --[[isbear]]
 
+>>> I found a bug where footnotes can't be added inside tables
+>>> (both the table plugin and markdown) because the markup isn't processed
+>>> in the page context. What you describe regarding the processing order
+>>> should fix it.
+>>> --[[adam|awesomeadam]]
+
 [[!debbug 487397]]
