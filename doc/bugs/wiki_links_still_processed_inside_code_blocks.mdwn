@@ -68,6 +68,8 @@ and have it render like:
 >>> (both the table plugin and markdown) because the markup isn't processed
 >>> in the page context. What you describe regarding the processing order
 >>> should fix it.
+>>> Nevermind, it generally seems that footnotes aren't allowed in tables
+>>> and footnotes can't be referred to more than once in Markdown.
 >>> --[[adam|awesomeadam]]
 
 [[!debbug 487397]]
