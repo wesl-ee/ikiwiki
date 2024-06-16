@@ -26,7 +26,7 @@ This template is used to create an infobox for a character of a TV show. It uses
 these parameters:
 
 * name - the name of the character
-* image - the file path of an image in the wiki
+* image - the file path of an image in the wiki, under the img directory
 * imagecaption - the image caption
 * aliases - the aliases of the character
 * relatives - the relatives of the character
