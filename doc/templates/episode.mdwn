@@ -2,7 +2,7 @@
 <div class="infobox">
 [[!table data="""
 **<TMPL_VAR title>**|
-[[!img <TMPL_VAR image> size=425x caption="<TMPL_VAR imagecaption>"]]|
+[[!img img/<TMPL_VAR image> size=425x caption="<TMPL_VAR imagecaption>"]]|
 Season|<TMPL_VAR partOfSeason>
 Episode|<TMPL_VAR episodeNumber>
 Air date|<TMPL_VAR airDate>
@@ -19,7 +19,7 @@ This template is used to create an infobox for an episode of a TV show. It uses
 these parameters:
 
 * title - the title of the episode
-* image - the file path of an image in the wiki
+* image - the file path of an image in the wiki, under the img directory
 * imagecaption - the image caption
 * partOfSeason - the season number
 * episodeNumber - notes about the episode number
