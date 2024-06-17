@@ -2,7 +2,7 @@
 <div class="infobox">
 [[!table data="""
 **<TMPL_VAR title>**|
-[[!img img/<TMPL_VAR image> size=425x caption="<TMPL_VAR imagecaption>"]]|
+[[!img img/<TMPL_VAR raw_image> size=425x caption="<TMPL_VAR imagecaption>"]]|
 Season|<TMPL_VAR partOfSeason>
 Episode|<TMPL_VAR episodeNumber>
 Air date|<TMPL_VAR airDate>
