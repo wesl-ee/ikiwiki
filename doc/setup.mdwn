@@ -8,6 +8,8 @@ If you're using Debian or Ubuntu, ikiwiki is an <code><a href="http://www.debian
 
 For those using Fedora, [IkiWiki is available as Fedora package](https://packages.fedoraproject.org/pkgs/ikiwiki/ikiwiki/).
 
+For those using Alpine Linux, [IkiWiki is available as an Alpine package](https://pkgs.alpinelinux.org/package/edge/community/x86_64/ikiwiki), thus installable via <code>apk add ikiwiki</code>.
+
 Otherwise, see the [[download]] and [[install]] pages.
 
 You may also want to try out IkiWiki in a [[container|containers]].
