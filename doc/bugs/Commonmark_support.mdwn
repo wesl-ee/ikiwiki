@@ -52,3 +52,11 @@ Patch: <https://github.com/jmtd/ikiwiki/commit/c76eeac8152604ce3d7d1672fe404c8ee
 > > 5. as far as I can tell from my [magic script](https://gitlab.com/anarcat/scripts/-/blob/a6dbda602d8d8e9c0ef810d308e35a09ff538836/in-debian), neither `libcmark` or `libperl-commonmark` are packaged. There isn't even a WNPP bug. I do wonder if that's a criteria for inclusion though; I wouldn't keep code away merely because it's not in Debian. (What *is* our criterion, actually? I'd say "unit tests and integration in CI", but, while we have the former, we don't have the latter, and not having Debian package might make testing this harder.... )
 > > 
 > > -- anarcat
+
+> I tried this patch on Fedora 39 (which has perl-commonmark 0.290000 and libcmark 0.30.3 packaged),
+> but immediately encountered a problem where all wikilinks and directives stopped working.
+> `\[[foo]]` in the source page becomes simply `foo` in the generated HTML, as if CommonMark ate the double brackets.
+>
+> I don't have a different system to compare if it's specific to the Fedora packages. Did you face this problem?
+>
+> -- j@ustink.org 2024-06-29
