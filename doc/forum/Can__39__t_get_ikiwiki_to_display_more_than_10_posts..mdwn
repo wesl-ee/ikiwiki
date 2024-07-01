@@ -1,0 +1,13 @@
+Trying to figure out why ikiwiki never displays more than 10 posts no matter what the value of the numbacklinks variable says.  I have tried 0 (to show all) and 100 (I only have 22 posts) but it always displays 10.
+
+The /var/lib/ikiwiki/<name-of-blog>.setup variable:
+
+numbacklinks: 0
+
+whose description says:
+
+    how many backlinks to show before hiding excess (0 to show all)
+
+properly reflects the changes made with the ikiwiki setup interface.  I'm running ikiwiki on a FreedomBox.
+
+Maybe I'm not understanding what this variable is supposed to do, but it seems to be the only one that has anything to do with how many posts to show.  I would like to show all the posts, not just the most recent 10 when entering the blog.  Can anyone tell me why this is not working?  Thanks. 
