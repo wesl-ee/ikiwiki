@@ -1,0 +1,13 @@
+[[!comment format=mdwn
+ username="j@000101868664dfd137e5c70844b577c209cb6be6"
+ nickname="j"
+ avatar="http://cdn.libravatar.org/avatar/3eba91441afbd8b8c56aa6ea4e0c577f"
+ subject="comment 1"
+ date="2024-07-03T03:49:41Z"
+ content="""
+[[backlinks]] are links from other pages back to the current page, that are shown at the bottom of a page by default. It's not related to the blog listing.
+
+The blog listing is generated with an [[ikiwiki/directive/inline]] directive.
+
+Go to the page that contains your blog listing and edit it. You will see the inline directive with a parameter `limit=\"10\"` (or `show=\"10\"`, which is outdated but still works).
+"""]]
