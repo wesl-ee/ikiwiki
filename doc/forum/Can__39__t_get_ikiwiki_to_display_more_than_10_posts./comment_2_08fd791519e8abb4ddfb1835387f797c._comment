@@ -1,0 +1,18 @@
+[[!comment format=mdwn
+ username="afc54"
+ avatar="http://cdn.libravatar.org/avatar/52d07197a05a068033c9ba45f2681ae7"
+ subject="Success! Thanks!"
+ date="2024-07-08T22:16:23Z"
+ content="""
+Ok, thanks.  I know next to nothing about ikiwiki, but it appears that the FreedomBox places the blog files in /var/lib/ikiwiki/<name-of-blog>.  From there:
+
+    find . -type f -exec grep 'show=\"10\"' {} \; -print
+    [[!inline pages=\"page(./posts/*) and !*/Discussion\" show=\"10\"
+    ./index.mdwn
+    grep: ./.ikiwiki/sessions.db: Permission denied
+    grep: ./.ikiwiki/userdb: Permission denied
+
+so replaced the show=\"10\" with show=\"100\" but no change.  Turns out that change doesn't propagate until a blog rebuild is done.  So, changed the numbacklinks to 100 from the ikiwiki interface and after the rebuild was done, I now see all posts.
+
+The ikiwiki version on the FreedomBox is 3.20200202.3-1 (per aptitude).  Not sure if newer versiona have this variable settable from the \"setup\" page, but it would be a good idea.
+"""]]
