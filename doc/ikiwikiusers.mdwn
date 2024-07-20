@@ -227,3 +227,4 @@ Personal sites and blogs
 * [Coyote Works](http://coyote.works/) - Work In Progress site of Stephen Michael Kellat
 * [cat.chessmuse.com](https://cat.chessmuse.com) - alip's chess blog
 * [wesl.ee](https://wesl.ee)'s personal wiki
+* [Summer Camp Island wiki](https://sumcamisl.neocities.org) (no CGI)
