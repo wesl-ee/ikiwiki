@@ -126,6 +126,11 @@ msgid "After inlines"
 msgstr "Après les inlines"
 EOF
 writefile('debian911356-inlined.fr.po', $config{srcdir}, <<EOF);
+msgid "" msgstr ""
+"MIME-Version: 1.0\\n"
+"Content-Type: text/plain; charset=UTF-8\\n"
+"Content-Transfer-Encoding: 8bit\\n"
+
 msgid "English content"
 msgstr "Contenu français"
 EOF
