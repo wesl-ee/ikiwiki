@@ -34,3 +34,6 @@ References:
  * [Jekyll 'front matter'](https://jekyllrb.com/docs/front-matter/)
 
 *— [[Jon]], 2021-10-15*
+
+> Alternatively, a new plugin with a [[filter|plugins/write]] hook would be able to do the necessary key translations to `meta` definitions.
+> _-- [[adam|awesomeadam]], 2024-07-31_
