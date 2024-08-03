@@ -48,3 +48,5 @@ The [openSUSE Build Service](http://software.opensuse.org/search?baseproject=ALL
 A [PKGBUILD for Arch Linux](https://aur.archlinux.org/packages/ikiwiki/) is in the AUR.
 
 A basic [Homebrew](https://brew.sh) Tap is available at <https://github.com/naosnz/homebrew-ikiwiki> ([[discussion|forum/Can someone add Ikiwiki in Homebrew?]])
+
+Guix has an [ikiwiki package](https://packages.guix.gnu.org/packages/ikiwiki).
