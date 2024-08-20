@@ -11,4 +11,4 @@ One thing I’m not sure about is the principle of graceful degradation. That’
 
 Thoughts?
 
-—[Jon]], 2024-08-20
+—[[Jon]], 2024-08-20
