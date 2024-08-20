@@ -1,0 +1,14 @@
+I’ve been reading a little about [htmx](https://htmx.org/): a JavaScript library which lets you declaratively define actions on page elements that call web API endpoints (without a page refresh), those return HTML snippets, and the snippets are inserted into the live page at defined points. 
+
+I thought that was pretty interesting and I wonders if there are opportunities to deploy it to enhance ikiwiki. What do you think? Examples:
+
+ * edit page. Could generate and populate the edit form within the loaded page without a full refresh 
+ * edit preview. Could be on demand within the edit page, or even automatic
+ * comment moderation. Handle deleting spam, approving comments and rebuilds etc asynchronously
+ * posting comments without leaving the parent page 
+
+One thing I’m not sure about is the principle of graceful degradation. That’s something we probanly want in ikiwiki: no JavaScript, things work as normal. I’m fairly sure this isn’t something modern web developers are interested in, so I don’t know to what extent it’s possible with htmx. 
+
+Thoughts?
+
+—[Jon]], 2024-08-20
