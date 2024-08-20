@@ -1,0 +1,12 @@
+[[!comment format=mdwn
+ username="anarcat"
+ avatar="http://cdn.libravatar.org/avatar/825d3c30cb96a053b5335e51b8d0bd49"
+ subject="not sure"
+ date="2024-08-20T16:02:05Z"
+ content="""
+I'm not sure. We already have jquery in ikiwiki (or at least it's there in my site) and it's one of those huge blobs i'd like to get rid of.
+
+I'd love to have more \"live\" previews, but the blocker for this right now is not, IMHO, Javascript or browser-level interactivity, it's how *slow* ikiwiki is over CGI. There's a *single* CGI endpoint that has huge lock contention: that's most of where people spend time when doing comments or, frankly, anything, through the web interface.
+
+Unless we fix that *first*, i doubt any live thing like this will be anywhere near useful... I'm also not convinced we *need* htmx to do the things you're refering to here, but i'm not a frontend developer and i'm old, so i could very well be wrong about that. :) -- [[anarcat]]
+"""]]
