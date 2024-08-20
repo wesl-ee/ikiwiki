@@ -1,0 +1,12 @@
+[[!comment format=mdwn
+ username="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/cae0ebd82377a48ef9f1f14ff23b3e0f"
+ subject="comment 2"
+ date="2024-08-20T17:41:54Z"
+ content="""
+I agree, the big locks are a pressing issue and will limit the usefulness of anything like this. 
+
+I’d hope that something like this could be optional, and unless opted in you wouldn’t pay the price (= need to bundle the js)
+
+I’m sure the same could be achieved without htmx, but it might be an especially quick/ergonomic way to achieve it. 
+"""]]
