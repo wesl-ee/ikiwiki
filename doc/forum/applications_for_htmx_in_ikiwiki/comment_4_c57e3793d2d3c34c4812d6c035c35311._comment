@@ -1,0 +1,19 @@
+[[!comment format=mdwn
+ username="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/cae0ebd82377a48ef9f1f14ff23b3e0f"
+ subject="comment 4"
+ date="2024-08-21T21:11:42Z"
+ content="""
+Some quick notes. the htmx library is tiny: 49567 bytes. To make the \"add comment\" form embed into the current page onclick, instead of a page refresh, requires the following adjustments to the \"add comment\" anchor tag:
+
+```
+<a rel=\"nofollow\" href=\"<TMPL_VAR ADDCOMMENTURL>\"                                                      
+    hx-target=\".addcomment\"                                                                            
+    hx-swap=beforend                                                                                   
+    hx-get=\"<TMPL_VAR ADDCOMMENTURL>\"                                                                  
+    hx-select=\".editcomment form\"                                                                      
+>Add a comment</a>
+```
+
+i.e. the four new attributes. That's it! Obviously some significant refinements could be made, but I'm pretty amazed how little is needed to get something functional working.
+"""]]
