@@ -1,0 +1,9 @@
+[[!comment format=mdwn
+ username="jmtd@d79be1606aba831a3b476d5fff7d99f4b321eab2"
+ nickname="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/96f1bc700fdf0fc814f40c90391a6b53"
+ subject="comment 1"
+ date="2024-08-26T15:38:22Z"
+ content="""
+Give us a bit more information about what you are observing and the environment in which you are running it. It _looks_ like you get two warnings (not errors). Is that the only problem, or does something not work? It also seems you are on macOS. Can you share the macOS version *and* the IkiWiki version you are using?
+"""]]
