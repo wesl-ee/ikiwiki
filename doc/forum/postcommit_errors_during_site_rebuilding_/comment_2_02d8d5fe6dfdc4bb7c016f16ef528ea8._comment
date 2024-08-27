@@ -1,0 +1,19 @@
+[[!comment format=mdwn
+ username="jmtd@d79be1606aba831a3b476d5fff7d99f4b321eab2"
+ nickname="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/96f1bc700fdf0fc814f40c90391a6b53"
+ subject="comment 2"
+ date="2024-08-27T10:04:11Z"
+ content="""
+Are you trying to use the configuration options `git_wrapped_backround_command` or `wrapper_background_command`? Those are what are triggering the warning. If you don't need those features, disable them in your setup file to silence the warning.
+
+If you do want them, can you ignore the warnings for now? What are you using them for -- perhaps we can find an alternative way of achieving the same thing.
+
+More detail:
+
+This is the code triggering the warning: <http://source.ikiwiki.branchable.com/?p=source.git;a=blob;f=IkiWiki/Wrapper.pm;h=1b8c558e5a46ae55aa14be4f09e59ef5ad5a504b;hb=HEAD#l283>
+
+If a background command is specified, then this code is generated and run. It uses function `daemon` (from 4.4BSD in 1995, added to glibc at the same time, not part of POSIX) and it seems Apple are going to remove it from a future macOS.
+
+We would have to look into whether their suggested remedy (use `posix_spawn` instead, or maybe we could `fork/exec`) would be appropriate for all the hosts/operating systems that IkiWiki might be run on.
+"""]]
