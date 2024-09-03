@@ -47,3 +47,7 @@ The only problem I encountered was that the `recentchanges` plugin doesn't have 
 [[!tag patch]]
 
 It's probably better to add the functionality I'm looking for in the editing-related plugins like `link` and `editpage`, but I'm not that familiar with Ikiwiki internals yet. Please let me know if that's preferrable. --[[awesomeadam]]
+
+> This feels odd to me: if you want to disable CGI (which is, effectively, what linking to CONTRIBUTING would do, no?), just disable CGI, then use the theme or something else to add a link? I have already patched ikiwiki to have recentchanges work properly without CGI, FWIW, in [[todo/proper_links_in_recentchanges_without_CGI]], have you tried that?
+>
+> see also [[plugins/sidebar]]. -- [[anarcat]]
