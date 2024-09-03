@@ -4,7 +4,7 @@ The only problem I encountered was that the `recentchanges` plugin doesn't have 
 
 ```
 --- a/IkiWiki/Plugin/recentchanges.pm	1970-01-01 07:30:01.000000000 +0730
-+++ b/IkiWiki/Plugin/recentchanges_local.pm	2024-09-03 14:13:29.351231651 +0800
++++ b/IkiWiki/Plugin/recentchanges.pm	2024-09-03 14:13:29.351231651 +0800
 @@ -1,0 +1,0 @@
  
  use warnings;
