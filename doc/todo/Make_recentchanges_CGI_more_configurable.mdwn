@@ -49,4 +49,4 @@ The only problem I encountered was that the `recentchanges` plugin doesn't have 
  			page => IkiWiki::userpage($change->{author}),
 ```
 
-It's probably better to add the functionality I'm looking for in the editing-related plugins like `link` and `editpage`, but I'm not that familiar with Ikiwiki internals yet. Please let me know if that's preferrable.
+It's probably better to add the functionality I'm looking for in the editing-related plugins like `link` and `editpage`, but I'm not that familiar with Ikiwiki internals yet. Please let me know if that's preferrable. --[[awesomeadam]]
