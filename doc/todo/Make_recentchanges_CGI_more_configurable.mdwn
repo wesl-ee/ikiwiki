@@ -52,6 +52,6 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >
 > see also [[plugins/sidebar]]. -- [[anarcat]]
 
->> Yes, I've disabled the CGI before this and the recentchanges page worked as expected. The reason I want to set the cgiurl to `CONTRIBUTING` is so that the `Edit` action and all the wikilinks to nonexistent pages(the ones with '?' prepended) will be shown, since they aren't shown if the CGI is disabled.
+>> Yes, I've disabled the CGI before this and the recentchanges page worked as expected. The reason I want to set the cgiurl to `CONTRIBUTING` is so that the `Edit` action and all the wikilinks to nonexistent pages(the ones with '?' prepended) will be shown, since they aren't shown if the CGI is disabled. It's normally better to not show them at all when the CGI is disabled, but it would be useful to link to a contribution guide page instead if there was an option for it.
 >>
 >> I could just use the sidebar plugin instead and link to `CONTRIBUTING` from there, but then the missing pages on the wiki won't be visible from a glance... -- [[awesomeadam]]
