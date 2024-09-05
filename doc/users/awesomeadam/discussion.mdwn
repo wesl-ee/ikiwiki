@@ -1,0 +1,3 @@
+Thanks for participating in the [[forum/theme poll]]! Your vote was for antitheme, with your last commit message reading [Undo my vote for "other" theme, since I use the antitheme with local.css](https://source.ikiwiki.branchable.com/?p=source.git;a=blobdiff;f=doc/forum/theme_poll.mdwn;h=47cafc9369b6ea30c82494a9e3f1735f45e218d5;hp=f86b8e3726bf0f2c301ec6001873392cd6155565;hb=b250476ebe183adeb2eb0973ae800258518ddd8c;hpb=6efba197e496cbfe86fa7fb8ab065cc37e45c642).
+
+The intention of the poll choice was to capture people using the antitheme with only light modifications: if you've done any kind of theming or styling via local.css, the more appropriate poll choice would be "Other". *— [[Jon]], 2024-09-05*
