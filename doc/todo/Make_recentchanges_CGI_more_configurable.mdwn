@@ -55,3 +55,13 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >> Yes, I've disabled the CGI before this and the recentchanges page worked as expected. The reason I want to set the cgiurl to `CONTRIBUTING` is so that the `Edit` action and all the wikilinks to nonexistent pages(the ones with '?' prepended) will be shown, since they aren't shown if the CGI is disabled. It's normally better to not show them at all when the CGI is disabled, but it would be useful to link to a contribution guide page instead if there was an option for it.
 >>
 >> I could just use the sidebar plugin instead and link to `CONTRIBUTING` from there, but then the missing pages on the wiki won't be visible from a glance... -- [[awesomeadam]]
+
+> (Let me preface this by first saying that presently I am not able to do any open
+> source work, including IkiWiki, for _reasons_ but I'm hoping that will change within the next few
+> weeks.)
+> Without looking at the code first (which might undermine my assumptions), I feel the cleanest
+> way to achieve what you want would be if it were possible for a plugin to be triggered during
+> link generation (the ? for broken links) and for that plugin to exist. I think enabling CGI
+> in any scenario where you don't want CGI is likely to have some risky corner cases. Cleaner
+> would be CGI off; a separate plugin handles dealing with ?-plugins; and anarcat's changes to
+> make recentchanges work properly with CGI off. *&mdash; [[Jon]], 2024-09-05*
