@@ -65,3 +65,11 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 > in any scenario where you don't want CGI is likely to have some risky corner cases. Cleaner
 > would be CGI off; a separate plugin handles dealing with ?-plugins; and anarcat's changes to
 > make recentchanges work properly with CGI off. *&mdash; [[Jon]], 2024-09-05*
+
+>> you'd need to make a copy of the `link` plugin, explicitly disable `link` and enable your
+>> copy. You'd then need to add a (renamed?) copy of `htmllink` from `IkiWiki.pm` to the copy,
+>> and call that instead, within the `linkify` subroutine.
+>> 
+>> Then, in the copy of `htmllink`, you can find the chunk of code which generates the links
+>> for missing pages (search for `"<span class=\"createlink\">`) and adjust it to be a static
+>> link to your `CONTRIBUTING` page. *— [[Jon]], 2024-09-09*
