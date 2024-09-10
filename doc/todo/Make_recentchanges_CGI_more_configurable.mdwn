@@ -77,3 +77,16 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >>> Thanks, here's my working [[modified link plugin|https://codeberg.org/AwesomeAdam54321/ikiplugins/src/branch/main/IkiWiki/Plugin/link_local.pm]]
 >>> based on your instructions.
 >>> Would the functionality be accepted into ikiwiki's link plugin? I could make adjustments if necessary. _— [[awesomeadam]], 2024-09-10_
+
+>>>> Nice! I think I might use this myself, too: on [my site](https://jmtd.net) I have CGI
+>>>> turned on for comments, but I don't do web-based page editing. I'll do a full review
+>>>> once I'm back at work. For now, I'd say that this works well as an independent plugin
+>>>> from `link.pm`, so it probably makes sense to keep it that way rather than modify
+>>>> `link.pm`, but I'd like to see this as a plugin included in IkiWiki. One quick hint,
+>>>> I noticed after a quick scan over: rather than copy the utility functions from
+>>>> `IkiWiki.pm`, you can reference them with e.g. `IkiWiki::abs2rel`. This wouldn't be
+>>>> necessary if we included those utility functions in the list of things that `IkiWiki.pm`
+>>>> exports, so, we should review whether to add them to that list. Also, I'd rename the
+>>>> copy of `htmllink` to something unique (`myhtmllink`? you can probably do better than
+>>>> that) and reference that name in `linkify`, to quash a warning about redefining the
+>>>> existing one. Great work!  *— [[Jon]], 2024-09-10*
