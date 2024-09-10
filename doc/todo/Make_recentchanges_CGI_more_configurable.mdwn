@@ -76,4 +76,4 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 
 >>> Thanks, here's my working [[modified link plugin|https://codeberg.org/AwesomeAdam54321/ikiplugins/src/branch/main/IkiWiki/Plugin/link_local.pm]]
 >>> based on your instructions.
->>> Would the functionality be accepted into ikiwiki's link plugin? I could make adjustments if necessary.
+>>> Would the functionality be accepted into ikiwiki's link plugin? I could make adjustments if necessary. _— [[awesomeadam]], 2024-09-10_
