@@ -73,3 +73,7 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >> Then, in the copy of `htmllink`, you can find the chunk of code which generates the links
 >> for missing pages (search for `"<span class=\"createlink\">`) and adjust it to be a static
 >> link to your `CONTRIBUTING` page. *— [[Jon]], 2024-09-09*
+
+>>> Thanks, here's my working [[modified link plugin|https://codeberg.org/AwesomeAdam54321/ikiplugins/src/branch/main/IkiWiki/Plugin/link_local.pm]]
+>>> based on your instructions.
+>>> Would the functionality be accepted into ikiwiki's link plugin? I could make adjustments if necessary.
