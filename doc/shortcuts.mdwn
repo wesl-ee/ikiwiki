@@ -68,6 +68,7 @@ This page controls what shortcut links the wiki supports.
 * [[!shortcut name=pkgsrc url="http://pkgsrc.se/%S"]]
 * [[!shortcut name=doi url="http://dx.doi.org/%s" desc="doi:%s"]]
 * [[!shortcut name=arxiv url="http://arxiv.org/abs/%s" desc="arXiv:%s"]]
+* [[!shortcut name=adventuretime url="https://breezewiki.com/adventuretime/wiki/%W"]]
 
 To add a new shortcut, use the `shortcut`
 [[ikiwiki/directive]]. In the url, "%s" is replaced with the
