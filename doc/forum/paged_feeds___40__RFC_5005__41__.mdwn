@@ -1,6 +1,6 @@
 I've [just learned](https://pleroma.debian.social/notice/AmEPTRoZiQifOD3hce) about [paged feeds](https://datatracker.ietf.org/doc/html/rfc5005): an RFC proposal for linking separate feed URIs together via `<link rel=prev`, `<link rel=next` etc. to specify an ordering.
 
-The purpose is to support pagination of feeds: have (say) 5 entries in your most recent URI, and then the next 5 (or so) in another file/URI, that a compliant reader could fetch if required (or not, if not desired).
+The purpose is to support pagination of feeds: have (say) 5 entries in your most recent URI, and then the next 5 (or so) in another file/URI, (etc etc) that a compliant reader could fetch if required (or not, if not desired).
 
 This might improve bandwidth for full-text entry/large entry feeds. It also might help with flooding aggregators, assuming the aggregators didn't blindly follow the links.
 
