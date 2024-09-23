@@ -5,3 +5,5 @@ The purpose is to support pagination of feeds: have (say) 5 entries in your most
 This might improve bandwidth for full-text entry/large entry feeds. It also might help with flooding aggregators, assuming the aggregators didn't blindly follow the links.
 
 I've no idea what client support is like. Does this sound interesting to anyone? *— [[Jon]], 2024-09-23*
+
+> Really interesting! Sounds like something we should implement, IMHO, if only as a way to pull "all the articles from this blog" kind of thing in a mechanical way. No idea what client support is either, as a RSS feed reader author myself, I had [no idea this existed in the first place](https://gitlab.com/anarcat/feed2exec/-/issues/33), yet this has been around for almost 20 years at this point, fascinating! (But then again, I've never really done much work trying to support that stuff and assumed the feedresader python module would do everything for me... Unfortunately, it doesn't, particularly with poorly formatted feeds, of course. See also [RSS Podcast Feed Inefficiency](https://www.earth.org.uk/RSS-efficiency.html). --[[anarcat]]
