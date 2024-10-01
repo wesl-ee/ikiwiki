@@ -16,7 +16,7 @@ more details.
  * [mdwn_itex][] - Works with the [[`mdwn`|plugins/mdwn]] plugin to convert
    inline [[todo/LaTeX]] expressions to MathML using `itex2MML`.
 
- * [h1title][] - If present, use the leading level 1 Markdown header to
+ * [[plugins/h1title]] - If present, use the leading level 1 Markdown header to
    set the page title and remove it from the page body.
 
  * [code][] - Whole file and inline code snippet [[todo/syntax highlighting]]
@@ -36,7 +36,6 @@ more details.
    `IS_HOMEPAGE` and `IN_DIR_SUBDIR`.
 
  [mdwn_itex]: http://jblevins.org/git/ikiwiki/plugins.git/plain/mdwn_itex.pm
- [h1title]: http://jblevins.org/git/ikiwiki/plugins.git/plain/h1title.pm
  [code]: http://jblevins.org/projects/ikiwiki/code
  [metamail]: http://jblevins.org/git/ikiwiki/plugins.git/plain/metamail.pm
  [pandoc]: http://jblevins.org/git/ikiwiki/plugins.git/plain/pandoc.pm

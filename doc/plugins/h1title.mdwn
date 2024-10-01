@@ -1,0 +1,5 @@
+[[!template id=plugin name=h1title core=0 author="[[jasonblevins]]"]]
+[[!tag type/chrome]]
+
+This plugin uses the leading level 1 Markdown header (if present) to
+set the page title and remove it from the page body.

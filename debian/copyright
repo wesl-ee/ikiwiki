@@ -155,6 +155,10 @@ Files: IkiWiki/Plugin/trail.pm
 Copyright: 2009-2012 Simon McVittie <http://smcv.pseudorandom.co.uk/>
 License: GPL-2+
 
+Files: IkiWiki/Plugin/h1title.pm
+Copyright: © 2008 Jason Blevins
+License: GPL-2+
+
 Files: doc/logo/*
 Copyright: © 2006 Recai Oktaş <roktas@debian.org>
 License: GPL-2+
