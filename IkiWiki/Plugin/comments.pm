@@ -580,7 +580,7 @@ sub editcomment ($$) {
 			IkiWiki::refresh();
 			IkiWiki::saveindex();
 
-			IkiWiki::printheader($session);
+			IkiWiki::printheader($session, 202); # HTTP 202: Accepted, but not processed
 			print IkiWiki::cgitemplate($cgi, gettext(gettext("comment stored for moderation")),
 				"<p>".
 				gettext("Your comment will be posted after moderator review").
