@@ -92,3 +92,8 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >>>> existing one. Also: in the logic immediately after generating the CONTRIBUTIONS link,
 >>>> we could actually call the real `htmllink` to handle the rest, which would remove the
 >>>> need for some of those utility functions. Great work!  *— [[Jon]], 2024-09-10*
+
+>>>> Hey Adam, I'm in a position now where I could work on this. But I want to check, are
+>>>> you interested in trying to write this? I could either write it myself, or I'd be happy
+>>>> to mentor you and review you doing it instead, if you would like to make a contribution
+>>>> to IkiWiki. Let me know! Thanks,  *— [[Jon]], 2024-10-01*
