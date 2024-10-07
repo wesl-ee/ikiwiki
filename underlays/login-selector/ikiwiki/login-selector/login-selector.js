@@ -197,19 +197,15 @@ var selector = {
 		
 		var html = '';
 		var id = selection['name']+'_entry';
-		var value = '';
 		var label = selection['label'];
-		var style = '';
 		
 		if (selection['name'] == 'OpenID') {
 			id = this.input_id;
-			value = '';
-			style = 'background:#FFF url(wikiicons/openidlogin-bg.gif) no-repeat scroll 0 50%; padding-left:18px;';
 		}
 		if (label) {
 			html = '<label for="'+ id +'" class="block">' + label + '</label>';
 		}
-		html += '<input id="'+id+'" type="text" style="'+style+'" name="'+id+'" value="'+value+'" />' + 
+		html += '<input id="'+id+'" type="text" name="'+id+'" />' + 
 					'<input id="selector_submit" type="submit" value="Login"/>';
 		
 		input_area.empty();
