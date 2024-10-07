@@ -35,3 +35,6 @@ mode, in my testing, is the styling around [[RecentChanges]].)
 > clear in release notes that this might be a problem, and how to avoid it.
 > 
 > — [[Jon]], *2024-02-26*
+
+>> closing ([[done]]) in favour of the approach outlined in
+>> [[support for light and dark mode]]. — [[Jon]], *2024-XX-XX*
