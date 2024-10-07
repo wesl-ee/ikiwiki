@@ -68,7 +68,6 @@ var selector = {
 		this.othersignin_id=othersignin_id;
            	selector_btns.prepend(
         		'<a href="javascript: selector.signin(\'othersignin\');"' +
-        		' style="background: #FFF" ' +
         		'class="othersignin login_large_btn">' +
 			'<img alt="" width="16" height="16" src="favicon.ico" />' +
 			' ' + this.othersignin_label +
@@ -95,7 +94,6 @@ var selector = {
 	}
         var box_id = selection["name"].toLowerCase();
         return '<a' + title +' href="javascript: selector.signin(\''+ box_id +'\');"' +
-        		' style="background: #FFF" ' + 
         		'class="' + box_id + ' login_' + box_size + '_btn">' +
 			'<img alt="" width="16" height="16" src="' + selection["icon"] + '" />' +
 			label +
