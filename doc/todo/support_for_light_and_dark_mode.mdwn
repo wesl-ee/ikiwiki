@@ -114,3 +114,30 @@ is probably the best way to implement this.
 >> could be enabled as part of a transition if we can detect where it
 >> introduces a problem (or perhaps mechanically detecting that is impractical).
 >> — [[Jon]], *2024-04-23*
+
+[[!template id=gitbranch
+  branch=jon/lightdark-theme
+  author="[[Jon]]"
+]]
+
+>>> I completed a first cut of this last night. The changes are not fully
+>>> contained within the new theme: I've adjusted the login JavaScript to
+>>> not inject `style` attributes; adjusted three icons to work better on
+>>> a dark background, although I think the OpenID one needs further work.
+>>>
+>>> I discovered [CSS System Colors](https://developer.mozilla.org/en-US/docs/Web/CSS/system-color)
+>>> whilst working on this: they're colour specifiers which use browser-
+>>> specified values which will change when in light or dark mode. For
+>>> example `Canvas` is the background colour, and `CanvasText` the text
+>>> colour.
+>>>
+>>> The default style uses a lot of different greys which we could probably
+>>> reduce and harmonize a little bit, perhaps by using one of the System
+>>> Colors.
+>>>
+>>> I think we should expect to fold the contents of this theme into the
+>>> default stylesheet in a future IkiWiki major version.
+>>>
+>>> I've put it up as a separate branch to gather feedback if anyone wants
+>>> to take a look before I merge it.
+>>> — [[Jon]], *2024-10-08*
