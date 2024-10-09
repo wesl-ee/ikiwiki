@@ -16,7 +16,7 @@ var selections_email_large = {
 var selections_openid_large = {
     openid: {
         name: 'OpenID',
-	icon: 'wikiicons/openidlogin-bg.gif',
+	icon: 'wikiicons/openidlogin-bg.png',
         label: 'Enter your OpenID:',
         url: null
     }
@@ -68,7 +68,6 @@ var selector = {
 		this.othersignin_id=othersignin_id;
            	selector_btns.prepend(
         		'<a href="javascript: selector.signin(\'othersignin\');"' +
-        		' style="background: #FFF" ' +
         		'class="othersignin login_large_btn">' +
 			'<img alt="" width="16" height="16" src="favicon.ico" />' +
 			' ' + this.othersignin_label +
@@ -95,7 +94,6 @@ var selector = {
 	}
         var box_id = selection["name"].toLowerCase();
         return '<a' + title +' href="javascript: selector.signin(\''+ box_id +'\');"' +
-        		' style="background: #FFF" ' + 
         		'class="' + box_id + ' login_' + box_size + '_btn">' +
 			'<img alt="" width="16" height="16" src="' + selection["icon"] + '" />' +
 			label +
@@ -199,19 +197,15 @@ var selector = {
 		
 		var html = '';
 		var id = selection['name']+'_entry';
-		var value = '';
 		var label = selection['label'];
-		var style = '';
 		
 		if (selection['name'] == 'OpenID') {
 			id = this.input_id;
-			value = '';
-			style = 'background:#FFF url(wikiicons/openidlogin-bg.gif) no-repeat scroll 0 50%; padding-left:18px;';
 		}
 		if (label) {
 			html = '<label for="'+ id +'" class="block">' + label + '</label>';
 		}
-		html += '<input id="'+id+'" type="text" style="'+style+'" name="'+id+'" value="'+value+'" />' + 
+		html += '<input id="'+id+'" type="text" name="'+id+'" />' + 
 					'<input id="selector_submit" type="submit" value="Login"/>';
 		
 		input_area.empty();

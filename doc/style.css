@@ -486,6 +486,7 @@ li.L8 { list-style: upper-alpha; }
 	border: 1px solid #DDD;
 	margin: 3px;
 	float: left;
+	background-color: white;
 }
 .login_small_btn {
 	padding: 4px 4px;

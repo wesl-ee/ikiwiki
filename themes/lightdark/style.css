@@ -1,0 +1,176 @@
+/* lightdark theme
+ * Follow browser's preference for light or dark mode
+ * Based on initial work by Joey Hess (doc/todo/support_for_light_and_dark_mode.mdwn)
+ *
+ * floating div backgrounds need a color specified or they are transparent
+ * and might overlap and be obscured by other elements (see
+ * d1cb73cb55ce2ecf185e2554a878a689113a01e4 and
+ * doc/bugs/sidebar_is_obscured_by_recentchanges.mdwn)
+ */
+
+/*
+ * the following will eventually be merged into the anti-theme (doc/style.css)
+ */
+
+html {
+  color-scheme: light dark;
+}
+
+.sidebar {
+  background: inherit;
+  border-color: initial;
+  color: inherit !important; /* antitheme uses !important, so we have to too */
+}
+
+.infobox, .notebox {
+  background: inherit;
+  color: inherit !important;
+}
+
+.pageheader .actions ul {
+  border-bottom-color: inherit;
+}
+#pageinfo {
+  border-top-color: inherit;
+}
+.pageheader #otherlanguages {
+  border-bottom-color: inherit;
+}
+
+.blogform, #blogform {
+    color: inherit !important;
+}
+
+pre.hl { color: inherit; background-color: inherit; }
+.hl.kwa { color: inherit; }
+.hl.sym { color: inherit; }
+.hl.kwc { color: inherit; }
+
+input#openid_identifier {
+  background: url(wikiicons/openidlogin-bg.png) no-repeat;
+}
+
+input#openid_identifier,
+input#searchbox
+{
+  background-color: inherit;
+  color: inherit;
+}
+
+.fb_invalid {
+	background: Field !important;
+}
+
+.pagecloud {
+  color: inherit !important;
+  border-color: black; /* XXX? */
+}
+
+.login_large_btn {
+  background-color: Canvas;
+}
+#login_highlight  {
+  background-color: CanvasText;
+}
+
+.feedbutton {
+  color: Canvas !important;
+}
+
+.popup {
+  border-bottom-color: currentColor;
+}
+  .popup:hover .balloon,
+  .popup:focus .balloon {
+     color: CanvasText;
+  }
+
+fieldset {
+  border: 1px solid CanvasText;
+}
+
+/*
+ * the following won't be merged as-is into the anti-theme
+ */
+
+/* recentchanges handling ***************************************************/
+/* XXX: come back to recentchanges, look at 
+ * the structure and see if that provides
+ * insights */
+
+@media (prefers-color-scheme: dark) {
+  div.recentchanges {
+    background: #333; /* light=#eee */
+    color: inherit !important;
+  }
+  .recentchanges .changelog {
+    background: Canvas !important;
+  }
+}
+
+.recentchanges .changelog {
+  color: inherit !important;
+}
+
+/* end recentchanges handling ***********************************************/
+
+@media (prefers-color-scheme: dark) {
+  .pagecloud
+  .comment,
+  .div.poll,
+  .inlinepage,
+  .infobox,
+  .notebox {
+    /* antitheme's value of aaa is intended to be a non-distracting
+     * less-bold choice than black. It's approx 5 notches down from
+     * white, so we choose five notches up from black for dark theme*/
+    border-color: #555;
+  }
+
+  .blogform, #blogform {
+    border-color: #aaa;
+    background: #333; /* light choice was #eee */
+  }
+
+  hr.poll {
+    color: inherit !important;
+    background-color: #555; /* was eee. 333 seems too dark */
+    border-color: inherit;
+  }
+  div.progress {
+    background-color: #333; /* was #eee */
+    color: inherit !important;
+  }
+  div.progress-done {
+    background-color: #996d42 !important; /* same hue, different luminance */
+    color: inherit !important;
+  }
+
+  .popup {
+    color: #5dbbbb; /* #366 + 50% luminance */
+  }
+
+  .popup:hover .balloon,
+  .popup:focus .balloon {
+     background-color: #3f4444; /* #dee -50% luminance */
+  }
+
+  .hl.kwb { color: #d80000; } /* lum+50%. too close ot hl.str/#f00?*/
+  .hl.kwd { color: #8080c0; } /* still to dakr on blcak */
+  .hl.str { color: #aa0000; } /* to differentiate better from #d80000 */
+  .hl.num { color: #9494ff; }
+  .hl.mark { color: black; background:#bbbb88; }
+
+  .pagecloud,
+  .month-calendar-day-this-day,
+  .year-calendar-this-month {
+    background-color: #333;
+  }
+
+  .login-selected,
+  .login_small_btn,
+  .login_large_btn {
+    border-color: #444;
+  }
+
+}
