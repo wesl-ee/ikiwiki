@@ -143,3 +143,5 @@ is probably the best way to implement this.
 >>> — [[Jon]], *2024-10-08*
 >>>
 >>>> This looks great, really nice to see the `style=` bits being gone, good job! I had a small comment in https://salsa.debian.org/jmtd/ikiwiki/-/commit/1deb739c1503db7831e8bcbd534ef2d78872f454, maybe there's a screenshot missing from the branch? Can't wait to merge this in my bootstrap theme (or could i?)... --[[anarcat]]
+
+>>>>> Good catch! I haven't taken one yet :-) — [[Jon]], *2024-10-09*
