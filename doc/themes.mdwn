@@ -28,7 +28,7 @@ based on [[Jon]]'s homepage design.
 
 <br clear="both" />
 
-[[!img lightdark_small.png align=left]] The *lightdark* theme, which honours
+[[!img lightdark_small.png align=left]] The **lightdark** theme, which honours
 your browser's preference for light or dark mode.
 
 <br clear="both" />
