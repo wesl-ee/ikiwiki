@@ -99,7 +99,4 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >>>> to IkiWiki. Let me know! Thanks,  *— [[Jon]], 2024-10-01*
 
 >>>>> Sorry for the late reply, I'm still interested in you mentoring me writing this plugin.
->>>>> I have a question: Wouldn't calling the original `htmllink` to handle the rest result
->>>>> in some of the checks being repeated/overridden? I don't think there's a way to replace
->>>>> only part of a function, so some of the logic will be duplicated.
 >>>>> _— [[awesomeadam]], 2024-10-18_
