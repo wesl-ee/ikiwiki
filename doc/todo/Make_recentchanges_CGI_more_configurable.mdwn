@@ -99,6 +99,6 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >>>> to IkiWiki. Let me know! Thanks,  *— [[Jon]], 2024-10-01*
 
 >>>>> Sorry for the late reply, I'm still interested in you mentoring me writing this plugin.
->>>>> I'll have to rework the plugin to just handle its case and call `htmllink` in the else
->>>>> statement to handle everything else.
+>>>>> I'll have to rework the plugin to just handle its case and call `htmllink` to handle
+>>>>> everything else(DONE). Is there anything else that's missing in my IkiWiki contribution?
 >>>>> _— [[awesomeadam]], 2024-10-18_
