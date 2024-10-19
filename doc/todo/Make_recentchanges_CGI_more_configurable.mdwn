@@ -100,5 +100,5 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 
 >>>>> Sorry for the late reply, I'm still interested in you mentoring me writing this plugin.
 >>>>> I'll have to rework the plugin to just handle its case and call `htmllink` to handle
->>>>> everything else(DONE). Is there anything else that's missing in my IkiWiki contribution?
+>>>>> everything else(DONE). Can you review the plugin?
 >>>>> _— [[awesomeadam]], 2024-10-18_
