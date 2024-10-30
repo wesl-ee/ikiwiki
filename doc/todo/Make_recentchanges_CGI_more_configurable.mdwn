@@ -102,3 +102,6 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 >>>>> I'll have to rework the plugin to just handle its case and call `htmllink` to handle
 >>>>> everything else(DONE). Can you review the plugin?
 >>>>> _— [[awesomeadam]], 2024-10-18_
+
+>>>>>> absolutely, happy to. I've started to look at it now, and I'll post review comments
+>>>>>> here soon. Thanks!   *— [[Jon]], 2024-10-30*
