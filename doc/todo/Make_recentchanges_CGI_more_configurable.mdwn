@@ -105,3 +105,29 @@ It's probably better to add the functionality I'm looking for in the editing-rel
 
 >>>>>> absolutely, happy to. I've started to look at it now, and I'll post review comments
 >>>>>> here soon. Thanks!   *— [[Jon]], 2024-10-30*
+
+----
+
+Initial notes from review of
+<https://codeberg.org/AwesomeAdam54321/ikiplugins/src/branch/main/IkiWiki/Plugin/link_local.pm>,
+commit `f2e3dc8583f82395313aa6f2cbd4f4c67430fa8f`:
+
+ * Ultimately, what we need is some commits to Ikiwiki's source repository
+   which introduce the plugin, as well as describe it in a page under
+   `doc/plugins` and probably introduce some tests under `./`. I will review
+   the plugin source in its present location, but one of us will need to
+   prepare commits for IkiWiki once it's ready.
+
+ * Can you use the technique you used for `renamepage` for `is_externallink`,
+   `externallink` `scan` and `linkify`?
+
+ * Could `if (length $config{contribpage})` ever be false? I don't think so,
+   since `checkconfig` sets it. Can we remove that conditional?
+ 
+ * I think we should consider renaming or making more generic the notion of
+   the "contributing" page. In your case, you want the destination to be
+   CONTRIBUTING. But other users might want to point it somewhere else. I'm
+   not sure what other terminology we could use, something as simple as
+   "broken_link_destination" maybe?
+
+*— [[Jon]], 2024-11-04*
