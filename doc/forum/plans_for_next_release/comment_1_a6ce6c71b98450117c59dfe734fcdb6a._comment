@@ -1,0 +1,20 @@
+[[!comment format=mdwn
+ username="anarcat"
+ avatar="http://cdn.libravatar.org/avatar/825d3c30cb96a053b5335e51b8d0bd49"
+ subject="my pending patch queue"
+ date="2024-11-18T16:18:06Z"
+ content="""
+I reviewed my patch queue and you merged a bunch, so first off, thanks for that and all the work you've done on ikiwiki, this is great!
+
+Those are the patches I have left, I think:
+
+- [[todo/allow_toc_to_skip_entries]]: i'm not sure i want this anymore, but it's something i have on my side... it's a bit messy
+- [[bugs/javascript_resources_placed_after_html_tag]]: trivial compatibility / performance fix
+- [[bugs/footnotes-look-weird]]: style tweak, got tangled up in markdown dialects issues, not sure what the next step is, i have [other tweaks to the base CSS](https://anarc.at/bootstrap.local.css), but some of them are relevant only to my bootstrap theme, unfortunately
+
+There might be other patches flying around my git repo... I had essentially given up on submitting patches here, but once this release goes out, I'll cleanup my house and rebase everything on top to make sure I'm not missing anything.
+
+In general, I'm really excited about the dark mode, and I'm wondering if i should just rebuild my theme on top of the base actiontabs thing now... 
+
+Thanks again!
+"""]]
