@@ -1,0 +1,8 @@
+[[!comment format=mdwn
+ username="jmtd"
+ avatar="http://cdn.libravatar.org/avatar/cae0ebd82377a48ef9f1f14ff23b3e0f"
+ subject="comment 2"
+ date="2024-11-19T20:00:25Z"
+ content="""
+Thanks for your kind words. I'll take a look at the patches you've highlighted here. Mentioning Dark Mode I'm reminded that we haven't fixed actiontabs yet, which is probably worthwhile, so I'll add that to the list.
+"""]]
