@@ -80,4 +80,4 @@ Foo Bar Baz
 Baz Bar Foo</details>
 </blockquote>
 
-So that's what I've settled on. *— [[Jon]], 2024-11-19*
+So that's what I've settled on. [[done]]. *— [[Jon]], 2024-11-19*

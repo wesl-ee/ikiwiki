@@ -4,7 +4,7 @@ I'd like to cut a new release this year, in particular to ship
 * [[todo/add a search plugin that uses duckduckgo]]
 * po.pm: fixes for po4a ≥ 0.70
 * [[todo/admonitions]]
-* [[bugs/backlinks onhover thing can go weird]] (not fixed yet)
+* [[bugs/backlinks onhover thing can go weird]]
 * [[todo/Make recentchanges CGI more configurable]] (hopefully)
 
 Is there anything else that people are particularly interested in?
