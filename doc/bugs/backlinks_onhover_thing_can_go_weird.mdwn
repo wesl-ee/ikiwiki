@@ -52,3 +52,32 @@ further down the list, but of course then you are outside the hover region.
 
 >>> [[!tag patch]]Patch in my repo, branch `more-backlinks-details-tag`.
 >>> (I must say this looks *much* nicer, IMHO) *—[[Jon]], 2020-10-07*
+
+----
+
+I've refreshed that branch after exploring this a little more. The main
+problem I had with my previous solution (simply substituting the floating
+box for a `details` tag) was how to integrate the overflow links
+nicely with the normal ones. Since `details` is a block-level tag, by
+default it would begin on a line after the existing links, and I couldn't
+settle on something which looked particularly integrated. E.g.:
+
+<blockquote>
+Links: Foo Bar Baz…
+<details>
+  <summary>Continued:</summary>
+Baz Bar Foo
+</details>
+</blockquote>
+
+I decided that, in the event the backlinks list overflowed, it made more
+sense to replace the _whole list_ with a `details` tag, and keep all the
+links together. E.g.
+
+<blockquote>
+<details><summary>Links:</summary>
+Foo Bar Baz
+Baz Bar Foo</details>
+</blockquote>
+
+So that's what I've settled on. *— [[Jon]], 2024-11-19*
