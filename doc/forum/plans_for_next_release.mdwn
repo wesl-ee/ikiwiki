@@ -1,6 +1,8 @@
 I'd like to cut a new release this year, in particular to ship
 
 * [[todo/support for light and dark mode]]
+  * fix actiontabs
+  * fix ikiwiki logo graphic
 * [[todo/add a search plugin that uses duckduckgo]]
 * po.pm: fixes for po4a ≥ 0.70
 * [[todo/admonitions]]
