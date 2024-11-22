@@ -118,16 +118,28 @@ commit `f2e3dc8583f82395313aa6f2cbd4f4c67430fa8f`:
    the plugin source in its present location, but one of us will need to
    prepare commits for IkiWiki once it's ready.
 
+   > Sure, I could do that.
+
  * Can you use the technique you used for `renamepage` for `is_externallink`,
    `externallink` `scan` and `linkify`?
 
+   > These functions use $link_regexp, $email_regexp and $url_regexp which are local
+   > variables, and give errors when I use the technique.
+   > Do you know how to make it work?
+
  * Could `if (length $config{contribpage})` ever be false? I don't think so,
    since `checkconfig` sets it. Can we remove that conditional?
+
+   > Yes, I've removed it.
  
  * I think we should consider renaming or making more generic the notion of
    the "contributing" page. In your case, you want the destination to be
    CONTRIBUTING. But other users might want to point it somewhere else. I'm
    not sure what other terminology we could use, something as simple as
    "broken_link_destination" maybe?
+
+   > I don't know if there's a more concise general term, so I've changed it to
+   > 'broken_link_destination'.
+   _— [[awesomeadam]], 2024-11-23_
 
 *— [[Jon]], 2024-11-04*
