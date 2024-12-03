@@ -154,6 +154,24 @@ commit `f2e3dc8583f82395313aa6f2cbd4f4c67430fa8f`:
    >> `url_regexp` from the plugin, and just reference `link.pm`'s versions. However
    >> I haven't got that working yet in my review.
    >> *— [[Jon]], 2024-12-03*
+   >>
+   >> ----
+   >> 
+   >> _several hours later…_
+   >> 
+   >> Forgive my enthusiasm, but with the feedback above I've gone past reviewing and
+   >> started bikeshedding the solution. The most important thing is for it to work.
+   >> I managed to miss that the approach for `renamepage` didn't actually work until
+   >> Today. So for me I think the next thing I'd like to see is the beginning of some
+   >> tests. I would suggest a separate test file from `t/linkify.pm`; you could start
+   >> by copying it but I'd look at some other test files to see if there are more
+   >> modern approaches to structuring them (`t/linkify.pm` is probably one of the
+   >> oldest). I'd want to see every routine that's exposed by the plugin be covered
+   >> by a least one test; I think it's also worth testing to confirm that `link.pm`
+   >> and `link_local.pm` are not loaded at the same time (in my local hacking around
+   >> I've ended up with that happening, despite my test config having
+   >> `disable_plugins: [link]`.)
+   >> *— [[Jon]], 2024-12-03*
 
  * Could `if (length $config{contribpage})` ever be false? I don't think so,
    since `checkconfig` sets it. Can we remove that conditional?
