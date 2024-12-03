@@ -127,6 +127,34 @@ commit `f2e3dc8583f82395313aa6f2cbd4f4c67430fa8f`:
    > variables, and give errors when I use the technique.
    > Do you know how to make it work?
 
+   >> Ah. I see the problem. In fact, `renamepage` is currently broken. The solution
+   >> for that, is to add `use IkiWiki::Plugin::link` to the top, meaning we can
+   >> reference subroutines from that plugin. However a better
+   >> approach than writing the stub `renamepage` function is to reference `link`s
+   >> directly in the hook, like this:
+   >> 
+   >> `hook(type => "renamepage"  , id => "link_local" , call => \&IkiWiki::Plugin::link::renamepage);`
+   >> 
+   >> The same can be done for `scan`, so long as you add a call to `IkiWiki::Plugin::link::checkconfig`
+   >> in your `checkconfig`. Then you can delete your local `scan` subroutine.
+   >>
+   >> That leaves you in a state where both `link` and `link_local` have a variable
+   >> `$link_regexp`. We can get rid of `link_local`s copy _if_ the one in `link.pm`
+   >> is changed from `my $link_regexp` to `our $link_regexp`: this permits accessing
+   >> the variable via `IkiWiki::Plugin::link::link_regexp`, and you can then delete
+   >> the logic to assign a value in `link_local`'s `checkconfig`.
+   >> 
+   >> That now leaves you in a situation where we need to modify `link.pm` as well as
+   >> provide `link_local.pm`. I think that's ok.
+   >>
+   >> I noticed that the `hook` calls have `id => "link"`; they need to be changed to
+   >> match the plugin name, i.e., `id => "link_local"`
+   >> 
+   >> I'd like to get rid of `is_externallink`, `externallink`, `email_regexp` and
+   >> `url_regexp` from the plugin, and just reference `link.pm`'s versions. However
+   >> I haven't got that working yet in my review.
+   >> *— [[Jon]], 2024-12-03*
+
  * Could `if (length $config{contribpage})` ever be false? I don't think so,
    since `checkconfig` sets it. Can we remove that conditional?
 
