@@ -1,0 +1,31 @@
+Please apply the attached patch to fix quotes for the non-HTML5 case of the displaytime function:
+
+```
+From cfb96ee56239eedb9fe702b7c2660046f7a8e668 Mon Sep 17 00:00:00 2001
+From: Paul Wise <pabs3@bonedaddy.net>
+Date: Sun, 15 Dec 2024 10:49:21 +0800
+Subject: [PATCH] Remove extra quote character from date spans
+
+This results in invalid HTML due to the duplicate quote character.
+
+Fixes: commit b6edc5ffc523c1775bdde15339f8c760dda4f0ca
+---
+ IkiWiki.pm | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/IkiWiki.pm b/IkiWiki.pm
+index c53be8e01..e0d4e2d31 100644
+--- a/IkiWiki.pm
++++ b/IkiWiki.pm
+@@ -1291,7 +1291,7 @@ sub displaytime ($;$$) {
+        else {
+                return '<span class="date'.
+                        ($_[2] ? ' dt-published' : '').
+-                       '"">'.$time.'</span>';
++                       '">'.$time.'</span>';
+        }
+ }
+ 
+-- 
+2.45.2
+```
