@@ -1291,7 +1291,7 @@ sub displaytime ($;$$) {
 	else {
 		return '<span class="date'.
 			($_[2] ? ' dt-published' : '').
-			'"">'.$time.'</span>';
+			'">'.$time.'</span>';
 	}
 }
 
