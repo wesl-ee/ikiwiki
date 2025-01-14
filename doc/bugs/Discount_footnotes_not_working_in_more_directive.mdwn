@@ -2,4 +2,12 @@ I was just trying to get footnotes working on a blog post (strange usecase I sup
 
 EDIT: this was my user error, turns out the footnote comment requires the : following the [^1] in order to work. i'll leave this here in case it helps someone in the future struggling with footnotes. - [[mare]] _Jan 12 2025 18:15PDT_
 
-[[done]] *— [[Jon]], 2025-01-13*
+> [[done]] *— [[Jon]], 2025-01-13*
+
+>> i was wondering, is there support for multiple references to the same footnote on a page? e.g., if i have text[^1] more text[^2] some more text[^1] and
+
+>> [^1] ref 1
+
+>> [^2] ref 2
+
+>> the [^1] on some more text never gets turned into a link to the footnote, nor does a second section link get added to the end of the respective footnote. this is counter to the behavior in my markdown editor (not the most useful benchmark, i know). thanks - [[mare]] _Jan 13 2025_
