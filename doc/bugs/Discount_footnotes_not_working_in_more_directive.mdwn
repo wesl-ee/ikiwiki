@@ -11,3 +11,11 @@ EDIT: this was my user error, turns out the footnote comment requires the : foll
 >> [^2] ref 2
 
 >> the [^1] on some more text never gets turned into a link to the footnote, nor does a second section link get added to the end of the respective footnote. this is counter to the behavior in my markdown editor (not the most useful benchmark, i know). thanks - [[mare]] _Jan 13 2025_
+
+>>> This is all pretty transparent to IkiWiki; it depends on the back-end. Unfortunately
+>>> neither Discount nor Multimarkdown seem to support this.
+>>> 
+>>> Someone could/should write an IkiWiki plugin to implement footnotes, independent of
+>>> of the markdown backend (or even syntax plugin).
+>>>
+>>>  *— [[Jon]], 2025-01-16*
