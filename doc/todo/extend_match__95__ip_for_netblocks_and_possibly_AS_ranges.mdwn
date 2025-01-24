@@ -1,0 +1,6 @@
+PageSpec `ip()` (implementation `match_ip`) supports globs, but it would be useful to be able to write say
+`154.12.192.0/22` to block a range of addresses that aren't matchable with a simple glob.
+
+Perhaps not in the same PageSpec, but it might also be useful to support looking up AS assignments and blocking ranges that way, see <https://feeding.cloud.geek.nz/posts/blocking-comment-spammers-ikiwiki/>. For the example IP above, this would be 6,171 IP ranges, and considerably more lines in `banned_users` without features like these.
+
+*— [[Jon]], 2025-01-24*
