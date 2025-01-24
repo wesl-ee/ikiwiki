@@ -4,3 +4,49 @@ PageSpec `ip()` (implementation `match_ip`) supports globs, but it would be usef
 Perhaps not in the same PageSpec, but it might also be useful to support looking up AS assignments and blocking ranges that way, see <https://feeding.cloud.geek.nz/posts/blocking-comment-spammers-ikiwiki/>. For the example IP above, this would be 6,171 IP ranges, and considerably more lines in `banned_users` without features like these.
 
 *— [[Jon]], 2025-01-24*
+
+Untested:
+
+```
+diff --git a/IkiWiki.pm b/IkiWiki.pm
+index e0d4e2d31..e1344758e 100644
+--- a/IkiWiki.pm
++++ b/IkiWiki.pm
+@@ -8,6 +8,7 @@ use Encode;
+ use Fcntl q{:flock};
+ use URI::Escape q{uri_escape_utf8};
+ use POSIX ();
++use Net::Netmask;
+ use Storable;
+ use open qw{:utf8 :std};
+ 
+@@ -3210,6 +3211,25 @@ sub match_admin ($$;@) {
+ 	}
+ }
+ 
++sub match_ipblock ($$;@) {
++	shift;
++	my $string=shift;
++	my %params=@_;
++
++	if (! exists $params{ip}) {
++		return IkiWiki::ErrorReason->new("no IP specified");
++	}
++	my $block = Net::Netmask->safe_new($string);
++	unless $block {
++		return IkiWiki::ErrorReason->new("invalid netmask specified");
++	}
++	if ($block->match($params{ip})) {
++		return IkiWiki::SuccessReason->new("IP is $ip");
++	} else {
++		return IkiWiki::FailReason->new("IP is $params{ip}, not $ip");
++	}
++}
++
+ sub match_ip ($$;@) {
+ 	shift;
+ 	my $ip=shift;
+```
+
+If I look at this further I'd move it into a plugin rather than add `Net::Netmask` to `IkiWiki.pm`.
+*— [[Jon]], 2025-01-24*
