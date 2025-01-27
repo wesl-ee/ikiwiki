@@ -5,48 +5,44 @@ Perhaps not in the same PageSpec, but it might also be useful to support looking
 
 *— [[Jon]], 2025-01-24*
 
-Untested:
-
 ```
-diff --git a/IkiWiki.pm b/IkiWiki.pm
-index e0d4e2d31..e1344758e 100644
---- a/IkiWiki.pm
-+++ b/IkiWiki.pm
-@@ -8,6 +8,7 @@ use Encode;
- use Fcntl q{:flock};
- use URI::Escape q{uri_escape_utf8};
- use POSIX ();
-+use Net::Netmask;
- use Storable;
- use open qw{:utf8 :std};
- 
-@@ -3210,6 +3211,25 @@ sub match_admin ($$;@) {
- 	}
- }
- 
-+sub match_ipblock ($$;@) {
-+	shift;
-+	my $string=shift;
-+	my %params=@_;
-+
-+	if (! exists $params{ip}) {
-+		return IkiWiki::ErrorReason->new("no IP specified");
-+	}
-+	my $block = Net::Netmask->safe_new($string);
-+	unless $block {
-+		return IkiWiki::ErrorReason->new("invalid netmask specified");
-+	}
-+	if ($block->match($params{ip})) {
-+		return IkiWiki::SuccessReason->new("IP is $ip");
-+	} else {
-+		return IkiWiki::FailReason->new("IP is $params{ip}, not $ip");
-+	}
-+}
-+
- sub match_ip ($$;@) {
- 	shift;
- 	my $ip=shift;
+#!/usr/bin/perl
+# Copyright © 2008 Joey Hess <joey@ikiwiki.info>
+# Copyright © 2025 Jonathan Dowland <jon@dow.land>
+# Licensed under the GNU GPL, version 2, or any later version published by the
+# Free Software Foundation
+
+use warnings;
+use strict;
+use IkiWiki 3.00;
+use Net::Netmask;
+
+package IkiWiki::PageSpec;
+
+sub match_ipblock ($$;@) {
+	shift;
+	my $string=shift;
+	my %params=@_;
+
+	if (! exists $params{ip}) {
+		return IkiWiki::ErrorReason->new("no IP specified");
+	}
+	my $block = Net::Netmask->safe_new($string);
+	unless ($block) {
+		return IkiWiki::ErrorReason->new("invalid netmask specified");
+	}
+	if ($block->match($params{ip})) {
+		return IkiWiki::SuccessReason->new("IP is in block $string");
+	} else {
+		return IkiWiki::FailReason->new("IP is $params{ip}, not in block $string");
+	}
+}
+
+1
 ```
 
 If I look at this further I'd move it into a plugin rather than add `Net::Netmask` to `IkiWiki.pm`.
 *— [[Jon]], 2025-01-24*
+
+> I've altered the code block above; I'm now testing this plugin on my
+> site. *— [[Jon]], 2025-01-27*
