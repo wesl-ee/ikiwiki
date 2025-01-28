@@ -110,6 +110,7 @@ Projects & Organizations
 * [[guppy|http://guppy.branchable.com/index.en.html]] an internationalized modular Python IRC bot
 * [[ChessWOB|https://www.chesswob.org]] Chess Without Boundaries
 * [[Debian Enhancement Proposals|https://dep-team.pages.debian.net/]]
+* [[Crypt Code Club|https://cryptcodeclub.codeberg.page/]]
 
 Personal sites and blogs
 ========================
