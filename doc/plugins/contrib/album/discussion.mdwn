@@ -1,3 +1,6 @@
+## working download links
+Does anyone have a git repo of the album plugin with the template files? It seems that all of the download links on the page are broken.
+
 ## installation queries from brush
 
 thanks for this plugin.  it might help me in my application, which is to provide album/galleries which can be edited (ie. new images added, taken away, etc.) through web interface.
