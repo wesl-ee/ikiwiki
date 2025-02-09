@@ -59,15 +59,21 @@ First, you need a version of ikiwiki with the [[trail]] plugin merged in
 Manual installation requires these files (use the "raw" link in gitweb
 to download):
 
-* [album.pm](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/IkiWiki/Plugin/album.pm)
+* [album.pm](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/IkiWiki/Plugin/album.pm) /
+  [cbaine's album.pm](https://git.cbaines.net/ikiwiki/plain/IkiWiki/Plugin/album.pm?h=git-annex-album)
   in an `IkiWiki/Plugin` subdirectory of your configured `plugindir`
-* [albumviewer.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumviewer.tmpl),
-  [albumitem.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumitem.tmpl),
-  [albumnext.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumnext.tmpl) and
-  [albumprev.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumprev.tmpl),
+* [albumviewer.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumviewer.tmpl) /
+  [cbaine's albumviewer.tmpl](https://git.cbaines.net/ikiwiki/plain/templates/albumviewer.tmpl?h=git-annex-album),
+  [albumitem.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumitem.tmpl) /
+  [cbaine's albumitem.tmpl](https://git.cbaines.net/ikiwiki/plain/templates/albumitem.tmpl?h=git-annex-album),
+  [albumnext.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumnext.tmpl) /
+  [cbaine's albumnext.tmpl](https://git.cbaines.net/ikiwiki/plain/templates/albumnext.tmpl?h=git-annex-album) and
+  [albumprev.tmpl](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/templates/albumprev.tmpl) /
+  [cbaine's albumprev.tmpl](https://git.cbaines.net/ikiwiki/plain/templates/albumprev.tmpl?h=git-annex-album),
    in your configured `templatedir`, or a `templates` subdirectory of your wiki repository
 * the album-related bits from the end of the
-  [stylesheet](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/doc/style.css)
+  [stylesheet](http://git.pseudorandom.co.uk/smcv/ikiwiki.git/blob/album5:/doc/style.css) /
+  [cbaine's stylesheet](https://git.cbaines.net/ikiwiki/plain/doc/style.css?h=git-annex-album-2-rebased)
   (put them in your local.css)
 
 ## Changing the templates
