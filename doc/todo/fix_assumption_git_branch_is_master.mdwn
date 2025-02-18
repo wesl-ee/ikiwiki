@@ -1,0 +1,7 @@
+`Git.pm` and several tests (and perhaps other things) implicitly assume
+the default branch for a repository is `master`. This is currently still
+the Git default, but can be overridden by a user (`init.defaultBranch`:
+try setting it and running the test suite!). We should make `Git.pm`
+more robust by settings `init.defaultBranch` on locally-created repos to
+match our assumption (or to match setup's `gitmaster_branch`)
+*— [[Jon]], 2025-02-18*
