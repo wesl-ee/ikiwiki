@@ -74,8 +74,8 @@ Here is a full list of the template files used:
 * `feedlink.tmpl` - Used to add rss/atom links if `blogpost.tmpl` is not used.
 * `aggregatepost.tmpl` - Used by the aggregate plugin to create
   a page for a post.
-* `searchform.tmpl`, `googleform.tmpl` - Used by the search plugin 
-  and google plugin to add search forms to wiki pages.
+* `searchform.tmpl`, `googleform.tmpl`, `duckduckgoform.tmpl` - Used by the
+   search plugin, google and duckduckgo plugins to add search forms to wiki pages.
 * `searchquery.tmpl` - This is a Omega template, used by the
   search plugin.
 * `comment.tmpl` - Used by the comments plugin to display a comment.
