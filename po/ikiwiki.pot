@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-17 20:59+0000\n"
+"POT-Creation-Date: 2025-02-21 14:37+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,44 +18,44 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: ../IkiWiki/CGI.pm:217
+#: ../IkiWiki/CGI.pm:219
 msgid ""
 "probable misconfiguration: sslcookie is set, but you are attempting to login "
 "via http, not https"
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:220
+#: ../IkiWiki/CGI.pm:222
 msgid ""
 "Login succeeded, but I don't remember why you were logging in, so you'll "
 "have to navigate back to whatever you were doing. (This should not normally "
 "happen. Perhaps you need to enable cookies?)"
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:239 ../IkiWiki/CGI.pm:395
+#: ../IkiWiki/CGI.pm:241 ../IkiWiki/CGI.pm:396
 msgid "Your login session has expired."
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:260
+#: ../IkiWiki/CGI.pm:261
 msgid "Login"
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:261
+#: ../IkiWiki/CGI.pm:262
 msgid "Preferences"
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:262
+#: ../IkiWiki/CGI.pm:263
 msgid "Admin"
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:303
+#: ../IkiWiki/CGI.pm:304
 msgid "Preferences saved."
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:358
+#: ../IkiWiki/CGI.pm:359
 msgid "You are banned."
 msgstr ""
 
-#: ../IkiWiki/CGI.pm:491 ../IkiWiki/CGI.pm:492 ../IkiWiki.pm:1677
+#: ../IkiWiki/CGI.pm:492 ../IkiWiki/CGI.pm:493 ../IkiWiki.pm:1677
 msgid "Error"
 msgstr ""
 
@@ -247,66 +247,66 @@ msgstr ""
 msgid "Comment Moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:382 ../IkiWiki/Plugin/comments.pm:386
+#: ../IkiWiki/Plugin/comments.pm:381 ../IkiWiki/Plugin/comments.pm:385
 msgid "email replies to me"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:420 ../IkiWiki/Plugin/editpage.pm:96
-#: ../IkiWiki/Plugin/editpage.pm:102
+#: ../IkiWiki/Plugin/comments.pm:419 ../IkiWiki/Plugin/editpage.pm:95
+#: ../IkiWiki/Plugin/editpage.pm:101
 msgid "bad page name"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:423
+#: ../IkiWiki/Plugin/comments.pm:422
 #, perl-format
 msgid "commenting on %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:440
+#: ../IkiWiki/Plugin/comments.pm:439
 #, perl-format
 msgid "page '%s' doesn't exist, so you can't comment"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:450
+#: ../IkiWiki/Plugin/comments.pm:449
 #, perl-format
 msgid "comments on page '%s' are not allowed"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:457
+#: ../IkiWiki/Plugin/comments.pm:456
 #, perl-format
 msgid "comments on page '%s' are closed"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:585
+#: ../IkiWiki/Plugin/comments.pm:584
 msgid "comment stored for moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:587
+#: ../IkiWiki/Plugin/comments.pm:586
 msgid "Your comment will be posted after moderator review"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:600
+#: ../IkiWiki/Plugin/comments.pm:599
 msgid "Added a comment"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:604
+#: ../IkiWiki/Plugin/comments.pm:603
 #, perl-format
 msgid "Added a comment: %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:678 ../IkiWiki/Plugin/userlist.pm:55
+#: ../IkiWiki/Plugin/comments.pm:677 ../IkiWiki/Plugin/userlist.pm:55
 #: ../IkiWiki/Plugin/websetup.pm:272
 msgid "you are not logged in as an admin"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:737
+#: ../IkiWiki/Plugin/comments.pm:736
 msgid "Comment moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:778
+#: ../IkiWiki/Plugin/comments.pm:777
 msgid "comment moderation"
 msgstr ""
 
-#: ../IkiWiki/Plugin/comments.pm:943
+#: ../IkiWiki/Plugin/comments.pm:942
 #, perl-format
 msgid "%i comment"
 msgid_plural "%i comments"
@@ -316,7 +316,7 @@ msgstr[1] ""
 #. translators: Here "Comment" is a verb;
 #. translators: the user clicks on it to
 #. translators: post a comment.
-#: ../IkiWiki/Plugin/comments.pm:953
+#: ../IkiWiki/Plugin/comments.pm:952
 msgid "Comment"
 msgstr ""
 
@@ -336,28 +336,34 @@ msgstr ""
 msgid "no text was copied in this page with id %s"
 msgstr ""
 
+#: ../IkiWiki/Plugin/duckduckgo.pm:26 ../IkiWiki/Plugin/google.pm:26
+#: ../IkiWiki/Plugin/search.pm:48
+#, perl-format
+msgid "Must specify %s when using the %s plugin"
+msgstr ""
+
 #: ../IkiWiki/Plugin/editpage.pm:41
 #, perl-format
 msgid "removing old preview %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/editpage.pm:118
+#: ../IkiWiki/Plugin/editpage.pm:117
 #, perl-format
 msgid "%s is not an editable page"
 msgstr ""
 
-#: ../IkiWiki/Plugin/editpage.pm:166
+#: ../IkiWiki/Plugin/editpage.pm:165
 msgid "email comments to me"
 msgstr ""
 
-#: ../IkiWiki/Plugin/editpage.pm:320
+#: ../IkiWiki/Plugin/editpage.pm:319
 #, perl-format
 msgid "creating %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/editpage.pm:338 ../IkiWiki/Plugin/editpage.pm:357
-#: ../IkiWiki/Plugin/editpage.pm:368 ../IkiWiki/Plugin/editpage.pm:415
-#: ../IkiWiki/Plugin/editpage.pm:457
+#: ../IkiWiki/Plugin/editpage.pm:337 ../IkiWiki/Plugin/editpage.pm:356
+#: ../IkiWiki/Plugin/editpage.pm:367 ../IkiWiki/Plugin/editpage.pm:414
+#: ../IkiWiki/Plugin/editpage.pm:456
 #, perl-format
 msgid "editing %s"
 msgstr ""
@@ -443,11 +449,6 @@ msgstr ""
 #: ../IkiWiki/Plugin/git.pm:1085 ../IkiWiki/Plugin/git.pm:1104
 #, perl-format
 msgid "Failed to revert commit %s"
-msgstr ""
-
-#: ../IkiWiki/Plugin/google.pm:26 ../IkiWiki/Plugin/search.pm:48
-#, perl-format
-msgid "Must specify %s when using the %s plugin"
 msgstr ""
 
 #: ../IkiWiki/Plugin/graphviz.pm:87
@@ -773,54 +774,54 @@ msgid ""
 "translations will be renamed as well."
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:929
+#: ../IkiWiki/Plugin/po.pm:926
 #, perl-format
 msgid "POT file (%s) does not exist"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:943
+#: ../IkiWiki/Plugin/po.pm:940
 #, perl-format
 msgid "failed to copy underlay PO file to %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:951
+#: ../IkiWiki/Plugin/po.pm:948
 #, perl-format
 msgid "failed to update %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:957
+#: ../IkiWiki/Plugin/po.pm:954
 #, perl-format
 msgid "failed to copy the POT file to %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:993
+#: ../IkiWiki/Plugin/po.pm:990
 msgid "N/A"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1004
+#: ../IkiWiki/Plugin/po.pm:1001
 #, perl-format
 msgid "failed to translate %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1087
+#: ../IkiWiki/Plugin/po.pm:1084
 msgid "removed obsolete PO files"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1143 ../IkiWiki/Plugin/po.pm:1155
-#: ../IkiWiki/Plugin/po.pm:1194
+#: ../IkiWiki/Plugin/po.pm:1140 ../IkiWiki/Plugin/po.pm:1152
+#: ../IkiWiki/Plugin/po.pm:1191
 #, perl-format
 msgid "failed to write %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1153
+#: ../IkiWiki/Plugin/po.pm:1150
 msgid "failed to translate"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1206
+#: ../IkiWiki/Plugin/po.pm:1203
 msgid "invalid gettext data, go back to previous page to continue edit"
 msgstr ""
 
-#: ../IkiWiki/Plugin/po.pm:1249
+#: ../IkiWiki/Plugin/po.pm:1246
 #, perl-format
 msgid "%s has invalid syntax: must use CODE|NAME"
 msgstr ""
@@ -926,12 +927,12 @@ msgstr ""
 msgid "need either `percent` or `totalpages` and `donepages` parameters"
 msgstr ""
 
-#: ../IkiWiki/Plugin/recentchanges.pm:106
+#: ../IkiWiki/Plugin/recentchanges.pm:105
 #, perl-format
 msgid "This reverts commit %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/recentchanges.pm:125
+#: ../IkiWiki/Plugin/recentchanges.pm:124
 #, perl-format
 msgid "confirm reversion of %s"
 msgstr ""
@@ -955,16 +956,16 @@ msgstr ""
 msgid "%s is not a file"
 msgstr ""
 
-#: ../IkiWiki/Plugin/remove.pm:167
+#: ../IkiWiki/Plugin/remove.pm:166
 #, perl-format
 msgid "confirm removal of %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/remove.pm:206
+#: ../IkiWiki/Plugin/remove.pm:205
 msgid "Please select the attachments to remove."
 msgstr ""
 
-#: ../IkiWiki/Plugin/remove.pm:267
+#: ../IkiWiki/Plugin/remove.pm:266
 msgid "removed"
 msgstr ""
 
@@ -997,24 +998,24 @@ msgstr ""
 msgid "rename %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:165
+#: ../IkiWiki/Plugin/rename.pm:164
 msgid "Also rename SubPages and attachments"
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:267
+#: ../IkiWiki/Plugin/rename.pm:266
 msgid "Only one attachment can be renamed at a time."
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:270
+#: ../IkiWiki/Plugin/rename.pm:269
 msgid "Please select the attachment to rename."
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:380
+#: ../IkiWiki/Plugin/rename.pm:379
 #, perl-format
 msgid "rename %s to %s"
 msgstr ""
 
-#: ../IkiWiki/Plugin/rename.pm:606
+#: ../IkiWiki/Plugin/rename.pm:605
 #, perl-format
 msgid "update for rename of %s to %s"
 msgstr ""
@@ -1175,22 +1176,22 @@ msgstr ""
 msgid "setup file for this wiki is not known"
 msgstr ""
 
-#: ../IkiWiki/Plugin/websetup.pm:292
+#: ../IkiWiki/Plugin/websetup.pm:291
 msgid "main"
 msgstr ""
 
-#: ../IkiWiki/Plugin/websetup.pm:436
+#: ../IkiWiki/Plugin/websetup.pm:435
 msgid ""
 "The configuration changes shown below require a wiki rebuild to take effect."
 msgstr ""
 
-#: ../IkiWiki/Plugin/websetup.pm:440
+#: ../IkiWiki/Plugin/websetup.pm:439
 msgid ""
 "For the configuration changes shown below to fully take effect, you may need "
 "to rebuild the wiki."
 msgstr ""
 
-#: ../IkiWiki/Plugin/websetup.pm:477
+#: ../IkiWiki/Plugin/websetup.pm:476
 #, perl-format
 msgid "Error: %s exited nonzero (%s). Discarding setup changes."
 msgstr ""
