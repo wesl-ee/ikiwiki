@@ -1,0 +1,25 @@
+ikiwiki 3.20250221 released with [[!toggle text="these changes"]]
+[[!toggleable text="""
+* [ Jonathan Dowland ]
+  * po.pm: fixes for po4a ≥ 0.70.
+  * CGI::printheader: optional HTTP status argument
+  * comments: return HTTP 202 for moderated comments
+  * page.tmpl: don't generate an empty parentlinks span
+  * new plugins:
+    * Jason Blevins' h1title plugin (previously external/contrib)
+    * DuckDuckGo plugin for site searching
+  * new theme: lightdark. Supports browse preferences for light or
+    dark mode.
+  * Default html5 to '1'
+  * Remove charset attribute from forms
+  * Use the HTML5 details tag for more backlinks
+
+* [ Paul Wise ]
+  * Remove extra quote character from date spans
+
+* [ intrigeri ]
+  * t/po.t: Add missing PO header
+
+* [ Antoine Beaupré ]
+  * admonitions plugin
+"""]]
