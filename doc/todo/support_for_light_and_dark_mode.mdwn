@@ -106,6 +106,8 @@ is probably the best way to implement this.
 >> [[support dark mode in antitheme]]: making the other existing themes
 >> support light-and-dark mode. That could be valuable, at least in the
 >> short term.
+>>
+>>> actiontabs strikes me as a good one to support it. --[[Joey]]
 >> 
 >> I concur that adjusting the antitheme to support light/dark mode could
 >> be regarded as a breaking change for existing users. I think we should
@@ -150,3 +152,13 @@ is probably the best way to implement this.
 >>>>> switch <https://ikiwiki.info> over to it. One thing that will need
 >>>>> adjusting for that, though, is the ikiwiki logo: [[ikiwiki_logo|logo/ikiwiki.png]]  
 >>>>> — [[Jon]], *2024-10-09*
+
+>>>>>> I am game for switching ikiwiki.info over to it. Indeed I plan to
+>>>>>> switch a lot of little websites like that over to it.
+>>>>>>
+>>>>>> My time and attention for this is sadly limited. Thanks for doing this work.
+>>>>>> I have upgraded ikiwiki on branchable, so it should be possible to
+>>>>>> change the ikiwiki.info setup once you sort out the icon (maybe
+>>>>>> adding just a small white border would suffice), and smcv and schmonz
+>>>>>> both have the admin bit to do it. Or feel free to reach out to me by email.
+>>>>>> --[[Joey]]
