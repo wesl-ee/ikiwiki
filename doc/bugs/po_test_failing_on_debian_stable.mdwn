@@ -1,0 +1,17 @@
+Building current master on debian stable:
+
+	   Failed test at t/po.t line 538.
+	#                   '<p>Tails takes <BD> hour to install</p>
+	# '
+	#     doesn't match '(?^usx:
+	#       .*
+	#       L'installation\sde\sTails\sdure\s<BD>\sheure
+	#       .*
+	# )'
+	# Looks like you failed 1 test of 126.
+	t/po.t .........................
+	Dubious, test returned 1 (wstat 256, 0x100)
+
+The failing code comes from "t/po.t: add test for UTF-8 vs. po4a 0.58+"
+
+It builds ok on debian unstable. --[[Joey]]
