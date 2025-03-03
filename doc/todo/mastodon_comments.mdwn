@@ -13,3 +13,35 @@ Or maybe i just need to make a new template and insert it in my blog posts... po
 >> I'm not even sure this is a good idea. The first test I did was a "test comment" which led to half a dozen "test reply" and then I realized i couldn't redact individual posts from there. Ugh. I don't even know if, when I mute a user, it actually gets hidden from everyone else too...
 >>
 >> So I'll test this for a while, I guess.
+
+# Update: the feed2exec diversion
+
+There's another thing that's needed to make this work, which I didn't mention above, which is to automatically *post* new entries to Mastodon when they show up, because otherwise the above needs you to manually post the thing to Mastodon. It's kind of a mess. At first, I implemented this as a [feed2exec](https://gitlab.com/anarcat/feed2exec) plugin called [ikiwikitoot.py](https://gitlab.com/anarcat/feed2exec/-/blob/main/feed2exec/plugins/ikiwikitoot.py) but that didn't work reliably: there was this horrible bootstrapping issue that you had to first post the article, then run the RSS feed, and that modifies the article again.
+
+This didn't work reliably for me, so I added more duct-tape so you can now run the command directly without going through the RSS feed. I ended up with the following post-receive hook in my `source.git`:
+
+```
+w-anarcat@marcos:~/source.git$ cat hooks/post-receive
+#!/bin/sh
+
+/home/anarcat/src/feed2exec/feed2exec/plugins/ikiwikitoot.py --post-receive --base-url https://anarc.at/ 
+```
+
+And the code still lives in feed2exec... It makes use of my second Python parser for ikiwiki directives (ugh) which really makes me feel like this should be implemented natively as a real ikiwiki plugin instead.
+
+I'm not sure how this would work: we'd need to somehow keep state of which page is associated with which mastodon post. In theory, this could be kept in .ikiwiki, but i find that iffy: i really like the idea of having the mastodon post directly in the git source, but i'm not aware of any ikiwiki plugin actually modifying the source, that seems to be traditionnally a "no no".
+
+I would also really like ikiwiki to render comments as static HTML. This would add a couple benefits over the current approach:
+
+ 1. no javascript necessary
+ 2. reduce load on the mastodon server (the current approach hits the server for every *visitor* that hits the "load comments" button, which is not kind to the mastodon server)
+ 3. reduce reliance on the upstream mastodon server to be up (right now, if mastodon goes away, comments disappear)
+ 4. allow for moderation on the ikiwiki side (right now, we're completely subject to the mastodon server moderation, if we don't like a comment, we can't remove it without removing it from the mastodon server)
+
+But that's even more work. I definitely like the idea of adding `!comment` directives to existing posts though, this feels nice, and it's easy to remove them to do moderation.
+
+The trick is "when do you post updates": short of having a daemon (or CGI?) that receives activitypub pushes, we'd need *something* that pulls new updates on a regular basis anyways, so it's not clear how easy it would be to actually implement.
+
+Still, moving that code from feed2exec/python to ikiwiki/perl (or ikiwiki/python, there's precedents here), would be an important step, IMHO.
+
+Thoughts? -- [[anarcat]] 2025-03-03
