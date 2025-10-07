@@ -16,7 +16,7 @@ var selections_email_large = {
 var selections_openid_large = {
     openid: {
         name: 'OpenID',
-	icon: 'wikiicons/openidlogin-bg.gif',
+	icon: 'wikiicons/openidlogin-bg.png',
         label: 'Enter your OpenID:',
         url: null
     }

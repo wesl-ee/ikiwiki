@@ -46,6 +46,10 @@ pre.hl { color: inherit; background-color: inherit; }
 .hl.sym { color: inherit; }
 .hl.kwc { color: inherit; }
 
+input#openid_identifier {
+  background: url(wikiicons/openidlogin-bg.png) no-repeat;
+}
+
 input#openid_identifier,
 input#searchbox
 {
